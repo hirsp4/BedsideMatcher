@@ -1,0 +1,578 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF2A3E4F1AB0856A00C4DBA7 /* NIVcheckinItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */; };
+		EF2A3E501AB0856A00C4DBA7 /* NIVcheckoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E381AB0856A00C4DBA7 /* NIVcheckoutItems.m */; };
+		EF2A3E511AB0856A00C4DBA7 /* NIVcompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E3A1AB0856A00C4DBA7 /* NIVcompany.m */; };
+		EF2A3E521AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E3C1AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m */; };
+		EF2A3E531AB0856A00C4DBA7 /* NIVHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E3E1AB0856A00C4DBA7 /* NIVHelper.m */; };
+		EF2A3E541AB0856A00C4DBA7 /* NIVinsertTrackingItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E401AB0856A00C4DBA7 /* NIVinsertTrackingItems.m */; };
+		EF2A3E551AB0856A00C4DBA7 /* NIVitem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E421AB0856A00C4DBA7 /* NIVitem.m */; };
+		EF2A3E561AB0856A00C4DBA7 /* NIVorder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E441AB0856A00C4DBA7 /* NIVorder.m */; };
+		EF2A3E571AB0856A00C4DBA7 /* NIVposition.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E461AB0856A00C4DBA7 /* NIVposition.m */; };
+		EF2A3E581AB0856A00C4DBA7 /* NIVRequestResultHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E481AB0856A00C4DBA7 /* NIVRequestResultHandler.m */; };
+		EF2A3E591AB0856A00C4DBA7 /* NIVSoapError.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E4A1AB0856A00C4DBA7 /* NIVSoapError.m */; };
+		EF2A3E5A1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E4C1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m */; };
+		EF2A3E5B1AB0856A00C4DBA7 /* NIVwebServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E4E1AB0856A00C4DBA7 /* NIVwebServiceResult.m */; };
+		EF2A3E641AB0858600C4DBA7 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E5F1AB0858600C4DBA7 /* DDXMLDocument.m */; };
+		EF2A3E651AB0858600C4DBA7 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E611AB0858600C4DBA7 /* DDXMLElement.m */; };
+		EF2A3E661AB0858600C4DBA7 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E631AB0858600C4DBA7 /* DDXMLNode.m */; };
+		EF2A3E691AB0858E00C4DBA7 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E681AB0858E00C4DBA7 /* NSString+DDXML.m */; };
+		EF2A3E6C1AB0859600C4DBA7 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E6B1AB0859600C4DBA7 /* DDXMLElementAdditions.m */; };
+		EF36567C1AAF95E000A0B64D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF36567B1AAF95E000A0B64D /* main.m */; };
+		EF36567F1AAF95E000A0B64D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF36567E1AAF95E000A0B64D /* AppDelegate.m */; };
+		EF3656821AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF3656801AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld */; };
+		EF3656851AAF95E000A0B64D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3656841AAF95E000A0B64D /* ViewController.m */; };
+		EF3656881AAF95E000A0B64D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656861AAF95E000A0B64D /* Main.storyboard */; };
+		EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3656891AAF95E000A0B64D /* Images.xcassets */; };
+		EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */; };
+		EF3656991AAF95E000A0B64D /* BedsideMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF3656931AAF95E000A0B64D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF36566E1AAF95E000A0B64D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF3656751AAF95E000A0B64D;
+			remoteInfo = BedsideMatcher;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF2A3E351AB0856A00C4DBA7 /* NIVcheckinItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckinItems.h; sourceTree = "<group>"; };
+		EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVcheckinItems.m; sourceTree = "<group>"; };
+		EF2A3E371AB0856A00C4DBA7 /* NIVcheckoutItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckoutItems.h; sourceTree = "<group>"; };
+		EF2A3E381AB0856A00C4DBA7 /* NIVcheckoutItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVcheckoutItems.m; sourceTree = "<group>"; };
+		EF2A3E391AB0856A00C4DBA7 /* NIVcompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcompany.h; sourceTree = "<group>"; };
+		EF2A3E3A1AB0856A00C4DBA7 /* NIVcompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVcompany.m; sourceTree = "<group>"; };
+		EF2A3E3B1AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVgetItemsBySSCCResponse.h; sourceTree = "<group>"; };
+		EF2A3E3C1AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVgetItemsBySSCCResponse.m; sourceTree = "<group>"; };
+		EF2A3E3D1AB0856A00C4DBA7 /* NIVHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVHelper.h; sourceTree = "<group>"; };
+		EF2A3E3E1AB0856A00C4DBA7 /* NIVHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVHelper.m; sourceTree = "<group>"; };
+		EF2A3E3F1AB0856A00C4DBA7 /* NIVinsertTrackingItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVinsertTrackingItems.h; sourceTree = "<group>"; };
+		EF2A3E401AB0856A00C4DBA7 /* NIVinsertTrackingItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVinsertTrackingItems.m; sourceTree = "<group>"; };
+		EF2A3E411AB0856A00C4DBA7 /* NIVitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVitem.h; sourceTree = "<group>"; };
+		EF2A3E421AB0856A00C4DBA7 /* NIVitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVitem.m; sourceTree = "<group>"; };
+		EF2A3E431AB0856A00C4DBA7 /* NIVorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVorder.h; sourceTree = "<group>"; };
+		EF2A3E441AB0856A00C4DBA7 /* NIVorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVorder.m; sourceTree = "<group>"; };
+		EF2A3E451AB0856A00C4DBA7 /* NIVposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVposition.h; sourceTree = "<group>"; };
+		EF2A3E461AB0856A00C4DBA7 /* NIVposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVposition.m; sourceTree = "<group>"; };
+		EF2A3E471AB0856A00C4DBA7 /* NIVRequestResultHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVRequestResultHandler.h; sourceTree = "<group>"; };
+		EF2A3E481AB0856A00C4DBA7 /* NIVRequestResultHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVRequestResultHandler.m; sourceTree = "<group>"; };
+		EF2A3E491AB0856A00C4DBA7 /* NIVSoapError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVSoapError.h; sourceTree = "<group>"; };
+		EF2A3E4A1AB0856A00C4DBA7 /* NIVSoapError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVSoapError.m; sourceTree = "<group>"; };
+		EF2A3E4B1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVSupplyChainServiceBinding.h; sourceTree = "<group>"; };
+		EF2A3E4C1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVSupplyChainServiceBinding.m; sourceTree = "<group>"; };
+		EF2A3E4D1AB0856A00C4DBA7 /* NIVwebServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVwebServiceResult.h; sourceTree = "<group>"; };
+		EF2A3E4E1AB0856A00C4DBA7 /* NIVwebServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVwebServiceResult.m; sourceTree = "<group>"; };
+		EF2A3E5C1AB0857F00C4DBA7 /* DDXMLPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
+		EF2A3E5D1AB0858600C4DBA7 /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
+		EF2A3E5E1AB0858600C4DBA7 /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
+		EF2A3E5F1AB0858600C4DBA7 /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
+		EF2A3E601AB0858600C4DBA7 /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
+		EF2A3E611AB0858600C4DBA7 /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
+		EF2A3E621AB0858600C4DBA7 /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
+		EF2A3E631AB0858600C4DBA7 /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
+		EF2A3E671AB0858E00C4DBA7 /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
+		EF2A3E681AB0858E00C4DBA7 /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
+		EF2A3E6A1AB0859600C4DBA7 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
+		EF2A3E6B1AB0859600C4DBA7 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		EF3656761AAF95E000A0B64D /* BedsideMatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BedsideMatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF36567A1AAF95E000A0B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF36567B1AAF95E000A0B64D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF36567D1AAF95E000A0B64D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF36567E1AAF95E000A0B64D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF3656811AAF95E000A0B64D /* BedsideMatcher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BedsideMatcher.xcdatamodel; sourceTree = "<group>"; };
+		EF3656831AAF95E000A0B64D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF3656841AAF95E000A0B64D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF3656871AAF95E000A0B64D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF3656891AAF95E000A0B64D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EF36568C1AAF95E000A0B64D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EF3656921AAF95E000A0B64D /* BedsideMatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BedsideMatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3656971AAF95E000A0B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BedsideMatcherTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF3656731AAF95E000A0B64D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF36568F1AAF95E000A0B64D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF36566D1AAF95E000A0B64D = {
+			isa = PBXGroup;
+			children = (
+				EF3656A21AAF960100A0B64D /* Service */,
+				EF3656781AAF95E000A0B64D /* BedsideMatcher */,
+				EF3656951AAF95E000A0B64D /* BedsideMatcherTests */,
+				EF3656771AAF95E000A0B64D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF3656771AAF95E000A0B64D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF3656761AAF95E000A0B64D /* BedsideMatcher.app */,
+				EF3656921AAF95E000A0B64D /* BedsideMatcherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF3656781AAF95E000A0B64D /* BedsideMatcher */ = {
+			isa = PBXGroup;
+			children = (
+				EF36567D1AAF95E000A0B64D /* AppDelegate.h */,
+				EF36567E1AAF95E000A0B64D /* AppDelegate.m */,
+				EF3656831AAF95E000A0B64D /* ViewController.h */,
+				EF3656841AAF95E000A0B64D /* ViewController.m */,
+				EF3656861AAF95E000A0B64D /* Main.storyboard */,
+				EF3656891AAF95E000A0B64D /* Images.xcassets */,
+				EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */,
+				EF3656801AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld */,
+				EF3656791AAF95E000A0B64D /* Supporting Files */,
+			);
+			path = BedsideMatcher;
+			sourceTree = "<group>";
+		};
+		EF3656791AAF95E000A0B64D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF36567A1AAF95E000A0B64D /* Info.plist */,
+				EF36567B1AAF95E000A0B64D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF3656951AAF95E000A0B64D /* BedsideMatcherTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */,
+				EF3656961AAF95E000A0B64D /* Supporting Files */,
+			);
+			path = BedsideMatcherTests;
+			sourceTree = "<group>";
+		};
+		EF3656961AAF95E000A0B64D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF3656971AAF95E000A0B64D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF3656A21AAF960100A0B64D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A3E351AB0856A00C4DBA7 /* NIVcheckinItems.h */,
+				EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */,
+				EF2A3E371AB0856A00C4DBA7 /* NIVcheckoutItems.h */,
+				EF2A3E381AB0856A00C4DBA7 /* NIVcheckoutItems.m */,
+				EF2A3E391AB0856A00C4DBA7 /* NIVcompany.h */,
+				EF2A3E3A1AB0856A00C4DBA7 /* NIVcompany.m */,
+				EF2A3E3B1AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.h */,
+				EF2A3E3C1AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m */,
+				EF2A3E3D1AB0856A00C4DBA7 /* NIVHelper.h */,
+				EF2A3E5D1AB0858600C4DBA7 /* DDXML.h */,
+				EF2A3E671AB0858E00C4DBA7 /* NSString+DDXML.h */,
+				EF2A3E681AB0858E00C4DBA7 /* NSString+DDXML.m */,
+				EF2A3E6A1AB0859600C4DBA7 /* DDXMLElementAdditions.h */,
+				EF2A3E6B1AB0859600C4DBA7 /* DDXMLElementAdditions.m */,
+				EF2A3E5E1AB0858600C4DBA7 /* DDXMLDocument.h */,
+				EF2A3E5F1AB0858600C4DBA7 /* DDXMLDocument.m */,
+				EF2A3E601AB0858600C4DBA7 /* DDXMLElement.h */,
+				EF2A3E611AB0858600C4DBA7 /* DDXMLElement.m */,
+				EF2A3E621AB0858600C4DBA7 /* DDXMLNode.h */,
+				EF2A3E631AB0858600C4DBA7 /* DDXMLNode.m */,
+				EF2A3E3E1AB0856A00C4DBA7 /* NIVHelper.m */,
+				EF2A3E3F1AB0856A00C4DBA7 /* NIVinsertTrackingItems.h */,
+				EF2A3E5C1AB0857F00C4DBA7 /* DDXMLPrivate.h */,
+				EF2A3E401AB0856A00C4DBA7 /* NIVinsertTrackingItems.m */,
+				EF2A3E411AB0856A00C4DBA7 /* NIVitem.h */,
+				EF2A3E421AB0856A00C4DBA7 /* NIVitem.m */,
+				EF2A3E431AB0856A00C4DBA7 /* NIVorder.h */,
+				EF2A3E441AB0856A00C4DBA7 /* NIVorder.m */,
+				EF2A3E451AB0856A00C4DBA7 /* NIVposition.h */,
+				EF2A3E461AB0856A00C4DBA7 /* NIVposition.m */,
+				EF2A3E471AB0856A00C4DBA7 /* NIVRequestResultHandler.h */,
+				EF2A3E481AB0856A00C4DBA7 /* NIVRequestResultHandler.m */,
+				EF2A3E491AB0856A00C4DBA7 /* NIVSoapError.h */,
+				EF2A3E4A1AB0856A00C4DBA7 /* NIVSoapError.m */,
+				EF2A3E4B1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.h */,
+				EF2A3E4C1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m */,
+				EF2A3E4D1AB0856A00C4DBA7 /* NIVwebServiceResult.h */,
+				EF2A3E4E1AB0856A00C4DBA7 /* NIVwebServiceResult.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF3656751AAF95E000A0B64D /* BedsideMatcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF36569C1AAF95E000A0B64D /* Build configuration list for PBXNativeTarget "BedsideMatcher" */;
+			buildPhases = (
+				EF3656721AAF95E000A0B64D /* Sources */,
+				EF3656731AAF95E000A0B64D /* Frameworks */,
+				EF3656741AAF95E000A0B64D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BedsideMatcher;
+			productName = BedsideMatcher;
+			productReference = EF3656761AAF95E000A0B64D /* BedsideMatcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF3656911AAF95E000A0B64D /* BedsideMatcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF36569F1AAF95E000A0B64D /* Build configuration list for PBXNativeTarget "BedsideMatcherTests" */;
+			buildPhases = (
+				EF36568E1AAF95E000A0B64D /* Sources */,
+				EF36568F1AAF95E000A0B64D /* Frameworks */,
+				EF3656901AAF95E000A0B64D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF3656941AAF95E000A0B64D /* PBXTargetDependency */,
+			);
+			name = BedsideMatcherTests;
+			productName = BedsideMatcherTests;
+			productReference = EF3656921AAF95E000A0B64D /* BedsideMatcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF36566E1AAF95E000A0B64D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Berner Fachhochschule";
+				TargetAttributes = {
+					EF3656751AAF95E000A0B64D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					EF3656911AAF95E000A0B64D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = EF3656751AAF95E000A0B64D;
+					};
+				};
+			};
+			buildConfigurationList = EF3656711AAF95E000A0B64D /* Build configuration list for PBXProject "BedsideMatcher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF36566D1AAF95E000A0B64D;
+			productRefGroup = EF3656771AAF95E000A0B64D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF3656751AAF95E000A0B64D /* BedsideMatcher */,
+				EF3656911AAF95E000A0B64D /* BedsideMatcherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF3656741AAF95E000A0B64D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3656881AAF95E000A0B64D /* Main.storyboard in Resources */,
+				EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */,
+				EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3656901AAF95E000A0B64D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF3656721AAF95E000A0B64D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3656821AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld in Sources */,
+				EF2A3E661AB0858600C4DBA7 /* DDXMLNode.m in Sources */,
+				EF2A3E581AB0856A00C4DBA7 /* NIVRequestResultHandler.m in Sources */,
+				EF2A3E5A1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m in Sources */,
+				EF36567F1AAF95E000A0B64D /* AppDelegate.m in Sources */,
+				EF2A3E651AB0858600C4DBA7 /* DDXMLElement.m in Sources */,
+				EF2A3E691AB0858E00C4DBA7 /* NSString+DDXML.m in Sources */,
+				EF2A3E561AB0856A00C4DBA7 /* NIVorder.m in Sources */,
+				EF2A3E541AB0856A00C4DBA7 /* NIVinsertTrackingItems.m in Sources */,
+				EF2A3E501AB0856A00C4DBA7 /* NIVcheckoutItems.m in Sources */,
+				EF2A3E521AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m in Sources */,
+				EF2A3E511AB0856A00C4DBA7 /* NIVcompany.m in Sources */,
+				EF2A3E571AB0856A00C4DBA7 /* NIVposition.m in Sources */,
+				EF3656851AAF95E000A0B64D /* ViewController.m in Sources */,
+				EF2A3E5B1AB0856A00C4DBA7 /* NIVwebServiceResult.m in Sources */,
+				EF2A3E551AB0856A00C4DBA7 /* NIVitem.m in Sources */,
+				EF36567C1AAF95E000A0B64D /* main.m in Sources */,
+				EF2A3E4F1AB0856A00C4DBA7 /* NIVcheckinItems.m in Sources */,
+				EF2A3E6C1AB0859600C4DBA7 /* DDXMLElementAdditions.m in Sources */,
+				EF2A3E531AB0856A00C4DBA7 /* NIVHelper.m in Sources */,
+				EF2A3E641AB0858600C4DBA7 /* DDXMLDocument.m in Sources */,
+				EF2A3E591AB0856A00C4DBA7 /* NIVSoapError.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF36568E1AAF95E000A0B64D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3656991AAF95E000A0B64D /* BedsideMatcherTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF3656941AAF95E000A0B64D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF3656751AAF95E000A0B64D /* BedsideMatcher */;
+			targetProxy = EF3656931AAF95E000A0B64D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF3656861AAF95E000A0B64D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF3656871AAF95E000A0B64D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF36568C1AAF95E000A0B64D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF36569A1AAF95E000A0B64D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EF36569B1AAF95E000A0B64D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF36569D1AAF95E000A0B64D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
+				INFOPLIST_FILE = BedsideMatcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF36569E1AAF95E000A0B64D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
+				INFOPLIST_FILE = BedsideMatcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF3656A01AAF95E000A0B64D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BedsideMatcherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BedsideMatcher.app/BedsideMatcher";
+			};
+			name = Debug;
+		};
+		EF3656A11AAF95E000A0B64D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BedsideMatcherTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BedsideMatcher.app/BedsideMatcher";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF3656711AAF95E000A0B64D /* Build configuration list for PBXProject "BedsideMatcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF36569A1AAF95E000A0B64D /* Debug */,
+				EF36569B1AAF95E000A0B64D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF36569C1AAF95E000A0B64D /* Build configuration list for PBXNativeTarget "BedsideMatcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF36569D1AAF95E000A0B64D /* Debug */,
+				EF36569E1AAF95E000A0B64D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF36569F1AAF95E000A0B64D /* Build configuration list for PBXNativeTarget "BedsideMatcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3656A01AAF95E000A0B64D /* Debug */,
+				EF3656A11AAF95E000A0B64D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF3656801AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF3656811AAF95E000A0B64D /* BedsideMatcher.xcdatamodel */,
+			);
+			currentVersion = EF3656811AAF95E000A0B64D /* BedsideMatcher.xcdatamodel */;
+			path = BedsideMatcher.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF36566E1AAF95E000A0B64D /* Project object */;
+}
