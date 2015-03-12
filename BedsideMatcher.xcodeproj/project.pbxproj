@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E07402AD1AB1A65600B0EF01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07402AC1AB1A65600B0EF01 /* Main.storyboard */; };
 		EF2A3E4F1AB0856A00C4DBA7 /* NIVcheckinItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */; };
 		EF2A3E501AB0856A00C4DBA7 /* NIVcheckoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E381AB0856A00C4DBA7 /* NIVcheckoutItems.m */; };
 		EF2A3E511AB0856A00C4DBA7 /* NIVcompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E3A1AB0856A00C4DBA7 /* NIVcompany.m */; };
@@ -30,7 +31,6 @@
 		EF36567F1AAF95E000A0B64D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF36567E1AAF95E000A0B64D /* AppDelegate.m */; };
 		EF3656821AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF3656801AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld */; };
 		EF3656851AAF95E000A0B64D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3656841AAF95E000A0B64D /* ViewController.m */; };
-		EF3656881AAF95E000A0B64D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3656861AAF95E000A0B64D /* Main.storyboard */; };
 		EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3656891AAF95E000A0B64D /* Images.xcassets */; };
 		EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */; };
 		EF3656991AAF95E000A0B64D /* BedsideMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */; };
@@ -51,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E07402AC1AB1A65600B0EF01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EF2A3E351AB0856A00C4DBA7 /* NIVcheckinItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckinItems.h; sourceTree = "<group>"; };
 		EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVcheckinItems.m; sourceTree = "<group>"; };
 		EF2A3E371AB0856A00C4DBA7 /* NIVcheckoutItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckoutItems.h; sourceTree = "<group>"; };
@@ -98,7 +99,6 @@
 		EF3656811AAF95E000A0B64D /* BedsideMatcher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BedsideMatcher.xcdatamodel; sourceTree = "<group>"; };
 		EF3656831AAF95E000A0B64D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EF3656841AAF95E000A0B64D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EF3656871AAF95E000A0B64D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF3656891AAF95E000A0B64D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EF36568C1AAF95E000A0B64D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EF3656921AAF95E000A0B64D /* BedsideMatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BedsideMatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,8 +164,8 @@
 				EF6339141AB0EAFE002ACE34 /* BeaconViewController.h */,
 				EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */,
 				EF6339171AB0EB0D002ACE34 /* VerordnungenViewController.h */,
+				E07402AC1AB1A65600B0EF01 /* Main.storyboard */,
 				EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */,
-				EF3656861AAF95E000A0B64D /* Main.storyboard */,
 				EF902E891AB0A7BF00347176 /* LoginViewController.h */,
 				EF902E8A1AB0A7BF00347176 /* LoginViewController.m */,
 				EF3656891AAF95E000A0B64D /* Images.xcassets */,
@@ -327,10 +327,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF3656881AAF95E000A0B64D /* Main.storyboard in Resources */,
 				EF30A1B31AB09ADC003DD2EA /* patsy.png in Resources */,
 				EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */,
 				EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */,
+				E07402AD1AB1A65600B0EF01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,14 +396,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EF3656861AAF95E000A0B64D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EF3656871AAF95E000A0B64D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

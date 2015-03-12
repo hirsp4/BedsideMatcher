@@ -9,5 +9,7 @@
 #import "ViewController.h"
 
 @interface VerordnungenViewController : ViewController
+@property (weak, nonatomic) IBOutlet UISearchBar *searchPrescriptionField;
+
 
 @end
