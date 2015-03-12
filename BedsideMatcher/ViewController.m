@@ -19,13 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NIVSupplyChainServiceBinding* service = [[NIVSupplyChainServiceBinding alloc]init];
-    NSLog(@"%@",[service sayHelloWorldFrom:@"Patrick" __error:nil]);
-    NIVwebServiceResult* result = [service getCheckedInItems:@"7640166731078" __error:nil];
-    NIVitem* item =[[result getItems]firstObject];
-    NSLog(@"%i",[[result getItems]count]);
-    NSLog(@"%@",[item getExpiryDate]);
-     NSLog(@"%@",[item getGTIN]);
+    //NIVSupplyChainServiceBinding* service = [[NIVSupplyChainServiceBinding alloc]init];
+    //NSLog(@"%@",[service sayHelloWorldFrom:@"Patrick" __error:nil]);
+    //NIVwebServiceResult* result = [service getCheckedInItems:@"7640166731078" __error:nil];
+   // NIVitem* item =[[result getItems]firstObject];
+    //NSLog(@"%i",[[result getItems]count]);
+    //NSLog(@"%@",[item getExpiryDate]);
+     //NSLog(@"%@",[item getGTIN]);
 
     
     

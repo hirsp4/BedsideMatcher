@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>912C7089-8981-41B9-B1FA-F07E76B21489</string>
+	<string>091417BB-62DE-479E-972C-D335E2D8ADD2</string>
 	<key>IDESourceControlProjectName</key>
 	<string>BedsideMatcher</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>FBBD73104969010B0BBA08E8562ABF8770575910</string>
 			<key>IDESourceControlWCCName</key>
-			<string>BedsideMatcher</string>
+			<string>BedsideMatcher_iOS</string>
 		</dict>
 	</array>
 </dict>
