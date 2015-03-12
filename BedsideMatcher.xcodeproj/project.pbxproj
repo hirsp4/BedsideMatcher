@@ -25,6 +25,7 @@
 		EF2A3E661AB0858600C4DBA7 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E631AB0858600C4DBA7 /* DDXMLNode.m */; };
 		EF2A3E691AB0858E00C4DBA7 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E681AB0858E00C4DBA7 /* NSString+DDXML.m */; };
 		EF2A3E6C1AB0859600C4DBA7 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E6B1AB0859600C4DBA7 /* DDXMLElementAdditions.m */; };
+		EF30A1B31AB09ADC003DD2EA /* patsy.png in Resources */ = {isa = PBXBuildFile; fileRef = EF30A1B21AB09ADC003DD2EA /* patsy.png */; };
 		EF36567C1AAF95E000A0B64D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF36567B1AAF95E000A0B64D /* main.m */; };
 		EF36567F1AAF95E000A0B64D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF36567E1AAF95E000A0B64D /* AppDelegate.m */; };
 		EF3656821AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF3656801AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld */; };
@@ -33,6 +34,10 @@
 		EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3656891AAF95E000A0B64D /* Images.xcassets */; };
 		EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */; };
 		EF3656991AAF95E000A0B64D /* BedsideMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */; };
+		EF6339131AB0EAEB002ACE34 /* MedikamenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */; };
+		EF6339161AB0EAFE002ACE34 /* BeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */; };
+		EF6339191AB0EB0D002ACE34 /* VerordnungenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */; };
+		EF902E8B1AB0A7BF00347176 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF902E8A1AB0A7BF00347176 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,7 @@
 		EF2A3E681AB0858E00C4DBA7 /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
 		EF2A3E6A1AB0859600C4DBA7 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
 		EF2A3E6B1AB0859600C4DBA7 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		EF30A1B21AB09ADC003DD2EA /* patsy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = patsy.png; sourceTree = "<group>"; };
 		EF3656761AAF95E000A0B64D /* BedsideMatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BedsideMatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF36567A1AAF95E000A0B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF36567B1AAF95E000A0B64D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,6 +104,14 @@
 		EF3656921AAF95E000A0B64D /* BedsideMatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BedsideMatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3656971AAF95E000A0B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BedsideMatcherTests.m; sourceTree = "<group>"; };
+		EF6339111AB0EAEB002ACE34 /* MedikamenteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedikamenteViewController.h; sourceTree = "<group>"; };
+		EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedikamenteViewController.m; sourceTree = "<group>"; };
+		EF6339141AB0EAFE002ACE34 /* BeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconViewController.h; sourceTree = "<group>"; };
+		EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconViewController.m; sourceTree = "<group>"; };
+		EF6339171AB0EB0D002ACE34 /* VerordnungenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerordnungenViewController.h; sourceTree = "<group>"; };
+		EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerordnungenViewController.m; sourceTree = "<group>"; };
+		EF902E891AB0A7BF00347176 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EF902E8A1AB0A7BF00347176 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,8 +157,17 @@
 				EF36567D1AAF95E000A0B64D /* AppDelegate.h */,
 				EF36567E1AAF95E000A0B64D /* AppDelegate.m */,
 				EF3656831AAF95E000A0B64D /* ViewController.h */,
+				EF30A1B21AB09ADC003DD2EA /* patsy.png */,
 				EF3656841AAF95E000A0B64D /* ViewController.m */,
+				EF6339111AB0EAEB002ACE34 /* MedikamenteViewController.h */,
+				EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */,
+				EF6339141AB0EAFE002ACE34 /* BeaconViewController.h */,
+				EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */,
+				EF6339171AB0EB0D002ACE34 /* VerordnungenViewController.h */,
+				EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */,
 				EF3656861AAF95E000A0B64D /* Main.storyboard */,
+				EF902E891AB0A7BF00347176 /* LoginViewController.h */,
+				EF902E8A1AB0A7BF00347176 /* LoginViewController.m */,
 				EF3656891AAF95E000A0B64D /* Images.xcassets */,
 				EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */,
 				EF3656801AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld */,
@@ -305,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3656881AAF95E000A0B64D /* Main.storyboard in Resources */,
+				EF30A1B31AB09ADC003DD2EA /* patsy.png in Resources */,
 				EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */,
 				EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */,
 			);
@@ -325,13 +349,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3656821AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld in Sources */,
+				EF6339191AB0EB0D002ACE34 /* VerordnungenViewController.m in Sources */,
+				EF902E8B1AB0A7BF00347176 /* LoginViewController.m in Sources */,
 				EF2A3E661AB0858600C4DBA7 /* DDXMLNode.m in Sources */,
 				EF2A3E581AB0856A00C4DBA7 /* NIVRequestResultHandler.m in Sources */,
 				EF2A3E5A1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m in Sources */,
 				EF36567F1AAF95E000A0B64D /* AppDelegate.m in Sources */,
 				EF2A3E651AB0858600C4DBA7 /* DDXMLElement.m in Sources */,
 				EF2A3E691AB0858E00C4DBA7 /* NSString+DDXML.m in Sources */,
+				EF6339161AB0EAFE002ACE34 /* BeaconViewController.m in Sources */,
 				EF2A3E561AB0856A00C4DBA7 /* NIVorder.m in Sources */,
+				EF6339131AB0EAEB002ACE34 /* MedikamenteViewController.m in Sources */,
 				EF2A3E541AB0856A00C4DBA7 /* NIVinsertTrackingItems.m in Sources */,
 				EF2A3E501AB0856A00C4DBA7 /* NIVcheckoutItems.m in Sources */,
 				EF2A3E521AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m in Sources */,
@@ -476,6 +504,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -492,6 +521,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
