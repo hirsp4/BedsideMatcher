@@ -12,6 +12,6 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *searchPrescriptionField;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewVerordnungen;
-@property (weak, nonatomic) IBOutlet UIView *tableCellVerordnungen;
+
 
 @end

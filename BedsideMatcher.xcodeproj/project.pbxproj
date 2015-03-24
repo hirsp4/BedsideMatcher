@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E07402AD1AB1A65600B0EF01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07402AC1AB1A65600B0EF01 /* Main.storyboard */; };
+		E09C91E51AC15273006804E9 /* iBeaconLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E41AC15273006804E9 /* iBeaconLogo.png */; };
+		E09C91E71AC15E98006804E9 /* notebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E61AC15E98006804E9 /* notebook.png */; };
+		E09C91E91AC15FA2006804E9 /* medicine.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E81AC15FA2006804E9 /* medicine.png */; };
+		E09C91F31AC166D2006804E9 /* LogoApp.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91F21AC166D2006804E9 /* LogoApp.png */; };
 		EF2A3E4F1AB0856A00C4DBA7 /* NIVcheckinItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */; };
 		EF2A3E501AB0856A00C4DBA7 /* NIVcheckoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E381AB0856A00C4DBA7 /* NIVcheckoutItems.m */; };
 		EF2A3E511AB0856A00C4DBA7 /* NIVcompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E3A1AB0856A00C4DBA7 /* NIVcompany.m */; };
@@ -52,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		E07402AC1AB1A65600B0EF01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E09C91E41AC15273006804E9 /* iBeaconLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iBeaconLogo.png; sourceTree = "<group>"; };
+		E09C91E61AC15E98006804E9 /* notebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notebook.png; sourceTree = "<group>"; };
+		E09C91E81AC15FA2006804E9 /* medicine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medicine.png; sourceTree = "<group>"; };
+		E09C91F21AC166D2006804E9 /* LogoApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoApp.png; sourceTree = "<group>"; };
 		EF2A3E351AB0856A00C4DBA7 /* NIVcheckinItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckinItems.h; sourceTree = "<group>"; };
 		EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVcheckinItems.m; sourceTree = "<group>"; };
 		EF2A3E371AB0856A00C4DBA7 /* NIVcheckoutItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckoutItems.h; sourceTree = "<group>"; };
@@ -90,7 +98,7 @@
 		EF2A3E681AB0858E00C4DBA7 /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
 		EF2A3E6A1AB0859600C4DBA7 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
 		EF2A3E6B1AB0859600C4DBA7 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
-		EF30A1B21AB09ADC003DD2EA /* patsy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = patsy.png; sourceTree = "<group>"; };
+		EF30A1B21AB09ADC003DD2EA /* patsy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = patsy.png; path = BedsideMatcher/patsy.png; sourceTree = "<group>"; };
 		EF3656761AAF95E000A0B64D /* BedsideMatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BedsideMatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF36567A1AAF95E000A0B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF36567B1AAF95E000A0B64D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -132,9 +140,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E09C91E11AC1515F006804E9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E09C91F21AC166D2006804E9 /* LogoApp.png */,
+				E09C91E81AC15FA2006804E9 /* medicine.png */,
+				E09C91E61AC15E98006804E9 /* notebook.png */,
+				E09C91E41AC15273006804E9 /* iBeaconLogo.png */,
+				EF30A1B21AB09ADC003DD2EA /* patsy.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		EF36566D1AAF95E000A0B64D = {
 			isa = PBXGroup;
 			children = (
+				E09C91E11AC1515F006804E9 /* Images */,
 				EF3656A21AAF960100A0B64D /* Service */,
 				EF3656781AAF95E000A0B64D /* BedsideMatcher */,
 				EF3656951AAF95E000A0B64D /* BedsideMatcherTests */,
@@ -157,7 +178,6 @@
 				EF36567D1AAF95E000A0B64D /* AppDelegate.h */,
 				EF36567E1AAF95E000A0B64D /* AppDelegate.m */,
 				EF3656831AAF95E000A0B64D /* ViewController.h */,
-				EF30A1B21AB09ADC003DD2EA /* patsy.png */,
 				EF3656841AAF95E000A0B64D /* ViewController.m */,
 				EF6339111AB0EAEB002ACE34 /* MedikamenteViewController.h */,
 				EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */,
@@ -327,8 +347,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E09C91F31AC166D2006804E9 /* LogoApp.png in Resources */,
+				E09C91E51AC15273006804E9 /* iBeaconLogo.png in Resources */,
+				E09C91E71AC15E98006804E9 /* notebook.png in Resources */,
 				EF30A1B31AB09ADC003DD2EA /* patsy.png in Resources */,
 				EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */,
+				E09C91E91AC15FA2006804E9 /* medicine.png in Resources */,
 				EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */,
 				E07402AD1AB1A65600B0EF01 /* Main.storyboard in Resources */,
 			);
