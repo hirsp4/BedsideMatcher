@@ -10,6 +10,7 @@
 #import "NIVSupplyChainServiceBinding.h"
 #import "NIVwebServiceResult.h"
 #import "NIVitem.h"
+#import "BeaconViewController.h"
 @interface ViewController ()
 
 @end
@@ -26,10 +27,11 @@
     //NSLog(@"%i",[[result getItems]count]);
     //NSLog(@"%@",[item getExpiryDate]);
      //NSLog(@"%@",[item getGTIN]);
+    
+}
 
-    
-    
-    
+-(void)viewWillAppear:(BOOL)animated{
+    [self.tabBarController setSelectedIndex:1];
 }
 
 - (void)didReceiveMemoryWarning {

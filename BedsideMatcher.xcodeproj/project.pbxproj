@@ -186,24 +186,10 @@
 		EF3656781AAF95E000A0B64D /* BedsideMatcher */ = {
 			isa = PBXGroup;
 			children = (
-				EF36567D1AAF95E000A0B64D /* AppDelegate.h */,
-				EF36567E1AAF95E000A0B64D /* AppDelegate.m */,
-				EF3656831AAF95E000A0B64D /* ViewController.h */,
-				EF3656841AAF95E000A0B64D /* ViewController.m */,
-				EF6339111AB0EAEB002ACE34 /* MedikamenteViewController.h */,
-				EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */,
-				EF6339141AB0EAFE002ACE34 /* BeaconViewController.h */,
-				EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */,
-				EF6339171AB0EB0D002ACE34 /* VerordnungenViewController.h */,
-				E07402AC1AB1A65600B0EF01 /* Main.storyboard */,
-				E0440DE51ACC28D70024E445 /* BarcodeViewController.h */,
-				E0440DE61ACC28D70024E445 /* BarcodeViewController.m */,
-				E0A2F65D1ACC084D001A02BE /* TableViewCellPatients.h */,
-				E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */,
-				E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */,
-				EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */,
-				EF902E891AB0A7BF00347176 /* LoginViewController.h */,
-				EF902E8A1AB0A7BF00347176 /* LoginViewController.m */,
+				EF6CD1A31ACC5411000E069E /* General */,
+				EF6CD1A21ACC53CF000E069E /* Medikamente Tab */,
+				EF6CD1A11ACC53C7000E069E /* Verordnungen Tab */,
+				EF6CD1A01ACC53B9000E069E /* Beacon Tab */,
 				EF3656891AAF95E000A0B64D /* Images.xcassets */,
 				EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */,
 				EF3656801AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld */,
@@ -281,6 +267,52 @@
 				EF2A3E4E1AB0856A00C4DBA7 /* NIVwebServiceResult.m */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		EF6CD1A01ACC53B9000E069E /* Beacon Tab */ = {
+			isa = PBXGroup;
+			children = (
+				E0440DE51ACC28D70024E445 /* BarcodeViewController.h */,
+				E0440DE61ACC28D70024E445 /* BarcodeViewController.m */,
+				E0A2F65D1ACC084D001A02BE /* TableViewCellPatients.h */,
+				EF6339141AB0EAFE002ACE34 /* BeaconViewController.h */,
+				EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */,
+				E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */,
+				E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */,
+			);
+			name = "Beacon Tab";
+			sourceTree = "<group>";
+		};
+		EF6CD1A11ACC53C7000E069E /* Verordnungen Tab */ = {
+			isa = PBXGroup;
+			children = (
+				EF6339171AB0EB0D002ACE34 /* VerordnungenViewController.h */,
+				EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */,
+			);
+			name = "Verordnungen Tab";
+			sourceTree = "<group>";
+		};
+		EF6CD1A21ACC53CF000E069E /* Medikamente Tab */ = {
+			isa = PBXGroup;
+			children = (
+				EF6339111AB0EAEB002ACE34 /* MedikamenteViewController.h */,
+				EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */,
+			);
+			name = "Medikamente Tab";
+			sourceTree = "<group>";
+		};
+		EF6CD1A31ACC5411000E069E /* General */ = {
+			isa = PBXGroup;
+			children = (
+				EF36567D1AAF95E000A0B64D /* AppDelegate.h */,
+				EF36567E1AAF95E000A0B64D /* AppDelegate.m */,
+				EF3656831AAF95E000A0B64D /* ViewController.h */,
+				EF3656841AAF95E000A0B64D /* ViewController.m */,
+				E07402AC1AB1A65600B0EF01 /* Main.storyboard */,
+				EF902E891AB0A7BF00347176 /* LoginViewController.h */,
+				EF902E8A1AB0A7BF00347176 /* LoginViewController.m */,
+			);
+			name = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
