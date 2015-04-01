@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E0440DE41ACC21820024E445 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = E0440DE31ACC21820024E445 /* barcode.png */; };
+		E0440DE71ACC28D70024E445 /* BarcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0440DE61ACC28D70024E445 /* BarcodeViewController.m */; };
 		E07402AD1AB1A65600B0EF01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07402AC1AB1A65600B0EF01 /* Main.storyboard */; };
 		E09C91E51AC15273006804E9 /* iBeaconLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E41AC15273006804E9 /* iBeaconLogo.png */; };
 		E09C91E71AC15E98006804E9 /* notebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E61AC15E98006804E9 /* notebook.png */; };
@@ -59,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		E0440DE31ACC21820024E445 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
+		E0440DE51ACC28D70024E445 /* BarcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeViewController.h; sourceTree = "<group>"; };
+		E0440DE61ACC28D70024E445 /* BarcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeViewController.m; sourceTree = "<group>"; };
 		E07402AC1AB1A65600B0EF01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E09C91E41AC15273006804E9 /* iBeaconLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iBeaconLogo.png; sourceTree = "<group>"; };
 		E09C91E61AC15E98006804E9 /* notebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notebook.png; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 				EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */,
 				EF6339171AB0EB0D002ACE34 /* VerordnungenViewController.h */,
 				E07402AC1AB1A65600B0EF01 /* Main.storyboard */,
+				E0440DE51ACC28D70024E445 /* BarcodeViewController.h */,
+				E0440DE61ACC28D70024E445 /* BarcodeViewController.m */,
 				E0A2F65D1ACC084D001A02BE /* TableViewCellPatients.h */,
 				E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */,
 				E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */,
@@ -403,6 +408,7 @@
 				EF2A3E521AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m in Sources */,
 				EF2A3E511AB0856A00C4DBA7 /* NIVcompany.m in Sources */,
 				EF2A3E571AB0856A00C4DBA7 /* NIVposition.m in Sources */,
+				E0440DE71ACC28D70024E445 /* BarcodeViewController.m in Sources */,
 				EF3656851AAF95E000A0B64D /* ViewController.m in Sources */,
 				EF2A3E5B1AB0856A00C4DBA7 /* NIVwebServiceResult.m in Sources */,
 				EF2A3E551AB0856A00C4DBA7 /* NIVitem.m in Sources */,
