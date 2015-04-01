@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
-@interface BeaconViewController : ViewController
+@interface BeaconViewController : ViewController <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UITableView *tableViewBeacon;
 
 @end

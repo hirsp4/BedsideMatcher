@@ -12,6 +12,8 @@
 		E09C91E71AC15E98006804E9 /* notebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E61AC15E98006804E9 /* notebook.png */; };
 		E09C91E91AC15FA2006804E9 /* medicine.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E81AC15FA2006804E9 /* medicine.png */; };
 		E09C91F31AC166D2006804E9 /* LogoApp.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91F21AC166D2006804E9 /* LogoApp.png */; };
+		E0A2F6601ACC084D001A02BE /* TableViewCellPatients.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */; };
+		E0A2F6611ACC084D001A02BE /* TableViewCellPatients.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */; };
 		EF2A3E4F1AB0856A00C4DBA7 /* NIVcheckinItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */; };
 		EF2A3E501AB0856A00C4DBA7 /* NIVcheckoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E381AB0856A00C4DBA7 /* NIVcheckoutItems.m */; };
 		EF2A3E511AB0856A00C4DBA7 /* NIVcompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E3A1AB0856A00C4DBA7 /* NIVcompany.m */; };
@@ -60,6 +62,9 @@
 		E09C91E61AC15E98006804E9 /* notebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notebook.png; sourceTree = "<group>"; };
 		E09C91E81AC15FA2006804E9 /* medicine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medicine.png; sourceTree = "<group>"; };
 		E09C91F21AC166D2006804E9 /* LogoApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoApp.png; sourceTree = "<group>"; };
+		E0A2F65D1ACC084D001A02BE /* TableViewCellPatients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellPatients.h; sourceTree = "<group>"; };
+		E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellPatients.m; sourceTree = "<group>"; };
+		E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellPatients.xib; sourceTree = "<group>"; };
 		EF2A3E351AB0856A00C4DBA7 /* NIVcheckinItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckinItems.h; sourceTree = "<group>"; };
 		EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVcheckinItems.m; sourceTree = "<group>"; };
 		EF2A3E371AB0856A00C4DBA7 /* NIVcheckoutItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckoutItems.h; sourceTree = "<group>"; };
@@ -185,6 +190,9 @@
 				EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */,
 				EF6339171AB0EB0D002ACE34 /* VerordnungenViewController.h */,
 				E07402AC1AB1A65600B0EF01 /* Main.storyboard */,
+				E0A2F65D1ACC084D001A02BE /* TableViewCellPatients.h */,
+				E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */,
+				E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */,
 				EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */,
 				EF902E891AB0A7BF00347176 /* LoginViewController.h */,
 				EF902E8A1AB0A7BF00347176 /* LoginViewController.m */,
@@ -316,6 +324,7 @@
 				TargetAttributes = {
 					EF3656751AAF95E000A0B64D = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 858Y9EWZ4B;
 					};
 					EF3656911AAF95E000A0B64D = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -349,6 +358,7 @@
 			files = (
 				E09C91F31AC166D2006804E9 /* LogoApp.png in Resources */,
 				E09C91E51AC15273006804E9 /* iBeaconLogo.png in Resources */,
+				E0A2F6611ACC084D001A02BE /* TableViewCellPatients.xib in Resources */,
 				E09C91E71AC15E98006804E9 /* notebook.png in Resources */,
 				EF30A1B31AB09ADC003DD2EA /* patsy.png in Resources */,
 				EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */,
@@ -397,6 +407,7 @@
 				EF2A3E6C1AB0859600C4DBA7 /* DDXMLElementAdditions.m in Sources */,
 				EF2A3E531AB0856A00C4DBA7 /* NIVHelper.m in Sources */,
 				EF2A3E641AB0858600C4DBA7 /* DDXMLDocument.m in Sources */,
+				E0A2F6601ACC084D001A02BE /* TableViewCellPatients.m in Sources */,
 				EF2A3E591AB0856A00C4DBA7 /* NIVSoapError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
