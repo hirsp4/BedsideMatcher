@@ -21,9 +21,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+        Patients = [NSArray arrayWithObjects: @"Hirschi, Patrick (12.01.1990, m)", @"Gnägi, Johannes (28.03.1989, m)", @"Zehnder, Patrizia (16.08.1992, w)", nil];
 }
 -(void) viewWillAppear:(BOOL)animated{
-    Patients = [NSArray arrayWithObjects: @"Hirschi, Patrick (12.01.1990, m)", @"Gnägi, Johannes (28.03.1989, m)", @"Zehnder, Patrizia (16.08.1992, w)", nil];
+
 
 }
 
@@ -52,10 +53,10 @@
     
     TableViewCellPatients *cell = (TableViewCellPatients *)[tableView dequeueReusableCellWithIdentifier: CellIdentifier];
     if (cell == nil) {
-        cell = [[TableViewCellPatients alloc] init];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TableViewCellPatients" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     cell.beaconsLabelPatients.text=[Patients objectAtIndex:indexPath.row];
-    NSLog(@"%@",cell.beaconsLabelPatients.text);
 
     return cell;
 }
