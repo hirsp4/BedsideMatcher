@@ -21,7 +21,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+        // Create Array
         Patients = [NSArray arrayWithObjects: @"Hirschi, Patrick (12.01.1990, m)", @"Gnägi, Johannes (28.03.1989, m)", @"Zehnder, Patrizia (16.08.1992, w)", nil];
+
+    [self setBarcodeButton];
 }
 -(void) viewWillAppear:(BOOL)animated{
 
@@ -65,6 +68,27 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     return 45.0;
+}
+
+// create Barcode-Button
+- (void)setBarcodeButton{
+
+UIImage *barcodeImage = [[UIImage imageNamed:@"barcode.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+    UIButton *barcode = [UIButton buttonWithType:UIButtonTypeCustom];
+    [barcode addTarget:self
+         action:@selector(showBarcodeView:)
+         forControlEvents:UIControlEventTouchUpInside];
+    barcode.bounds = CGRectMake( 0, 0, 36, 31);
+    [barcode setImage:barcodeImage forState:UIControlStateNormal];
+    UIBarButtonItem *barcodeButton = [[UIBarButtonItem alloc] initWithCustomView:barcode];
+    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle: @"Patienten in der Nähe"];
+    item.leftBarButtonItem = barcodeButton;
+    [_navBarBeacon pushNavigationItem:item animated:NO];
+}
+
+- (IBAction)showBarcodeView:(id)sender {
+
+    [self performSegueWithIdentifier:@"showBarcodeView" sender:self];
 }
 
 /*

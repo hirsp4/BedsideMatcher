@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0440DE41ACC21820024E445 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = E0440DE31ACC21820024E445 /* barcode.png */; };
 		E07402AD1AB1A65600B0EF01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07402AC1AB1A65600B0EF01 /* Main.storyboard */; };
 		E09C91E51AC15273006804E9 /* iBeaconLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E41AC15273006804E9 /* iBeaconLogo.png */; };
 		E09C91E71AC15E98006804E9 /* notebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E61AC15E98006804E9 /* notebook.png */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E0440DE31ACC21820024E445 /* barcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barcode.png; sourceTree = "<group>"; };
 		E07402AC1AB1A65600B0EF01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E09C91E41AC15273006804E9 /* iBeaconLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iBeaconLogo.png; sourceTree = "<group>"; };
 		E09C91E61AC15E98006804E9 /* notebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notebook.png; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		E09C91E11AC1515F006804E9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E0440DE31ACC21820024E445 /* barcode.png */,
 				E09C91F21AC166D2006804E9 /* LogoApp.png */,
 				E09C91E81AC15FA2006804E9 /* medicine.png */,
 				E09C91E61AC15E98006804E9 /* notebook.png */,
@@ -358,6 +361,7 @@
 			files = (
 				E09C91F31AC166D2006804E9 /* LogoApp.png in Resources */,
 				E09C91E51AC15273006804E9 /* iBeaconLogo.png in Resources */,
+				E0440DE41ACC21820024E445 /* barcode.png in Resources */,
 				E0A2F6611ACC084D001A02BE /* TableViewCellPatients.xib in Resources */,
 				E09C91E71AC15E98006804E9 /* notebook.png in Resources */,
 				EF30A1B31AB09ADC003DD2EA /* patsy.png in Resources */,

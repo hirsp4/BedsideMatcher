@@ -76,12 +76,34 @@
                     <tabBarItem key="tabBarItem" title="iBeacon" image="iBeaconLogo.png" id="dM4-9i-QEq"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="navBarBeacon" destination="LyL-a4-IsY" id="VNI-3y-MK2"/>
                         <outlet property="tableViewBeacon" destination="ucG-8R-WWO" id="toF-jf-Unx"/>
+                        <segue destination="KtO-MN-BZx" kind="custom" identifier="showBarcodeView" id="om7-kw-lPt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ueb-KI-FzN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="526" y="275"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2YB-Jw-Wjn">
+            <objects>
+                <viewController id="KtO-MN-BZx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xR8-8r-n8U"/>
+                        <viewControllerLayoutGuide type="bottom" id="4GH-od-43O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jel-JR-9zH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7CK-fh-uX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="275"/>
         </scene>
         <!--Verordnungen-->
         <scene sceneID="oBU-1Z-izr">

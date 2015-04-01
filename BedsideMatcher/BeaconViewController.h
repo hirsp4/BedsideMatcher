@@ -10,5 +10,6 @@
 
 @interface BeaconViewController : ViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewBeacon;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBarBeacon;
 
 @end
