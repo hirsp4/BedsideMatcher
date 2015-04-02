@@ -7,16 +7,18 @@
 //
 
 #import "AppDelegate.h"
-
+#import "snfsdk.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+@synthesize deviceManager;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    deviceManager = [[LeDeviceManager alloc] initWithSupportedDevices:@[[LeSnfDevice class]] delegate:self];
+    [deviceManager startScan];
     return YES;
 }
 
@@ -123,5 +125,100 @@
         }
     }
 }
+
+#pragma LeDeviceManagerDelegate Methods
+- (void)leDeviceManager:(LeDeviceManager *)mgr didAddNewDevice:(LeDevice *)dev
+{
+    //set device delegate for call back
+    ((LeSnfDevice *)dev).delegate = self;
+    NSLog(@"added a device");
+}
+
+//delgate methods that are here for completion but not used
+
+//used for tracking beacons and grouping them (implementation is up to you as no one way would work for everyone)
+-(NSArray *)retrieveStoredDeviceUUIDsForLeDeviceManager:(LeDeviceManager *)mgr {return nil;}
+-(id)leDeviceManager:(LeDeviceManager *)mgr valueForDeviceUUID:(CFUUIDRef)uuid key:(NSString *)key {return nil;}
+-(void)leDeviceManager:(LeDeviceManager *)mgr setValue:(id)value forDeviceUUID:(CFUUIDRef)uuid key:(NSString *)key {}
+-(void)leDeviceManager:(LeDeviceManager *)mgr didDiscoverDevice:(LeDevice *)dev advertisementData:(NSDictionary *)advData RSSI:(NSNumber *)RSSI{}
+
+
+//this is used incase you have beacons around that are not reconized by the SDK
+- (Class) leDeviceManager:(LeDeviceManager *)mgr didDiscoverUnknownPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advData RSSI:(NSNumber *)RSSI
+{
+    return nil;
+}
+
+#pragma LeSnfDeviceDelegate Methods
+
+
+//this is called everytime the beacon changes state (connected, connecting, disconnected, and during fw updates)
+-(void)leSnfDevice:(LeSnfDevice *)dev didChangeState:(int)state{
+    switch (state) {
+        case LE_DEVICE_STATE_CONNECTED:
+            
+            break;
+            
+        case LE_DEVICE_STATE_CONNECTING:
+            
+            break;
+        case LE_DEVICE_STATE_DISCONNECTED:
+            
+            break;
+            
+        default: //firmware update
+            
+            break;
+    }
+    
+}
+
+//this is called when packets are recieved
+- (void)didDiscoverLeSnfDevice:(LeSnfDevice *)dev {}
+
+//called when broadcast data is updated
+-(void)leSnfDevice:(LeSnfDevice *)dev didUpdateBroadcastData:(NSData *)data
+{
+}
+
+//all of the didUpdate... methods are callbacks to confirm if something worked on not
+-(void)leSnfDevice:(LeSnfDevice *)dev didUpdateBroadcastServiceData:(NSDictionary *)serviceDict {}
+-(void)leSnfDevice:(LeSnfDevice *)dev didUpdateBroadcastUUID:(CBUUID *)uuid {}
+
+//update firmware if needed
+- (NSData *)firmwareDataForLeSnfDevice:(LeSnfDevice *)dev
+{
+    return nil;
+}
+
+
+- (NSData *)authenticationKeyforLeSnfDevice:(LeSnfDevice *)dev
+{
+    return nil;
+}
+
+-(BOOL)broadcastAuthStatus:(LeSnfAuthStatus)status forLeSnfDevice:(LeSnfDevice *)dev{
+    return NO;
+}
+
+-(void)didSetBroadcastDataForLeSnfDevice:(LeSnfDevice *)dev success:(BOOL)success
+{
+    success == YES ? NSLog(@"written") : NSLog(@"not written");
+}
+
+-(void)didReadBroadcastData:(NSDictionary *)dict forLeSnfDevice:(LeSnfDevice *)dev {
+    NSLog(@"%@", dict);
+}
+
+//several unused delegate methods... here for completion, but not used by this app
+-(void)didSetBroadcastKeyForLeSnfDevice:(LeSnfDevice *)dev success:(BOOL)success {}
+-(NSData *)broadcastKeyforLeSnfDevice:(LeSnfDevice *)dev atIndex:(int)index {return nil;}
+
+//this method will be called after you click the page me button in the app (assuming the device is connected)
+-(void)didEnableAlertForLeSnfDevice:(LeSnfDevice *)dev success:(BOOL)success {}
+-(void)didEnableConnectionLossAlertForLeSnfDevice:(LeSnfDevice *)dev success:(BOOL)success {}
+-(void)didSetPairingRssiForLeSnfDevice:(LeSnfDevice *)dev success:(BOOL)success {}
+-(void)didSetTemperatureCalibrationForLeSnfDevice:(LeSnfDevice *)dev success:(BOOL)success{}
+-(void)didReadTemperatureLog:(NSArray *)log forLeSnfDevice:(LeSnfDevice *)dev {}
 
 @end

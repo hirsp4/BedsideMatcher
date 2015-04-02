@@ -8,6 +8,10 @@
 
 #import "BeaconViewController.h"
 #import "TableViewCellPatients.h"
+#import "BeaconTableViewCell.h"
+#import "AppDelegate.h"
+#import "snfsdk.h"
+#import "DetailBeaconViewController.h"
 
 @interface BeaconViewController (){
     NSArray *Patients;
@@ -16,15 +20,15 @@
 @end
 
 @implementation BeaconViewController
-
+@synthesize tableViewBeacon;
+NSTimer *timer;
+LeSnfDevice *selectedDevice;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-        // Create Array
-        Patients = [NSArray arrayWithObjects: @"Hirschi, Patrick (12.01.1990, m)", @"Gnägi, Johannes (28.03.1989, m)", @"Zehnder, Patrizia (16.08.1992, w)", nil];
-
     [self setBarcodeButton];
+     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(reloadTable) userInfo:NULL repeats:YES];
 }
 -(void) viewWillAppear:(BOOL)animated{
 
@@ -36,38 +40,57 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(NSArray *)getBeaconArray{
+    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    return appDel.deviceManager.devList;
+}
 
-// Customize the number of sections in the table view
+-(void)reloadTable{
+    [tableViewBeacon reloadData];
+}
+
+
+#pragma mark - Table view data source
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
-// Customize the number of rows in the section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return Patients.count;
+    return [self getBeaconArray].count;
 }
 
-// Customize the appearance of table view cells
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"TableViewCellPatients";
+    BeaconTableViewCell *cell = [self.tableViewBeacon dequeueReusableCellWithIdentifier: @"BEACONCELL" forIndexPath:indexPath];
     
-    TableViewCellPatients *cell = (TableViewCellPatients *)[tableView dequeueReusableCellWithIdentifier: CellIdentifier];
-    if (cell == nil) {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TableViewCellPatients" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-    cell.beaconsLabelPatients.text=[Patients objectAtIndex:indexPath.row];
-
+    LeSnfDevice *device = [[self getBeaconArray]objectAtIndexedSubscript:indexPath.row];
+    
+    cell.nameLbl.text = device.peripheral.name;
+    cell.rssiLbl.text = [device.peripheral.identifier UUIDString];
+    
     return cell;
 }
 
-// define cell-height
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    selectedDevice = [[self getBeaconArray] objectAtIndex:indexPath.row];
+    
+    //have to do segue manually (otherwise segue registers before this method does)
+    [self performSegueWithIdentifier:@"toBeacon" sender:self.tableViewBeacon];
+}
 
-    return 65.0;
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"toBeacon"]) {
+        DetailBeaconViewController *vc = [segue destinationViewController];
+        vc.theDevice = selectedDevice;
+    }
 }
 
 // create Barcode-Button
