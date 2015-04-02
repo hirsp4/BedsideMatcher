@@ -143,6 +143,10 @@
     });
 }
 
+- (IBAction)didTap:(id)sender {
+    [self performSegueWithIdentifier:@"showBeaconView" sender:self];
+}  
+
 
 /*
 #pragma mark - Navigation
@@ -154,7 +158,5 @@
 }
 */
 
-- (IBAction)didTap:(id)sender {
-    [self performSegueWithIdentifier:@"showBeaconView" sender:self];
-}
+
 @end

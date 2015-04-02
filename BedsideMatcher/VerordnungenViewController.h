@@ -8,10 +8,11 @@
 
 #import "ViewController.h"
 
-@interface VerordnungenViewController : ViewController
+@interface VerordnungenViewController : ViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UISearchBar *searchPrescriptionField;
-
 @property (weak, nonatomic) IBOutlet UITableView *tableViewVerordnungen;
+
+
 
 
 @end

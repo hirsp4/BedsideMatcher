@@ -67,7 +67,7 @@
 // define cell-height
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return 45.0;
+    return 65.0;
 }
 
 // create Barcode-Button

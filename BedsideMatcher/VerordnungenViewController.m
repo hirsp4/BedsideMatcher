@@ -7,8 +7,12 @@
 //
 
 #import "VerordnungenViewController.h"
+#import "TableViewCellVerordnung.h"
 
-@interface VerordnungenViewController ()
+@interface VerordnungenViewController (){
+
+    NSArray *Verordnungen;
+}
 
 @end
 
@@ -17,11 +21,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Create Array
+    Verordnungen = [NSArray arrayWithObjects: @"Hirschi, Patrick (12.01.1990, m) \n Valium 10mg (0-0-0-1) ", @"Gnägi, Johannes (28.03.1989, m) \n Dafalgan 500mg (1-1-1-1)", @"Zehnder, Patrizia (16.08.1992, w) \n Resyl Plus Tr. 0-0-0-20)", nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// Customize the number of sections in the table view
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+// Customize the number of rows in the section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return Verordnungen.count;
+}
+
+// Customize the appearance of table view cells
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"TableViewCellVerordnung";
+    
+    TableViewCellVerordnung *cell = (TableViewCellVerordnung *)[tableView dequeueReusableCellWithIdentifier: CellIdentifier];
+    if (cell == nil) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TableViewCellVerordnung" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    cell.verordnungsLabelPatient.numberOfLines=2;
+    cell.verordnungsLabelPatient.text=[Verordnungen objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+
+// define cell-height
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 65.0;
+    
 }
 
 /*

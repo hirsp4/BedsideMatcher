@@ -10,6 +10,8 @@
 		E0440DE41ACC21820024E445 /* barcode.png in Resources */ = {isa = PBXBuildFile; fileRef = E0440DE31ACC21820024E445 /* barcode.png */; };
 		E0440DE71ACC28D70024E445 /* BarcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0440DE61ACC28D70024E445 /* BarcodeViewController.m */; };
 		E07402AD1AB1A65600B0EF01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07402AC1AB1A65600B0EF01 /* Main.storyboard */; };
+		E09B23491ACD7D32004B4088 /* TableViewCellVerordnung.m in Sources */ = {isa = PBXBuildFile; fileRef = E09B23471ACD7D32004B4088 /* TableViewCellVerordnung.m */; };
+		E09B234A1ACD7D32004B4088 /* TableViewCellVerordnung.xib in Resources */ = {isa = PBXBuildFile; fileRef = E09B23481ACD7D32004B4088 /* TableViewCellVerordnung.xib */; };
 		E09C91E51AC15273006804E9 /* iBeaconLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E41AC15273006804E9 /* iBeaconLogo.png */; };
 		E09C91E71AC15E98006804E9 /* notebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E61AC15E98006804E9 /* notebook.png */; };
 		E09C91E91AC15FA2006804E9 /* medicine.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E81AC15FA2006804E9 /* medicine.png */; };
@@ -283,6 +285,9 @@
 		E0440DE51ACC28D70024E445 /* BarcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeViewController.h; sourceTree = "<group>"; };
 		E0440DE61ACC28D70024E445 /* BarcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeViewController.m; sourceTree = "<group>"; };
 		E07402AC1AB1A65600B0EF01 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E09B23461ACD7D32004B4088 /* TableViewCellVerordnung.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellVerordnung.h; sourceTree = "<group>"; };
+		E09B23471ACD7D32004B4088 /* TableViewCellVerordnung.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellVerordnung.m; sourceTree = "<group>"; };
+		E09B23481ACD7D32004B4088 /* TableViewCellVerordnung.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellVerordnung.xib; sourceTree = "<group>"; };
 		E09C91E41AC15273006804E9 /* iBeaconLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iBeaconLogo.png; sourceTree = "<group>"; };
 		E09C91E61AC15E98006804E9 /* notebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notebook.png; sourceTree = "<group>"; };
 		E09C91E81AC15FA2006804E9 /* medicine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medicine.png; sourceTree = "<group>"; };
@@ -966,6 +971,9 @@
 			children = (
 				EF6339171AB0EB0D002ACE34 /* VerordnungenViewController.h */,
 				EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */,
+				E09B23461ACD7D32004B4088 /* TableViewCellVerordnung.h */,
+				E09B23471ACD7D32004B4088 /* TableViewCellVerordnung.m */,
+				E09B23481ACD7D32004B4088 /* TableViewCellVerordnung.xib */,
 			);
 			name = "Verordnungen Tab";
 			sourceTree = "<group>";
@@ -1797,6 +1805,7 @@
 				E09C91F31AC166D2006804E9 /* LogoApp.png in Resources */,
 				E09C91E51AC15273006804E9 /* iBeaconLogo.png in Resources */,
 				E0440DE41ACC21820024E445 /* barcode.png in Resources */,
+				E09B234A1ACD7D32004B4088 /* TableViewCellVerordnung.xib in Resources */,
 				E0A2F6611ACC084D001A02BE /* TableViewCellPatients.xib in Resources */,
 				E09C91E71AC15E98006804E9 /* notebook.png in Resources */,
 				EF30A1B31AB09ADC003DD2EA /* patsy.png in Resources */,
@@ -1958,6 +1967,7 @@
 				EFAD36301ACD2C80000E978E /* ZXExpandedProductResultParser.m in Sources */,
 				EFAD364F1ACD2C80000E978E /* ZXGenericGF.m in Sources */,
 				EFAD361C1ACD2C80000E978E /* ZXAztecCode.m in Sources */,
+				E09B23491ACD7D32004B4088 /* TableViewCellVerordnung.m in Sources */,
 				EFAD36A41ACD2C80000E978E /* ZXRSSPair.m in Sources */,
 				EFAD36941ACD2C80000E978E /* ZXRSSExpandedBlockParsedResult.m in Sources */,
 				EFAD36E31ACD2C80000E978E /* ZXQRCodeAlignmentPattern.m in Sources */,
