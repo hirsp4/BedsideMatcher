@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Csw-1g-eZ6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Medikamente-->
@@ -99,20 +100,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5PE-Gg-sYH">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5PE-Gg-sYH">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3k-ZI-Jq5">
+                                <rect key="frame" x="32" y="176" width="257" height="257"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Halten Sie den Barcode vor die Kamera" textAlignment="center" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITJ-18-WCu">
+                                <rect key="frame" x="9" y="101" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="e3k-ZI-Jq5" firstAttribute="leading" secondItem="jel-JR-9zH" secondAttribute="leadingMargin" constant="16" id="1A6-91-n0O"/>
+                            <constraint firstItem="e3k-ZI-Jq5" firstAttribute="top" secondItem="ITJ-18-WCu" secondAttribute="bottom" constant="54" id="1aD-78-NB8"/>
+                            <constraint firstItem="ITJ-18-WCu" firstAttribute="top" secondItem="5PE-Gg-sYH" secondAttribute="bottom" constant="37" id="73d-PK-TQl"/>
+                            <constraint firstItem="5PE-Gg-sYH" firstAttribute="leading" secondItem="jel-JR-9zH" secondAttribute="leading" id="IvJ-QG-aQs"/>
+                            <constraint firstAttribute="trailing" secondItem="5PE-Gg-sYH" secondAttribute="trailing" id="Lyu-Cn-HIB"/>
+                            <constraint firstItem="ITJ-18-WCu" firstAttribute="centerX" secondItem="e3k-ZI-Jq5" secondAttribute="centerX" id="YUd-hP-udh"/>
+                            <constraint firstItem="5PE-Gg-sYH" firstAttribute="top" secondItem="xR8-8r-n8U" secondAttribute="bottom" id="mmn-e6-pCi"/>
+                            <constraint firstItem="ITJ-18-WCu" firstAttribute="centerX" secondItem="5PE-Gg-sYH" secondAttribute="centerX" id="r3x-6B-2kn"/>
+                            <constraint firstItem="4GH-od-43O" firstAttribute="top" secondItem="e3k-ZI-Jq5" secondAttribute="bottom" constant="135" id="x6B-5N-qWQ"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="PuI-Vn-YiI" appends="YES" id="R7J-mx-q3t"/>
+                        </connections>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="decodedLabel" destination="ITJ-18-WCu" id="P4P-mL-NBb"/>
                         <outlet property="navBarBarcode" destination="5PE-Gg-sYH" id="HdV-yg-9b7"/>
+                        <outlet property="scanRectView" destination="e3k-ZI-Jq5" id="W6C-6j-jFU"/>
+                        <outlet property="scanView" destination="jel-JR-9zH" id="P1g-UP-Cuh"/>
                         <segue destination="Y6d-mh-9iK" kind="custom" identifier="showBeaconView" id="dG0-pZ-QuS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CK-fh-uX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PuI-Vn-YiI">
+                    <connections>
+                        <action selector="didTap:" destination="KtO-MN-BZx" id="Hyr-mX-iGP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1211" y="233"/>
         </scene>
