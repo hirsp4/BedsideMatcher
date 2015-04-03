@@ -18,7 +18,6 @@
 		E09C91F31AC166D2006804E9 /* LogoApp.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91F21AC166D2006804E9 /* LogoApp.png */; };
 		E0A2F6601ACC084D001A02BE /* TableViewCellPatients.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */; };
 		E0A2F6611ACC084D001A02BE /* TableViewCellPatients.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */; };
-		EF0518E91ACDE5ED007929AA /* snfsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0518E81ACDE5ED007929AA /* snfsdk.framework */; };
 		EF0518ED1ACDE7F7007929AA /* DetailBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0518EC1ACDE7F7007929AA /* DetailBeaconViewController.m */; };
 		EF0518F01ACDE953007929AA /* BeaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0518EF1ACDE953007929AA /* BeaconTableViewCell.m */; };
 		EF2A3E4F1AB0856A00C4DBA7 /* NIVcheckinItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */; };
@@ -51,6 +50,7 @@
 		EF6339161AB0EAFE002ACE34 /* BeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */; };
 		EF6339191AB0EB0D002ACE34 /* VerordnungenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */; };
 		EF902E8B1AB0A7BF00347176 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF902E8A1AB0A7BF00347176 /* LoginViewController.m */; };
+		EF959ABD1ACE926000B95DB6 /* snfsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF959ABC1ACE926000B95DB6 /* snfsdk.framework */; };
 		EFAD36191ACD2C80000E978E /* ZXAztecDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD34331ACD2C7F000E978E /* ZXAztecDecoder.m */; };
 		EFAD361A1ACD2C80000E978E /* ZXAztecDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD34361ACD2C7F000E978E /* ZXAztecDetector.m */; };
 		EFAD361B1ACD2C80000E978E /* ZXAztecBinaryShiftToken.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD34391ACD2C7F000E978E /* ZXAztecBinaryShiftToken.m */; };
@@ -298,7 +298,6 @@
 		E0A2F65D1ACC084D001A02BE /* TableViewCellPatients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellPatients.h; sourceTree = "<group>"; };
 		E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellPatients.m; sourceTree = "<group>"; };
 		E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellPatients.xib; sourceTree = "<group>"; };
-		EF0518E81ACDE5ED007929AA /* snfsdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = snfsdk.framework; path = "../iOS SDK Demo/snfsdk.framework"; sourceTree = "<group>"; };
 		EF0518EA1ACDE602007929AA /* snfsdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = snfsdk.h; sourceTree = "<group>"; };
 		EF0518EB1ACDE7F7007929AA /* DetailBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailBeaconViewController.h; sourceTree = "<group>"; };
 		EF0518EC1ACDE7F7007929AA /* DetailBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailBeaconViewController.m; sourceTree = "<group>"; };
@@ -364,6 +363,7 @@
 		EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerordnungenViewController.m; sourceTree = "<group>"; };
 		EF902E891AB0A7BF00347176 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EF902E8A1AB0A7BF00347176 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		EF959ABC1ACE926000B95DB6 /* snfsdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = snfsdk.framework; sourceTree = "<group>"; };
 		EFAD34321ACD2C7F000E978E /* ZXAztecDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXAztecDecoder.h; sourceTree = "<group>"; };
 		EFAD34331ACD2C7F000E978E /* ZXAztecDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXAztecDecoder.m; sourceTree = "<group>"; };
 		EFAD34351ACD2C7F000E978E /* ZXAztecDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXAztecDetector.h; sourceTree = "<group>"; };
@@ -828,7 +828,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF0518E91ACDE5ED007929AA /* snfsdk.framework in Frameworks */,
+				EF959ABD1ACE926000B95DB6 /* snfsdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,8 +858,8 @@
 		EF36566D1AAF95E000A0B64D = {
 			isa = PBXGroup;
 			children = (
+				EF959ABC1ACE926000B95DB6 /* snfsdk.framework */,
 				EF0518EA1ACDE602007929AA /* snfsdk.h */,
-				EF0518E81ACDE5ED007929AA /* snfsdk.framework */,
 				EFAD342F1ACD2C7F000E978E /* ZXingObjC */,
 				E09C91E11AC1515F006804E9 /* Images */,
 				EF3656A21AAF960100A0B64D /* Service */,
@@ -2217,6 +2217,7 @@
 					/Users/ph/Desktop/iOS,
 					SDK,
 					Demo,
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2243,6 +2244,7 @@
 					/Users/ph/Desktop/iOS,
 					SDK,
 					Demo,
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
