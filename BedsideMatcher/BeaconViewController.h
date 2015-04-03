@@ -8,8 +8,13 @@
 
 #import "ViewController.h"
 
-@interface BeaconViewController : ViewController <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UITableView *tableViewBeacon;
+@import CoreLocation;
+@import CoreBluetooth;
+
+@interface BeaconViewController : UIViewController <CLLocationManagerDelegate, CBPeripheralManagerDelegate,
+UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UITableView *beaconTableView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navBarBeacon;
 
 @end

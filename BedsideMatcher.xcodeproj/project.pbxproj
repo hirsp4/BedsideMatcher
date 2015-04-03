@@ -18,8 +18,6 @@
 		E09C91F31AC166D2006804E9 /* LogoApp.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91F21AC166D2006804E9 /* LogoApp.png */; };
 		E0A2F6601ACC084D001A02BE /* TableViewCellPatients.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */; };
 		E0A2F6611ACC084D001A02BE /* TableViewCellPatients.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */; };
-		EF0518ED1ACDE7F7007929AA /* DetailBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0518EC1ACDE7F7007929AA /* DetailBeaconViewController.m */; };
-		EF0518F01ACDE953007929AA /* BeaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0518EF1ACDE953007929AA /* BeaconTableViewCell.m */; };
 		EF2A3E4F1AB0856A00C4DBA7 /* NIVcheckinItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */; };
 		EF2A3E501AB0856A00C4DBA7 /* NIVcheckoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E381AB0856A00C4DBA7 /* NIVcheckoutItems.m */; };
 		EF2A3E511AB0856A00C4DBA7 /* NIVcompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E3A1AB0856A00C4DBA7 /* NIVcompany.m */; };
@@ -50,7 +48,6 @@
 		EF6339161AB0EAFE002ACE34 /* BeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */; };
 		EF6339191AB0EB0D002ACE34 /* VerordnungenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */; };
 		EF902E8B1AB0A7BF00347176 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF902E8A1AB0A7BF00347176 /* LoginViewController.m */; };
-		EF959ABD1ACE926000B95DB6 /* snfsdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF959ABC1ACE926000B95DB6 /* snfsdk.framework */; };
 		EFAD36191ACD2C80000E978E /* ZXAztecDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD34331ACD2C7F000E978E /* ZXAztecDecoder.m */; };
 		EFAD361A1ACD2C80000E978E /* ZXAztecDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD34361ACD2C7F000E978E /* ZXAztecDetector.m */; };
 		EFAD361B1ACD2C80000E978E /* ZXAztecBinaryShiftToken.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD34391ACD2C7F000E978E /* ZXAztecBinaryShiftToken.m */; };
@@ -271,6 +268,8 @@
 		EFAD36F21ACD2C80000E978E /* ZXQRCodeWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD36131ACD2C80000E978E /* ZXQRCodeWriter.m */; };
 		EFAD36F31ACD2C80000E978E /* ZXMultiFormatReader.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD36161ACD2C80000E978E /* ZXMultiFormatReader.m */; };
 		EFAD36F41ACD2C80000E978E /* ZXMultiFormatWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD36181ACD2C80000E978E /* ZXMultiFormatWriter.m */; };
+		EFB4B2BB1ACEBFD7004594B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB4B2BA1ACEBFD7004594B3 /* CoreLocation.framework */; };
+		EFB4B2BD1ACEBFDD004594B3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB4B2BC1ACEBFDD004594B3 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -298,11 +297,6 @@
 		E0A2F65D1ACC084D001A02BE /* TableViewCellPatients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellPatients.h; sourceTree = "<group>"; };
 		E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellPatients.m; sourceTree = "<group>"; };
 		E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellPatients.xib; sourceTree = "<group>"; };
-		EF0518EA1ACDE602007929AA /* snfsdk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = snfsdk.h; sourceTree = "<group>"; };
-		EF0518EB1ACDE7F7007929AA /* DetailBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailBeaconViewController.h; sourceTree = "<group>"; };
-		EF0518EC1ACDE7F7007929AA /* DetailBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailBeaconViewController.m; sourceTree = "<group>"; };
-		EF0518EE1ACDE953007929AA /* BeaconTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconTableViewCell.h; sourceTree = "<group>"; };
-		EF0518EF1ACDE953007929AA /* BeaconTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconTableViewCell.m; sourceTree = "<group>"; };
 		EF2A3E351AB0856A00C4DBA7 /* NIVcheckinItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckinItems.h; sourceTree = "<group>"; };
 		EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVcheckinItems.m; sourceTree = "<group>"; };
 		EF2A3E371AB0856A00C4DBA7 /* NIVcheckoutItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckoutItems.h; sourceTree = "<group>"; };
@@ -363,7 +357,6 @@
 		EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerordnungenViewController.m; sourceTree = "<group>"; };
 		EF902E891AB0A7BF00347176 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EF902E8A1AB0A7BF00347176 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		EF959ABC1ACE926000B95DB6 /* snfsdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = snfsdk.framework; sourceTree = "<group>"; };
 		EFAD34321ACD2C7F000E978E /* ZXAztecDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXAztecDecoder.h; sourceTree = "<group>"; };
 		EFAD34331ACD2C7F000E978E /* ZXAztecDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXAztecDecoder.m; sourceTree = "<group>"; };
 		EFAD34351ACD2C7F000E978E /* ZXAztecDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXAztecDetector.h; sourceTree = "<group>"; };
@@ -821,6 +814,8 @@
 		EFAD36161ACD2C80000E978E /* ZXMultiFormatReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXMultiFormatReader.m; sourceTree = "<group>"; };
 		EFAD36171ACD2C80000E978E /* ZXMultiFormatWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXMultiFormatWriter.h; sourceTree = "<group>"; };
 		EFAD36181ACD2C80000E978E /* ZXMultiFormatWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXMultiFormatWriter.m; sourceTree = "<group>"; };
+		EFB4B2BA1ACEBFD7004594B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EFB4B2BC1ACEBFDD004594B3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -828,7 +823,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF959ABD1ACE926000B95DB6 /* snfsdk.framework in Frameworks */,
+				EFB4B2BD1ACEBFDD004594B3 /* CoreBluetooth.framework in Frameworks */,
+				EFB4B2BB1ACEBFD7004594B3 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,8 +854,8 @@
 		EF36566D1AAF95E000A0B64D = {
 			isa = PBXGroup;
 			children = (
-				EF959ABC1ACE926000B95DB6 /* snfsdk.framework */,
-				EF0518EA1ACDE602007929AA /* snfsdk.h */,
+				EFB4B2BC1ACEBFDD004594B3 /* CoreBluetooth.framework */,
+				EFB4B2BA1ACEBFD7004594B3 /* CoreLocation.framework */,
 				EFAD342F1ACD2C7F000E978E /* ZXingObjC */,
 				E09C91E11AC1515F006804E9 /* Images */,
 				EF3656A21AAF960100A0B64D /* Service */,
@@ -974,10 +970,6 @@
 				EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */,
 				E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */,
 				E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */,
-				EF0518EB1ACDE7F7007929AA /* DetailBeaconViewController.h */,
-				EF0518EC1ACDE7F7007929AA /* DetailBeaconViewController.m */,
-				EF0518EE1ACDE953007929AA /* BeaconTableViewCell.h */,
-				EF0518EF1ACDE953007929AA /* BeaconTableViewCell.m */,
 			);
 			name = "Beacon Tab";
 			sourceTree = "<group>";
@@ -1897,9 +1889,7 @@
 				EFAD36701ACD2C80000E978E /* ZXDataMatrixDataBlock.m in Sources */,
 				EFAD36411ACD2C80000E978E /* ZXURIResultParser.m in Sources */,
 				EFAD36A11ACD2C80000E978E /* ZXRSS14Reader.m in Sources */,
-				EF0518ED1ACDE7F7007929AA /* DetailBeaconViewController.m in Sources */,
 				EFAD362C1ACD2C80000E978E /* ZXEmailAddressParsedResult.m in Sources */,
-				EF0518F01ACDE953007929AA /* BeaconTableViewCell.m in Sources */,
 				EF902E8B1AB0A7BF00347176 /* LoginViewController.m in Sources */,
 				EFAD36BE1ACD2C80000E978E /* ZXUPCEANWriter.m in Sources */,
 				EFAD368D1ACD2C80000E978E /* ZXAI01393xDecoder.m in Sources */,
@@ -2212,13 +2202,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/ph/Desktop/iOS,
-					SDK,
-					Demo,
-					"$(PROJECT_DIR)",
-				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -2239,13 +2222,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/ph/Desktop/iOS,
-					SDK,
-					Demo,
-					"$(PROJECT_DIR)",
-				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
