@@ -71,7 +71,7 @@ LeSnfDevice *selectedDevice;
     
     cell.nameLbl.text = device.peripheral.name;
     cell.rssiLbl.text = [device.peripheral.identifier UUIDString];
-    
+    cell.distLbl.text = [[NSString stringWithFormat:@"%f", device.distanceEstimate]stringByAppendingString:@" m"];
     return cell;
 }
 

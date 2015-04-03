@@ -9,7 +9,7 @@
 
 @interface BeaconTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *nameLbl;
-
+@property (weak, nonatomic) IBOutlet UILabel *distLbl;
 @property (weak, nonatomic) IBOutlet UILabel *rssiLbl;
 
 @end
