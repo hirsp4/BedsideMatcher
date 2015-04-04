@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZXingObjC.h"
 
-@interface BarcodeViewController : UIViewController
+@interface BarcodeViewController : UIViewController <ZXCaptureDelegate>
+@property (strong, nonatomic) IBOutlet UIView *scanView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navBarBarcode;
+@property (weak, nonatomic) IBOutlet UIView *scanRectView;
+@property (weak, nonatomic) IBOutlet UILabel *decodedLabel;
+@property (nonatomic, strong) ZXCapture *capture;
+- (IBAction)didTap:(id)sender;
 
 @end
