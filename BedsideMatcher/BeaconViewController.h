@@ -36,5 +36,7 @@ UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *beaconTableView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navBarBeacon;
+@property (nonatomic, strong) NSArray *patients;
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 
 @end

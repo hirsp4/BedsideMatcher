@@ -270,6 +270,10 @@
 		EFAD36F41ACD2C80000E978E /* ZXMultiFormatWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD36181ACD2C80000E978E /* ZXMultiFormatWriter.m */; };
 		EFB4B2BB1ACEBFD7004594B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB4B2BA1ACEBFD7004594B3 /* CoreLocation.framework */; };
 		EFB4B2BD1ACEBFDD004594B3 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB4B2BC1ACEBFDD004594B3 /* CoreBluetooth.framework */; };
+		EFD9A2531AD3C4F200DF7E10 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = EFD9A2521AD3C4F200DF7E10 /* Patient.m */; };
+		EFD9A2551AD3C52000DF7E10 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD9A2541AD3C52000DF7E10 /* CoreData.framework */; };
+		EFD9A2581AD3D29600DF7E10 /* female.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD9A2561AD3D29600DF7E10 /* female.png */; };
+		EFD9A2591AD3D29600DF7E10 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD9A2571AD3D29600DF7E10 /* male.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -816,6 +820,11 @@
 		EFAD36181ACD2C80000E978E /* ZXMultiFormatWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXMultiFormatWriter.m; sourceTree = "<group>"; };
 		EFB4B2BA1ACEBFD7004594B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		EFB4B2BC1ACEBFDD004594B3 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		EFD9A2511AD3C4F200DF7E10 /* Patient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		EFD9A2521AD3C4F200DF7E10 /* Patient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		EFD9A2541AD3C52000DF7E10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EFD9A2561AD3D29600DF7E10 /* female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female.png; sourceTree = "<group>"; };
+		EFD9A2571AD3D29600DF7E10 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -823,6 +832,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD9A2551AD3C52000DF7E10 /* CoreData.framework in Frameworks */,
 				EFB4B2BD1ACEBFDD004594B3 /* CoreBluetooth.framework in Frameworks */,
 				EFB4B2BB1ACEBFD7004594B3 /* CoreLocation.framework in Frameworks */,
 			);
@@ -843,6 +853,8 @@
 			children = (
 				E0440DE31ACC21820024E445 /* barcode.png */,
 				E09C91F21AC166D2006804E9 /* LogoApp.png */,
+				EFD9A2561AD3D29600DF7E10 /* female.png */,
+				EFD9A2571AD3D29600DF7E10 /* male.png */,
 				E09C91E81AC15FA2006804E9 /* medicine.png */,
 				E09C91E61AC15E98006804E9 /* notebook.png */,
 				E09C91E41AC15273006804E9 /* iBeaconLogo.png */,
@@ -854,6 +866,7 @@
 		EF36566D1AAF95E000A0B64D = {
 			isa = PBXGroup;
 			children = (
+				EFD9A2541AD3C52000DF7E10 /* CoreData.framework */,
 				EFB4B2BC1ACEBFDD004594B3 /* CoreBluetooth.framework */,
 				EFB4B2BA1ACEBFD7004594B3 /* CoreLocation.framework */,
 				EFAD342F1ACD2C7F000E978E /* ZXingObjC */,
@@ -877,6 +890,7 @@
 		EF3656781AAF95E000A0B64D /* BedsideMatcher */ = {
 			isa = PBXGroup;
 			children = (
+				EFD9A2501AD3C4D900DF7E10 /* Managed Objects */,
 				EF6CD1A31ACC5411000E069E /* General */,
 				EF6CD1A21ACC53CF000E069E /* Medikamente Tab */,
 				EF6CD1A11ACC53C7000E069E /* Verordnungen Tab */,
@@ -1729,6 +1743,15 @@
 			path = detector;
 			sourceTree = "<group>";
 		};
+		EFD9A2501AD3C4D900DF7E10 /* Managed Objects */ = {
+			isa = PBXGroup;
+			children = (
+				EFD9A2511AD3C4F200DF7E10 /* Patient.h */,
+				EFD9A2521AD3C4F200DF7E10 /* Patient.m */,
+			);
+			name = "Managed Objects";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1817,10 +1840,12 @@
 				E0A2F6611ACC084D001A02BE /* TableViewCellPatients.xib in Resources */,
 				E09C91E71AC15E98006804E9 /* notebook.png in Resources */,
 				EF30A1B31AB09ADC003DD2EA /* patsy.png in Resources */,
+				EFD9A2591AD3D29600DF7E10 /* male.png in Resources */,
 				EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */,
 				E09C91E91AC15FA2006804E9 /* medicine.png in Resources */,
 				EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */,
 				E07402AD1AB1A65600B0EF01 /* Main.storyboard in Resources */,
+				EFD9A2581AD3D29600DF7E10 /* female.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2045,6 +2070,7 @@
 				EFAD36771ACD2C80000E978E /* ZXDataMatrixC40Encoder.m in Sources */,
 				EFAD36A81ACD2C80000E978E /* ZXCode128Reader.m in Sources */,
 				EFAD36C61ACD2C80000E978E /* ZXPDF417Codeword.m in Sources */,
+				EFD9A2531AD3C4F200DF7E10 /* Patient.m in Sources */,
 				EFAD36471ACD2C80000E978E /* ZXWifiParsedResult.m in Sources */,
 				EFAD365D1ACD2C80000E978E /* ZXGridSampler.m in Sources */,
 				EFAD366A1ACD2C80000E978E /* ZXLuminanceSource.m in Sources */,

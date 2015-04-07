@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Patient.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self resetPatients];
     return YES;
 }
 
@@ -122,6 +124,51 @@
             abort();
         }
     }
+}
+
+
+-(void)resetPatients
+{
+    [self deleteAllObjects:@"Patient"];
+    Patient *patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
+                                                                 inManagedObjectContext:self.managedObjectContext];
+    Patient *patient2 = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
+                                                     inManagedObjectContext:self.managedObjectContext];
+    [patient setValue:@"16.08.1992" forKey:@"birthdate"];
+    [patient setValue:@"56503" forKey:@"minorid"];
+    [patient setValue:@"Zehnder" forKey:@"name"];
+    [patient setValue:@"Patrizia" forKey:@"firstname"];
+    [patient setValue:@"3" forKey:@"polypointPID"];
+    [patient setValue:@"f" forKey:@"gender"];
+    
+    [patient2 setValue:@"12.01.1990" forKey:@"birthdate"];
+    [patient2 setValue:@"56504" forKey:@"minorid"];
+    [patient2 setValue:@"Hirschi" forKey:@"name"];
+    [patient2 setValue:@"Patrick" forKey:@"firstname"];
+    [patient2 setValue:@"2" forKey:@"polypointPID"];
+    [patient2 setValue:@"m" forKey:@"gender"];
+    
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Failed to save - error: %@", [error localizedDescription]);
+    }
+}
+
+- (void) deleteAllObjects: (NSString *) entityDescription  {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityDescription inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error;
+    NSArray *items = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    for (NSManagedObject *managedObject in items) {
+        [self.managedObjectContext deleteObject:managedObject];
+    }
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Failed to delete - error: %@", [error localizedDescription]);
+    }
+    
 }
 
 @end
