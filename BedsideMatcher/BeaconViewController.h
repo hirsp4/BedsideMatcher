@@ -39,4 +39,5 @@ UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 @property (nonatomic, strong) NSArray *patients;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 
+
 @end

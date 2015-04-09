@@ -30,6 +30,7 @@
 #import "TableViewCellPatients.h"
 #import "AppDelegate.h"
 #import "Patient.h"
+#import "PatientViewController.h"
 static NSString * const kUUID = @"4661D06A-9E38-4367-8BA2-2C72DE319164";
 static NSString * const kIdentifier = @"BFH";
 
@@ -161,6 +162,24 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     return indexPaths;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showPatientView" sender:[self.beaconTableView cellForRowAtIndexPath:indexPath]];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showPatientView"]) {
+        UITableViewCell *cell =sender;
+        PatientViewController *destViewController = segue.destinationViewController;
+        NSArray *nameSplitted = [cell.textLabel.text componentsSeparatedByString: @" "];
+        NSArray *detailSplitted = [cell.detailTextLabel.text componentsSeparatedByString: @" "];
+        destViewController.name = nameSplitted[0];
+        destViewController.firstname = nameSplitted[1];
+        destViewController.image = cell.imageView.image;
+        destViewController.birthdate = detailSplitted[1];
+        destViewController.gender = detailSplitted[4];
+        [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+    }
+}
+
 - (NSArray *)indexPathsForBeacons:(NSArray *)beacons
 {
     NSMutableArray *indexPaths = [NSMutableArray new];
@@ -253,8 +272,8 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             break;
     }
     
-    NSString *format = @"%@, %@ • %@ • %f";
-    return [NSString stringWithFormat:format, beacon.minor, patient.birthdate,[@"Geschlecht: " stringByAppendingString:patient.gender], proximity];
+    NSString *format = @"%@, %@ • %@";
+    return [NSString stringWithFormat:format, beacon.minor, patient.birthdate,[@"Geschlecht: " stringByAppendingString:patient.gender]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -300,6 +319,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
                 }
             }
             cell.detailTextLabel.textColor = [UIColor grayColor];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
             break;
     }

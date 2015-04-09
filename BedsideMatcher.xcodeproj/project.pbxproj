@@ -44,6 +44,7 @@
 		EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3656891AAF95E000A0B64D /* Images.xcassets */; };
 		EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */; };
 		EF3656991AAF95E000A0B64D /* BedsideMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */; };
+		EF566A701AD6CB720083F781 /* PatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF566A6F1AD6CB720083F781 /* PatientViewController.m */; };
 		EF6339131AB0EAEB002ACE34 /* MedikamenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */; };
 		EF6339161AB0EAFE002ACE34 /* BeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */; };
 		EF6339191AB0EB0D002ACE34 /* VerordnungenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */; };
@@ -353,6 +354,8 @@
 		EF3656921AAF95E000A0B64D /* BedsideMatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BedsideMatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3656971AAF95E000A0B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BedsideMatcherTests.m; sourceTree = "<group>"; };
+		EF566A6E1AD6CB720083F781 /* PatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientViewController.h; sourceTree = "<group>"; };
+		EF566A6F1AD6CB720083F781 /* PatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientViewController.m; sourceTree = "<group>"; };
 		EF6339111AB0EAEB002ACE34 /* MedikamenteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedikamenteViewController.h; sourceTree = "<group>"; };
 		EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedikamenteViewController.m; sourceTree = "<group>"; };
 		EF6339141AB0EAFE002ACE34 /* BeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconViewController.h; sourceTree = "<group>"; };
@@ -984,6 +987,8 @@
 				EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */,
 				E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */,
 				E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */,
+				EF566A6E1AD6CB720083F781 /* PatientViewController.h */,
+				EF566A6F1AD6CB720083F781 /* PatientViewController.m */,
 			);
 			name = "Beacon Tab";
 			sourceTree = "<group>";
@@ -2096,6 +2101,7 @@
 				EFAD369F1ACD2C80000E978E /* ZXRSSExpandedRow.m in Sources */,
 				EFAD36311ACD2C80000E978E /* ZXGeoParsedResult.m in Sources */,
 				EFAD366E1ACD2C80000E978E /* ZXRGBLuminanceSource.m in Sources */,
+				EF566A701AD6CB720083F781 /* PatientViewController.m in Sources */,
 				EFAD36921ACD2C80000E978E /* ZXAI01weightDecoder.m in Sources */,
 				EF2A3E4F1AB0856A00C4DBA7 /* NIVcheckinItems.m in Sources */,
 				EF2A3E6C1AB0859600C4DBA7 /* DDXMLElementAdditions.m in Sources */,
