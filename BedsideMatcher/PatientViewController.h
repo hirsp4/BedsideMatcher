@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZXingObjC.h"
 
-@interface PatientViewController : UIViewController
+@interface PatientViewController : UIViewController <ZXCaptureDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *firstnameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *birthdateLabel;
@@ -20,6 +21,11 @@
 @property (nonatomic, strong) NSString *birthdate;
 @property (nonatomic, strong) NSString *gender;
 @property (nonatomic, strong) UIImage *image;
+@property (weak, nonatomic) IBOutlet UIView *utilityView;
+@property (weak, nonatomic) IBOutlet UIView *scanView;
+@property (weak, nonatomic) IBOutlet UIView *scanRectView;
+@property (nonatomic, strong) ZXCapture *capture;
 
+@property (strong, nonatomic) IBOutlet UIView *mainView;
 
 @end
