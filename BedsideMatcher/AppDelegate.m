@@ -140,6 +140,7 @@
     [patient setValue:@"Patrizia" forKey:@"firstname"];
     [patient setValue:@"3" forKey:@"polypointPID"];
     [patient setValue:@"f" forKey:@"gender"];
+    [patient setValue:@"Station B" forKey:@"station"];
     
     [patient2 setValue:@"12.01.1990" forKey:@"birthdate"];
     [patient2 setValue:@"56504" forKey:@"minorid"];
@@ -147,6 +148,7 @@
     [patient2 setValue:@"Patrick" forKey:@"firstname"];
     [patient2 setValue:@"2" forKey:@"polypointPID"];
     [patient2 setValue:@"m" forKey:@"gender"];
+    [patient2 setValue:@"Station A" forKey:@"station"];
     
     NSError *error;
     if (![self.managedObjectContext save:&error]) {

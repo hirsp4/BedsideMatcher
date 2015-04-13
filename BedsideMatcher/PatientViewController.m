@@ -14,7 +14,7 @@
 @end
 
 @implementation PatientViewController
-@synthesize nameLabel,firstnameLabel,genderLabel,birthdateLabel,navBar,patientImage,name,firstname,birthdate,gender,image;
+@synthesize nameLabel,firstnameLabel,genderLabel,birthdateLabel,navBar,patientImage,name,firstname,birthdate,gender,image,stationLabel,station;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +24,7 @@
     patientImage.image=image;
     birthdateLabel.text=birthdate;
     genderLabel.text=gender;
+    stationLabel.text=station;
     [self setBackButtonAndTitle];
     
     self.capture = [[ZXCapture alloc] init];

@@ -15,4 +15,5 @@
 @property NSString *firstname;
 @property NSString *minorid;
 @property NSString *birthdate;
+@property NSString *station;
 @end

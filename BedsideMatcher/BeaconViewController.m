@@ -102,7 +102,6 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 }
 
 -(void)performFetch{
-    // read blood sugar values
     NSFetchRequest *fetchRequestPatient = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
                                    entityForName:@"Patient" inManagedObjectContext:managedObjectContext];
@@ -176,6 +175,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         destViewController.image = cell.imageView.image;
         destViewController.birthdate = detailSplitted[1];
         destViewController.gender = detailSplitted[4];
+        destViewController.station=[[detailSplitted[6] stringByAppendingString:@" "]stringByAppendingString:detailSplitted[7]];
         [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
     }
 }
@@ -272,8 +272,8 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             break;
     }
     
-    NSString *format = @"%@, %@ • %@";
-    return [NSString stringWithFormat:format, beacon.minor, patient.birthdate,[@"Geschlecht: " stringByAppendingString:patient.gender]];
+    NSString *format = @"%@, %@ • %@ • %@";
+    return [NSString stringWithFormat:format, beacon.minor, patient.birthdate,[@"Geschlecht: " stringByAppendingString:patient.gender],patient.station];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

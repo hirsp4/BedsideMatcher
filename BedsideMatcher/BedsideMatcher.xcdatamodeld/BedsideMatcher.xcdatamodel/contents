@@ -7,8 +7,9 @@
         <attribute name="minorid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="polypointPID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="station" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Patient" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Patient" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>

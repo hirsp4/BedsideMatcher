@@ -8,18 +8,24 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "BarcodeViewController.h"
 #import "PatientViewController.h"
+#import "AppDelegate.h"
+#import "Patient.h"
 
 @interface BarcodeViewController ()
 
 @end
 
 @implementation BarcodeViewController
-
+@synthesize patients,managedObjectContext,minorID;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     [self setBackButton];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
+    [self performFetch];
+    
     self.capture = [[ZXCapture alloc] init];
     self.capture.camera = self.capture.back;
     self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
@@ -137,7 +143,8 @@
     
     // Vibrate
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    
+    minorID = [NSMutableString string];
+    [minorID appendString:@"56503"];
     [self performSegueWithIdentifier:@"scanToPatientView" sender:self];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self.capture start];
@@ -152,14 +159,41 @@
     if ([segue.identifier isEqualToString:@"scanToPatientView"]) {
         PatientViewController *destViewController = segue.destinationViewController;
         // web service getPatientInformation
-        destViewController.name = @"Scan";
-        destViewController.firstname = @"Scan";
-        //destViewController.image = @"Scan";
-        destViewController.birthdate = @"Scan";
-        destViewController.gender = @"Scan";
+        Patient *patient = nil;
+        for(Patient *p in patients){
+            if([p.minorid isEqualToString:minorID]){
+                patient=p;
+            }
+        }
+        if(patient!=nil){
+           destViewController.name = patient.name;
+        destViewController.firstname = patient.firstname;
+        destViewController.birthdate = patient.birthdate;
+        destViewController.gender = patient.gender;
+        destViewController.station=patient.station;
+            if([patient.gender isEqualToString:@"f"]){
+                destViewController.image=[UIImage imageNamed:@"female.png"];
+            }else  destViewController.image=[UIImage imageNamed:@"male.png"];
+        minorID =nil; 
+        }else{
+            NSString *alertMessage=@"Es wurde kein Patient gefunden.";
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Achtung!"
+                                                              message:alertMessage
+                                                             delegate:self
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            [message show];
+        }
     }
 }
-
+-(void)performFetch{
+    NSFetchRequest *fetchRequestPatient = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Patient" inManagedObjectContext:managedObjectContext];
+    [fetchRequestPatient setEntity:entity];
+    NSError *error;
+    self.patients = [managedObjectContext executeFetchRequest:fetchRequestPatient error:&error];
+}
 
 /*
 #pragma mark - Navigation

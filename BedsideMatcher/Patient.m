@@ -9,5 +9,5 @@
 #import "Patient.h"
 
 @implementation Patient
-@dynamic gender, minorid, name, firstname,birthdate,polypointPID;
+@dynamic gender, minorid, name, firstname,birthdate,polypointPID,station;
 @end

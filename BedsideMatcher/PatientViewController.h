@@ -20,11 +20,13 @@
 @property (nonatomic, strong) NSString *firstname;
 @property (nonatomic, strong) NSString *birthdate;
 @property (nonatomic, strong) NSString *gender;
+@property (nonatomic, strong) NSString *station;
 @property (nonatomic, strong) UIImage *image;
 @property (weak, nonatomic) IBOutlet UIView *utilityView;
 @property (weak, nonatomic) IBOutlet UIView *scanView;
 @property (weak, nonatomic) IBOutlet UIView *scanRectView;
 @property (nonatomic, strong) ZXCapture *capture;
+@property (weak, nonatomic) IBOutlet UILabel *stationLabel;
 
 @property (strong, nonatomic) IBOutlet UIView *mainView;
 

@@ -325,6 +325,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uS-qf-nas">
+                                <rect key="frame" x="246" y="171" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -382,6 +388,7 @@
                         <outlet property="patientImage" destination="PGO-8l-eRD" id="sly-ZL-Fpc"/>
                         <outlet property="scanRectView" destination="p1B-3J-VBA" id="rZK-gO-vMW"/>
                         <outlet property="scanView" destination="j0u-jv-M5s" id="UHt-tn-DOw"/>
+                        <outlet property="stationLabel" destination="0uS-qf-nas" id="SEB-XC-PJl"/>
                         <outlet property="utilityView" destination="KxA-cJ-QyX" id="Pr0-em-hRe"/>
                         <segue destination="Y6d-mh-9iK" kind="custom" identifier="backToBeaconView" id="x2d-f2-vH2"/>
                     </connections>
@@ -606,7 +613,7 @@
         <image name="notebook.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rJs-6p-Ah0"/>
+        <segue reference="x2d-f2-vH2"/>
         <segue reference="QPb-M5-ngR"/>
     </inferredMetricsTieBreakers>
 </document>
