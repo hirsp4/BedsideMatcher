@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,13 +16,6 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="patsy.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sg4-np-loa">
-                    <rect key="frame" x="95" y="364" width="131" height="128"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="128" id="tEr-ay-blJ"/>
-                        <constraint firstAttribute="width" constant="131" id="udp-Sa-Kx9"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© P. Zehnder" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Y93-rk-5Er">
                     <rect key="frame" x="-60" y="303" width="441" height="43"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
@@ -33,12 +26,10 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Y93-rk-5Er" firstAttribute="trailing" secondItem="kId-c2-rCX" secondAttribute="trailing" id="90e-1f-gvW"/>
-                <constraint firstItem="Sg4-np-loa" firstAttribute="top" secondItem="Y93-rk-5Er" secondAttribute="bottom" constant="18" id="JKl-9W-aNI"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-60" id="NNP-2B-T0P"/>
                 <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="46" id="YuO-oK-hQ2"/>
                 <constraint firstItem="Y93-rk-5Er" firstAttribute="leading" secondItem="kId-c2-rCX" secondAttribute="leading" id="Z1n-Cu-FkI"/>
                 <constraint firstItem="Y93-rk-5Er" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ia2-E2-4fs"/>
-                <constraint firstItem="Sg4-np-loa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="95" id="qdi-Hs-tSr"/>
                 <constraint firstItem="Y93-rk-5Er" firstAttribute="top" secondItem="kId-c2-rCX" secondAttribute="bottom" constant="214" id="y1M-8b-biQ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -46,7 +37,4 @@
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
-    <resources>
-        <image name="patsy.png" width="139" height="139"/>
-    </resources>
 </document>
