@@ -170,6 +170,7 @@
                         <outlet property="scanRectView" destination="e3k-ZI-Jq5" id="W6C-6j-jFU"/>
                         <outlet property="scanView" destination="jel-JR-9zH" id="P1g-UP-Cuh"/>
                         <segue destination="Y6d-mh-9iK" kind="custom" identifier="showBeaconView" id="dG0-pZ-QuS"/>
+                        <segue destination="2a1-Uy-Z3F" kind="custom" identifier="scanToPatientView" id="QPb-M5-ngR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CK-fh-uX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -289,9 +290,9 @@
                                     <constraint firstAttribute="trailing" secondItem="j0u-jv-M5s" secondAttribute="trailing" id="ogW-oA-UTb"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scannen Sie hier die verordneten Medikamente." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9a-Be-SKp">
-                                <rect key="frame" x="7" y="208" width="309" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Verordnung scannen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9a-Be-SKp">
+                                <rect key="frame" x="16" y="209" width="282" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -304,8 +305,8 @@
                             <constraint firstItem="1zW-qc-p3Y" firstAttribute="firstBaseline" secondItem="qhR-vr-9Om" secondAttribute="firstBaseline" id="88Z-Xp-xXn"/>
                             <constraint firstItem="KxA-cJ-QyX" firstAttribute="top" secondItem="PGO-8l-eRD" secondAttribute="bottom" constant="104" id="8XG-zz-lrP"/>
                             <constraint firstItem="suP-ZT-6bq" firstAttribute="baseline" secondItem="cIf-aw-2EM" secondAttribute="baseline" id="AFe-IH-kB2"/>
-                            <constraint firstItem="Z9a-Be-SKp" firstAttribute="top" secondItem="1zW-qc-p3Y" secondAttribute="bottom" constant="16" id="APs-7C-yka"/>
-                            <constraint firstItem="Z9a-Be-SKp" firstAttribute="leading" secondItem="Lvh-G3-vyK" secondAttribute="leadingMargin" constant="-9" id="BhK-nf-RW4"/>
+                            <constraint firstItem="Z9a-Be-SKp" firstAttribute="top" secondItem="1zW-qc-p3Y" secondAttribute="bottom" constant="17" id="APs-7C-yka"/>
+                            <constraint firstItem="Z9a-Be-SKp" firstAttribute="leading" secondItem="Lvh-G3-vyK" secondAttribute="leadingMargin" id="BhK-nf-RW4"/>
                             <constraint firstItem="qSg-ss-GiF" firstAttribute="top" secondItem="sSN-2Y-9Ci" secondAttribute="bottom" constant="8" symbolic="YES" id="Chv-1V-t2n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PGO-8l-eRD" secondAttribute="trailing" constant="-6" id="EXd-wA-Na0"/>
                             <constraint firstItem="HM5-iz-Hvg" firstAttribute="trailing" secondItem="suP-ZT-6bq" secondAttribute="trailing" id="FlO-L2-rcD"/>
@@ -333,7 +334,7 @@
                             <constraint firstItem="sSN-2Y-9Ci" firstAttribute="top" secondItem="KDD-wd-If0" secondAttribute="bottom" constant="20" id="rjK-rr-D8J"/>
                             <constraint firstItem="PGO-8l-eRD" firstAttribute="top" secondItem="KDD-wd-If0" secondAttribute="bottom" constant="12" id="tft-Pq-Awm"/>
                             <constraint firstItem="KxA-cJ-QyX" firstAttribute="centerX" secondItem="KDD-wd-If0" secondAttribute="centerX" id="vFl-kA-vv4"/>
-                            <constraint firstItem="KxA-cJ-QyX" firstAttribute="top" secondItem="Z9a-Be-SKp" secondAttribute="bottom" constant="15" id="wF7-4b-223"/>
+                            <constraint firstItem="KxA-cJ-QyX" firstAttribute="top" secondItem="Z9a-Be-SKp" secondAttribute="bottom" constant="14" id="wF7-4b-223"/>
                             <constraint firstItem="cIf-aw-2EM" firstAttribute="top" secondItem="qSg-ss-GiF" secondAttribute="bottom" constant="8" symbolic="YES" id="wNI-Ub-KQD"/>
                             <constraint firstItem="cIf-aw-2EM" firstAttribute="leading" secondItem="qhR-vr-9Om" secondAttribute="leading" id="wZ0-mQ-NpR"/>
                             <constraint firstItem="qhR-vr-9Om" firstAttribute="top" secondItem="cIf-aw-2EM" secondAttribute="bottom" constant="8" symbolic="YES" id="x5p-sO-0YJ"/>
@@ -353,7 +354,7 @@
                         <outlet property="scanRectView" destination="p1B-3J-VBA" id="rZK-gO-vMW"/>
                         <outlet property="scanView" destination="j0u-jv-M5s" id="UHt-tn-DOw"/>
                         <outlet property="utilityView" destination="KxA-cJ-QyX" id="Pr0-em-hRe"/>
-                        <segue destination="a5K-vl-ozU" kind="custom" identifier="backToBeaconView" id="8Us-kW-lq6"/>
+                        <segue destination="Y6d-mh-9iK" kind="custom" identifier="backToBeaconView" id="x2d-f2-vH2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WaN-Gb-S87" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -575,7 +576,7 @@
         <image name="notebook.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dG0-pZ-QuS"/>
-        <segue reference="8Us-kW-lq6"/>
+        <segue reference="x2d-f2-vH2"/>
+        <segue reference="QPb-M5-ngR"/>
     </inferredMetricsTieBreakers>
 </document>

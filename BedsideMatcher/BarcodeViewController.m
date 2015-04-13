@@ -7,6 +7,7 @@
 //
 #import <AudioToolbox/AudioToolbox.h>
 #import "BarcodeViewController.h"
+#import "PatientViewController.h"
 
 @interface BarcodeViewController ()
 
@@ -137,7 +138,7 @@
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     
     [self.capture stop];
-    
+    [self performSegueWithIdentifier:@"scanToPatientView" sender:self];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self.capture start];
     });
@@ -145,7 +146,19 @@
 
 - (IBAction)didTap:(id)sender {
     [self performSegueWithIdentifier:@"showBeaconView" sender:self];
-}  
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"scanToPatientView"]) {
+        PatientViewController *destViewController = segue.destinationViewController;
+        // web service getPatientInformation
+        destViewController.name = @"Scan";
+        destViewController.firstname = @"Scan";
+        //destViewController.image = @"Scan";
+        destViewController.birthdate = @"Scan";
+        destViewController.gender = @"Scan";
+    }
+}
 
 
 /*
