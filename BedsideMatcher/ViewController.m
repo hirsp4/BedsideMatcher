@@ -27,13 +27,11 @@
     //NSLog(@"%i",[[result getItems]count]);
     //NSLog(@"%@",[item getExpiryDate]);
      //NSLog(@"%@",[item getGTIN]);
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [self.tabBarController setSelectedIndex:1];
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
