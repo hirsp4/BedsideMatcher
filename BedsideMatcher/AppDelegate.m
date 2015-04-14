@@ -1,4 +1,4 @@
-//
+  //
 //  AppDelegate.m
 //  BedsideMatcher
 //
@@ -8,13 +8,14 @@
 
 #import "AppDelegate.h"
 #import "Patient.h"
-#import "ViewController.h"
+#import "SupplyChainServicePortBinding.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -130,6 +131,11 @@
 -(void)resetPatients
 {
     [self deleteAllObjects:@"Patient"];
+    
+    SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
+
+    getPatientsResponse *result=[service getPatients:nil];
+    
     Patient *patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
                                                                  inManagedObjectContext:self.managedObjectContext];
     Patient *patient2 = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"

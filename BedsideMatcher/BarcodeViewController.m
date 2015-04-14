@@ -134,17 +134,30 @@
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
     if (!result) return;
     [self.capture stop];
+    
+    // Intermediate
+    NSString *numberString;
+    
+    NSScanner *scanner = [NSScanner scannerWithString:result.text];
+    NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+    
+    // Throw away characters before the first number.
+    [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+    
+    // Collect numbers.
+    [scanner scanCharactersFromSet:numbers intoString:&numberString];
+    
 
     // We got a result. Display information about the result onscreen.
     NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
-    NSString *display = [NSString stringWithFormat:@"Gescannt!\n\nFormat: %@\nInhalt:\n%@", formatString, result.text];
+    NSString *display = [NSString stringWithFormat:@"Gescannt!\n\nFormat: %@\nInhalt:\n%@", formatString, numberString];
     [self.decodedLabel performSelectorOnMainThread:@selector(setText:) withObject:display waitUntilDone:YES];
     NSLog(@"%@",display);
     
     // Vibrate
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     minorID = [NSMutableString string];
-    [minorID appendString:@"56503"];
+    [minorID appendString:numberString];
     [self performSegueWithIdentifier:@"scanToPatientView" sender:self];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self.capture start];
