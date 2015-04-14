@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "NIVSupplyChainServiceBinding.h"
-#import "NIVwebServiceResult.h"
-#import "NIVitem.h"
+#import "CMASupplyChainServicePortBinding.h"
+#import "CMAwebServiceResult.h"
+#import "CMAitem.h"
 #import "BeaconViewController.h"
 @interface ViewController ()
 
@@ -20,15 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    //NIVSupplyChainServiceBinding* service = [[NIVSupplyChainServiceBinding alloc]init];
-    //NSLog(@"%@",[service sayHelloWorldFrom:@"Patrick" __error:nil]);
-    //NIVwebServiceResult* result = [service getCheckedInItems:@"7640166731078" __error:nil];
-   // NIVitem* item =[[result getItems]firstObject];
-    //NSLog(@"%i",[[result getItems]count]);
-    //NSLog(@"%@",[item getExpiryDate]);
-     //NSLog(@"%@",[item getGTIN]);
-    
-}
+    CMASupplyChainServicePortBinding* service = [[CMASupplyChainServicePortBinding alloc]init];
+    NSLog(@"%@",[service sayHelloWorldFrom:@"Patrizia" __error:nil]);
+    }
 
 -(void)viewWillAppear:(BOOL)animated{
     [self.tabBarController setSelectedIndex:1];

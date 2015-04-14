@@ -18,24 +18,86 @@
 		E09C91F31AC166D2006804E9 /* LogoApp.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91F21AC166D2006804E9 /* LogoApp.png */; };
 		E0A2F6601ACC084D001A02BE /* TableViewCellPatients.m in Sources */ = {isa = PBXBuildFile; fileRef = E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */; };
 		E0A2F6611ACC084D001A02BE /* TableViewCellPatients.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */; };
-		EF2A3E4F1AB0856A00C4DBA7 /* NIVcheckinItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */; };
-		EF2A3E501AB0856A00C4DBA7 /* NIVcheckoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E381AB0856A00C4DBA7 /* NIVcheckoutItems.m */; };
-		EF2A3E511AB0856A00C4DBA7 /* NIVcompany.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E3A1AB0856A00C4DBA7 /* NIVcompany.m */; };
-		EF2A3E521AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E3C1AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m */; };
-		EF2A3E531AB0856A00C4DBA7 /* NIVHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E3E1AB0856A00C4DBA7 /* NIVHelper.m */; };
-		EF2A3E541AB0856A00C4DBA7 /* NIVinsertTrackingItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E401AB0856A00C4DBA7 /* NIVinsertTrackingItems.m */; };
-		EF2A3E551AB0856A00C4DBA7 /* NIVitem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E421AB0856A00C4DBA7 /* NIVitem.m */; };
-		EF2A3E561AB0856A00C4DBA7 /* NIVorder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E441AB0856A00C4DBA7 /* NIVorder.m */; };
-		EF2A3E571AB0856A00C4DBA7 /* NIVposition.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E461AB0856A00C4DBA7 /* NIVposition.m */; };
-		EF2A3E581AB0856A00C4DBA7 /* NIVRequestResultHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E481AB0856A00C4DBA7 /* NIVRequestResultHandler.m */; };
-		EF2A3E591AB0856A00C4DBA7 /* NIVSoapError.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E4A1AB0856A00C4DBA7 /* NIVSoapError.m */; };
-		EF2A3E5A1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E4C1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m */; };
-		EF2A3E5B1AB0856A00C4DBA7 /* NIVwebServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E4E1AB0856A00C4DBA7 /* NIVwebServiceResult.m */; };
-		EF2A3E641AB0858600C4DBA7 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E5F1AB0858600C4DBA7 /* DDXMLDocument.m */; };
-		EF2A3E651AB0858600C4DBA7 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E611AB0858600C4DBA7 /* DDXMLElement.m */; };
-		EF2A3E661AB0858600C4DBA7 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E631AB0858600C4DBA7 /* DDXMLNode.m */; };
-		EF2A3E691AB0858E00C4DBA7 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E681AB0858E00C4DBA7 /* NSString+DDXML.m */; };
-		EF2A3E6C1AB0859600C4DBA7 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2A3E6B1AB0859600C4DBA7 /* DDXMLElementAdditions.m */; };
+		E0DC11011ADD1D4700167F2B /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC10F71ADD1D4700167F2B /* DDXMLElementAdditions.m */; };
+		E0DC11021ADD1D4700167F2B /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC10F91ADD1D4700167F2B /* NSString+DDXML.m */; };
+		E0DC11031ADD1D4700167F2B /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC10FC1ADD1D4700167F2B /* DDXMLDocument.m */; };
+		E0DC11041ADD1D4700167F2B /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC10FE1ADD1D4700167F2B /* DDXMLElement.m */; };
+		E0DC11051ADD1D4700167F2B /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11001ADD1D4700167F2B /* DDXMLNode.m */; };
+		E0DC119C1ADD1D6200167F2B /* bloodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11071ADD1D6200167F2B /* bloodGroup.m */; };
+		E0DC119D1ADD1D6200167F2B /* gender.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11091ADD1D6200167F2B /* gender.m */; };
+		E0DC119E1ADD1D6200167F2B /* getCheckedInItems.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC110B1ADD1D6200167F2B /* getCheckedInItems.m */; };
+		E0DC119F1ADD1D6200167F2B /* getCheckedInItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC110D1ADD1D6200167F2B /* getCheckedInItemsResponse.m */; };
+		E0DC11A01ADD1D6200167F2B /* getDosetForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC110F1ADD1D6200167F2B /* getDosetForPatientResponse.m */; };
+		E0DC11A11ADD1D6200167F2B /* getItemsByBatchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11111ADD1D6200167F2B /* getItemsByBatchResponse.m */; };
+		E0DC11A21ADD1D6200167F2B /* getItemsBySSCCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11131ADD1D6200167F2B /* getItemsBySSCCResponse.m */; };
+		E0DC11A31ADD1D6200167F2B /* getOpenOrdersByGLNResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11151ADD1D6200167F2B /* getOpenOrdersByGLNResponse.m */; };
+		E0DC11A41ADD1D6200167F2B /* getPatientsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11171ADD1D6200167F2B /* getPatientsResponse.m */; };
+		E0DC11A51ADD1D6200167F2B /* getPreparedMedicationsForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11191ADD1D6200167F2B /* getPreparedMedicationsForPatientResponse.m */; };
+		E0DC11A61ADD1D6200167F2B /* getPrescriptionsForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC111B1ADD1D6200167F2B /* getPrescriptionsForPatientResponse.m */; };
+		E0DC11A71ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC111D1ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m */; };
+		E0DC11A81ADD1D6200167F2B /* getProductForSecondaryPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC111F1ADD1D6200167F2B /* getProductForSecondaryPackage.m */; };
+		E0DC11A91ADD1D6200167F2B /* getProductForSecondaryPackageResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11211ADD1D6200167F2B /* getProductForSecondaryPackageResponse.m */; };
+		E0DC11AA1ADD1D6200167F2B /* getQuantities.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11231ADD1D6200167F2B /* getQuantities.m */; };
+		E0DC11AB1ADD1D6200167F2B /* getQuantitiesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11251ADD1D6200167F2B /* getQuantitiesResponse.m */; };
+		E0DC11AC1ADD1D6200167F2B /* getStationsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11271ADD1D6200167F2B /* getStationsResponse.m */; };
+		E0DC11AD1ADD1D6200167F2B /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11291ADD1D6200167F2B /* Helper.m */; };
+		E0DC11AE1ADD1D6200167F2B /* insertTrackingItems.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC112B1ADD1D6200167F2B /* insertTrackingItems.m */; };
+		E0DC11AF1ADD1D6200167F2B /* insertTrackingItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC112D1ADD1D6200167F2B /* insertTrackingItemsResponse.m */; };
+		E0DC11B01ADD1D6200167F2B /* medicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC112F1ADD1D6200167F2B /* medicationState.m */; };
+		E0DC11B11ADD1D6200167F2B /* prescriptionState.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11311ADD1D6200167F2B /* prescriptionState.m */; };
+		E0DC11B21ADD1D6200167F2B /* quantity.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11331ADD1D6200167F2B /* quantity.m */; };
+		E0DC11B31ADD1D6200167F2B /* RequestResultHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11351ADD1D6200167F2B /* RequestResultHandler.m */; };
+		E0DC11B41ADD1D6200167F2B /* savePreparedMedications.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11371ADD1D6200167F2B /* savePreparedMedications.m */; };
+		E0DC11B51ADD1D6200167F2B /* SoapError.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11391ADD1D6200167F2B /* SoapError.m */; };
+		E0DC11B61ADD1D6200167F2B /* SupplyChainServicePortBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC113B1ADD1D6200167F2B /* SupplyChainServicePortBinding.m */; };
+		E0DC11B71ADD1D6200167F2B /* checkinItems.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC113D1ADD1D6200167F2B /* checkinItems.m */; };
+		E0DC11B81ADD1D6200167F2B /* checkinItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC113F1ADD1D6200167F2B /* checkinItemsResponse.m */; };
+		E0DC11B91ADD1D6200167F2B /* getDosetForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11411ADD1D6200167F2B /* getDosetForPatient.m */; };
+		E0DC11BA1ADD1D6200167F2B /* getItemByIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11431ADD1D6200167F2B /* getItemByIdentifier.m */; };
+		E0DC11BB1ADD1D6200167F2B /* getItemByIdentifierResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11451ADD1D6200167F2B /* getItemByIdentifierResponse.m */; };
+		E0DC11BC1ADD1D6200167F2B /* getItemsByBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11471ADD1D6200167F2B /* getItemsByBatch.m */; };
+		E0DC11BD1ADD1D6200167F2B /* getItemsByGSIN.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11491ADD1D6200167F2B /* getItemsByGSIN.m */; };
+		E0DC11BE1ADD1D6200167F2B /* getItemsByGSINResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC114B1ADD1D6200167F2B /* getItemsByGSINResponse.m */; };
+		E0DC11BF1ADD1D6200167F2B /* getItemsBySSCC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC114D1ADD1D6200167F2B /* getItemsBySSCC.m */; };
+		E0DC11C01ADD1D6200167F2B /* getOpenOrdersByGLN.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC114F1ADD1D6200167F2B /* getOpenOrdersByGLN.m */; };
+		E0DC11C11ADD1D6200167F2B /* getPatientByMinorId.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11511ADD1D6200167F2B /* getPatientByMinorId.m */; };
+		E0DC11C21ADD1D6200167F2B /* getPatientByMinorIdResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11531ADD1D6200167F2B /* getPatientByMinorIdResponse.m */; };
+		E0DC11C31ADD1D6200167F2B /* getPatientByPid.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11551ADD1D6200167F2B /* getPatientByPid.m */; };
+		E0DC11C41ADD1D6200167F2B /* getPatientByPidResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11571ADD1D6200167F2B /* getPatientByPidResponse.m */; };
+		E0DC11C51ADD1D6200167F2B /* getPatients.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11591ADD1D6200167F2B /* getPatients.m */; };
+		E0DC11C61ADD1D6200167F2B /* getPreparedMedicationsForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC115B1ADD1D6200167F2B /* getPreparedMedicationsForPatient.m */; };
+		E0DC11C71ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC115D1ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatient.m */; };
+		E0DC11C81ADD1D6200167F2B /* getStations.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC115F1ADD1D6200167F2B /* getStations.m */; };
+		E0DC11C91ADD1D6200167F2B /* order.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11611ADD1D6200167F2B /* order.m */; };
+		E0DC11CA1ADD1D6200167F2B /* position.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11631ADD1D6200167F2B /* position.m */; };
+		E0DC11CB1ADD1D6200167F2B /* processOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11651ADD1D6200167F2B /* processOrder.m */; };
+		E0DC11CC1ADD1D6200167F2B /* processOrderResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11671ADD1D6200167F2B /* processOrderResponse.m */; };
+		E0DC11CD1ADD1D6200167F2B /* production.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11691ADD1D6200167F2B /* production.m */; };
+		E0DC11CE1ADD1D6200167F2B /* resetTrackedItems.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC116B1ADD1D6200167F2B /* resetTrackedItems.m */; };
+		E0DC11CF1ADD1D6200167F2B /* resetTrackedItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC116D1ADD1D6200167F2B /* resetTrackedItemsResponse.m */; };
+		E0DC11D01ADD1D6200167F2B /* savePreparedMedicationsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC116F1ADD1D6200167F2B /* savePreparedMedicationsResponse.m */; };
+		E0DC11D11ADD1D6200167F2B /* sayHelloWorldFrom.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11711ADD1D6200167F2B /* sayHelloWorldFrom.m */; };
+		E0DC11D21ADD1D6200167F2B /* sayHelloWorldFromResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11731ADD1D6200167F2B /* sayHelloWorldFromResponse.m */; };
+		E0DC11D31ADD1D6200167F2B /* setOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11751ADD1D6200167F2B /* setOrder.m */; };
+		E0DC11D41ADD1D6200167F2B /* setOrderResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11771ADD1D6200167F2B /* setOrderResponse.m */; };
+		E0DC11D51ADD1D6200167F2B /* shipment.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11791ADD1D6200167F2B /* shipment.m */; };
+		E0DC11D61ADD1D6200167F2B /* station.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC117B1ADD1D6200167F2B /* station.m */; };
+		E0DC11D71ADD1D6200167F2B /* trspPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC117D1ADD1D6200167F2B /* trspPatient.m */; };
+		E0DC11D81ADD1D6200167F2B /* updatePreparedMedications.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC117F1ADD1D6200167F2B /* updatePreparedMedications.m */; };
+		E0DC11D91ADD1D6200167F2B /* updatePreparedMedicationsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11811ADD1D6200167F2B /* updatePreparedMedicationsResponse.m */; };
+		E0DC11DA1ADD1D6200167F2B /* updatePrescriptions.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11831ADD1D6200167F2B /* updatePrescriptions.m */; };
+		E0DC11DB1ADD1D6200167F2B /* updatePrescriptionsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11851ADD1D6200167F2B /* updatePrescriptionsResponse.m */; };
+		E0DC11DC1ADD1D6200167F2B /* checkoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11871ADD1D6200167F2B /* checkoutItems.m */; };
+		E0DC11DD1ADD1D6200167F2B /* checkoutItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11891ADD1D6200167F2B /* checkoutItemsResponse.m */; };
+		E0DC11DE1ADD1D6200167F2B /* company.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC118B1ADD1D6200167F2B /* company.m */; };
+		E0DC11DF1ADD1D6200167F2B /* getOrderForSSCC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC118D1ADD1D6200167F2B /* getOrderForSSCC.m */; };
+		E0DC11E01ADD1D6200167F2B /* getOrderForSSCCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC118F1ADD1D6200167F2B /* getOrderForSSCCResponse.m */; };
+		E0DC11E11ADD1D6200167F2B /* getPrescriptionsForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11911ADD1D6200167F2B /* getPrescriptionsForPatient.m */; };
+		E0DC11E21ADD1D6200167F2B /* item.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11931ADD1D6200167F2B /* item.m */; };
+		E0DC11E31ADD1D6200167F2B /* trspMedication.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11951ADD1D6200167F2B /* trspMedication.m */; };
+		E0DC11E41ADD1D6200167F2B /* trspPreparedMedication.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11971ADD1D6200167F2B /* trspPreparedMedication.m */; };
+		E0DC11E51ADD1D6200167F2B /* trspPrescription.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC11991ADD1D6200167F2B /* trspPrescription.m */; };
+		E0DC11E61ADD1D6200167F2B /* webServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DC119B1ADD1D6200167F2B /* webServiceResult.m */; };
 		EF36567C1AAF95E000A0B64D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF36567B1AAF95E000A0B64D /* main.m */; };
 		EF36567F1AAF95E000A0B64D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF36567E1AAF95E000A0B64D /* AppDelegate.m */; };
 		EF3656821AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF3656801AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld */; };
@@ -302,44 +364,167 @@
 		E0A2F65D1ACC084D001A02BE /* TableViewCellPatients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellPatients.h; sourceTree = "<group>"; };
 		E0A2F65E1ACC084D001A02BE /* TableViewCellPatients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellPatients.m; sourceTree = "<group>"; };
 		E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellPatients.xib; sourceTree = "<group>"; };
-		EF2A3E351AB0856A00C4DBA7 /* NIVcheckinItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckinItems.h; sourceTree = "<group>"; };
-		EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVcheckinItems.m; sourceTree = "<group>"; };
-		EF2A3E371AB0856A00C4DBA7 /* NIVcheckoutItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcheckoutItems.h; sourceTree = "<group>"; };
-		EF2A3E381AB0856A00C4DBA7 /* NIVcheckoutItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVcheckoutItems.m; sourceTree = "<group>"; };
-		EF2A3E391AB0856A00C4DBA7 /* NIVcompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVcompany.h; sourceTree = "<group>"; };
-		EF2A3E3A1AB0856A00C4DBA7 /* NIVcompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVcompany.m; sourceTree = "<group>"; };
-		EF2A3E3B1AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVgetItemsBySSCCResponse.h; sourceTree = "<group>"; };
-		EF2A3E3C1AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVgetItemsBySSCCResponse.m; sourceTree = "<group>"; };
-		EF2A3E3D1AB0856A00C4DBA7 /* NIVHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVHelper.h; sourceTree = "<group>"; };
-		EF2A3E3E1AB0856A00C4DBA7 /* NIVHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVHelper.m; sourceTree = "<group>"; };
-		EF2A3E3F1AB0856A00C4DBA7 /* NIVinsertTrackingItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVinsertTrackingItems.h; sourceTree = "<group>"; };
-		EF2A3E401AB0856A00C4DBA7 /* NIVinsertTrackingItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVinsertTrackingItems.m; sourceTree = "<group>"; };
-		EF2A3E411AB0856A00C4DBA7 /* NIVitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVitem.h; sourceTree = "<group>"; };
-		EF2A3E421AB0856A00C4DBA7 /* NIVitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVitem.m; sourceTree = "<group>"; };
-		EF2A3E431AB0856A00C4DBA7 /* NIVorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVorder.h; sourceTree = "<group>"; };
-		EF2A3E441AB0856A00C4DBA7 /* NIVorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVorder.m; sourceTree = "<group>"; };
-		EF2A3E451AB0856A00C4DBA7 /* NIVposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVposition.h; sourceTree = "<group>"; };
-		EF2A3E461AB0856A00C4DBA7 /* NIVposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVposition.m; sourceTree = "<group>"; };
-		EF2A3E471AB0856A00C4DBA7 /* NIVRequestResultHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVRequestResultHandler.h; sourceTree = "<group>"; };
-		EF2A3E481AB0856A00C4DBA7 /* NIVRequestResultHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVRequestResultHandler.m; sourceTree = "<group>"; };
-		EF2A3E491AB0856A00C4DBA7 /* NIVSoapError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVSoapError.h; sourceTree = "<group>"; };
-		EF2A3E4A1AB0856A00C4DBA7 /* NIVSoapError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVSoapError.m; sourceTree = "<group>"; };
-		EF2A3E4B1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVSupplyChainServiceBinding.h; sourceTree = "<group>"; };
-		EF2A3E4C1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVSupplyChainServiceBinding.m; sourceTree = "<group>"; };
-		EF2A3E4D1AB0856A00C4DBA7 /* NIVwebServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIVwebServiceResult.h; sourceTree = "<group>"; };
-		EF2A3E4E1AB0856A00C4DBA7 /* NIVwebServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIVwebServiceResult.m; sourceTree = "<group>"; };
-		EF2A3E5C1AB0857F00C4DBA7 /* DDXMLPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
-		EF2A3E5D1AB0858600C4DBA7 /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
-		EF2A3E5E1AB0858600C4DBA7 /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
-		EF2A3E5F1AB0858600C4DBA7 /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
-		EF2A3E601AB0858600C4DBA7 /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
-		EF2A3E611AB0858600C4DBA7 /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
-		EF2A3E621AB0858600C4DBA7 /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
-		EF2A3E631AB0858600C4DBA7 /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
-		EF2A3E671AB0858E00C4DBA7 /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
-		EF2A3E681AB0858E00C4DBA7 /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
-		EF2A3E6A1AB0859600C4DBA7 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
-		EF2A3E6B1AB0859600C4DBA7 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		E0DC10F61ADD1D4700167F2B /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
+		E0DC10F71ADD1D4700167F2B /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		E0DC10F81ADD1D4700167F2B /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
+		E0DC10F91ADD1D4700167F2B /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
+		E0DC10FA1ADD1D4700167F2B /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
+		E0DC10FB1ADD1D4700167F2B /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
+		E0DC10FC1ADD1D4700167F2B /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
+		E0DC10FD1ADD1D4700167F2B /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
+		E0DC10FE1ADD1D4700167F2B /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
+		E0DC10FF1ADD1D4700167F2B /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
+		E0DC11001ADD1D4700167F2B /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
+		E0DC11061ADD1D6200167F2B /* bloodGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bloodGroup.h; sourceTree = "<group>"; };
+		E0DC11071ADD1D6200167F2B /* bloodGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bloodGroup.m; sourceTree = "<group>"; };
+		E0DC11081ADD1D6200167F2B /* gender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gender.h; sourceTree = "<group>"; };
+		E0DC11091ADD1D6200167F2B /* gender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gender.m; sourceTree = "<group>"; };
+		E0DC110A1ADD1D6200167F2B /* getCheckedInItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getCheckedInItems.h; sourceTree = "<group>"; };
+		E0DC110B1ADD1D6200167F2B /* getCheckedInItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getCheckedInItems.m; sourceTree = "<group>"; };
+		E0DC110C1ADD1D6200167F2B /* getCheckedInItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getCheckedInItemsResponse.h; sourceTree = "<group>"; };
+		E0DC110D1ADD1D6200167F2B /* getCheckedInItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getCheckedInItemsResponse.m; sourceTree = "<group>"; };
+		E0DC110E1ADD1D6200167F2B /* getDosetForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getDosetForPatientResponse.h; sourceTree = "<group>"; };
+		E0DC110F1ADD1D6200167F2B /* getDosetForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getDosetForPatientResponse.m; sourceTree = "<group>"; };
+		E0DC11101ADD1D6200167F2B /* getItemsByBatchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByBatchResponse.h; sourceTree = "<group>"; };
+		E0DC11111ADD1D6200167F2B /* getItemsByBatchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByBatchResponse.m; sourceTree = "<group>"; };
+		E0DC11121ADD1D6200167F2B /* getItemsBySSCCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsBySSCCResponse.h; sourceTree = "<group>"; };
+		E0DC11131ADD1D6200167F2B /* getItemsBySSCCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsBySSCCResponse.m; sourceTree = "<group>"; };
+		E0DC11141ADD1D6200167F2B /* getOpenOrdersByGLNResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOpenOrdersByGLNResponse.h; sourceTree = "<group>"; };
+		E0DC11151ADD1D6200167F2B /* getOpenOrdersByGLNResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOpenOrdersByGLNResponse.m; sourceTree = "<group>"; };
+		E0DC11161ADD1D6200167F2B /* getPatientsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPatientsResponse.h; sourceTree = "<group>"; };
+		E0DC11171ADD1D6200167F2B /* getPatientsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPatientsResponse.m; sourceTree = "<group>"; };
+		E0DC11181ADD1D6200167F2B /* getPreparedMedicationsForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPreparedMedicationsForPatientResponse.h; sourceTree = "<group>"; };
+		E0DC11191ADD1D6200167F2B /* getPreparedMedicationsForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPreparedMedicationsForPatientResponse.m; sourceTree = "<group>"; };
+		E0DC111A1ADD1D6200167F2B /* getPrescriptionsForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsForPatientResponse.h; sourceTree = "<group>"; };
+		E0DC111B1ADD1D6200167F2B /* getPrescriptionsForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsForPatientResponse.m; sourceTree = "<group>"; };
+		E0DC111C1ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsWithPreparedMedicationsForPatientResponse.h; sourceTree = "<group>"; };
+		E0DC111D1ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsWithPreparedMedicationsForPatientResponse.m; sourceTree = "<group>"; };
+		E0DC111E1ADD1D6200167F2B /* getProductForSecondaryPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getProductForSecondaryPackage.h; sourceTree = "<group>"; };
+		E0DC111F1ADD1D6200167F2B /* getProductForSecondaryPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getProductForSecondaryPackage.m; sourceTree = "<group>"; };
+		E0DC11201ADD1D6200167F2B /* getProductForSecondaryPackageResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getProductForSecondaryPackageResponse.h; sourceTree = "<group>"; };
+		E0DC11211ADD1D6200167F2B /* getProductForSecondaryPackageResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getProductForSecondaryPackageResponse.m; sourceTree = "<group>"; };
+		E0DC11221ADD1D6200167F2B /* getQuantities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getQuantities.h; sourceTree = "<group>"; };
+		E0DC11231ADD1D6200167F2B /* getQuantities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getQuantities.m; sourceTree = "<group>"; };
+		E0DC11241ADD1D6200167F2B /* getQuantitiesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getQuantitiesResponse.h; sourceTree = "<group>"; };
+		E0DC11251ADD1D6200167F2B /* getQuantitiesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getQuantitiesResponse.m; sourceTree = "<group>"; };
+		E0DC11261ADD1D6200167F2B /* getStationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getStationsResponse.h; sourceTree = "<group>"; };
+		E0DC11271ADD1D6200167F2B /* getStationsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getStationsResponse.m; sourceTree = "<group>"; };
+		E0DC11281ADD1D6200167F2B /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		E0DC11291ADD1D6200167F2B /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		E0DC112A1ADD1D6200167F2B /* insertTrackingItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertTrackingItems.h; sourceTree = "<group>"; };
+		E0DC112B1ADD1D6200167F2B /* insertTrackingItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insertTrackingItems.m; sourceTree = "<group>"; };
+		E0DC112C1ADD1D6200167F2B /* insertTrackingItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertTrackingItemsResponse.h; sourceTree = "<group>"; };
+		E0DC112D1ADD1D6200167F2B /* insertTrackingItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insertTrackingItemsResponse.m; sourceTree = "<group>"; };
+		E0DC112E1ADD1D6200167F2B /* medicationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = medicationState.h; sourceTree = "<group>"; };
+		E0DC112F1ADD1D6200167F2B /* medicationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = medicationState.m; sourceTree = "<group>"; };
+		E0DC11301ADD1D6200167F2B /* prescriptionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prescriptionState.h; sourceTree = "<group>"; };
+		E0DC11311ADD1D6200167F2B /* prescriptionState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prescriptionState.m; sourceTree = "<group>"; };
+		E0DC11321ADD1D6200167F2B /* quantity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quantity.h; sourceTree = "<group>"; };
+		E0DC11331ADD1D6200167F2B /* quantity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = quantity.m; sourceTree = "<group>"; };
+		E0DC11341ADD1D6200167F2B /* RequestResultHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestResultHandler.h; sourceTree = "<group>"; };
+		E0DC11351ADD1D6200167F2B /* RequestResultHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestResultHandler.m; sourceTree = "<group>"; };
+		E0DC11361ADD1D6200167F2B /* savePreparedMedications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = savePreparedMedications.h; sourceTree = "<group>"; };
+		E0DC11371ADD1D6200167F2B /* savePreparedMedications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = savePreparedMedications.m; sourceTree = "<group>"; };
+		E0DC11381ADD1D6200167F2B /* SoapError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapError.h; sourceTree = "<group>"; };
+		E0DC11391ADD1D6200167F2B /* SoapError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapError.m; sourceTree = "<group>"; };
+		E0DC113A1ADD1D6200167F2B /* SupplyChainServicePortBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplyChainServicePortBinding.h; sourceTree = "<group>"; };
+		E0DC113B1ADD1D6200167F2B /* SupplyChainServicePortBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplyChainServicePortBinding.m; sourceTree = "<group>"; };
+		E0DC113C1ADD1D6200167F2B /* checkinItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkinItems.h; sourceTree = "<group>"; };
+		E0DC113D1ADD1D6200167F2B /* checkinItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkinItems.m; sourceTree = "<group>"; };
+		E0DC113E1ADD1D6200167F2B /* checkinItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkinItemsResponse.h; sourceTree = "<group>"; };
+		E0DC113F1ADD1D6200167F2B /* checkinItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkinItemsResponse.m; sourceTree = "<group>"; };
+		E0DC11401ADD1D6200167F2B /* getDosetForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getDosetForPatient.h; sourceTree = "<group>"; };
+		E0DC11411ADD1D6200167F2B /* getDosetForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getDosetForPatient.m; sourceTree = "<group>"; };
+		E0DC11421ADD1D6200167F2B /* getItemByIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemByIdentifier.h; sourceTree = "<group>"; };
+		E0DC11431ADD1D6200167F2B /* getItemByIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemByIdentifier.m; sourceTree = "<group>"; };
+		E0DC11441ADD1D6200167F2B /* getItemByIdentifierResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemByIdentifierResponse.h; sourceTree = "<group>"; };
+		E0DC11451ADD1D6200167F2B /* getItemByIdentifierResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemByIdentifierResponse.m; sourceTree = "<group>"; };
+		E0DC11461ADD1D6200167F2B /* getItemsByBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByBatch.h; sourceTree = "<group>"; };
+		E0DC11471ADD1D6200167F2B /* getItemsByBatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByBatch.m; sourceTree = "<group>"; };
+		E0DC11481ADD1D6200167F2B /* getItemsByGSIN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByGSIN.h; sourceTree = "<group>"; };
+		E0DC11491ADD1D6200167F2B /* getItemsByGSIN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByGSIN.m; sourceTree = "<group>"; };
+		E0DC114A1ADD1D6200167F2B /* getItemsByGSINResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByGSINResponse.h; sourceTree = "<group>"; };
+		E0DC114B1ADD1D6200167F2B /* getItemsByGSINResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByGSINResponse.m; sourceTree = "<group>"; };
+		E0DC114C1ADD1D6200167F2B /* getItemsBySSCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsBySSCC.h; sourceTree = "<group>"; };
+		E0DC114D1ADD1D6200167F2B /* getItemsBySSCC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsBySSCC.m; sourceTree = "<group>"; };
+		E0DC114E1ADD1D6200167F2B /* getOpenOrdersByGLN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOpenOrdersByGLN.h; sourceTree = "<group>"; };
+		E0DC114F1ADD1D6200167F2B /* getOpenOrdersByGLN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOpenOrdersByGLN.m; sourceTree = "<group>"; };
+		E0DC11501ADD1D6200167F2B /* getPatientByMinorId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPatientByMinorId.h; sourceTree = "<group>"; };
+		E0DC11511ADD1D6200167F2B /* getPatientByMinorId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPatientByMinorId.m; sourceTree = "<group>"; };
+		E0DC11521ADD1D6200167F2B /* getPatientByMinorIdResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPatientByMinorIdResponse.h; sourceTree = "<group>"; };
+		E0DC11531ADD1D6200167F2B /* getPatientByMinorIdResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPatientByMinorIdResponse.m; sourceTree = "<group>"; };
+		E0DC11541ADD1D6200167F2B /* getPatientByPid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPatientByPid.h; sourceTree = "<group>"; };
+		E0DC11551ADD1D6200167F2B /* getPatientByPid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPatientByPid.m; sourceTree = "<group>"; };
+		E0DC11561ADD1D6200167F2B /* getPatientByPidResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPatientByPidResponse.h; sourceTree = "<group>"; };
+		E0DC11571ADD1D6200167F2B /* getPatientByPidResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPatientByPidResponse.m; sourceTree = "<group>"; };
+		E0DC11581ADD1D6200167F2B /* getPatients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPatients.h; sourceTree = "<group>"; };
+		E0DC11591ADD1D6200167F2B /* getPatients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPatients.m; sourceTree = "<group>"; };
+		E0DC115A1ADD1D6200167F2B /* getPreparedMedicationsForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPreparedMedicationsForPatient.h; sourceTree = "<group>"; };
+		E0DC115B1ADD1D6200167F2B /* getPreparedMedicationsForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPreparedMedicationsForPatient.m; sourceTree = "<group>"; };
+		E0DC115C1ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsWithPreparedMedicationsForPatient.h; sourceTree = "<group>"; };
+		E0DC115D1ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsWithPreparedMedicationsForPatient.m; sourceTree = "<group>"; };
+		E0DC115E1ADD1D6200167F2B /* getStations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getStations.h; sourceTree = "<group>"; };
+		E0DC115F1ADD1D6200167F2B /* getStations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getStations.m; sourceTree = "<group>"; };
+		E0DC11601ADD1D6200167F2B /* order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = order.h; sourceTree = "<group>"; };
+		E0DC11611ADD1D6200167F2B /* order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = order.m; sourceTree = "<group>"; };
+		E0DC11621ADD1D6200167F2B /* position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = position.h; sourceTree = "<group>"; };
+		E0DC11631ADD1D6200167F2B /* position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = position.m; sourceTree = "<group>"; };
+		E0DC11641ADD1D6200167F2B /* processOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = processOrder.h; sourceTree = "<group>"; };
+		E0DC11651ADD1D6200167F2B /* processOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = processOrder.m; sourceTree = "<group>"; };
+		E0DC11661ADD1D6200167F2B /* processOrderResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = processOrderResponse.h; sourceTree = "<group>"; };
+		E0DC11671ADD1D6200167F2B /* processOrderResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = processOrderResponse.m; sourceTree = "<group>"; };
+		E0DC11681ADD1D6200167F2B /* production.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = production.h; sourceTree = "<group>"; };
+		E0DC11691ADD1D6200167F2B /* production.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = production.m; sourceTree = "<group>"; };
+		E0DC116A1ADD1D6200167F2B /* resetTrackedItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resetTrackedItems.h; sourceTree = "<group>"; };
+		E0DC116B1ADD1D6200167F2B /* resetTrackedItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resetTrackedItems.m; sourceTree = "<group>"; };
+		E0DC116C1ADD1D6200167F2B /* resetTrackedItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resetTrackedItemsResponse.h; sourceTree = "<group>"; };
+		E0DC116D1ADD1D6200167F2B /* resetTrackedItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resetTrackedItemsResponse.m; sourceTree = "<group>"; };
+		E0DC116E1ADD1D6200167F2B /* savePreparedMedicationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = savePreparedMedicationsResponse.h; sourceTree = "<group>"; };
+		E0DC116F1ADD1D6200167F2B /* savePreparedMedicationsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = savePreparedMedicationsResponse.m; sourceTree = "<group>"; };
+		E0DC11701ADD1D6200167F2B /* sayHelloWorldFrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sayHelloWorldFrom.h; sourceTree = "<group>"; };
+		E0DC11711ADD1D6200167F2B /* sayHelloWorldFrom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sayHelloWorldFrom.m; sourceTree = "<group>"; };
+		E0DC11721ADD1D6200167F2B /* sayHelloWorldFromResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sayHelloWorldFromResponse.h; sourceTree = "<group>"; };
+		E0DC11731ADD1D6200167F2B /* sayHelloWorldFromResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sayHelloWorldFromResponse.m; sourceTree = "<group>"; };
+		E0DC11741ADD1D6200167F2B /* setOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setOrder.h; sourceTree = "<group>"; };
+		E0DC11751ADD1D6200167F2B /* setOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setOrder.m; sourceTree = "<group>"; };
+		E0DC11761ADD1D6200167F2B /* setOrderResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setOrderResponse.h; sourceTree = "<group>"; };
+		E0DC11771ADD1D6200167F2B /* setOrderResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setOrderResponse.m; sourceTree = "<group>"; };
+		E0DC11781ADD1D6200167F2B /* shipment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shipment.h; sourceTree = "<group>"; };
+		E0DC11791ADD1D6200167F2B /* shipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shipment.m; sourceTree = "<group>"; };
+		E0DC117A1ADD1D6200167F2B /* station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = station.h; sourceTree = "<group>"; };
+		E0DC117B1ADD1D6200167F2B /* station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = station.m; sourceTree = "<group>"; };
+		E0DC117C1ADD1D6200167F2B /* trspPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspPatient.h; sourceTree = "<group>"; };
+		E0DC117D1ADD1D6200167F2B /* trspPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspPatient.m; sourceTree = "<group>"; };
+		E0DC117E1ADD1D6200167F2B /* updatePreparedMedications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePreparedMedications.h; sourceTree = "<group>"; };
+		E0DC117F1ADD1D6200167F2B /* updatePreparedMedications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePreparedMedications.m; sourceTree = "<group>"; };
+		E0DC11801ADD1D6200167F2B /* updatePreparedMedicationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePreparedMedicationsResponse.h; sourceTree = "<group>"; };
+		E0DC11811ADD1D6200167F2B /* updatePreparedMedicationsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePreparedMedicationsResponse.m; sourceTree = "<group>"; };
+		E0DC11821ADD1D6200167F2B /* updatePrescriptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePrescriptions.h; sourceTree = "<group>"; };
+		E0DC11831ADD1D6200167F2B /* updatePrescriptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePrescriptions.m; sourceTree = "<group>"; };
+		E0DC11841ADD1D6200167F2B /* updatePrescriptionsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePrescriptionsResponse.h; sourceTree = "<group>"; };
+		E0DC11851ADD1D6200167F2B /* updatePrescriptionsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePrescriptionsResponse.m; sourceTree = "<group>"; };
+		E0DC11861ADD1D6200167F2B /* checkoutItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutItems.h; sourceTree = "<group>"; };
+		E0DC11871ADD1D6200167F2B /* checkoutItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutItems.m; sourceTree = "<group>"; };
+		E0DC11881ADD1D6200167F2B /* checkoutItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutItemsResponse.h; sourceTree = "<group>"; };
+		E0DC11891ADD1D6200167F2B /* checkoutItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutItemsResponse.m; sourceTree = "<group>"; };
+		E0DC118A1ADD1D6200167F2B /* company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = company.h; sourceTree = "<group>"; };
+		E0DC118B1ADD1D6200167F2B /* company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = company.m; sourceTree = "<group>"; };
+		E0DC118C1ADD1D6200167F2B /* getOrderForSSCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOrderForSSCC.h; sourceTree = "<group>"; };
+		E0DC118D1ADD1D6200167F2B /* getOrderForSSCC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOrderForSSCC.m; sourceTree = "<group>"; };
+		E0DC118E1ADD1D6200167F2B /* getOrderForSSCCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOrderForSSCCResponse.h; sourceTree = "<group>"; };
+		E0DC118F1ADD1D6200167F2B /* getOrderForSSCCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOrderForSSCCResponse.m; sourceTree = "<group>"; };
+		E0DC11901ADD1D6200167F2B /* getPrescriptionsForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsForPatient.h; sourceTree = "<group>"; };
+		E0DC11911ADD1D6200167F2B /* getPrescriptionsForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsForPatient.m; sourceTree = "<group>"; };
+		E0DC11921ADD1D6200167F2B /* item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = item.h; sourceTree = "<group>"; };
+		E0DC11931ADD1D6200167F2B /* item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = item.m; sourceTree = "<group>"; };
+		E0DC11941ADD1D6200167F2B /* trspMedication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspMedication.h; sourceTree = "<group>"; };
+		E0DC11951ADD1D6200167F2B /* trspMedication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspMedication.m; sourceTree = "<group>"; };
+		E0DC11961ADD1D6200167F2B /* trspPreparedMedication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspPreparedMedication.h; sourceTree = "<group>"; };
+		E0DC11971ADD1D6200167F2B /* trspPreparedMedication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspPreparedMedication.m; sourceTree = "<group>"; };
+		E0DC11981ADD1D6200167F2B /* trspPrescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspPrescription.h; sourceTree = "<group>"; };
+		E0DC11991ADD1D6200167F2B /* trspPrescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspPrescription.m; sourceTree = "<group>"; };
+		E0DC119A1ADD1D6200167F2B /* webServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webServiceResult.h; sourceTree = "<group>"; };
+		E0DC119B1ADD1D6200167F2B /* webServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webServiceResult.m; sourceTree = "<group>"; };
 		EF3656761AAF95E000A0B64D /* BedsideMatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BedsideMatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF36567A1AAF95E000A0B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF36567B1AAF95E000A0B64D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -935,44 +1120,167 @@
 		EF3656A21AAF960100A0B64D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				EF2A3E351AB0856A00C4DBA7 /* NIVcheckinItems.h */,
-				EF2A3E361AB0856A00C4DBA7 /* NIVcheckinItems.m */,
-				EF2A3E371AB0856A00C4DBA7 /* NIVcheckoutItems.h */,
-				EF2A3E381AB0856A00C4DBA7 /* NIVcheckoutItems.m */,
-				EF2A3E391AB0856A00C4DBA7 /* NIVcompany.h */,
-				EF2A3E3A1AB0856A00C4DBA7 /* NIVcompany.m */,
-				EF2A3E3B1AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.h */,
-				EF2A3E3C1AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m */,
-				EF2A3E3D1AB0856A00C4DBA7 /* NIVHelper.h */,
-				EF2A3E5D1AB0858600C4DBA7 /* DDXML.h */,
-				EF2A3E671AB0858E00C4DBA7 /* NSString+DDXML.h */,
-				EF2A3E681AB0858E00C4DBA7 /* NSString+DDXML.m */,
-				EF2A3E6A1AB0859600C4DBA7 /* DDXMLElementAdditions.h */,
-				EF2A3E6B1AB0859600C4DBA7 /* DDXMLElementAdditions.m */,
-				EF2A3E5E1AB0858600C4DBA7 /* DDXMLDocument.h */,
-				EF2A3E5F1AB0858600C4DBA7 /* DDXMLDocument.m */,
-				EF2A3E601AB0858600C4DBA7 /* DDXMLElement.h */,
-				EF2A3E611AB0858600C4DBA7 /* DDXMLElement.m */,
-				EF2A3E621AB0858600C4DBA7 /* DDXMLNode.h */,
-				EF2A3E631AB0858600C4DBA7 /* DDXMLNode.m */,
-				EF2A3E3E1AB0856A00C4DBA7 /* NIVHelper.m */,
-				EF2A3E3F1AB0856A00C4DBA7 /* NIVinsertTrackingItems.h */,
-				EF2A3E5C1AB0857F00C4DBA7 /* DDXMLPrivate.h */,
-				EF2A3E401AB0856A00C4DBA7 /* NIVinsertTrackingItems.m */,
-				EF2A3E411AB0856A00C4DBA7 /* NIVitem.h */,
-				EF2A3E421AB0856A00C4DBA7 /* NIVitem.m */,
-				EF2A3E431AB0856A00C4DBA7 /* NIVorder.h */,
-				EF2A3E441AB0856A00C4DBA7 /* NIVorder.m */,
-				EF2A3E451AB0856A00C4DBA7 /* NIVposition.h */,
-				EF2A3E461AB0856A00C4DBA7 /* NIVposition.m */,
-				EF2A3E471AB0856A00C4DBA7 /* NIVRequestResultHandler.h */,
-				EF2A3E481AB0856A00C4DBA7 /* NIVRequestResultHandler.m */,
-				EF2A3E491AB0856A00C4DBA7 /* NIVSoapError.h */,
-				EF2A3E4A1AB0856A00C4DBA7 /* NIVSoapError.m */,
-				EF2A3E4B1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.h */,
-				EF2A3E4C1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m */,
-				EF2A3E4D1AB0856A00C4DBA7 /* NIVwebServiceResult.h */,
-				EF2A3E4E1AB0856A00C4DBA7 /* NIVwebServiceResult.m */,
+				E0DC11061ADD1D6200167F2B /* bloodGroup.h */,
+				E0DC11071ADD1D6200167F2B /* bloodGroup.m */,
+				E0DC11081ADD1D6200167F2B /* gender.h */,
+				E0DC11091ADD1D6200167F2B /* gender.m */,
+				E0DC110A1ADD1D6200167F2B /* getCheckedInItems.h */,
+				E0DC110B1ADD1D6200167F2B /* getCheckedInItems.m */,
+				E0DC110C1ADD1D6200167F2B /* getCheckedInItemsResponse.h */,
+				E0DC110D1ADD1D6200167F2B /* getCheckedInItemsResponse.m */,
+				E0DC110E1ADD1D6200167F2B /* getDosetForPatientResponse.h */,
+				E0DC110F1ADD1D6200167F2B /* getDosetForPatientResponse.m */,
+				E0DC11101ADD1D6200167F2B /* getItemsByBatchResponse.h */,
+				E0DC11111ADD1D6200167F2B /* getItemsByBatchResponse.m */,
+				E0DC11121ADD1D6200167F2B /* getItemsBySSCCResponse.h */,
+				E0DC11131ADD1D6200167F2B /* getItemsBySSCCResponse.m */,
+				E0DC11141ADD1D6200167F2B /* getOpenOrdersByGLNResponse.h */,
+				E0DC11151ADD1D6200167F2B /* getOpenOrdersByGLNResponse.m */,
+				E0DC11161ADD1D6200167F2B /* getPatientsResponse.h */,
+				E0DC11171ADD1D6200167F2B /* getPatientsResponse.m */,
+				E0DC11181ADD1D6200167F2B /* getPreparedMedicationsForPatientResponse.h */,
+				E0DC11191ADD1D6200167F2B /* getPreparedMedicationsForPatientResponse.m */,
+				E0DC111A1ADD1D6200167F2B /* getPrescriptionsForPatientResponse.h */,
+				E0DC111B1ADD1D6200167F2B /* getPrescriptionsForPatientResponse.m */,
+				E0DC111C1ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatientResponse.h */,
+				E0DC111D1ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m */,
+				E0DC111E1ADD1D6200167F2B /* getProductForSecondaryPackage.h */,
+				E0DC111F1ADD1D6200167F2B /* getProductForSecondaryPackage.m */,
+				E0DC11201ADD1D6200167F2B /* getProductForSecondaryPackageResponse.h */,
+				E0DC11211ADD1D6200167F2B /* getProductForSecondaryPackageResponse.m */,
+				E0DC11221ADD1D6200167F2B /* getQuantities.h */,
+				E0DC11231ADD1D6200167F2B /* getQuantities.m */,
+				E0DC11241ADD1D6200167F2B /* getQuantitiesResponse.h */,
+				E0DC11251ADD1D6200167F2B /* getQuantitiesResponse.m */,
+				E0DC11261ADD1D6200167F2B /* getStationsResponse.h */,
+				E0DC11271ADD1D6200167F2B /* getStationsResponse.m */,
+				E0DC11281ADD1D6200167F2B /* Helper.h */,
+				E0DC11291ADD1D6200167F2B /* Helper.m */,
+				E0DC112A1ADD1D6200167F2B /* insertTrackingItems.h */,
+				E0DC112B1ADD1D6200167F2B /* insertTrackingItems.m */,
+				E0DC112C1ADD1D6200167F2B /* insertTrackingItemsResponse.h */,
+				E0DC112D1ADD1D6200167F2B /* insertTrackingItemsResponse.m */,
+				E0DC112E1ADD1D6200167F2B /* medicationState.h */,
+				E0DC112F1ADD1D6200167F2B /* medicationState.m */,
+				E0DC11301ADD1D6200167F2B /* prescriptionState.h */,
+				E0DC11311ADD1D6200167F2B /* prescriptionState.m */,
+				E0DC11321ADD1D6200167F2B /* quantity.h */,
+				E0DC11331ADD1D6200167F2B /* quantity.m */,
+				E0DC11341ADD1D6200167F2B /* RequestResultHandler.h */,
+				E0DC11351ADD1D6200167F2B /* RequestResultHandler.m */,
+				E0DC11361ADD1D6200167F2B /* savePreparedMedications.h */,
+				E0DC11371ADD1D6200167F2B /* savePreparedMedications.m */,
+				E0DC11381ADD1D6200167F2B /* SoapError.h */,
+				E0DC11391ADD1D6200167F2B /* SoapError.m */,
+				E0DC113A1ADD1D6200167F2B /* SupplyChainServicePortBinding.h */,
+				E0DC113B1ADD1D6200167F2B /* SupplyChainServicePortBinding.m */,
+				E0DC113C1ADD1D6200167F2B /* checkinItems.h */,
+				E0DC113D1ADD1D6200167F2B /* checkinItems.m */,
+				E0DC113E1ADD1D6200167F2B /* checkinItemsResponse.h */,
+				E0DC113F1ADD1D6200167F2B /* checkinItemsResponse.m */,
+				E0DC11401ADD1D6200167F2B /* getDosetForPatient.h */,
+				E0DC11411ADD1D6200167F2B /* getDosetForPatient.m */,
+				E0DC11421ADD1D6200167F2B /* getItemByIdentifier.h */,
+				E0DC11431ADD1D6200167F2B /* getItemByIdentifier.m */,
+				E0DC11441ADD1D6200167F2B /* getItemByIdentifierResponse.h */,
+				E0DC11451ADD1D6200167F2B /* getItemByIdentifierResponse.m */,
+				E0DC11461ADD1D6200167F2B /* getItemsByBatch.h */,
+				E0DC11471ADD1D6200167F2B /* getItemsByBatch.m */,
+				E0DC11481ADD1D6200167F2B /* getItemsByGSIN.h */,
+				E0DC11491ADD1D6200167F2B /* getItemsByGSIN.m */,
+				E0DC114A1ADD1D6200167F2B /* getItemsByGSINResponse.h */,
+				E0DC114B1ADD1D6200167F2B /* getItemsByGSINResponse.m */,
+				E0DC114C1ADD1D6200167F2B /* getItemsBySSCC.h */,
+				E0DC114D1ADD1D6200167F2B /* getItemsBySSCC.m */,
+				E0DC114E1ADD1D6200167F2B /* getOpenOrdersByGLN.h */,
+				E0DC114F1ADD1D6200167F2B /* getOpenOrdersByGLN.m */,
+				E0DC11501ADD1D6200167F2B /* getPatientByMinorId.h */,
+				E0DC11511ADD1D6200167F2B /* getPatientByMinorId.m */,
+				E0DC11521ADD1D6200167F2B /* getPatientByMinorIdResponse.h */,
+				E0DC11531ADD1D6200167F2B /* getPatientByMinorIdResponse.m */,
+				E0DC11541ADD1D6200167F2B /* getPatientByPid.h */,
+				E0DC11551ADD1D6200167F2B /* getPatientByPid.m */,
+				E0DC11561ADD1D6200167F2B /* getPatientByPidResponse.h */,
+				E0DC11571ADD1D6200167F2B /* getPatientByPidResponse.m */,
+				E0DC11581ADD1D6200167F2B /* getPatients.h */,
+				E0DC11591ADD1D6200167F2B /* getPatients.m */,
+				E0DC115A1ADD1D6200167F2B /* getPreparedMedicationsForPatient.h */,
+				E0DC115B1ADD1D6200167F2B /* getPreparedMedicationsForPatient.m */,
+				E0DC115C1ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatient.h */,
+				E0DC115D1ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatient.m */,
+				E0DC115E1ADD1D6200167F2B /* getStations.h */,
+				E0DC115F1ADD1D6200167F2B /* getStations.m */,
+				E0DC11601ADD1D6200167F2B /* order.h */,
+				E0DC11611ADD1D6200167F2B /* order.m */,
+				E0DC11621ADD1D6200167F2B /* position.h */,
+				E0DC11631ADD1D6200167F2B /* position.m */,
+				E0DC11641ADD1D6200167F2B /* processOrder.h */,
+				E0DC11651ADD1D6200167F2B /* processOrder.m */,
+				E0DC11661ADD1D6200167F2B /* processOrderResponse.h */,
+				E0DC11671ADD1D6200167F2B /* processOrderResponse.m */,
+				E0DC11681ADD1D6200167F2B /* production.h */,
+				E0DC11691ADD1D6200167F2B /* production.m */,
+				E0DC116A1ADD1D6200167F2B /* resetTrackedItems.h */,
+				E0DC116B1ADD1D6200167F2B /* resetTrackedItems.m */,
+				E0DC116C1ADD1D6200167F2B /* resetTrackedItemsResponse.h */,
+				E0DC116D1ADD1D6200167F2B /* resetTrackedItemsResponse.m */,
+				E0DC116E1ADD1D6200167F2B /* savePreparedMedicationsResponse.h */,
+				E0DC116F1ADD1D6200167F2B /* savePreparedMedicationsResponse.m */,
+				E0DC11701ADD1D6200167F2B /* sayHelloWorldFrom.h */,
+				E0DC11711ADD1D6200167F2B /* sayHelloWorldFrom.m */,
+				E0DC11721ADD1D6200167F2B /* sayHelloWorldFromResponse.h */,
+				E0DC11731ADD1D6200167F2B /* sayHelloWorldFromResponse.m */,
+				E0DC11741ADD1D6200167F2B /* setOrder.h */,
+				E0DC11751ADD1D6200167F2B /* setOrder.m */,
+				E0DC11761ADD1D6200167F2B /* setOrderResponse.h */,
+				E0DC11771ADD1D6200167F2B /* setOrderResponse.m */,
+				E0DC11781ADD1D6200167F2B /* shipment.h */,
+				E0DC11791ADD1D6200167F2B /* shipment.m */,
+				E0DC117A1ADD1D6200167F2B /* station.h */,
+				E0DC117B1ADD1D6200167F2B /* station.m */,
+				E0DC117C1ADD1D6200167F2B /* trspPatient.h */,
+				E0DC117D1ADD1D6200167F2B /* trspPatient.m */,
+				E0DC117E1ADD1D6200167F2B /* updatePreparedMedications.h */,
+				E0DC117F1ADD1D6200167F2B /* updatePreparedMedications.m */,
+				E0DC11801ADD1D6200167F2B /* updatePreparedMedicationsResponse.h */,
+				E0DC11811ADD1D6200167F2B /* updatePreparedMedicationsResponse.m */,
+				E0DC11821ADD1D6200167F2B /* updatePrescriptions.h */,
+				E0DC11831ADD1D6200167F2B /* updatePrescriptions.m */,
+				E0DC11841ADD1D6200167F2B /* updatePrescriptionsResponse.h */,
+				E0DC11851ADD1D6200167F2B /* updatePrescriptionsResponse.m */,
+				E0DC11861ADD1D6200167F2B /* checkoutItems.h */,
+				E0DC11871ADD1D6200167F2B /* checkoutItems.m */,
+				E0DC11881ADD1D6200167F2B /* checkoutItemsResponse.h */,
+				E0DC11891ADD1D6200167F2B /* checkoutItemsResponse.m */,
+				E0DC118A1ADD1D6200167F2B /* company.h */,
+				E0DC118B1ADD1D6200167F2B /* company.m */,
+				E0DC118C1ADD1D6200167F2B /* getOrderForSSCC.h */,
+				E0DC118D1ADD1D6200167F2B /* getOrderForSSCC.m */,
+				E0DC118E1ADD1D6200167F2B /* getOrderForSSCCResponse.h */,
+				E0DC118F1ADD1D6200167F2B /* getOrderForSSCCResponse.m */,
+				E0DC11901ADD1D6200167F2B /* getPrescriptionsForPatient.h */,
+				E0DC11911ADD1D6200167F2B /* getPrescriptionsForPatient.m */,
+				E0DC11921ADD1D6200167F2B /* item.h */,
+				E0DC11931ADD1D6200167F2B /* item.m */,
+				E0DC11941ADD1D6200167F2B /* trspMedication.h */,
+				E0DC11951ADD1D6200167F2B /* trspMedication.m */,
+				E0DC11961ADD1D6200167F2B /* trspPreparedMedication.h */,
+				E0DC11971ADD1D6200167F2B /* trspPreparedMedication.m */,
+				E0DC11981ADD1D6200167F2B /* trspPrescription.h */,
+				E0DC11991ADD1D6200167F2B /* trspPrescription.m */,
+				E0DC119A1ADD1D6200167F2B /* webServiceResult.h */,
+				E0DC119B1ADD1D6200167F2B /* webServiceResult.m */,
+				E0DC10F61ADD1D4700167F2B /* DDXMLElementAdditions.h */,
+				E0DC10F71ADD1D4700167F2B /* DDXMLElementAdditions.m */,
+				E0DC10F81ADD1D4700167F2B /* NSString+DDXML.h */,
+				E0DC10F91ADD1D4700167F2B /* NSString+DDXML.m */,
+				E0DC10FA1ADD1D4700167F2B /* DDXML.h */,
+				E0DC10FB1ADD1D4700167F2B /* DDXMLDocument.h */,
+				E0DC10FC1ADD1D4700167F2B /* DDXMLDocument.m */,
+				E0DC10FD1ADD1D4700167F2B /* DDXMLElement.h */,
+				E0DC10FE1ADD1D4700167F2B /* DDXMLElement.m */,
+				E0DC10FF1ADD1D4700167F2B /* DDXMLNode.h */,
+				E0DC11001ADD1D4700167F2B /* DDXMLNode.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -1874,23 +2182,31 @@
 				EFAD36341ACD2C80000E978E /* ZXISBNResultParser.m in Sources */,
 				EFAD36401ACD2C80000E978E /* ZXURIParsedResult.m in Sources */,
 				EFAD36371ACD2C80000E978E /* ZXProductResultParser.m in Sources */,
+				E0DC11A51ADD1D6200167F2B /* getPreparedMedicationsForPatientResponse.m in Sources */,
 				EFAD36951ACD2C80000E978E /* ZXRSSExpandedCurrentParsingState.m in Sources */,
 				EFAD368A1ACD2C80000E978E /* ZXAI013103decoder.m in Sources */,
 				EFAD367B1ACD2C80000E978E /* ZXDataMatrixErrorCorrection.m in Sources */,
 				EFAD36641ACD2C80000E978E /* ZXByteMatrix.m in Sources */,
+				E0DC11AE1ADD1D6200167F2B /* insertTrackingItems.m in Sources */,
 				EFAD36BD1ACD2C80000E978E /* ZXUPCEANReader.m in Sources */,
+				E0DC11E41ADD1D6200167F2B /* trspPreparedMedication.m in Sources */,
 				EFAD36D61ACD2C80000E978E /* ZXPDF417Reader.m in Sources */,
 				EFAD361A1ACD2C80000E978E /* ZXAztecDetector.m in Sources */,
 				EFAD364E1ACD2C80000E978E /* ZXWhiteRectangleDetector.m in Sources */,
+				E0DC11031ADD1D4700167F2B /* DDXMLDocument.m in Sources */,
 				EFAD36B81ACD2C80000E978E /* ZXUPCAReader.m in Sources */,
 				EFAD36D91ACD2C80000E978E /* ZXQRCodeBitMatrixParser.m in Sources */,
 				EF6339191AB0EB0D002ACE34 /* VerordnungenViewController.m in Sources */,
 				EFAD363B1ACD2C80000E978E /* ZXSMSTOMMSTOResultParser.m in Sources */,
 				EFAD36721ACD2C80000E978E /* ZXDataMatrixDecoder.m in Sources */,
+				E0DC11E31ADD1D6200167F2B /* trspMedication.m in Sources */,
 				EFAD364D1ACD2C80000E978E /* ZXMonochromeRectangleDetector.m in Sources */,
+				E0DC11E01ADD1D6200167F2B /* getOrderForSSCCResponse.m in Sources */,
 				EFAD36511ACD2C80000E978E /* ZXReedSolomonDecoder.m in Sources */,
 				EFAD36841ACD2C80000E978E /* ZXMaxiCodeDecodedBitStreamParser.m in Sources */,
+				E0DC11041ADD1D4700167F2B /* DDXMLElement.m in Sources */,
 				EFAD36881ACD2C80000E978E /* ZXGenericMultipleBarcodeReader.m in Sources */,
+				E0DC11B91ADD1D6200167F2B /* getDosetForPatient.m in Sources */,
 				EFAD36DC1ACD2C80000E978E /* ZXQRCodeDecodedBitStreamParser.m in Sources */,
 				EFAD36351ACD2C80000E978E /* ZXParsedResult.m in Sources */,
 				EFAD36601ACD2C80000E978E /* ZXPerspectiveTransform.m in Sources */,
@@ -1898,8 +2214,10 @@
 				EFAD362D1ACD2C80000E978E /* ZXEmailAddressResultParser.m in Sources */,
 				EFAD36EA1ACD2C80000E978E /* ZXQRCodeBlockPair.m in Sources */,
 				EFAD36C01ACD2C80000E978E /* ZXModulusGF.m in Sources */,
+				E0DC11DD1ADD1D6200167F2B /* checkoutItemsResponse.m in Sources */,
 				EFAD369A1ACD2C80000E978E /* ZXRSSExpandedFieldParser.m in Sources */,
 				EFAD367D1ACD2C80000E978E /* ZXDataMatrixSymbolInfo.m in Sources */,
+				E0DC11D41ADD1D6200167F2B /* setOrderResponse.m in Sources */,
 				EFAD36B91ACD2C80000E978E /* ZXUPCAWriter.m in Sources */,
 				EFAD36DE1ACD2C80000E978E /* ZXQRCodeDecoderMetaData.m in Sources */,
 				EFAD36E81ACD2C80000E978E /* ZXQRCodeFinderPatternInfo.m in Sources */,
@@ -1907,6 +2225,7 @@
 				EFAD36AC1ACD2C80000E978E /* ZXCode93Reader.m in Sources */,
 				EFAD362B1ACD2C80000E978E /* ZXCalendarParsedResult.m in Sources */,
 				EFAD367C1ACD2C80000E978E /* ZXDataMatrixHighLevelEncoder.m in Sources */,
+				E0DC11D31ADD1D6200167F2B /* setOrder.m in Sources */,
 				EFAD36F01ACD2C80000E978E /* ZXQRCodeMultiReader.m in Sources */,
 				EFAD36C91ACD2C80000E978E /* ZXPDF417DetectionResult.m in Sources */,
 				EFAD36D51ACD2C80000E978E /* ZXPDF417Common.m in Sources */,
@@ -1918,10 +2237,13 @@
 				EFAD36A91ACD2C80000E978E /* ZXCode128Writer.m in Sources */,
 				EFAD369B1ACD2C80000E978E /* ZXRSSExpandedGeneralAppIdDecoder.m in Sources */,
 				EFAD36701ACD2C80000E978E /* ZXDataMatrixDataBlock.m in Sources */,
+				E0DC11D21ADD1D6200167F2B /* sayHelloWorldFromResponse.m in Sources */,
 				EFAD36411ACD2C80000E978E /* ZXURIResultParser.m in Sources */,
 				EFEB130F1ADBBAE500EA204F /* VerordnungDetailViewController.m in Sources */,
+				E0DC11A81ADD1D6200167F2B /* getProductForSecondaryPackage.m in Sources */,
 				EFAD36A11ACD2C80000E978E /* ZXRSS14Reader.m in Sources */,
 				EFAD362C1ACD2C80000E978E /* ZXEmailAddressParsedResult.m in Sources */,
+				E0DC11A41ADD1D6200167F2B /* getPatientsResponse.m in Sources */,
 				EF902E8B1AB0A7BF00347176 /* LoginViewController.m in Sources */,
 				EFAD36BE1ACD2C80000E978E /* ZXUPCEANWriter.m in Sources */,
 				EFAD368D1ACD2C80000E978E /* ZXAI01393xDecoder.m in Sources */,
@@ -1932,58 +2254,69 @@
 				EFAD36551ACD2C80000E978E /* ZXBitSource.m in Sources */,
 				EFAD36E51ACD2C80000E978E /* ZXQRCodeDetector.m in Sources */,
 				EFAD36861ACD2C80000E978E /* ZXMaxiCodeReader.m in Sources */,
-				EF2A3E661AB0858600C4DBA7 /* DDXMLNode.m in Sources */,
 				EFAD36D01ACD2C80000E978E /* ZXPDF417BarcodeMatrix.m in Sources */,
 				EFAD36B41ACD2C80000E978E /* ZXMultiFormatOneDReader.m in Sources */,
 				EFAD367F1ACD2C80000E978E /* ZXDataMatrixTextEncoder.m in Sources */,
 				EFAD36801ACD2C80000E978E /* ZXDataMatrixX12Encoder.m in Sources */,
-				EF2A3E581AB0856A00C4DBA7 /* NIVRequestResultHandler.m in Sources */,
 				EFAD36781ACD2C80000E978E /* ZXDataMatrixDefaultPlacement.m in Sources */,
+				E0DC11B11ADD1D6200167F2B /* prescriptionState.m in Sources */,
 				EFAD36B71ACD2C80000E978E /* ZXOneDReader.m in Sources */,
 				EFAD366D1ACD2C80000E978E /* ZXResultPoint.m in Sources */,
 				EFAD36B51ACD2C80000E978E /* ZXMultiFormatUPCEANReader.m in Sources */,
-				EF2A3E5A1AB0856A00C4DBA7 /* NIVSupplyChainServiceBinding.m in Sources */,
+				E0DC11B41ADD1D6200167F2B /* savePreparedMedications.m in Sources */,
+				E0DC11BD1ADD1D6200167F2B /* getItemsByGSIN.m in Sources */,
 				EFAD36331ACD2C80000E978E /* ZXISBNParsedResult.m in Sources */,
+				E0DC11B01ADD1D6200167F2B /* medicationState.m in Sources */,
+				E0DC11BF1ADD1D6200167F2B /* getItemsBySSCC.m in Sources */,
 				EFAD363C1ACD2C80000E978E /* ZXSMTPResultParser.m in Sources */,
 				EFAD36CE1ACD2C80000E978E /* ZXPDF417DetectorResult.m in Sources */,
 				EFAD36871ACD2C80000E978E /* ZXByQuadrantReader.m in Sources */,
 				EFAD36611ACD2C80000E978E /* ZXStringUtils.m in Sources */,
 				EFAD36C41ACD2C80000E978E /* ZXPDF417BarcodeValue.m in Sources */,
 				EFAD36241ACD2C80000E978E /* ZXAztecWriter.m in Sources */,
+				E0DC11DB1ADD1D6200167F2B /* updatePrescriptionsResponse.m in Sources */,
 				EFAD36621ACD2C80000E978E /* ZXBinarizer.m in Sources */,
+				E0DC11CE1ADD1D6200167F2B /* resetTrackedItems.m in Sources */,
 				EFAD363D1ACD2C80000E978E /* ZXTelParsedResult.m in Sources */,
 				EFAD36251ACD2C80000E978E /* ZXAbstractDoCoMoResultParser.m in Sources */,
 				EFAD36681ACD2C80000E978E /* ZXErrors.m in Sources */,
+				E0DC11B61ADD1D6200167F2B /* SupplyChainServicePortBinding.m in Sources */,
 				EFAD362F1ACD2C80000E978E /* ZXExpandedProductParsedResult.m in Sources */,
 				EFAD36821ACD2C80000E978E /* ZXDataMatrixWriter.m in Sources */,
 				EFAD36D31ACD2C80000E978E /* ZXPDF417ErrorCorrection.m in Sources */,
 				EFAD36911ACD2C80000E978E /* ZXAI01decoder.m in Sources */,
+				E0DC11A11ADD1D6200167F2B /* getItemsByBatchResponse.m in Sources */,
 				EF36567F1AAF95E000A0B64D /* AppDelegate.m in Sources */,
+				E0DC11021ADD1D4700167F2B /* NSString+DDXML.m in Sources */,
 				EFAD36CF1ACD2C80000E978E /* ZXPDF417.m in Sources */,
+				E0DC11C71ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatient.m in Sources */,
 				EFAD363F1ACD2C80000E978E /* ZXTextParsedResult.m in Sources */,
 				EFAD36B11ACD2C80000E978E /* ZXEANManufacturerOrgSupport.m in Sources */,
+				E0DC119D1ADD1D6200167F2B /* gender.m in Sources */,
 				EFAD365B1ACD2C80000E978E /* ZXDetectorResult.m in Sources */,
+				E0DC11C91ADD1D6200167F2B /* order.m in Sources */,
 				EFAD36BB1ACD2C80000E978E /* ZXUPCEANExtension5Support.m in Sources */,
-				EF2A3E651AB0858600C4DBA7 /* DDXMLElement.m in Sources */,
 				EFAD368C1ACD2C80000E978E /* ZXAI01392xDecoder.m in Sources */,
 				EFAD365A1ACD2C80000E978E /* ZXDefaultGridSampler.m in Sources */,
 				EFAD36221ACD2C80000E978E /* ZXAztecDetectorResult.m in Sources */,
 				EFAD36D81ACD2C80000E978E /* ZXPDF417Writer.m in Sources */,
 				EFAD362A1ACD2C80000E978E /* ZXBookmarkDoCoMoResultParser.m in Sources */,
-				EF2A3E691AB0858E00C4DBA7 /* NSString+DDXML.m in Sources */,
 				EF6339161AB0EAFE002ACE34 /* BeaconViewController.m in Sources */,
-				EF2A3E561AB0856A00C4DBA7 /* NIVorder.m in Sources */,
 				EFAD36E11ACD2C80000E978E /* ZXQRCodeMode.m in Sources */,
 				EFAD36CD1ACD2C80000E978E /* ZXPDF417Detector.m in Sources */,
 				EFAD36521ACD2C80000E978E /* ZXReedSolomonEncoder.m in Sources */,
 				EFAD36961ACD2C80000E978E /* ZXRSSExpandedDecodedChar.m in Sources */,
 				EFAD366B1ACD2C80000E978E /* ZXPlanarYUVLuminanceSource.m in Sources */,
 				EFAD36211ACD2C80000E978E /* ZXAztecToken.m in Sources */,
+				E0DC11C41ADD1D6200167F2B /* getPatientByPidResponse.m in Sources */,
 				EFAD36E71ACD2C80000E978E /* ZXQRCodeFinderPatternFinder.m in Sources */,
+				E0DC11C11ADD1D6200167F2B /* getPatientByMinorId.m in Sources */,
 				EFAD361F1ACD2C80000E978E /* ZXAztecSimpleToken.m in Sources */,
 				EFAD363E1ACD2C80000E978E /* ZXTelResultParser.m in Sources */,
 				EFAD36ED1ACD2C80000E978E /* ZXQRCodeMatrixUtil.m in Sources */,
 				EFAD362E1ACD2C80000E978E /* ZXEmailDoCoMoResultParser.m in Sources */,
+				E0DC11BC1ADD1D6200167F2B /* getItemsByBatch.m in Sources */,
+				E0DC11D91ADD1D6200167F2B /* updatePreparedMedicationsResponse.m in Sources */,
 				EFAD36AD1ACD2C80000E978E /* ZXEAN13Reader.m in Sources */,
 				EFAD36581ACD2C80000E978E /* ZXCharacterSetECI.m in Sources */,
 				EFAD36421ACD2C80000E978E /* ZXURLTOResultParser.m in Sources */,
@@ -1991,8 +2324,13 @@
 				EFAD365C1ACD2C80000E978E /* ZXGlobalHistogramBinarizer.m in Sources */,
 				EFAD36DD1ACD2C80000E978E /* ZXQRCodeDecoder.m in Sources */,
 				EFAD36AB1ACD2C80000E978E /* ZXCode39Writer.m in Sources */,
+				E0DC11A91ADD1D6200167F2B /* getProductForSecondaryPackageResponse.m in Sources */,
 				EFAD36431ACD2C80000E978E /* ZXVCardResultParser.m in Sources */,
+				E0DC11B81ADD1D6200167F2B /* checkinItemsResponse.m in Sources */,
+				E0DC11DF1ADD1D6200167F2B /* getOrderForSSCC.m in Sources */,
 				EFAD366C1ACD2C80000E978E /* ZXResult.m in Sources */,
+				E0DC11B31ADD1D6200167F2B /* RequestResultHandler.m in Sources */,
+				E0DC11CB1ADD1D6200167F2B /* processOrder.m in Sources */,
 				EFAD36631ACD2C80000E978E /* ZXBinaryBitmap.m in Sources */,
 				EFAD36281ACD2C80000E978E /* ZXAddressBookParsedResult.m in Sources */,
 				EFAD36531ACD2C80000E978E /* ZXBitArray.m in Sources */,
@@ -2001,24 +2339,40 @@
 				EFAD365F1ACD2C80000E978E /* ZXIntArray.m in Sources */,
 				EFAD36751ACD2C80000E978E /* ZXDataMatrixASCIIEncoder.m in Sources */,
 				EFAD36E91ACD2C80000E978E /* ZXQRCode.m in Sources */,
+				E0DC11D51ADD1D6200167F2B /* shipment.m in Sources */,
+				E0DC11D61ADD1D6200167F2B /* station.m in Sources */,
 				EFAD36AA1ACD2C80000E978E /* ZXCode39Reader.m in Sources */,
 				EFAD36811ACD2C80000E978E /* ZXDataMatrixReader.m in Sources */,
 				EFAD36361ACD2C80000E978E /* ZXProductParsedResult.m in Sources */,
 				EFAD36301ACD2C80000E978E /* ZXExpandedProductResultParser.m in Sources */,
+				E0DC11CC1ADD1D6200167F2B /* processOrderResponse.m in Sources */,
+				E0DC11A31ADD1D6200167F2B /* getOpenOrdersByGLNResponse.m in Sources */,
 				EFAD364F1ACD2C80000E978E /* ZXGenericGF.m in Sources */,
 				EFAD361C1ACD2C80000E978E /* ZXAztecCode.m in Sources */,
+				E0DC11E21ADD1D6200167F2B /* item.m in Sources */,
 				E09B23491ACD7D32004B4088 /* TableViewCellVerordnung.m in Sources */,
+				E0DC11AA1ADD1D6200167F2B /* getQuantities.m in Sources */,
 				EFAD36A41ACD2C80000E978E /* ZXRSSPair.m in Sources */,
+				E0DC119F1ADD1D6200167F2B /* getCheckedInItemsResponse.m in Sources */,
 				EFAD36941ACD2C80000E978E /* ZXRSSExpandedBlockParsedResult.m in Sources */,
+				E0DC11051ADD1D4700167F2B /* DDXMLNode.m in Sources */,
+				E0DC11BB1ADD1D6200167F2B /* getItemByIdentifierResponse.m in Sources */,
+				E0DC11AC1ADD1D6200167F2B /* getStationsResponse.m in Sources */,
 				EFAD36E31ACD2C80000E978E /* ZXQRCodeAlignmentPattern.m in Sources */,
 				EFAD36F31ACD2C80000E978E /* ZXMultiFormatReader.m in Sources */,
 				EFAD36BF1ACD2C80000E978E /* ZXUPCEReader.m in Sources */,
+				E0DC11A71ADD1D6200167F2B /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m in Sources */,
 				EFAD36AF1ACD2C80000E978E /* ZXEAN8Reader.m in Sources */,
 				EFAD368B1ACD2C80000E978E /* ZXAI01320xDecoder.m in Sources */,
 				EFAD36981ACD2C80000E978E /* ZXRSSExpandedDecodedNumeric.m in Sources */,
 				EFAD367E1ACD2C80000E978E /* ZXDataMatrixSymbolInfo144.m in Sources */,
+				E0DC11E61ADD1D6200167F2B /* webServiceResult.m in Sources */,
 				EFAD363A1ACD2C80000E978E /* ZXSMSParsedResult.m in Sources */,
 				EFAD369D1ACD2C80000E978E /* ZXRSSExpandedPair.m in Sources */,
+				E0DC11E11ADD1D6200167F2B /* getPrescriptionsForPatient.m in Sources */,
+				E0DC11AB1ADD1D6200167F2B /* getQuantitiesResponse.m in Sources */,
+				E0DC11D01ADD1D6200167F2B /* savePreparedMedicationsResponse.m in Sources */,
+				E0DC119C1ADD1D6200167F2B /* bloodGroup.m in Sources */,
 				EFAD36481ACD2C80000E978E /* ZXWifiResultParser.m in Sources */,
 				EFAD36A71ACD2C80000E978E /* ZXCodaBarWriter.m in Sources */,
 				EF6339131AB0EAEB002ACE34 /* MedikamenteViewController.m in Sources */,
@@ -2033,49 +2387,60 @@
 				EFAD36A31ACD2C80000E978E /* ZXRSSFinderPattern.m in Sources */,
 				EFAD369C1ACD2C80000E978E /* ZXBitArrayBuilder.m in Sources */,
 				EFAD368F1ACD2C80000E978E /* ZXAI013x0xDecoder.m in Sources */,
-				EF2A3E541AB0856A00C4DBA7 /* NIVinsertTrackingItems.m in Sources */,
+				E0DC11BE1ADD1D6200167F2B /* getItemsByGSINResponse.m in Sources */,
+				E0DC11A61ADD1D6200167F2B /* getPrescriptionsForPatientResponse.m in Sources */,
 				EFAD36F41ACD2C80000E978E /* ZXMultiFormatWriter.m in Sources */,
 				EFAD36791ACD2C80000E978E /* ZXDataMatrixEdifactEncoder.m in Sources */,
 				EFAD36DF1ACD2C80000E978E /* ZXQRCodeErrorCorrectionLevel.m in Sources */,
 				EFAD36EB1ACD2C80000E978E /* ZXQRCodeEncoder.m in Sources */,
 				EFAD364B1ACD2C80000E978E /* ZXImage.m in Sources */,
 				EFAD36591ACD2C80000E978E /* ZXDecoderResult.m in Sources */,
+				E0DC11D81ADD1D6200167F2B /* updatePreparedMedications.m in Sources */,
 				EFAD36741ACD2C80000E978E /* ZXDataMatrixDetector.m in Sources */,
+				E0DC11C61ADD1D6200167F2B /* getPreparedMedicationsForPatient.m in Sources */,
 				EFAD36AE1ACD2C80000E978E /* ZXEAN13Writer.m in Sources */,
+				E0DC11A01ADD1D6200167F2B /* getDosetForPatientResponse.m in Sources */,
 				EFAD361B1ACD2C80000E978E /* ZXAztecBinaryShiftToken.m in Sources */,
 				EFAD36C51ACD2C80000E978E /* ZXPDF417BoundingBox.m in Sources */,
-				EF2A3E501AB0856A00C4DBA7 /* NIVcheckoutItems.m in Sources */,
-				EF2A3E521AB0856A00C4DBA7 /* NIVgetItemsBySSCCResponse.m in Sources */,
 				EFAD366F1ACD2C80000E978E /* ZXDataMatrixBitMatrixParser.m in Sources */,
 				EFAD36CA1ACD2C80000E978E /* ZXPDF417DetectionResultColumn.m in Sources */,
+				E0DC11C51ADD1D6200167F2B /* getPatients.m in Sources */,
+				E0DC11B21ADD1D6200167F2B /* quantity.m in Sources */,
 				EFAD36691ACD2C80000E978E /* ZXInvertedLuminanceSource.m in Sources */,
 				EFAD36671ACD2C80000E978E /* ZXEncodeHints.m in Sources */,
 				EFAD36CB1ACD2C80000E978E /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
+				E0DC11DE1ADD1D6200167F2B /* company.m in Sources */,
 				EFAD36851ACD2C80000E978E /* ZXMaxiCodeDecoder.m in Sources */,
+				E0DC11D71ADD1D6200167F2B /* trspPatient.m in Sources */,
 				EFAD36B01ACD2C80000E978E /* ZXEAN8Writer.m in Sources */,
+				E0DC11CD1ADD1D6200167F2B /* production.m in Sources */,
 				EFAD36D41ACD2C80000E978E /* ZXPDF417HighLevelEncoder.m in Sources */,
 				EFAD36901ACD2C80000E978E /* ZXAI01AndOtherAIs.m in Sources */,
 				EFAD36DB1ACD2C80000E978E /* ZXQRCodeDataMask.m in Sources */,
 				EFAD365E1ACD2C80000E978E /* ZXHybridBinarizer.m in Sources */,
-				EF2A3E511AB0856A00C4DBA7 /* NIVcompany.m in Sources */,
+				E0DC11C01ADD1D6200167F2B /* getOpenOrdersByGLN.m in Sources */,
 				EFAD36321ACD2C80000E978E /* ZXGeoResultParser.m in Sources */,
+				E0DC119E1ADD1D6200167F2B /* getCheckedInItems.m in Sources */,
 				EFAD36381ACD2C80000E978E /* ZXResultParser.m in Sources */,
 				EFAD36E01ACD2C80000E978E /* ZXQRCodeFormatInformation.m in Sources */,
 				EFAD36A01ACD2C80000E978E /* ZXAbstractRSSReader.m in Sources */,
 				EFAD367A1ACD2C80000E978E /* ZXDataMatrixEncoderContext.m in Sources */,
-				EF2A3E571AB0856A00C4DBA7 /* NIVposition.m in Sources */,
 				E0440DE71ACC28D70024E445 /* BarcodeViewController.m in Sources */,
 				EFAD36A21ACD2C80000E978E /* ZXRSSDataCharacter.m in Sources */,
 				EF3656851AAF95E000A0B64D /* ViewController.m in Sources */,
+				E0DC11CA1ADD1D6200167F2B /* position.m in Sources */,
 				EFAD36651ACD2C80000E978E /* ZXDecodeHints.m in Sources */,
 				EFAD36831ACD2C80000E978E /* ZXMaxiCodeBitMatrixParser.m in Sources */,
 				EFAD36231ACD2C80000E978E /* ZXAztecReader.m in Sources */,
+				E0DC11E51ADD1D6200167F2B /* trspPrescription.m in Sources */,
+				E0DC11B51ADD1D6200167F2B /* SoapError.m in Sources */,
 				EFAD36391ACD2C80000E978E /* ZXSMSMMSResultParser.m in Sources */,
 				EFAD36291ACD2C80000E978E /* ZXBizcardResultParser.m in Sources */,
 				EFAD36E21ACD2C80000E978E /* ZXQRCodeVersion.m in Sources */,
 				EFAD361E1ACD2C80000E978E /* ZXAztecHighLevelEncoder.m in Sources */,
 				EFAD36771ACD2C80000E978E /* ZXDataMatrixC40Encoder.m in Sources */,
 				EFAD36A81ACD2C80000E978E /* ZXCode128Reader.m in Sources */,
+				E0DC11C81ADD1D6200167F2B /* getStations.m in Sources */,
 				EFAD36C61ACD2C80000E978E /* ZXPDF417Codeword.m in Sources */,
 				EFD9A2531AD3C4F200DF7E10 /* Patient.m in Sources */,
 				EFAD36471ACD2C80000E978E /* ZXWifiParsedResult.m in Sources */,
@@ -2085,17 +2450,20 @@
 				EFAD36891ACD2C80000E978E /* ZXAbstractExpandedDecoder.m in Sources */,
 				EFAD36661ACD2C80000E978E /* ZXDimension.m in Sources */,
 				EFAD36EE1ACD2C80000E978E /* ZXMultiDetector.m in Sources */,
+				E0DC11A21ADD1D6200167F2B /* getItemsBySSCCResponse.m in Sources */,
 				EFAD36931ACD2C80000E978E /* ZXAnyAIDecoder.m in Sources */,
-				EF2A3E5B1AB0856A00C4DBA7 /* NIVwebServiceResult.m in Sources */,
 				EFAD364A1ACD2C80000E978E /* ZXCGImageLuminanceSource.m in Sources */,
+				E0DC11C21ADD1D6200167F2B /* getPatientByMinorIdResponse.m in Sources */,
 				EFAD36D21ACD2C80000E978E /* ZXPDF417Dimensions.m in Sources */,
 				EFAD36EF1ACD2C80000E978E /* ZXMultiFinderPatternFinder.m in Sources */,
 				EFAD36B61ACD2C80000E978E /* ZXOneDimensionalCodeWriter.m in Sources */,
+				E0DC11BA1ADD1D6200167F2B /* getItemByIdentifier.m in Sources */,
 				EFAD36191ACD2C80000E978E /* ZXAztecDecoder.m in Sources */,
 				EFAD36E61ACD2C80000E978E /* ZXQRCodeFinderPattern.m in Sources */,
-				EF2A3E551AB0856A00C4DBA7 /* NIVitem.m in Sources */,
 				EFAD36491ACD2C80000E978E /* ZXCapture.m in Sources */,
+				E0DC11DC1ADD1D6200167F2B /* checkoutItems.m in Sources */,
 				EFAD36B21ACD2C80000E978E /* ZXITFReader.m in Sources */,
+				E0DC11DA1ADD1D6200167F2B /* updatePrescriptions.m in Sources */,
 				EF36567C1AAF95E000A0B64D /* main.m in Sources */,
 				EFAD364C1ACD2C80000E978E /* ZXMathUtils.m in Sources */,
 				EFAD36C31ACD2C80000E978E /* ZXPDF417BarcodeMetadata.m in Sources */,
@@ -2103,24 +2471,26 @@
 				EFAD369F1ACD2C80000E978E /* ZXRSSExpandedRow.m in Sources */,
 				EFAD36311ACD2C80000E978E /* ZXGeoParsedResult.m in Sources */,
 				EFAD366E1ACD2C80000E978E /* ZXRGBLuminanceSource.m in Sources */,
+				E0DC11C31ADD1D6200167F2B /* getPatientByPid.m in Sources */,
 				EF566A701AD6CB720083F781 /* PatientViewController.m in Sources */,
 				EFAD36921ACD2C80000E978E /* ZXAI01weightDecoder.m in Sources */,
-				EF2A3E4F1AB0856A00C4DBA7 /* NIVcheckinItems.m in Sources */,
-				EF2A3E6C1AB0859600C4DBA7 /* DDXMLElementAdditions.m in Sources */,
-				EF2A3E531AB0856A00C4DBA7 /* NIVHelper.m in Sources */,
-				EF2A3E641AB0858600C4DBA7 /* DDXMLDocument.m in Sources */,
 				EFAD36451ACD2C80000E978E /* ZXVINParsedResult.m in Sources */,
 				EFAD36BA1ACD2C80000E978E /* ZXUPCEANExtension2Support.m in Sources */,
 				EFAD36C11ACD2C80000E978E /* ZXModulusPoly.m in Sources */,
 				EFAD369E1ACD2C80000E978E /* ZXRSSExpandedReader.m in Sources */,
+				E0DC11B71ADD1D6200167F2B /* checkinItems.m in Sources */,
+				E0DC11D11ADD1D6200167F2B /* sayHelloWorldFrom.m in Sources */,
 				E0A2F6601ACC084D001A02BE /* TableViewCellPatients.m in Sources */,
 				EFAD36571ACD2C80000E978E /* ZXByteArray.m in Sources */,
-				EF2A3E591AB0856A00C4DBA7 /* NIVSoapError.m in Sources */,
+				E0DC11CF1ADD1D6200167F2B /* resetTrackedItemsResponse.m in Sources */,
+				E0DC11011ADD1D4700167F2B /* DDXMLElementAdditions.m in Sources */,
 				EFAD36201ACD2C80000E978E /* ZXAztecState.m in Sources */,
 				EFAD36711ACD2C80000E978E /* ZXDataMatrixDecodedBitStreamParser.m in Sources */,
 				EFAD36A61ACD2C80000E978E /* ZXCodaBarReader.m in Sources */,
 				EFAD36561ACD2C80000E978E /* ZXBoolArray.m in Sources */,
 				EFAD368E1ACD2C80000E978E /* ZXAI013x0x1xDecoder.m in Sources */,
+				E0DC11AF1ADD1D6200167F2B /* insertTrackingItemsResponse.m in Sources */,
+				E0DC11AD1ADD1D6200167F2B /* Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

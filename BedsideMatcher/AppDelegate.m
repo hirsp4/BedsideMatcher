@@ -1,4 +1,4 @@
-//
+  //
 //  AppDelegate.m
 //  BedsideMatcher
 //
@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Patient.h"
+#import "SupplyChainServicePortBinding.h"
 
 @interface AppDelegate ()
 
@@ -130,6 +131,11 @@
 -(void)resetPatients
 {
     [self deleteAllObjects:@"Patient"];
+    
+    SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
+
+    getPatientsResponse *result=[service getPatients:nil];
+    
     Patient *patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
                                                                  inManagedObjectContext:self.managedObjectContext];
     Patient *patient2 = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
