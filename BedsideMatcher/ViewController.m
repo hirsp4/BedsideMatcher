@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "CMASupplyChainServicePortBinding.h"
-#import "CMAwebServiceResult.h"
-#import "CMAitem.h"
+#import "SupplyChainServicePortBinding.h"
+#import "webServiceResult.h"
+#import "item.h"
 #import "BeaconViewController.h"
 @interface ViewController ()
 
@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    CMASupplyChainServicePortBinding* service = [[CMASupplyChainServicePortBinding alloc]init];
+    SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
     NSLog(@"%@",[service sayHelloWorldFrom:@"Patrizia" __error:nil]);
     }
 
