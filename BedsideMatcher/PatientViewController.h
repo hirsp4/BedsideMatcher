@@ -27,7 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIView *scanRectView;
 @property (nonatomic, strong) ZXCapture *capture;
 @property (weak, nonatomic) IBOutlet UILabel *stationLabel;
-
+@property (nonatomic, assign) BOOL hasScannedResult;
 @property (strong, nonatomic) IBOutlet UIView *mainView;
 
 @end

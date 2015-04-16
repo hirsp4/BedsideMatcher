@@ -131,16 +131,10 @@
 
 -(void)resetPatients
 {
-    [self deleteAllObjects:@"Patient"];
-    
+    [self deleteAllObjects:@"Patient"];    
     SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
-
     getPatientsResponse *result=[service getPatients:nil];
-    
-    trspPatient *trsppatient =nil;
-    
     for(int i=0;i<result.count;i++){
-        NSLog(@"%@", [[result objectAtIndex:i]getLastname]);
         [self savePatient:[result objectAtIndex:i]];
     }
 }

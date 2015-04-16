@@ -28,6 +28,7 @@
     [self setBackButtonAndTitle];
     
     self.capture = [[ZXCapture alloc] init];
+    [self.capture stop];
     self.capture.camera = self.capture.back;
     self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
     self.capture.rotation = 90.0f;
@@ -139,7 +140,9 @@
 
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
     if (!result) return;
-    
+    if(self.hasScannedResult == NO)
+    {
+        self.hasScannedResult = YES;
     // We got a result. Display information about the result onscreen.
     NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
     NSString *display = [NSString stringWithFormat:@"Gescannt!\n\nFormat: %@\nInhalt:\n%@", formatString, result.text];
@@ -153,6 +156,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self.capture start];
     });
+    }
 }
 
 

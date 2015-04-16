@@ -133,9 +133,12 @@
 
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
     if (!result) return;
-    [self.capture stop];
-    
-    // Intermediate
+    if(self.hasScannedResult == NO)
+    {
+        self.hasScannedResult = YES;
+        [self.capture stop];
+        
+         // Intermediate
     NSString *numberString;
     
     NSScanner *scanner = [NSScanner scannerWithString:result.text];
@@ -162,6 +165,10 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self.capture start];
     });
+    }
+    
+    
+   
 }
 
 - (IBAction)didTap:(id)sender {
