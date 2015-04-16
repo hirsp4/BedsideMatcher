@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Patient.h"
 #import "SupplyChainServicePortBinding.h"
+#import "gender.h"
 
 @interface AppDelegate ()
 
@@ -136,26 +137,30 @@
 
     getPatientsResponse *result=[service getPatients:nil];
     
+    trspPatient *trsppatient =nil;
+    
+    for(int i=0;i<result.count;i++){
+        NSLog(@"%@", [[result objectAtIndex:i]getLastname]);
+        [self savePatient:[result objectAtIndex:i]];
+    }
+}
+
+-(void)savePatient:(trspPatient *)trsppatient{
     Patient *patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
-                                                                 inManagedObjectContext:self.managedObjectContext];
-    Patient *patient2 = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
                                                      inManagedObjectContext:self.managedObjectContext];
-    [patient setValue:@"16.08.1992" forKey:@"birthdate"];
-    [patient setValue:@"56503" forKey:@"minorid"];
-    [patient setValue:@"Zehnder" forKey:@"name"];
-    [patient setValue:@"Patrizia" forKey:@"firstname"];
-    [patient setValue:@"3" forKey:@"polypointPID"];
-    [patient setValue:@"f" forKey:@"gender"];
-    [patient setValue:@"Station B" forKey:@"station"];
-    
-    [patient2 setValue:@"12.01.1990" forKey:@"birthdate"];
-    [patient2 setValue:@"56504" forKey:@"minorid"];
-    [patient2 setValue:@"Hirschi" forKey:@"name"];
-    [patient2 setValue:@"Patrick" forKey:@"firstname"];
-    [patient2 setValue:@"2" forKey:@"polypointPID"];
-    [patient2 setValue:@"m" forKey:@"gender"];
-    [patient2 setValue:@"Station A" forKey:@"station"];
-    
+    [patient setValue:trsppatient.birthDate forKey:@"birthdate"];
+    [patient setValue:trsppatient.beaconID forKey:@"minorid"];
+    [patient setValue:trsppatient.lastname forKey:@"name"];
+    [patient setValue:trsppatient.firstname forKey:@"firstname"];
+    [patient setValue:[NSString stringWithFormat:@"%d", trsppatient.pid] forKey:@"polypointPID"];
+    gender *patientgender=trsppatient.gender;
+    NSString *genderString;
+    if([[patientgender stringValue]isEqualToString:@"male"]){
+        genderString = @"männlich";
+    }else genderString=@"weiblich";
+    [patient setValue:genderString forKey:@"gender"];
+    [patient setValue:trsppatient.stationName forKey:@"station"];
+    [self.managedObjectContext insertObject:patient];
     NSError *error;
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Failed to save - error: %@", [error localizedDescription]);
