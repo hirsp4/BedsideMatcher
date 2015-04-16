@@ -20,7 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
+    SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
+    NSLog(@"%@",[service sayHelloWorldFrom:@"Patrizia" __error:nil]);
     }
 
 -(void)viewWillAppear:(BOOL)animated{
