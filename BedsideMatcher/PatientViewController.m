@@ -111,17 +111,14 @@
     {
         cell.accessoryType = UITableViewCellAccessoryNone;
           }
-    
+    cell.infoButton.tag=indexPath.row;
+    [cell.infoButton addTarget:self
+               action:@selector(showInfoAlert:) forControlEvents:UIControlEventTouchDown];
     [cell.cellNumberLabel setText:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1]];
     trspPrescription *prescription = [prescriptions objectAtIndex:indexPath.row];
     cell.dateLabel.text=[prescription getDateCreated];
     cell.nameLabel.text=@"Verordnung";
     cell.descriptionLabel.text=[prescription getSchedule];
-    NSMutableArray *medications = [prescription getMedications];
-    for(int i=0;i<medications.count;i++){
-        trspMedication *medication = [medications objectAtIndex:i];
-        NSLog(@"Description: %@",[medication getName]);
-    }
     cell.backgroundColor = [UIColor colorWithRed:1.00 green:0.94 blue:0.87 alpha:1.0];
     return cell;
 }
@@ -251,6 +248,7 @@
     for(int i=0;i<result.count;i++){
         trspPrescription *trsppresc= [result objectAtIndex:i];
         [prescriptions addObject:trsppresc];
+        [prescriptions addObject:trsppresc];
     }
     [self.prescriptionTable reloadData];
 }
@@ -283,5 +281,25 @@
         default:
             break;
     }
+}
+
+-(void)showInfoAlert:(UIButton*)sender
+{
+    trspPrescription *prescription = [prescriptions objectAtIndex:sender.tag];
+    NSMutableArray *medications = [prescription getMedications];
+    NSString *alertMessage=@"Die Verordnung besteht aus den folgenden Komponenten: \n\n";
+    for(int i=0;i<medications.count;i++){
+        trspMedication *medication = [medications objectAtIndex:i];
+        alertMessage=[alertMessage stringByAppendingString:@"- "];
+        alertMessage=[alertMessage stringByAppendingString:[medication getName]];
+        alertMessage=[alertMessage stringByAppendingString:@"\n"];
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Inhalt"
+                                                    message:alertMessage
+                                                   delegate:self
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+
 }
 @end

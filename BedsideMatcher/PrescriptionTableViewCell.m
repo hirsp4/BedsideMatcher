@@ -13,6 +13,8 @@
 @synthesize nameLabel=_nameLabel;
 @synthesize descriptionLabel=_descriptionLabel;
 @synthesize dateLabel=_dateLabel;
+@synthesize infoButton=_infoButton;
+
 - (void)awakeFromNib {
     // Initialization code
 }
