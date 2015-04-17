@@ -286,6 +286,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
                 case NTRangingRow:
                 default:
                     cell.textLabel.text = kRangingOperationTitle;
+                    [cell.accessoryView setBounds:CGRectMake(-250, -7, 51, 31)];
                     self.rangingSwitch = (UISwitch *)cell.accessoryView;
                     [self.rangingSwitch addTarget:self
                                            action:@selector(changeRangingState:)

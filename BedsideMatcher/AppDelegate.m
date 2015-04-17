@@ -137,6 +137,7 @@
     for(int i=0;i<result.count;i++){
         [self savePatient:[result objectAtIndex:i]];
     }
+    
 }
 
 -(void)savePatient:(trspPatient *)trsppatient{
