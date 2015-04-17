@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ZXingObjC.h"
 
-@interface PatientViewController : UIViewController <ZXCaptureDelegate>
+@interface PatientViewController : UIViewController <ZXCaptureDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *firstnameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *birthdateLabel;
@@ -29,5 +29,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *stationLabel;
 @property (nonatomic, assign) BOOL hasScannedResult;
 @property (strong, nonatomic) IBOutlet UIView *mainView;
+@property (weak, nonatomic) IBOutlet UIView *patientView;
+@property (weak, nonatomic) IBOutlet UIView *prescriptionView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+- (IBAction)segmentedValueChanged:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *prescriptionTable;
 
 @end

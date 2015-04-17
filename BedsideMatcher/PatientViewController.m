@@ -8,13 +8,17 @@
 
 #import <AudioToolbox/AudioToolbox.h>
 #import "PatientViewController.h"
+#import "PrescriptionTableViewCell.h"
+#import "SupplyChainServicePortBinding.h"
 
-@interface PatientViewController ()
+@interface PatientViewController (){
+    NSMutableArray *prescriptions;
+}
 
 @end
 
 @implementation PatientViewController
-@synthesize nameLabel,firstnameLabel,genderLabel,birthdateLabel,navBar,patientImage,name,firstname,birthdate,gender,image,stationLabel,station;
+@synthesize nameLabel,firstnameLabel,genderLabel,birthdateLabel,navBar,patientImage,name,firstname,birthdate,gender,image,stationLabel,station,patientView,prescriptionView,segmentedControl,prescriptionTable;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,6 +49,7 @@
     [self.utilityView bringSubviewToFront:self.scanView];
     [self.scanView.layer addSublayer:self.capture.layer];
     [self.scanView bringSubviewToFront:self.scanRectView];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -53,8 +58,66 @@
     self.capture.delegate = self;
     self.capture.layer.frame = self.utilityView.bounds;
     
+    [self performFetch];
+    
     //CGAffineTransform captureSizeTransform = CGAffineTransformMakeScale(320 / self.view.frame.size.width, 480 / self.view.frame.size.height);
     //self.capture.scanRect = CGRectApplyAffineTransform(self.scanRectView.frame, captureSizeTransform);
+}
+
+// Customize the number of sections in the table view
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+// Customize the number of rows in the section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return prescriptions.count;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
+    /* Create custom view to display section header... */
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
+    [label setFont:[UIFont boldSystemFontOfSize:12]];
+    NSString *string =[[[@"Verordnungen für: " stringByAppendingString:name]stringByAppendingString:@" "]stringByAppendingString:firstname];
+    /* Section header is in 0th index... */
+    [label setText:string];
+    [view addSubview:label];
+    [view setBackgroundColor:[UIColor colorWithRed:0.85 green:0.84 blue:0.84 alpha:1.0]]; //your background color...
+    return view;
+}
+
+
+// Customize the appearance of table view cells
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    int val = [[prefs objectForKey:@"selectedRow"] intValue];
+    static NSString *CellIdentifier = @"PrescriptionTableViewCell";
+    PrescriptionTableViewCell *cell = (PrescriptionTableViewCell *)[tableView dequeueReusableCellWithIdentifier: CellIdentifier];
+    if (cell == nil) {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PrescriptionTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+    }
+    if (indexPath.row == val)
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+    } else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+          }
+    
+    [cell.cellNumberLabel setText:[NSString stringWithFormat:@"%d",indexPath.row]];
+    trspPrescription *prescription = [prescriptions objectAtIndex:indexPath.row];
+    cell.backgroundColor = [UIColor colorWithRed:1.00 green:0.94 blue:0.87 alpha:1.0];
+    return cell;
+}
+// define cell-height
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 65.0;
 }
 
 - (void)setBackButtonAndTitle{
@@ -170,4 +233,46 @@
 }
 */
 
+-(void) performFetch{
+    prescriptions =[[NSMutableArray alloc] init];
+    [prescriptions removeAllObjects];
+    SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
+    getPrescriptionsForPatientResponse *result=[service getPrescriptionsForPatient:@"1" __error:nil];
+    for(int i=0;i<result.count;i++){
+        trspPrescription *trsppresc= [result objectAtIndex:i];
+        [prescriptions addObject:trsppresc];
+        [prescriptions addObject:trsppresc];
+    }
+    [self.prescriptionTable reloadData];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.prescriptionTable cellForRowAtIndexPath:indexPath];
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    [prefs setObject:[NSNumber numberWithInt:indexPath.row] forKey:@"selectedRow"];
+    if (cell.accessoryType == UITableViewCellAccessoryNone)
+    {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else
+    {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
+    [tableView reloadData];
+}
+
+- (IBAction)segmentedValueChanged:(UISegmentedControl *)sender {
+    switch (sender.selectedSegmentIndex) {
+        case 0:
+            self.patientView.hidden=NO;
+            self.prescriptionView.hidden=YES;
+            break;
+        case 1:
+            self.patientView.hidden=YES;
+            self.prescriptionView.hidden=NO;
+            break;
+        default:
+            break;
+    }
+}
 @end

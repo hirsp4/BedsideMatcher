@@ -105,6 +105,8 @@
 		EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3656891AAF95E000A0B64D /* Images.xcassets */; };
 		EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */; };
 		EF3656991AAF95E000A0B64D /* BedsideMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */; };
+		EF4E88BF1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E88BD1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m */; };
+		EF4E88C01AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4E88BE1AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib */; };
 		EF566A701AD6CB720083F781 /* PatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF566A6F1AD6CB720083F781 /* PatientViewController.m */; };
 		EF6339131AB0EAEB002ACE34 /* MedikamenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */; };
 		EF6339161AB0EAFE002ACE34 /* BeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */; };
@@ -539,6 +541,9 @@
 		EF3656921AAF95E000A0B64D /* BedsideMatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BedsideMatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3656971AAF95E000A0B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BedsideMatcherTests.m; sourceTree = "<group>"; };
+		EF4E88BC1AE1549B00DB5BE4 /* PrescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrescriptionTableViewCell.h; sourceTree = "<group>"; };
+		EF4E88BD1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrescriptionTableViewCell.m; sourceTree = "<group>"; };
+		EF4E88BE1AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		EF566A6E1AD6CB720083F781 /* PatientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientViewController.h; sourceTree = "<group>"; };
 		EF566A6F1AD6CB720083F781 /* PatientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientViewController.m; sourceTree = "<group>"; };
 		EF6339111AB0EAEB002ACE34 /* MedikamenteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedikamenteViewController.h; sourceTree = "<group>"; };
@@ -1299,6 +1304,9 @@
 				E0A2F65F1ACC084D001A02BE /* TableViewCellPatients.xib */,
 				EF566A6E1AD6CB720083F781 /* PatientViewController.h */,
 				EF566A6F1AD6CB720083F781 /* PatientViewController.m */,
+				EF4E88BC1AE1549B00DB5BE4 /* PrescriptionTableViewCell.h */,
+				EF4E88BD1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m */,
+				EF4E88BE1AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib */,
 			);
 			name = "Beacon Tab";
 			sourceTree = "<group>";
@@ -2154,6 +2162,7 @@
 				E09C91E51AC15273006804E9 /* iBeaconLogo.png in Resources */,
 				E0440DE41ACC21820024E445 /* barcode.png in Resources */,
 				E09B234A1ACD7D32004B4088 /* TableViewCellVerordnung.xib in Resources */,
+				EF4E88C01AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib in Resources */,
 				E0A2F6611ACC084D001A02BE /* TableViewCellPatients.xib in Resources */,
 				E09C91E71AC15E98006804E9 /* notebook.png in Resources */,
 				EFD9A2591AD3D29600DF7E10 /* male.png in Resources */,
@@ -2194,6 +2203,7 @@
 				E08956D61ADF9B8000C42A92 /* medicationState.m in Sources */,
 				E08956E01ADF9B8000C42A92 /* checkoutItemsResponse.m in Sources */,
 				E08956D71ADF9B8000C42A92 /* prescriptionState.m in Sources */,
+				EF4E88BF1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m in Sources */,
 				EFAD36641ACD2C80000E978E /* ZXByteMatrix.m in Sources */,
 				EFAD36BD1ACD2C80000E978E /* ZXUPCEANReader.m in Sources */,
 				EFAD36D61ACD2C80000E978E /* ZXPDF417Reader.m in Sources */,
