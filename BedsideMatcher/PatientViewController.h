@@ -21,6 +21,7 @@
 @property (nonatomic, strong) NSString *birthdate;
 @property (nonatomic, strong) NSString *gender;
 @property (nonatomic, strong) NSString *station;
+@property (nonatomic, strong) NSString *pid;
 @property (nonatomic, strong) UIImage *image;
 @property (weak, nonatomic) IBOutlet UIView *utilityView;
 @property (weak, nonatomic) IBOutlet UIView *scanView;

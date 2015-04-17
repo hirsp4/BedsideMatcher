@@ -10,6 +10,9 @@
 
 @implementation PrescriptionTableViewCell
 @synthesize cellNumberLabel=_cellNumberLabel;
+@synthesize nameLabel=_nameLabel;
+@synthesize descriptionLabel=_descriptionLabel;
+@synthesize dateLabel=_dateLabel;
 - (void)awakeFromNib {
     // Initialization code
 }

@@ -191,6 +191,7 @@
         destViewController.birthdate = patient.birthdate;
         destViewController.gender = patient.gender;
         destViewController.station=patient.station;
+            destViewController.pid=patient.polypointPID;
             if([patient.gender isEqualToString:@"f"]){
                 destViewController.image=[UIImage imageNamed:@"female.png"];
             }else  destViewController.image=[UIImage imageNamed:@"male.png"];

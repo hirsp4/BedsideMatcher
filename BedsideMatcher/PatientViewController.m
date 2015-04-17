@@ -10,6 +10,8 @@
 #import "PatientViewController.h"
 #import "PrescriptionTableViewCell.h"
 #import "SupplyChainServicePortBinding.h"
+#import "trspPrescription.h"
+#import "trspMedication.h"
 
 @interface PatientViewController (){
     NSMutableArray *prescriptions;
@@ -18,7 +20,7 @@
 @end
 
 @implementation PatientViewController
-@synthesize nameLabel,firstnameLabel,genderLabel,birthdateLabel,navBar,patientImage,name,firstname,birthdate,gender,image,stationLabel,station,patientView,prescriptionView,segmentedControl,prescriptionTable;
+@synthesize nameLabel,firstnameLabel,genderLabel,birthdateLabel,navBar,patientImage,name,firstname,birthdate,pid,gender,image,stationLabel,station,patientView,prescriptionView,segmentedControl,prescriptionTable;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -110,8 +112,16 @@
         cell.accessoryType = UITableViewCellAccessoryNone;
           }
     
-    [cell.cellNumberLabel setText:[NSString stringWithFormat:@"%d",indexPath.row]];
+    [cell.cellNumberLabel setText:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1]];
     trspPrescription *prescription = [prescriptions objectAtIndex:indexPath.row];
+    cell.dateLabel.text=[prescription getDateCreated];
+    cell.nameLabel.text=@"Verordnung";
+    cell.descriptionLabel.text=[prescription getSchedule];
+    NSMutableArray *medications = [prescription getMedications];
+    for(int i=0;i<medications.count;i++){
+        trspMedication *medication = [medications objectAtIndex:i];
+        NSLog(@"Description: %@",[medication getName]);
+    }
     cell.backgroundColor = [UIColor colorWithRed:1.00 green:0.94 blue:0.87 alpha:1.0];
     return cell;
 }
@@ -237,10 +247,9 @@
     prescriptions =[[NSMutableArray alloc] init];
     [prescriptions removeAllObjects];
     SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
-    getPrescriptionsForPatientResponse *result=[service getPrescriptionsForPatient:@"1" __error:nil];
+    getPrescriptionsForPatientResponse *result=[service getPrescriptionsForPatient:pid __error:nil];
     for(int i=0;i<result.count;i++){
         trspPrescription *trsppresc= [result objectAtIndex:i];
-        [prescriptions addObject:trsppresc];
         [prescriptions addObject:trsppresc];
     }
     [self.prescriptionTable reloadData];

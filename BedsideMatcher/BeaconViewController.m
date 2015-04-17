@@ -176,6 +176,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         destViewController.birthdate = detailSplitted[1];
         destViewController.gender = detailSplitted[4];
         destViewController.station=[[detailSplitted[6] stringByAppendingString:@" "]stringByAppendingString:detailSplitted[7]];
+        destViewController.pid=detailSplitted[8];
         [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
     }
 }
@@ -272,8 +273,8 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             break;
     }
     
-    NSString *format = @"%@, %@ • %@ • %@";
-    return [NSString stringWithFormat:format, beacon.minor, patient.birthdate,[@"Geschlecht: " stringByAppendingString:patient.gender],patient.station];
+    NSString *format = @"%@, %@ • %@ • %@ • %@";
+    return [NSString stringWithFormat:format, beacon.minor, patient.birthdate,[@"Geschlecht: " stringByAppendingString:patient.gender],patient.station,patient.polypointPID];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
