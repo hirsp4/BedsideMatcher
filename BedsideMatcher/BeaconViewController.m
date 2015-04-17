@@ -28,6 +28,9 @@
 
 #import "BeaconViewController.h"
 #import "TableViewCellPatients.h"
+#import "AppDelegate.h"
+#import "Patient.h"
+#import "PatientViewController.h"
 static NSString * const kUUID = @"4661D06A-9E38-4367-8BA2-2C72DE319164";
 static NSString * const kIdentifier = @"BFH";
 
@@ -66,11 +69,14 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 @end
 
 @implementation BeaconViewController
-
+@synthesize patients,managedObjectContext;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
     
+    [self performFetch];
     [self setBarcodeButton];
 }
 
@@ -93,6 +99,15 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 - (IBAction)showBarcodeView:(id)sender {
     
     [self performSegueWithIdentifier:@"showBarcodeView" sender:self];
+}
+
+-(void)performFetch{
+    NSFetchRequest *fetchRequestPatient = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Patient" inManagedObjectContext:managedObjectContext];
+    [fetchRequestPatient setEntity:entity];
+    NSError *error;
+    self.patients = [managedObjectContext executeFetchRequest:fetchRequestPatient error:&error];
 }
 
 #pragma mark - Index path management
@@ -144,6 +159,25 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     }
     
     return indexPaths;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showPatientView" sender:[self.beaconTableView cellForRowAtIndexPath:indexPath]];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showPatientView"]) {
+        UITableViewCell *cell =sender;
+        PatientViewController *destViewController = segue.destinationViewController;
+        NSArray *nameSplitted = [cell.textLabel.text componentsSeparatedByString: @" "];
+        NSArray *detailSplitted = [cell.detailTextLabel.text componentsSeparatedByString: @" "];
+        destViewController.name = nameSplitted[0];
+        destViewController.firstname = nameSplitted[1];
+        destViewController.image = cell.imageView.image;
+        destViewController.birthdate = detailSplitted[1];
+        destViewController.gender = detailSplitted[4];
+        destViewController.station=[[detailSplitted[6] stringByAppendingString:@" "]stringByAppendingString:detailSplitted[7]];
+        [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
+    }
 }
 
 - (NSArray *)indexPathsForBeacons:(NSArray *)beacons
@@ -201,22 +235,45 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     NSString *proximity;
     switch (beacon.proximity) {
         case CLProximityNear:
-            proximity = @"Near";
+            proximity = @"Nah";
             break;
         case CLProximityImmediate:
-            proximity = @"Immediate";
+            proximity = @"Mittel";
             break;
         case CLProximityFar:
-            proximity = @"Far";
+            proximity = @"Fern";
             break;
         case CLProximityUnknown:
         default:
-            proximity = @"Unknown";
+            proximity = @"Unbekannt";
             break;
     }
     
     NSString *format = @"%@, %@ • %@ • %f • %li";
     return [NSString stringWithFormat:format, beacon.major, beacon.minor, proximity, beacon.accuracy, beacon.rssi];
+}
+
+- (NSString *)detailsStringForBeacon:(CLBeacon *)beacon andPatient:(Patient *)patient
+{
+    NSString *proximity;
+    switch (beacon.proximity) {
+        case CLProximityNear:
+            proximity = @"Nah";
+            break;
+        case CLProximityImmediate:
+            proximity = @"Mittel";
+            break;
+        case CLProximityFar:
+            proximity = @"Fern";
+            break;
+        case CLProximityUnknown:
+        default:
+            proximity = @"Unbekannt";
+            break;
+    }
+    
+    NSString *format = @"%@, %@ • %@ • %@";
+    return [NSString stringWithFormat:format, beacon.minor, patient.birthdate,[@"Geschlecht: " stringByAppendingString:patient.gender],patient.station];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -246,10 +303,23 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             if (!cell)
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                               reuseIdentifier:kBeaconCellIdentifier];
-            
-            cell.textLabel.text = beacon.proximityUUID.UUIDString;
+            NSString *name = @"Beacon";
+            cell.textLabel.text = name;
             cell.detailTextLabel.text = [self detailsStringForBeacon:beacon];
+            for(Patient *patient in self.patients){
+                if([[beacon.minor stringValue]isEqualToString:patient.minorid]){
+                    cell.textLabel.text = [[patient.firstname stringByAppendingString:@" "]stringByAppendingString:patient.name];
+                    cell.detailTextLabel.text = [self detailsStringForBeacon:beacon andPatient:patient];
+                    if([@"f" isEqualToString:patient.gender]){
+                        cell.imageView.image = [UIImage imageNamed:@"female.png"];
+                    }else{
+                        cell.imageView.image = [UIImage imageNamed:@"male.png"];
+                    }
+                    
+                }
+            }
             cell.detailTextLabel.textColor = [UIColor grayColor];
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
             break;
     }

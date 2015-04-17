@@ -1,4 +1,4 @@
-//
+  //
 //  AppDelegate.m
 //  BedsideMatcher
 //
@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "Patient.h"
+#import "SupplyChainServicePortBinding.h"
+#import "gender.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self resetPatients];
     return YES;
 }
 
@@ -122,6 +126,56 @@
             abort();
         }
     }
+}
+
+
+-(void)resetPatients
+{
+    [self deleteAllObjects:@"Patient"];    
+    SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
+    getPatientsResponse *result=[service getPatients:nil];
+    for(int i=0;i<result.count;i++){
+        [self savePatient:[result objectAtIndex:i]];
+    }
+}
+
+-(void)savePatient:(trspPatient *)trsppatient{
+    Patient *patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
+                                                     inManagedObjectContext:self.managedObjectContext];
+    [patient setValue:trsppatient.birthDate forKey:@"birthdate"];
+    [patient setValue:trsppatient.beaconID forKey:@"minorid"];
+    [patient setValue:trsppatient.lastname forKey:@"name"];
+    [patient setValue:trsppatient.firstname forKey:@"firstname"];
+    [patient setValue:[NSString stringWithFormat:@"%d", trsppatient.pid] forKey:@"polypointPID"];
+    gender *patientgender=trsppatient.gender;
+    NSString *genderString;
+    if([[patientgender stringValue]isEqualToString:@"male"]){
+        genderString = @"männlich";
+    }else genderString=@"weiblich";
+    [patient setValue:genderString forKey:@"gender"];
+    [patient setValue:trsppatient.stationName forKey:@"station"];
+    [self.managedObjectContext insertObject:patient];
+    NSError *error;
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Failed to save - error: %@", [error localizedDescription]);
+    }
+}
+
+- (void) deleteAllObjects: (NSString *) entityDescription  {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityDescription inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error;
+    NSArray *items = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    for (NSManagedObject *managedObject in items) {
+        [self.managedObjectContext deleteObject:managedObject];
+    }
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Failed to delete - error: %@", [error localizedDescription]);
+    }
+    
 }
 
 @end

@@ -55,8 +55,11 @@
     }
     cell.verordnungsLabelPatient.numberOfLines=2;
     cell.verordnungsLabelPatient.text=[Verordnungen objectAtIndex:indexPath.row];
-    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"showVerordnungDetail" sender:[self.tableViewVerordnungen cellForRowAtIndexPath:indexPath]];
 }
 
 // define cell-height

@@ -7,18 +7,25 @@
 //
 #import <AudioToolbox/AudioToolbox.h>
 #import "BarcodeViewController.h"
+#import "PatientViewController.h"
+#import "AppDelegate.h"
+#import "Patient.h"
 
 @interface BarcodeViewController ()
 
 @end
 
 @implementation BarcodeViewController
-
+@synthesize patients,managedObjectContext,minorID;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     [self setBackButton];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    self.managedObjectContext = [appDelegate managedObjectContext];
+    [self performFetch];
+    
     self.capture = [[ZXCapture alloc] init];
     self.capture.camera = self.capture.back;
     self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
@@ -126,27 +133,87 @@
 
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
     if (!result) return;
+    if(self.hasScannedResult == NO)
+    {
+        self.hasScannedResult = YES;
+        [self.capture stop];
+        
+         // Intermediate
+    NSString *numberString;
     
+    NSScanner *scanner = [NSScanner scannerWithString:result.text];
+    NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+    
+    // Throw away characters before the first number.
+    [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+    
+    // Collect numbers.
+    [scanner scanCharactersFromSet:numbers intoString:&numberString];
+    
+
     // We got a result. Display information about the result onscreen.
     NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
-    NSString *display = [NSString stringWithFormat:@"Gescannt!\n\nFormat: %@\nInhalt:\n%@", formatString, result.text];
+    NSString *display = [NSString stringWithFormat:@"Gescannt!\n\nFormat: %@\nInhalt:\n%@", formatString, numberString];
     [self.decodedLabel performSelectorOnMainThread:@selector(setText:) withObject:display waitUntilDone:YES];
     NSLog(@"%@",display);
     
     // Vibrate
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    
-    [self.capture stop];
-    
+    minorID = [NSMutableString string];
+    [minorID appendString:numberString];
+    [self performSegueWithIdentifier:@"scanToPatientView" sender:self];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self.capture start];
     });
+    }
+    
+    
+   
 }
 
 - (IBAction)didTap:(id)sender {
     [self performSegueWithIdentifier:@"showBeaconView" sender:self];
-}  
+}
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"scanToPatientView"]) {
+        PatientViewController *destViewController = segue.destinationViewController;
+        // web service getPatientInformation
+        Patient *patient = nil;
+        for(Patient *p in patients){
+            if([p.minorid isEqualToString:minorID]){
+                patient=p;
+            }
+        }
+        if(patient!=nil){
+           destViewController.name = patient.name;
+        destViewController.firstname = patient.firstname;
+        destViewController.birthdate = patient.birthdate;
+        destViewController.gender = patient.gender;
+        destViewController.station=patient.station;
+            if([patient.gender isEqualToString:@"f"]){
+                destViewController.image=[UIImage imageNamed:@"female.png"];
+            }else  destViewController.image=[UIImage imageNamed:@"male.png"];
+        minorID =nil; 
+        }else{
+            NSString *alertMessage=@"Es wurde kein Patient gefunden.";
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Achtung!"
+                                                              message:alertMessage
+                                                             delegate:self
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            [message show];
+        }
+    }
+}
+-(void)performFetch{
+    NSFetchRequest *fetchRequestPatient = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription
+                                   entityForName:@"Patient" inManagedObjectContext:managedObjectContext];
+    [fetchRequestPatient setEntity:entity];
+    NSError *error;
+    self.patients = [managedObjectContext executeFetchRequest:fetchRequestPatient error:&error];
+}
 
 /*
 #pragma mark - Navigation
