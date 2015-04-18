@@ -24,15 +24,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // fill the labels with the values of the instance variables
     nameLabel.text=name;
     firstnameLabel.text=firstname;
     patientImage.image=image;
     birthdateLabel.text=birthdate;
     genderLabel.text=gender;
     stationLabel.text=station;
+    // set the title of the navigation bar and add a back button
     [self setBackButtonAndTitle];
     
+    // setup the scan view to scan for prescriptions
     self.capture = [[ZXCapture alloc] init];
     [self.capture stop];
     self.capture.camera = self.capture.back;
@@ -56,14 +58,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
     self.capture.delegate = self;
     self.capture.layer.frame = self.utilityView.bounds;
-    
+    // get prescriptions from the webservice
     [self performFetch];
-    
-    //CGAffineTransform captureSizeTransform = CGAffineTransformMakeScale(320 / self.view.frame.size.width, 480 / self.view.frame.size.height);
-    //self.capture.scanRect = CGRectApplyAffineTransform(self.scanRectView.frame, captureSizeTransform);
 }
 
 // Customize the number of sections in the table view
@@ -84,10 +82,9 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
     [label setFont:[UIFont boldSystemFontOfSize:12]];
     NSString *string =[[[@"Verordnungen für: " stringByAppendingString:name]stringByAppendingString:@" "]stringByAppendingString:firstname];
-    /* Section header is in 0th index... */
     [label setText:string];
     [view addSubview:label];
-    [view setBackgroundColor:[UIColor colorWithRed:0.85 green:0.84 blue:0.84 alpha:1.0]]; //your background color...
+    [view setBackgroundColor:[UIColor colorWithRed:0.85 green:0.84 blue:0.84 alpha:1.0]];
     return view;
 }
 
@@ -96,6 +93,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    // get the selected row in  user defaults
     int val = [[prefs objectForKey:@"selectedRow"] intValue];
     static NSString *CellIdentifier = @"PrescriptionTableViewCell";
     PrescriptionTableViewCell *cell = (PrescriptionTableViewCell *)[tableView dequeueReusableCellWithIdentifier: CellIdentifier];
@@ -103,6 +101,7 @@
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PrescriptionTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
+    // ensure that only one cell can be selected with accessory checkmark
     if (indexPath.row == val)
     {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -110,12 +109,14 @@
     } else
     {
         cell.accessoryType = UITableViewCellAccessoryNone;
-          }
+    }
+    // set the info button and tag it
     cell.infoButton.tag=indexPath.row;
     [cell.infoButton addTarget:self
                action:@selector(showInfoAlert:) forControlEvents:UIControlEventTouchDown];
     [cell.cellNumberLabel setText:[NSString stringWithFormat:@"%ld",(long)indexPath.row+1]];
     trspPrescription *prescription = [prescriptions objectAtIndex:indexPath.row];
+    // set the prescription labels of the cell
     cell.dateLabel.text=[prescription getDateCreated];
     cell.nameLabel.text=@"Verordnung";
     cell.descriptionLabel.text=[prescription getSchedule];
@@ -126,7 +127,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 65.0;
 }
-
+// set the back button and the title of the navigation bar
 - (void)setBackButtonAndTitle{
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [backButton addTarget:self
@@ -144,13 +145,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+/*
+ *  Action method for the back button
+ */
 - (void) backToBeaconView: (id) sender{
     [self performSegueWithIdentifier:@"backToBeaconView" sender:self];
 }
 
 #pragma mark - Private Methods
-
+// private helper method to convert the scanned barcode formats to strings
 - (NSString *)barcodeFormatToString:(ZXBarcodeFormat)format {
     switch (format) {
         case kBarcodeFormatAztec:
@@ -207,9 +210,14 @@
 }
 
 #pragma mark - ZXCaptureDelegate Methods
-
+/*
+ *  capture method of the scanner
+ */
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
+    // check if we have a valid result
     if (!result) return;
+    // check hasScannedResult boolean. Needed to avoid having multiple successful scans
+    // in few seconds.
     if(self.hasScannedResult == NO)
     {
         self.hasScannedResult = YES;
@@ -228,18 +236,7 @@
     });
     }
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
+// get the prescriptions from the webservice
 -(void) performFetch{
     prescriptions =[[NSMutableArray alloc] init];
     [prescriptions removeAllObjects];
@@ -252,10 +249,11 @@
     }
     [self.prescriptionTable reloadData];
 }
-
+// handle the user selections and set the accessory checkmark
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [self.prescriptionTable cellForRowAtIndexPath:indexPath];
+    // save the selected index
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     [prefs setObject:[NSNumber numberWithInt:indexPath.row] forKey:@"selectedRow"];
     if (cell.accessoryType == UITableViewCellAccessoryNone)
@@ -265,26 +263,34 @@
     {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
+    // force table view to reload the content
     [tableView reloadData];
 }
-
+/*
+ *  managing the views of the segmented control
+ */
 - (IBAction)segmentedValueChanged:(UISegmentedControl *)sender {
     switch (sender.selectedSegmentIndex) {
-        case 0:
+        case 0: // segment "Patient"
             self.patientView.hidden=NO;
             self.prescriptionView.hidden=YES;
             break;
-        case 1:
+        case 1: // segment "Verordnungen"
             self.patientView.hidden=YES;
             self.prescriptionView.hidden=NO;
             break;
+                // should never happen, just some default stuff
         default:
             break;
     }
 }
-
+/*
+ *  show information for a selected prescription row to the user
+ */
 -(void)showInfoAlert:(UIButton*)sender
 {
+    // get the selected prescriptions and build an alert message
+    // for the medications in the prescription
     trspPrescription *prescription = [prescriptions objectAtIndex:sender.tag];
     NSMutableArray *medications = [prescription getMedications];
     NSString *alertMessage=@"Die Verordnung besteht aus den folgenden Komponenten: \n\n";

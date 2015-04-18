@@ -27,13 +27,15 @@
 //
 
 #import "BeaconViewController.h"
-#import "TableViewCellPatients.h"
 #import "AppDelegate.h"
 #import "Patient.h"
 #import "PatientViewController.h"
+
+// set the beacon region UUID and location identifier (beacons have to be configured to this UUID and the below location
+// to be detected).
 static NSString * const kUUID = @"4661D06A-9E38-4367-8BA2-2C72DE319164";
 static NSString * const kIdentifier = @"BFH";
-
+// set the cell identifiers
 static NSString * const kOperationCellIdentifier = @"OperationCell";
 static NSString * const kBeaconCellIdentifier = @"BeaconCell";
 
@@ -72,17 +74,18 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 @synthesize patients,managedObjectContext;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // geth the managed object context from AppDelegate
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
-    
+    // get the patients from core data
     [self performFetch];
+    // set the button to get to barcode view
     [self setBarcodeButton];
 }
 
 // create Barcode-Button
 - (void)setBarcodeButton{
-    
+    // setup the barcode button
     UIImage *barcodeImage = [[UIImage imageNamed:@"barcode.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
     UIButton *barcode = [UIButton buttonWithType:UIButtonTypeCustom];
     [barcode addTarget:self
@@ -95,12 +98,15 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     item.leftBarButtonItem = barcodeButton;
     [_navBarBeacon pushNavigationItem:item animated:NO];
 }
-
+/*
+ *  Action method for the barcode button.
+ */
 - (IBAction)showBarcodeView:(id)sender {
-    
     [self performSegueWithIdentifier:@"showBarcodeView" sender:self];
 }
-
+/*
+ *  get the patients from core data
+ */
 -(void)performFetch{
     NSFetchRequest *fetchRequestPatient = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
@@ -160,14 +166,21 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     
     return indexPaths;
 }
-
+/*
+ *  handle the user selection
+ */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"showPatientView" sender:[self.beaconTableView cellForRowAtIndexPath:indexPath]];
 }
+/*
+ *  pass patient data to destination view controller
+ */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showPatientView"]) {
         UITableViewCell *cell =sender;
         PatientViewController *destViewController = segue.destinationViewController;
+        // split the detail string of the beacon cell in table view and
+        // set the destination view controllers instance variables.
         NSArray *nameSplitted = [cell.textLabel.text componentsSeparatedByString: @" "];
         NSArray *detailSplitted = [cell.detailTextLabel.text componentsSeparatedByString: @" "];
         destViewController.name = nameSplitted[0];
@@ -177,6 +190,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         destViewController.gender = detailSplitted[4];
         destViewController.station=[[detailSplitted[6] stringByAppendingString:@" "]stringByAppendingString:detailSplitted[7]];
         destViewController.pid=detailSplitted[8];
+        // stop ranging for beacons because we already selected a patient!
         [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
     }
 }
@@ -253,7 +267,9 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     NSString *format = @"%@, %@ • %@ • %f • %li";
     return [NSString stringWithFormat:format, beacon.major, beacon.minor, proximity, beacon.accuracy, beacon.rssi];
 }
-
+/*
+ *  sets the detail string for a given beacon and patient
+ */
 - (NSString *)detailsStringForBeacon:(CLBeacon *)beacon andPatient:(Patient *)patient
 {
     NSString *proximity;
