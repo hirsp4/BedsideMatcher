@@ -20,7 +20,7 @@
 @end
 
 @implementation PatientViewController
-@synthesize nameLabel,firstnameLabel,genderLabel,birthdateLabel,navBar,patientImage,name,firstname,birthdate,pid,gender,image,stationLabel,station,patientView,prescriptionView,segmentedControl,prescriptionTable;
+@synthesize nameLabel,firstnameLabel,genderLabel,birthdateLabel,navBar,patientImage,name,firstname,birthdate,caseid,reastate,bloodgroup,room,pid,gender,image,stationLabel,station,patientView,prescriptionView,segmentedControl,prescriptionTable, roomLabel,pidLabel,fidLabel,bloodgroupLabel,reaLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,11 +30,18 @@
     patientImage.image=image;
     birthdateLabel.text=birthdate;
     genderLabel.text=gender;
-    stationLabel.text=station;
+    stationLabel.text=[self getStationString];
+    roomLabel.text=room;
+    pidLabel.text=pid;
+    fidLabel.text=caseid;
+    reaLabel.text=reastate;
+    bloodgroupLabel.text=[self getBloodGroupString];
     // set the title of the navigation bar and add a back button
     [self setBackButtonAndTitle];
     
     // setup the scan view to scan for prescriptions
+    self.hasScannedResult=YES;
+    [self.capture.layer removeFromSuperlayer];
     self.capture = [[ZXCapture alloc] init];
     [self.capture stop];
     self.capture.camera = self.capture.back;
@@ -47,6 +54,7 @@
     self.scanRectView.layer.borderColor = [UIColor greenColor].CGColor;
     self.scanRectView.layer.borderWidth = borderWidth;
     self.utilityView.layer.borderColor = [UIColor blackColor].CGColor;
+    borderWidth = 1.0f;
     self.utilityView.layer.borderWidth = borderWidth;
     self.mainView.autoresizesSubviews=NO;
     [self.utilityView.layer addSublayer:self.scanView.layer];
@@ -77,10 +85,10 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 18)];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 38)];
     /* Create custom view to display section header... */
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
-    [label setFont:[UIFont boldSystemFontOfSize:12]];
+    [label setFont:[UIFont boldSystemFontOfSize:14]];
     NSString *string =[[[@"Verordnungen für: " stringByAppendingString:name]stringByAppendingString:@" "]stringByAppendingString:firstname];
     [label setText:string];
     [view addSubview:label];
@@ -149,6 +157,8 @@
  *  Action method for the back button
  */
 - (void) backToBeaconView: (id) sender{
+    [self.capture.layer removeFromSuperlayer];
+    self.hasScannedResult = YES;
     [self performSegueWithIdentifier:@"backToBeaconView" sender:self];
 }
 
@@ -231,7 +241,7 @@
     
     [self.capture stop];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self.capture start];
     });
     }
@@ -274,10 +284,12 @@
         case 0: // segment "Patient"
             self.patientView.hidden=NO;
             self.prescriptionView.hidden=YES;
+            [self.capture.layer removeFromSuperlayer];
             break;
         case 1: // segment "Verordnungen"
             self.patientView.hidden=YES;
             self.prescriptionView.hidden=NO;
+            self.hasScannedResult=NO;
             break;
                 // should never happen, just some default stuff
         default:
@@ -307,5 +319,29 @@
                                           otherButtonTitles:nil];
     [alert show];
 
+}
+- (void)dealloc {
+    [self.capture.layer removeFromSuperlayer];
+}
+-(NSString*)getBloodGroupString{
+    if([bloodgroup isEqualToString:@"Apositive"]){
+        return @"A+";
+    }else if([bloodgroup isEqualToString:@"Bpositive"]){
+        return @"B+";
+    }else if([bloodgroup isEqualToString:@"AB"]){
+        return @"AB";
+    }else if([bloodgroup isEqualToString:@"ZeroNegative"]){
+        return @"0-";
+    }else if([bloodgroup isEqualToString:@"ZeroPositive"]){
+        return @"0+";
+    }else{
+        return @"Unbekannt";
+    }
+
+}
+-(NSString*)getStationString{
+    NSString *stationString = station;
+    NSArray *stationSplitted = [stationString componentsSeparatedByString:@" "];
+    return stationSplitted[1];
 }
 @end

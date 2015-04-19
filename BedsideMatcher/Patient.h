@@ -18,4 +18,8 @@
 @property NSString *minorid;
 @property NSString *birthdate;
 @property NSString *station;
+@property NSString *room;
+@property NSString *reastate;
+@property NSString *caseID;
+@property NSString *bloodgroup;
 @end

@@ -11,5 +11,5 @@
 #import "Patient.h"
 
 @implementation Patient
-@dynamic gender, minorid, name, firstname,birthdate,polypointPID,station;
+@dynamic gender, minorid, name, firstname,birthdate,polypointPID,station,room,reastate,caseID,bloodgroup;
 @end

@@ -30,8 +30,8 @@
     self.managedObjectContext = [appDelegate managedObjectContext];
     // perform the fetch to get all patients from core data
     [self performFetch];
-    
     // load and setup the capture frames
+    self.capture = nil;
     self.capture = [[ZXCapture alloc] init];
     self.capture.camera = self.capture.back;
     self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
@@ -47,10 +47,12 @@
     [self.view bringSubviewToFront:self.scanRectView];
     [self.view bringSubviewToFront:self.decodedLabel];
 }
-
+- (void)dealloc {
+    [self.capture.layer removeFromSuperlayer];
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    self.hasScannedResult=NO;
     self.capture.delegate = self;
     self.capture.layer.frame = self.view.bounds;
     // transform the scan view to full screen size
@@ -216,6 +218,10 @@
             destViewController.gender = patient.gender;
             destViewController.station=patient.station;
             destViewController.pid=patient.polypointPID;
+            destViewController.reastate = patient.reastate;
+            destViewController.bloodgroup = patient.bloodgroup;
+            destViewController.room=patient.room;
+            destViewController.caseid=patient.caseID;
             // select the right patient image
             if([patient.gender isEqualToString:@"f"]){
                 destViewController.image=[UIImage imageNamed:@"female.png"];

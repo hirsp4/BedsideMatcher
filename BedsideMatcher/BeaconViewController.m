@@ -181,15 +181,22 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         PatientViewController *destViewController = segue.destinationViewController;
         // split the detail string of the beacon cell in table view and
         // set the destination view controllers instance variables.
-        NSArray *nameSplitted = [cell.textLabel.text componentsSeparatedByString: @" "];
         NSArray *detailSplitted = [cell.detailTextLabel.text componentsSeparatedByString: @" "];
-        destViewController.name = nameSplitted[0];
-        destViewController.firstname = nameSplitted[1];
-        destViewController.image = cell.imageView.image;
-        destViewController.birthdate = detailSplitted[1];
-        destViewController.gender = detailSplitted[4];
-        destViewController.station=[[detailSplitted[6] stringByAppendingString:@" "]stringByAppendingString:detailSplitted[7]];
-        destViewController.pid=detailSplitted[8];
+        Patient *patient = [self getPatientForBeacon:detailSplitted[0]];
+        destViewController.name = patient.name;
+        destViewController.firstname = patient.firstname;
+        destViewController.birthdate = patient.birthdate;
+        destViewController.gender = patient.gender;
+        destViewController.station=patient.station;
+        destViewController.pid=patient.polypointPID;
+        destViewController.reastate = patient.reastate;
+        destViewController.bloodgroup = patient.bloodgroup;
+        destViewController.room=patient.room;
+        destViewController.caseid=patient.caseID;
+        // select the right patient image
+        if([patient.gender isEqualToString:@"f"]){
+            destViewController.image=[UIImage imageNamed:@"female.png"];
+        }else  destViewController.image=[UIImage imageNamed:@"male.png"];
         // stop ranging for beacons because we already selected a patient!
         [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
     }
@@ -599,7 +606,25 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 }
 
 
-
+-(Patient*)getPatientForBeacon:(NSString*)beaconID{
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Patient"
+                                              inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"minorid LIKE %@",
+                              beaconID];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects == nil) {
+        // impossible
+        //... error handling code
+    }
+    
+    return [fetchedObjects firstObject];
+}
 
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheralManager
 {

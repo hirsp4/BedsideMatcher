@@ -10,6 +10,8 @@
 #import "Patient.h"
 #import "SupplyChainServicePortBinding.h"
 #import "gender.h"
+#import "bloodgroup.h"
+
 
 @interface AppDelegate ()
 
@@ -164,6 +166,13 @@
     }else genderString=@"weiblich";
     [patient setValue:genderString forKey:@"gender"];
     [patient setValue:trsppatient.stationName forKey:@"station"];
+    [patient setValue:trsppatient.room forKey:@"room"];
+    BOOL flag = trsppatient.getReaState;
+    NSString *string = flag ? @"Ja" : @"Nein";
+    [patient setValue:string forKey:@"reastate"];
+    [patient setValue:[NSString stringWithFormat:@"%d",trsppatient.fid] forKey:@"caseID"];
+    [patient setValue:[trsppatient.getBloodGroup stringValue] forKey:@"bloodgroup"];
+
     // insert the object in the managed object context
     [self.managedObjectContext insertObject:patient];
     NSError *error;
