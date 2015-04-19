@@ -28,7 +28,7 @@
     nameLabel.text=name;
     firstnameLabel.text=firstname;
     patientImage.image=image;
-    birthdateLabel.text=birthdate;
+    birthdateLabel.text=[self getBirthdateString];
     genderLabel.text=gender;
     stationLabel.text=[self getStationString];
     roomLabel.text=room;
@@ -343,5 +343,10 @@
     NSString *stationString = station;
     NSArray *stationSplitted = [stationString componentsSeparatedByString:@" "];
     return stationSplitted[1];
+}
+-(NSString*)getBirthdateString{
+    NSString *birthdateString = birthdate;
+    NSArray *birthdateSplitted = [birthdateString componentsSeparatedByString:@"-"];
+    return [[[[birthdateSplitted[2] stringByAppendingString:@"."]stringByAppendingString:birthdateSplitted[1]]stringByAppendingString:@"."]stringByAppendingString:birthdateSplitted[0]];
 }
 @end

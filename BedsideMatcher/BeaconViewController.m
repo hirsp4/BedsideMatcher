@@ -102,6 +102,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
  *  Action method for the barcode button.
  */
 - (IBAction)showBarcodeView:(id)sender {
+    [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
     [self performSegueWithIdentifier:@"showBarcodeView" sender:self];
 }
 /*
