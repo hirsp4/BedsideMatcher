@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>091417BB-62DE-479E-972C-D335E2D8ADD2</string>
 	<key>IDESourceControlProjectName</key>
-	<string>BedsideMatcher</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>FBBD73104969010B0BBA08E8562ABF8770575910</key>
 		<string>https://github.com/hirsp4/BedsideMatcher.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BedsideMatcher.xcodeproj</string>
+	<string>BedsideMatcher.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FBBD73104969010B0BBA08E8562ABF8770575910</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>FBBD73104969010B0BBA08E8562ABF8770575910</string>
 			<key>IDESourceControlWCCName</key>
-			<string>BedsideMatcher_iOS</string>
+			<string>BedsideMatcher</string>
 		</dict>
 	</array>
 </dict>
