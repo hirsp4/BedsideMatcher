@@ -2,6 +2,10 @@
 //  BarcodeViewController.h
 //  BedsideMatcher
 //
+//  Class for the scanning of a patient barcode. Handles the scanned barcode and
+//  initializes a patient view with the stored values for the given patient
+//  in the database.
+//
 //  Created by Patrizia Zehnder on 01/04/15.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //

@@ -2,6 +2,10 @@
 //  BarcodeViewController.m
 //  BedsideMatcher
 //
+//  Class for the scanning of a patient barcode. Handles the scanned barcode and
+//  initializes a patient view with the stored values for the given patient
+//  in the database.
+//
 //  Created by Patrizia Zehnder on 01/04/15.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
@@ -19,13 +23,15 @@
 @synthesize patients,managedObjectContext,minorID;
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+    // set the back button in the navigation bar to get back to beacon view controller
     [self setBackButton];
+    // get the managed object context from AppDelegate
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
+    // perform the fetch to get all patients from core data
     [self performFetch];
-    
+    // load and setup the capture frames
+    self.capture = nil;
     self.capture = [[ZXCapture alloc] init];
     self.capture.camera = self.capture.back;
     self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
@@ -41,13 +47,15 @@
     [self.view bringSubviewToFront:self.scanRectView];
     [self.view bringSubviewToFront:self.decodedLabel];
 }
-
+- (void)dealloc {
+    [self.capture.layer removeFromSuperlayer];
+}
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    self.hasScannedResult=NO;
     self.capture.delegate = self;
     self.capture.layer.frame = self.view.bounds;
-    
+    // transform the scan view to full screen size
     CGAffineTransform captureSizeTransform = CGAffineTransformMakeScale(320 / self.view.frame.size.width, 480 / self.view.frame.size.height);
     self.capture.scanRect = CGRectApplyAffineTransform(self.scanRectView.frame, captureSizeTransform);
 }
@@ -67,13 +75,15 @@
     item.leftBarButtonItem=backButton;
     [_navBarBarcode pushNavigationItem:item animated:NO];
 }
-
+/*
+ *  Action method for the back button.
+ */
 - (IBAction)showBeaconView:(id)sender {
     
     [self performSegueWithIdentifier:@"showBeaconView" sender:self];
 }
 #pragma mark - Private Methods
-
+// private helper method to convert the scanned barcode formats to strings
 - (NSString *)barcodeFormatToString:(ZXBarcodeFormat)format {
     switch (format) {
         case kBarcodeFormatAztec:
@@ -130,17 +140,22 @@
 }
 
 #pragma mark - ZXCaptureDelegate Methods
-
+/*
+ *  capture method of the scanner
+ */
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
+    // check if there's a valid result
     if (!result) return;
+    // check hasScannedResult boolean. Needed to avoid having multiple successful scans
+    // in few seconds.
     if(self.hasScannedResult == NO)
     {
         self.hasScannedResult = YES;
         [self.capture stop];
         
-         // Intermediate
     NSString *numberString;
-    
+    // extract numbers from the scanned string (trims the first sign of the barcode which
+    // is defined as a "¿"
     NSScanner *scanner = [NSScanner scannerWithString:result.text];
     NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
     
@@ -159,8 +174,10 @@
     
     // Vibrate
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    // set the minor id instance variable
     minorID = [NSMutableString string];
     [minorID appendString:numberString];
+    // perform the segue to patient view
     [self performSegueWithIdentifier:@"scanToPatientView" sender:self];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [self.capture start];
@@ -171,31 +188,48 @@
    
 }
 
+/*
+ *  Tap recognizer to get back to beacon view (tap because the scan view is full screen and 
+ *  we dont want to have buttons here).
+ */
 - (IBAction)didTap:(id)sender {
     [self performSegueWithIdentifier:@"showBeaconView" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"scanToPatientView"]) {
+        // set the destination view controller
         PatientViewController *destViewController = segue.destinationViewController;
         // web service getPatientInformation
         Patient *patient = nil;
+        // get the right patient from core data
         for(Patient *p in patients){
             if([p.minorid isEqualToString:minorID]){
                 patient=p;
             }
         }
+        // if the patient is nil, no patient was found. if the patient is not nil,
+        // we pass data of this patient to the destination view controller.
         if(patient!=nil){
-           destViewController.name = patient.name;
-        destViewController.firstname = patient.firstname;
-        destViewController.birthdate = patient.birthdate;
-        destViewController.gender = patient.gender;
-        destViewController.station=patient.station;
+            // pass the variables
+            destViewController.name = patient.name;
+            destViewController.firstname = patient.firstname;
+            destViewController.birthdate = patient.birthdate;
+            destViewController.gender = patient.gender;
+            destViewController.station=patient.station;
+            destViewController.pid=patient.polypointPID;
+            destViewController.reastate = patient.reastate;
+            destViewController.bloodgroup = patient.bloodgroup;
+            destViewController.room=patient.room;
+            destViewController.caseid=patient.caseID;
+            // select the right patient image
             if([patient.gender isEqualToString:@"f"]){
                 destViewController.image=[UIImage imageNamed:@"female.png"];
             }else  destViewController.image=[UIImage imageNamed:@"male.png"];
-        minorID =nil; 
+            // reset the minor id instance variable
+            minorID =nil;
         }else{
+            // build the alert string to inform the user
             NSString *alertMessage=@"Es wurde kein Patient gefunden.";
             UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Achtung!"
                                                               message:alertMessage
@@ -206,6 +240,9 @@
         }
     }
 }
+/*
+ *      get the patients from core data.
+ */
 -(void)performFetch{
     NSFetchRequest *fetchRequestPatient = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription

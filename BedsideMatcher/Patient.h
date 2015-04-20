@@ -2,6 +2,8 @@
 //  Patient.h
 //  BedsideMatcher
 //
+//  Managed object class for a patient to store in core data.
+//
 //  Created by Fresh Prince on 07.04.15.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
@@ -16,4 +18,8 @@
 @property NSString *minorid;
 @property NSString *birthdate;
 @property NSString *station;
+@property NSString *room;
+@property NSString *reastate;
+@property NSString *caseID;
+@property NSString *bloodgroup;
 @end

@@ -1,4 +1,4 @@
-  //
+//
 //  AppDelegate.m
 //  BedsideMatcher
 //
@@ -10,6 +10,8 @@
 #import "Patient.h"
 #import "SupplyChainServicePortBinding.h"
 #import "gender.h"
+#import "bloodgroup.h"
+
 
 @interface AppDelegate ()
 
@@ -19,7 +21,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // delete all core data patients and get the newest patient list from the webservice
     [self resetPatients];
     return YES;
 }
@@ -128,7 +130,10 @@
     }
 }
 
-
+/**
+ * deletes the stored patient objects in coredata and saves the newest patient list
+ * from the webservice.
+**/
 -(void)resetPatients
 {
     [self deleteAllObjects:@"Patient"];    
@@ -137,16 +142,23 @@
     for(int i=0;i<result.count;i++){
         [self savePatient:[result objectAtIndex:i]];
     }
+    
 }
-
+/**
+ * saves a trspPatient object to core data
+ *
+ **/
 -(void)savePatient:(trspPatient *)trsppatient{
+    // initialize a managed object inherited patient
     Patient *patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
                                                      inManagedObjectContext:self.managedObjectContext];
+    // set the values of trspPatient to Patient
     [patient setValue:trsppatient.birthDate forKey:@"birthdate"];
     [patient setValue:trsppatient.beaconID forKey:@"minorid"];
     [patient setValue:trsppatient.lastname forKey:@"name"];
     [patient setValue:trsppatient.firstname forKey:@"firstname"];
     [patient setValue:[NSString stringWithFormat:@"%d", trsppatient.pid] forKey:@"polypointPID"];
+    // convert the gender enumeration value to german strings
     gender *patientgender=trsppatient.gender;
     NSString *genderString;
     if([[patientgender stringValue]isEqualToString:@"male"]){
@@ -154,21 +166,35 @@
     }else genderString=@"weiblich";
     [patient setValue:genderString forKey:@"gender"];
     [patient setValue:trsppatient.stationName forKey:@"station"];
+    [patient setValue:trsppatient.room forKey:@"room"];
+    BOOL flag = trsppatient.getReaState;
+    NSString *string = flag ? @"Ja" : @"Nein";
+    [patient setValue:string forKey:@"reastate"];
+    [patient setValue:[NSString stringWithFormat:@"%d",trsppatient.fid] forKey:@"caseID"];
+    [patient setValue:[trsppatient.getBloodGroup stringValue] forKey:@"bloodgroup"];
+
+    // insert the object in the managed object context
     [self.managedObjectContext insertObject:patient];
     NSError *error;
+    // save the context
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Failed to save - error: %@", [error localizedDescription]);
     }
 }
 
+/**
+ * deletes managed objects for the given entity description (string)
+**/
 - (void) deleteAllObjects: (NSString *) entityDescription  {
+    // build the fetch request
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // set the entity description
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityDescription inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
-    
+    // execute the fetch request
     NSError *error;
     NSArray *items = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
+    // delete all objects in the list
     for (NSManagedObject *managedObject in items) {
         [self.managedObjectContext deleteObject:managedObject];
     }

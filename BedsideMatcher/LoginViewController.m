@@ -2,6 +2,8 @@
 //  LoginViewController.m
 //  BedsideMatcher
 //
+//  Class that handles the login UI of BedisdeMatcher. Input values not validated.
+//
 //  Created by Fresh Prince on 11.03.15.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
@@ -34,6 +36,9 @@
 }
 */
 
+/*
+ * login button simply leads to tab bar controller of the application. no input validation!
+ */
 - (IBAction)loginButton:(id)sender {
     [self performSegueWithIdentifier:@"showTabBarController" sender:sender];
 }
