@@ -18,4 +18,6 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @property (nonatomic, strong) NSArray *patients;
+@property (nonatomic, strong) NSArray *medications;
+
 @end

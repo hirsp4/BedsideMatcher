@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *birthdateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *patientImage;
+@property (weak, nonatomic) IBOutlet UILabel *medicationLabel;
 
 @end

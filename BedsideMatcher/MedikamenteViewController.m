@@ -10,6 +10,7 @@
 #import "SupplyChainServicePortBinding.h"
 #import "ScheduledPrescriptionCell.h"
 #import "trspPrescription.h"
+#import "trspPreparedMedication.h"
 #import "AppDelegate.h"
 #import "Patient.h"
 
@@ -18,7 +19,7 @@
 @end
 
 @implementation MedikamenteViewController
-@synthesize searchBar,scheduledPrescriptionsTable,scheduledPrescriptionsEvening,scheduledPrescriptionsNight,scheduledPrescriptionsNoon,scheduledPrescriptionsMorning,scheduledPrescriptions,managedObjectContext,patients;
+@synthesize searchBar,scheduledPrescriptionsTable,scheduledPrescriptionsEvening,scheduledPrescriptionsNight,scheduledPrescriptionsNoon,scheduledPrescriptionsMorning,scheduledPrescriptions,managedObjectContext,patients,medications;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -98,6 +99,7 @@
         cell = [nib objectAtIndex:0];
     }
     trspPrescription *presc = [scheduledPrescriptions objectAtIndex:indexPath.row];
+    medications = [presc getMedications];
     NSFetchRequest *fetchRequestPatient = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription
                                    entityForName:@"Patient" inManagedObjectContext:managedObjectContext];
@@ -118,6 +120,13 @@
     cell.schemeLabel.text = [self getSchemeString:[presc getSchedule]];
     cell.descriptionLabel.numberOfLines=0;
     cell.descriptionLabel.text = [presc getDescription];
+    NSString *medicationString = @"";
+    for(trspPreparedMedication *medi in medications){
+        medicationString = [medicationString stringByAppendingString:medi.getName];
+        medicationString = [medicationString stringByAppendingString:@" "];
+    }
+    cell.medicationLabel.numberOfLines=0;
+    cell.medicationLabel.text = medicationString;
     [cell.descriptionLabel sizeToFit];
     return cell;
 }
@@ -127,7 +136,7 @@
 
 // define cell-height
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 78.0;
+    return 88.0;
 }
 
 -(void)performFetch{

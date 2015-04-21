@@ -12,6 +12,7 @@
 @synthesize nameLabel=_nameLabel;
 @synthesize schemeLabel=_schemeLabel;
 @synthesize birthdateLabel=_birthdateLabel;
+@synthesize medicationLabel=_medicationLabel;
 @synthesize descriptionLabel=_descriptionLabel;
 @synthesize patientImage=_patientImage;
 
