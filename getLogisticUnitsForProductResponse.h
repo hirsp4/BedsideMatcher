@@ -10,45 +10,44 @@
 
 #import <Foundation/Foundation.h>
 
-@class trspPreparedMedication;
 #import "RequestResultHandler.h"
 #import "DDXML.h"
 
 
 
-@interface savePreparedMedications : NSObject < NSCopying, NSMutableCopying, NSCoding, NSFastEnumeration>
+@interface getLogisticUnitsForProductResponse : NSObject < NSCopying, NSMutableCopying, NSCoding, NSFastEnumeration>
     
 @property (nonatomic, retain) NSMutableArray* items;
 
 -(id)init;
 -(id) initWithXml: (DDXMLElement*)__node __request:(RequestResultHandler*) __request;
-+(savePreparedMedications*) createWithXml:(DDXMLElement*)__node __request:(RequestResultHandler*) __request;
++(getLogisticUnitsForProductResponse*) createWithXml:(DDXMLElement*)__node __request:(RequestResultHandler*) __request;
 -(void) serialize:(DDXMLElement*)__parent __request:(RequestResultHandler*) __request;
 
 - (NSUInteger)count;
-- (trspPreparedMedication*)objectAtIndex:(NSUInteger)index;
+- (NSString*)objectAtIndex:(NSUInteger)index;
 
-- (NSArray *)arrayByAddingObject:(trspPreparedMedication*)anObject;
+- (NSArray *)arrayByAddingObject:(NSString*)anObject;
 - (NSArray *)arrayByAddingObjectsFromArray:(NSArray *)otherArray;
 - (NSString *)componentsJoinedByString:(NSString *)separator;
-- (BOOL)containsObject:(trspPreparedMedication*)anObject;
+- (BOOL)containsObject:(NSString*)anObject;
 - (NSString *)description;
 - (NSString *)descriptionWithLocale:(id)locale;
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level;
 - (id)firstObjectCommonWithArray:(NSArray *)otherArray;
 - (void)getObjects:(id __unsafe_unretained *)objects;
 - (void)getObjects:(id __unsafe_unretained *)objects range:(NSRange)range;
-- (NSUInteger)indexOfObject:(trspPreparedMedication*)anObject;
-- (NSUInteger)indexOfObject:(trspPreparedMedication*)anObject inRange:(NSRange)range;
-- (NSUInteger)indexOfObjectIdenticalTo:(trspPreparedMedication*)anObject;
-- (NSUInteger)indexOfObjectIdenticalTo:(trspPreparedMedication*)anObject inRange:(NSRange)range;
+- (NSUInteger)indexOfObject:(NSString*)anObject;
+- (NSUInteger)indexOfObject:(NSString*)anObject inRange:(NSRange)range;
+- (NSUInteger)indexOfObjectIdenticalTo:(NSString*)anObject;
+- (NSUInteger)indexOfObjectIdenticalTo:(NSString*)anObject inRange:(NSRange)range;
 - (BOOL)isEqualToArray:(NSArray *)otherArray;
-- (trspPreparedMedication*)lastObject;
+- (NSString*)lastObject;
 - (NSEnumerator *)objectEnumerator;
 - (NSEnumerator *)reverseObjectEnumerator;
 - (NSData *)sortedArrayHint;
-- (NSArray *)sortedArrayUsingFunction:(NSInteger (*)(trspPreparedMedication*, trspPreparedMedication*, void *))comparator context:(void *)context;
-- (NSArray *)sortedArrayUsingFunction:(NSInteger (*)(trspPreparedMedication*, trspPreparedMedication*, void *))comparator context:(void *)context hint:(NSData *)hint;
+- (NSArray *)sortedArrayUsingFunction:(NSInteger (*)(NSString*, NSString*, void *))comparator context:(void *)context;
+- (NSArray *)sortedArrayUsingFunction:(NSInteger (*)(NSString*, NSString*, void *))comparator context:(void *)context hint:(NSData *)hint;
 - (NSArray *)sortedArrayUsingSelector:(SEL)comparator;
 - (NSArray *)subarrayWithRange:(NSRange)range;
 - (BOOL)writeToFile:(NSString *)path atomically:(BOOL)useAuxiliaryFile;
@@ -60,13 +59,13 @@
 - (NSArray *)objectsAtIndexes:(NSIndexSet *)indexes;
 
 + (id)array;
-+ (id)arrayWithObject:(trspPreparedMedication*)anObject;
-+ (id)arrayWithObjects:(const trspPreparedMedication* *)objects count:(NSUInteger)cnt;
-+ (id)arrayWithObjects:(trspPreparedMedication*)firstObj, ... NS_REQUIRES_NIL_TERMINATION;
++ (id)arrayWithObject:(NSString*)anObject;
++ (id)arrayWithObjects:(const NSString* *)objects count:(NSUInteger)cnt;
++ (id)arrayWithObjects:(NSString*)firstObj, ... NS_REQUIRES_NIL_TERMINATION;
 + (id)arrayWithArray:(NSArray *)array;
 
-- (id)initWithObjects:(const trspPreparedMedication* *)objects count:(NSUInteger)cnt;
-- (id)initWithObjects:(trspPreparedMedication*)firstObj, ... NS_REQUIRES_NIL_TERMINATION;
+- (id)initWithObjects:(const NSString* *)objects count:(NSUInteger)cnt;
+- (id)initWithObjects:(NSString*)firstObj, ... NS_REQUIRES_NIL_TERMINATION;
 - (id)initWithArray:(NSArray *)array;
 - (id)initWithArray:(NSArray *)array copyItems:(BOOL)flag AVAILABLE_MAC_OS_X_VERSION_10_2_AND_LATER;
 
@@ -75,17 +74,17 @@
 - (id)initWithContentsOfFile:(NSString *)path;
 - (id)initWithContentsOfURL:(NSURL *)url;
 
-- (void)addObject:(trspPreparedMedication*)anObject;
-- (void)insertObject:(trspPreparedMedication*)anObject atIndex:(NSUInteger)index;
+- (void)addObject:(NSString*)anObject;
+- (void)insertObject:(NSString*)anObject atIndex:(NSUInteger)index;
 - (void)removeLastObject;
 - (void)removeObjectAtIndex:(NSUInteger)index;
-- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(trspPreparedMedication*)anObject;
+- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(NSString*)anObject;
 
 - (void)addObjectsFromArray:(NSArray *)otherArray;
 - (void)exchangeObjectAtIndex:(NSUInteger)idx1 withObjectAtIndex:(NSUInteger)idx2;
 - (void)removeAllObjects;
-- (void)removeObject:(trspPreparedMedication*)anObject inRange:(NSRange)range;
-- (void)removeObject:(trspPreparedMedication*)anObject;
+- (void)removeObject:(NSString*)anObject inRange:(NSRange)range;
+- (void)removeObject:(NSString*)anObject;
 - (void)removeObjectIdenticalTo:(id)anObject inRange:(NSRange)range;
 - (void)removeObjectIdenticalTo:(id)anObject;
 - (void)removeObjectsInArray:(NSArray *)otherArray;
@@ -93,7 +92,7 @@
 - (void)replaceObjectsInRange:(NSRange)range withObjectsFromArray:(NSArray *)otherArray range:(NSRange)otherRange;
 - (void)replaceObjectsInRange:(NSRange)range withObjectsFromArray:(NSArray *)otherArray;
 - (void)setArray:(NSArray *)otherArray;
-- (void)sortUsingFunction:(NSInteger (*)(trspPreparedMedication*, trspPreparedMedication*, void *))compare context:(void *)context;
+- (void)sortUsingFunction:(NSInteger (*)(NSString*, NSString*, void *))compare context:(void *)context;
 - (void)sortUsingSelector:(SEL)comparator;
 
 - (void)insertObjects:(NSArray *)objects atIndexes:(NSIndexSet *)indexes;

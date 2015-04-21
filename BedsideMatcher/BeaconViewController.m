@@ -311,7 +311,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
                 case NTRangingRow:
                 default:
                     cell.textLabel.text = kRangingOperationTitle;
-                    [cell.accessoryView setBounds:CGRectMake(-250, -7, 51, 31)];
+                    //[cell.accessoryView setBounds:CGRectMake(-250, -7, 51, 31)];
                     self.rangingSwitch = (UISwitch *)cell.accessoryView;
                     [self.rangingSwitch addTarget:self
                                            action:@selector(changeRangingState:)
@@ -608,13 +608,24 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 
 
 -(Patient*)getPatientForBeacon:(NSString*)beaconID{
+    NSString *numberString;
+    // extract numbers from the scanned string (trims the first sign of the barcode which
+    // is defined as a "¿"
+    NSScanner *scanner = [NSScanner scannerWithString:beaconID];
+    NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+    
+    // Throw away characters before the first number.
+    [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+    
+    // Collect numbers.
+    [scanner scanCharactersFromSet:numbers intoString:&numberString];
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Patient"
                                               inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"minorid LIKE %@",
-                              beaconID];
+                              numberString];
     [fetchRequest setPredicate:predicate];
     
     NSError *error = nil;

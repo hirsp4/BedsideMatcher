@@ -127,7 +127,7 @@
     // set the prescription labels of the cell
     cell.dateLabel.text=[prescription getDateCreated];
     cell.nameLabel.text=@"Verordnung";
-    cell.descriptionLabel.text=[prescription getSchedule];
+    cell.descriptionLabel.text=[prescription getDescription];
     cell.backgroundColor = [UIColor colorWithRed:1.00 green:0.94 blue:0.87 alpha:1.0];
     return cell;
 }
@@ -255,7 +255,6 @@
     for(int i=0;i<result.count;i++){
         trspPrescription *trsppresc= [result objectAtIndex:i];
         [prescriptions addObject:trsppresc];
-        [prescriptions addObject:trsppresc];
     }
     [self.prescriptionTable reloadData];
 }
@@ -346,6 +345,9 @@
 }
 -(NSString*)getBirthdateString{
     NSString *birthdateString = birthdate;
+    if([birthdateString isEqualToString:@""]){
+        return @"Unbekannt";
+    }
     NSArray *birthdateSplitted = [birthdateString componentsSeparatedByString:@"-"];
     return [[[[birthdateSplitted[2] stringByAppendingString:@"."]stringByAppendingString:birthdateSplitted[1]]stringByAppendingString:@"."]stringByAppendingString:birthdateSplitted[0]];
 }

@@ -8,16 +8,15 @@
 //---------------------------------------------------
 
 
-#import "item.h"
 #import "Helper.h"
-#import "webServiceResult.h"
+#import "mediPrepResult.h"
 
 
-@implementation webServiceResult
-@synthesize items;
+@implementation mediPrepResult
+@synthesize errorCode;
 @synthesize result;
 
-+ (webServiceResult *)createWithXml:(DDXMLElement *)__node __request:(RequestResultHandler*) __request
++ (mediPrepResult *)createWithXml:(DDXMLElement *)__node __request:(RequestResultHandler*) __request
 {
     if(__node == nil) { return nil; }
     return [[self alloc] initWithXml: __node __request:__request];
@@ -25,7 +24,7 @@
 
 -(id)init {
     if ((self=[super init])) {
-        self.items =[NSMutableArray array];
+        self.errorCode =0;
     }
     return self;
 }
@@ -33,12 +32,9 @@
 - (id) initWithXml: (DDXMLElement*) __node __request:(RequestResultHandler*) __request{
     if(self = [self init])
     {
-        if([Helper hasValue:__node name:@"items"])
+        if([Helper hasValue:__node name:@"errorCode" index:0])
         {
-            NSArray* __items=[__node elementsForName:@"items"];
-            for (DDXMLElement* __item in __items) {
-                [self.items addObject:(item*)[__request createObject:__item type:[item class]]];
-            }
+            self.errorCode = [[[Helper getNode:__node name:@"errorCode" index:0] stringValue] intValue];
         }
         if([Helper hasValue:__node name:@"result" index:0])
         {
@@ -52,16 +48,8 @@
 {
 
              
-    if(self.items!=nil)
-    {
-        for (item* __item in self.items) {
-            DDXMLElement* __itemsItemElement=[__request writeElement:items type:[item class] name:@"items" URI:@"" parent:__parent skipNullProperty:NO];
-            if(__itemsItemElement!=nil)
-            {
-                [__item serialize:__itemsItemElement __request: __request];
-            }
-        }
-    }
+    DDXMLElement* __errorCodeItemElement=[__request writeElement:@"errorCode" URI:@"" parent:__parent];
+    [__errorCodeItemElement setStringValue: [NSString stringWithFormat:@"%i", self.errorCode]];
              
     DDXMLElement* __resultItemElement=[__request writeElement:@"result" URI:@"" parent:__parent];
     [__resultItemElement setStringValue:[Helper toBoolStringFromBool:self.result]];

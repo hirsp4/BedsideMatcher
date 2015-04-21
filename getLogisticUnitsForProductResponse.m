@@ -8,16 +8,15 @@
 //---------------------------------------------------
 
 
-#import "trspPrescription.h"
 #import "Helper.h"
-#import "getPrescriptionsForPatientResponse.h"
+#import "getLogisticUnitsForProductResponse.h"
 
 
-@implementation getPrescriptionsForPatientResponse
+@implementation getLogisticUnitsForProductResponse
 
 @synthesize items;
 
-+ (getPrescriptionsForPatientResponse *)createWithXml:(DDXMLElement *)__node __request:(RequestResultHandler*) __request
++ (getLogisticUnitsForProductResponse *)createWithXml:(DDXMLElement *)__node __request:(RequestResultHandler*) __request
 {
     if(__node == nil) { return nil; }
     return [[self alloc] initWithXml: __node __request:__request];
@@ -36,7 +35,7 @@
         NSArray* tempItems = [__node elementsForName:@"return"];
         for(DDXMLElement* child in tempItems)
         {
-            [self.items addObject:(trspPrescription*)[__request createObject:child type:[trspPrescription class]]];
+            [self.items addObject:[child stringValue]];
         }
 
     }
@@ -45,11 +44,11 @@
 
 -(void) serialize:(DDXMLElement*)__parent __request:(RequestResultHandler*) __request
 {
-    for (trspPrescription* item in self.items) {
-        DDXMLElement* propertyElement=[__request writeElement:item type:[trspPrescription class] name:@"return" URI:@"" parent:__parent skipNullProperty:NO];
+    for (NSString* item in self.items) {
+        DDXMLElement* propertyElement=[__request writeElement:item type:[NSString class] name:@"return" URI:@"" parent:__parent skipNullProperty:NO];
         if(propertyElement!=nil)
         {
-            [item serialize:propertyElement __request: __request];
+            [propertyElement setStringValue:item];
         }
     }
 }
@@ -62,11 +61,11 @@
 	return [self.items count];
 }
 
-- (trspPrescription*)objectAtIndex:(NSUInteger)index {
+- (NSString*)objectAtIndex:(NSUInteger)index {
 	return [self.items objectAtIndex:index];
 }
 
-- (NSArray *)arrayByAddingObject:(trspPrescription*)anObject {
+- (NSArray *)arrayByAddingObject:(NSString*)anObject {
 	return [self.items arrayByAddingObject:anObject];
 }
 - (NSArray *)arrayByAddingObjectsFromArray:(NSArray *)otherArray {
@@ -75,7 +74,7 @@
 - (NSString *)componentsJoinedByString:(NSString *)separator {
 	return [self.items componentsJoinedByString: separator]; 
 }
-- (BOOL)containsObject:(trspPrescription*)anObject {
+- (BOOL)containsObject:(NSString*)anObject {
 	return [self.items containsObject:anObject];
 }
 
@@ -103,19 +102,19 @@
 	return [self.items getObjects:objects range:range];
 }
 
-- (NSUInteger)indexOfObject:(trspPrescription*)anObject {
+- (NSUInteger)indexOfObject:(NSString*)anObject {
 	return [self.items indexOfObject:anObject];
 }
 
-- (NSUInteger)indexOfObject:(trspPrescription*)anObject inRange:(NSRange)range {
+- (NSUInteger)indexOfObject:(NSString*)anObject inRange:(NSRange)range {
 	return [self.items indexOfObject:anObject inRange:range];
 }
 
-- (NSUInteger)indexOfObjectIdenticalTo:(trspPrescription*)anObject {
+- (NSUInteger)indexOfObjectIdenticalTo:(NSString*)anObject {
 	return [self.items indexOfObjectIdenticalTo:anObject];
 }
 
-- (NSUInteger)indexOfObjectIdenticalTo:(trspPrescription*)anObject inRange:(NSRange)range {
+- (NSUInteger)indexOfObjectIdenticalTo:(NSString*)anObject inRange:(NSRange)range {
 	return [self.items indexOfObjectIdenticalTo:anObject inRange:range];
 }
 
@@ -123,7 +122,7 @@
 	return [self.items isEqualToArray:otherArray];
 }
 
-- (trspPrescription*)lastObject {
+- (NSString*)lastObject {
 	return [self.items lastObject];
 }
 
@@ -167,11 +166,11 @@
 	return [self.items objectsAtIndexes:indexes];
 }
 
-- (void)addObject:(trspPrescription*)anObject {
+- (void)addObject:(NSString*)anObject {
 	return [self.items addObject:anObject];
 }
 
-- (void)insertObject:(trspPrescription*)anObject atIndex:(NSUInteger)index {
+- (void)insertObject:(NSString*)anObject atIndex:(NSUInteger)index {
 	return [self.items insertObject:anObject atIndex:index];
 }
 
@@ -183,7 +182,7 @@
 	return [self.items removeObjectAtIndex:index];
 }
 
-- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(trspPrescription*)anObject {
+- (void)replaceObjectAtIndex:(NSUInteger)index withObject:(NSString*)anObject {
 	return [self.items replaceObjectAtIndex:index withObject:anObject];
 }
 
@@ -199,19 +198,19 @@
 	return [self.items removeAllObjects];
 }
 
-- (void)removeObject:(trspPrescription*)anObject inRange:(NSRange)range {
+- (void)removeObject:(NSString*)anObject inRange:(NSRange)range {
 	return [self.items removeObject:anObject inRange:range];
 }
 
-- (void)removeObject:(trspPrescription*)anObject {
+- (void)removeObject:(NSString*)anObject {
 	return [self.items removeObject:anObject];
 }
 
-- (void)removeObjectIdenticalTo:(trspPrescription*)anObject inRange:(NSRange)range {
+- (void)removeObjectIdenticalTo:(NSString*)anObject inRange:(NSRange)range {
 	return [self.items removeObjectIdenticalTo:anObject inRange:range];
 }
 
-- (void)removeObjectIdenticalTo:(trspPrescription*)anObject {
+- (void)removeObjectIdenticalTo:(NSString*)anObject {
 	return [self.items removeObjectIdenticalTo:anObject];
 }
 
@@ -260,19 +259,19 @@
 }
 
 + (id)array {
-	return [[ getPrescriptionsForPatientResponse alloc] init];
+	return [[ getLogisticUnitsForProductResponse alloc] init];
 }
 
-+ (id)arrayWithObject:(trspPrescription*)anObject {
-	return [[ getPrescriptionsForPatientResponse alloc] initWithObjects:anObject, nil];
++ (id)arrayWithObject:(NSString*)anObject {
+	return [[ getLogisticUnitsForProductResponse alloc] initWithObjects:anObject, nil];
 }
 
-+ (id)arrayWithObjects:(const trspPrescription* *)objects count:(NSUInteger)cnt {
-	return [[ getPrescriptionsForPatientResponse alloc] initWithObjects:objects count:cnt];
++ (id)arrayWithObjects:(const NSString* *)objects count:(NSUInteger)cnt {
+	return [[ getLogisticUnitsForProductResponse alloc] initWithObjects:objects count:cnt];
 }
 
-+ (id)arrayWithObjects:(trspPrescription*)firstObj, ... {
-	getPrescriptionsForPatientResponse* a = [ getPrescriptionsForPatientResponse array];
++ (id)arrayWithObjects:(NSString*)firstObj, ... {
+	getLogisticUnitsForProductResponse* a = [ getLogisticUnitsForProductResponse array];
 	id eachObject;
 	va_list argumentList;
 	if (firstObj) {
@@ -286,7 +285,7 @@
 	return a;
 }
 
-- (id)initWithObjects:(trspPrescription*)firstObj, ... {
+- (id)initWithObjects:(NSString*)firstObj, ... {
 	if(self = [self init]) {
 		id eachObject;
 		va_list argumentList;
@@ -303,22 +302,22 @@
 }
 
 + (id)arrayWithArray:(NSArray *)array {
-	return [[ getPrescriptionsForPatientResponse alloc] initWithArray:array];
+	return [[ getLogisticUnitsForProductResponse alloc] initWithArray:array];
 }
 
 + (id)arrayWithContentsOfFile:(NSString *)path {
-	return [[ getPrescriptionsForPatientResponse alloc] initWithContentsOfFile:path];
+	return [[ getLogisticUnitsForProductResponse alloc] initWithContentsOfFile:path];
 }
 
 + (id)arrayWithContentsOfURL:(NSURL *)url {
-	return [[ getPrescriptionsForPatientResponse alloc] initWithContentsOfURL:url];
+	return [[ getLogisticUnitsForProductResponse alloc] initWithContentsOfURL:url];
 }
 
 + (id)arrayWithCapacity:(NSUInteger)numItems {
-	return [[ getPrescriptionsForPatientResponse alloc] initWithCapacity:numItems];
+	return [[ getLogisticUnitsForProductResponse alloc] initWithCapacity:numItems];
 }
 
-- (id)initWithObjects:(const trspPrescription* *)objects count:(NSUInteger)cnt {
+- (id)initWithObjects:(const NSString* *)objects count:(NSUInteger)cnt {
 	self = [self init];
 	if(self) {
 		self.items = [[NSMutableArray alloc] initWithObjects:objects count:cnt];
@@ -358,15 +357,15 @@
 	return self;
 }
 
-- (NSArray *)sortedArrayUsingFunction:(NSInteger (*)(trspPrescription*, trspPrescription*, void *))comparator context:(void *)context {
+- (NSArray *)sortedArrayUsingFunction:(NSInteger (*)(NSString*, NSString*, void *))comparator context:(void *)context {
 	return [self.items sortedArrayUsingFunction:comparator context:context];
 }
 
-- (NSArray *)sortedArrayUsingFunction:(NSInteger (*)(trspPrescription*, trspPrescription*, void *))comparator context:(void *)context hint:(NSData *)hint {
+- (NSArray *)sortedArrayUsingFunction:(NSInteger (*)(NSString*, NSString*, void *))comparator context:(void *)context hint:(NSData *)hint {
 	return [self.items sortedArrayUsingFunction:comparator context:context hint:hint];
 }
 
-- (void)sortUsingFunction:(NSInteger (*)(trspPrescription*, trspPrescription*, void *))compare context:(void *)context {
+- (void)sortUsingFunction:(NSInteger (*)(NSString*, NSString*, void *))compare context:(void *)context {
 	return [self.items sortUsingFunction:compare context:context];
 }
 
