@@ -69,18 +69,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yqB-D8-2NO">
-                                                    <rect key="frame" x="251" y="6" width="51" height="31"/>
+                                                <switch opaque="NO" tag="9999" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yqB-D8-2NO">
+                                                    <rect key="frame" x="258" y="6" width="51" height="31"/>
                                                 </switch>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="yqB-D8-2NO" firstAttribute="centerY" secondItem="ncg-zO-lfD" secondAttribute="centerY" id="R6Z-Xa-mPi"/>
-                                                <constraint firstAttribute="trailing" secondItem="yqB-D8-2NO" secondAttribute="trailing" constant="20" symbolic="YES" id="j7Q-SV-Zjh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yqB-D8-2NO" secondAttribute="trailing" constant="5" id="QQk-QA-5TS"/>
+                                                <constraint firstItem="yqB-D8-2NO" firstAttribute="centerY" secondItem="ncg-zO-lfD" secondAttribute="centerY" id="kWb-SP-CYM"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="accessoryView" destination="yqB-D8-2NO" id="75x-3f-3uO"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>

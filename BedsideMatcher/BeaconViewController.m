@@ -171,7 +171,10 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
  *  handle the user selection
  */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"showPatientView" sender:[self.beaconTableView cellForRowAtIndexPath:indexPath]];
+    if (indexPath.section!=0) {
+        [self performSegueWithIdentifier:@"showPatientView" sender:[self.beaconTableView cellForRowAtIndexPath:indexPath]];
+    }
+    
 }
 /*
  *  pass patient data to destination view controller
@@ -310,9 +313,8 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             switch (indexPath.row) {
                 case NTRangingRow:
                 default:
-                    cell.textLabel.text = kRangingOperationTitle;
-                    //[cell.accessoryView setBounds:CGRectMake(-250, -7, 51, 31)];
-                    self.rangingSwitch = (UISwitch *)cell.accessoryView;
+                    cell.textLabel.text = kRangingOperationTitle;                    
+                    self.rangingSwitch = (UISwitch *)[cell.contentView viewWithTag:9999];
                     [self.rangingSwitch addTarget:self
                                            action:@selector(changeRangingState:)
                                  forControlEvents:UIControlEventValueChanged];
