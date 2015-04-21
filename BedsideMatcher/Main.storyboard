@@ -601,9 +601,12 @@
                                     <outlet property="delegate" destination="p1F-a0-WS7" id="RHC-4I-8xE"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rnq-fQ-R6F">
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qzn-fN-nbP">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="p1F-a0-WS7" id="ea5-Zh-Lhn"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -613,12 +616,21 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
-                        <outlet property="searchPrescriptionField" destination="rnq-fQ-R6F" id="dH2-yO-RNs"/>
+                        <outlet property="searchDisplayController" destination="oI7-tr-9Jj" id="FFh-vI-JlU"/>
                         <outlet property="tableViewVerordnungen" destination="bQv-xL-zef" id="VBf-K6-bc0"/>
                         <segue destination="IoJ-Cv-7YY" kind="custom" identifier="showVerordnungDetail" id="GcF-RS-lz9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tz-f4-rAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="oI7-tr-9Jj">
+                    <connections>
+                        <outlet property="delegate" destination="p1F-a0-WS7" id="rZp-tl-KeH"/>
+                        <outlet property="searchBar" destination="Qzn-fN-nbP" id="2Hh-p5-PIw"/>
+                        <outlet property="searchContentsController" destination="p1F-a0-WS7" id="uDI-RK-IB4"/>
+                        <outlet property="searchResultsDataSource" destination="p1F-a0-WS7" id="N4a-4V-xeW"/>
+                        <outlet property="searchResultsDelegate" destination="p1F-a0-WS7" id="3W7-cf-yv2"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="526" y="-346"/>
         </scene>

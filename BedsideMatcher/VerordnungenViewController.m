@@ -19,13 +19,17 @@
 @end
 
 @implementation VerordnungenViewController
-@synthesize managedObjectContext,patientsA,patientsB,listPatientsA,listPatientsB,listPatients;
+@synthesize managedObjectContext,patientsA,patientsB,listPatientsA,listPatientsB,listPatients,searchResultsA,searchResultsB;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // get the managed object context from AppDelegate
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
     self.managedObjectContext = [appDelegate managedObjectContext];
+    self.searchDisplayController.searchBar.scopeButtonTitles = @[NSLocalizedString(@"Name",@"Name"),
+                                                          NSLocalizedString(@"Vorname",@"Vorname")];
+    self.searchResultsA = [[NSMutableArray alloc]init];
+    self.searchResultsB = [[NSMutableArray alloc]init];
     // get the patients from core data
     [self performFetch];
 }
@@ -59,19 +63,59 @@
 // Customize the number of rows in the section
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if(section==0){
-        return listPatientsA.count;
-    }
-    if(section==1){
-        return listPatientsB.count;
+    if(tableView==self.searchDisplayController.searchResultsTableView){
+        if(section==0){
+            return searchResultsA.count;
+        }
+        if(section==1){
+            return searchResultsB.count;
+        }else{
+            return 0;
+        }
     }else{
-        return 0;
+        if(section==0){
+            return listPatientsA.count;
+        }
+        if(section==1){
+            return listPatientsB.count;
+        }else{
+            return 0;
+        }
     }
 }
 
 // Customize the appearance of table view cells
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if(tableView==self.searchDisplayController.searchResultsTableView){
+        // check if its section 0 (Station A) or section 1 (Station B)
+        if(indexPath.section==0){
+            listPatients=[searchResultsA mutableCopy];
+        }else{
+            listPatients=[searchResultsB mutableCopy];
+        }
+        static NSString *CellIdentifier = @"TableViewCellVerordnung";
+        
+        TableViewCellVerordnung *cell = (TableViewCellVerordnung *)[tableView dequeueReusableCellWithIdentifier: CellIdentifier];
+        if (cell == nil) {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TableViewCellVerordnung" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        cell.nameLabel.text=[[[[[listPatients objectAtIndex:indexPath.row]patient ]name]stringByAppendingString:@" "]stringByAppendingString:[[[listPatients objectAtIndex:indexPath.row]patient ]firstname]];
+        cell.birthdateLabel.text=[self getBirthdateString:[[[listPatients objectAtIndex:indexPath.row]patient ]birthdate]];
+        if([@"weiblich" isEqualToString:[[[listPatients objectAtIndex:indexPath.row]patient ]gender]]){
+            cell.imageView.image = [UIImage imageNamed:@"female.png"];
+        }else{
+            cell.imageView.image = [UIImage imageNamed:@"male.png"];
+        }
+        
+        if([[[listPatients objectAtIndex:indexPath.row ]openPrescriptions] integerValue]>0){
+            cell.backgroundColor = [UIColor colorWithRed:0.99 green:0.81 blue:0.63 alpha:1.0];
+        }
+        cell.prescriptionNbLabel.text=[[[listPatients objectAtIndex:indexPath.row ]openPrescriptions]stringValue];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        return cell;
+    }else{
     // check if its section 0 (Station A) or section 1 (Station B)
     if(indexPath.section==0){
         listPatients=listPatientsA;
@@ -99,6 +143,7 @@
     cell.prescriptionNbLabel.text=[[[listPatients objectAtIndex:indexPath.row ]openPrescriptions]stringValue];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+    }
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"showVerordnungDetail" sender:[self.tableViewVerordnungen cellForRowAtIndexPath:indexPath]];
@@ -189,5 +234,36 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(void)filterContentForSearchText:(NSString *)searchText scope:(NSString *)scope{
+    [self.searchResultsA removeAllObjects ];
+    [self.searchResultsB removeAllObjects];
+
+    for (ListPatient *listPatient in self.listPatientsA)
+    {
+        NSComparisonResult result;
+        if([scope isEqualToString:@"Name"]){
+            result = [listPatient.patient.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+        }if ([scope isEqualToString:@"Vorname"]) {
+            result = [listPatient.patient.firstname compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+        }
+        if (result == NSOrderedSame)
+        {
+            [self.searchResultsA addObject:listPatient];
+        }
+    }
+    for (ListPatient *listPatient in self.listPatientsB)
+    {
+        NSComparisonResult result = [listPatient.patient.name compare:searchText options:(NSCaseInsensitiveSearch|NSDiacriticInsensitiveSearch) range:NSMakeRange(0, [searchText length])];
+        if (result == NSOrderedSame)
+        {
+            [self.searchResultsB addObject:listPatient];
+        }
+    }
+
+}
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString{
+    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles]objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex] ]];
+    return YES;
+}
 
 @end

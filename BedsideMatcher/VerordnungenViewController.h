@@ -8,14 +8,15 @@
 
 #import "ViewController.h"
 
-@interface VerordnungenViewController : ViewController <UITableViewDelegate, UITableViewDataSource>
-@property (weak, nonatomic) IBOutlet UISearchBar *searchPrescriptionField;
+@interface VerordnungenViewController : ViewController <UITableViewDelegate, UITableViewDataSource,UISearchDisplayDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewVerordnungen;
 @property (nonatomic, strong) NSArray *patientsA;
 @property (nonatomic, strong) NSArray *patientsB;
 @property (nonatomic, strong) NSMutableArray *listPatientsA;
 @property (nonatomic, strong) NSMutableArray *listPatientsB;
 @property (nonatomic, strong) NSMutableArray *listPatients;
+@property (nonatomic, strong) NSMutableArray *searchResultsA;
+@property (nonatomic, strong) NSMutableArray *searchResultsB;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 
 
