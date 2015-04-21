@@ -586,7 +586,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bQv-xL-zef">
-                                <rect key="frame" x="0.0" y="102" width="326" height="417"/>
+                                <rect key="frame" x="0.0" y="107" width="326" height="412"/>
                                 <color key="backgroundColor" red="0.84752548579999998" green="0.901853919" blue="0.99919462199999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="p1F-a0-WS7" id="avg-Tb-v7Q"/>

@@ -102,6 +102,7 @@
 		EF400D3C1AE640E0001A1BF4 /* updatePrescriptions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CF01AE640E0001A1BF4 /* updatePrescriptions.m */; };
 		EF400D3D1AE640E0001A1BF4 /* updatePrescriptionsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CF21AE640E0001A1BF4 /* updatePrescriptionsResponse.m */; };
 		EF400D3E1AE640E0001A1BF4 /* webServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CF41AE640E0001A1BF4 /* webServiceResult.m */; };
+		EF400D411AE677DE001A1BF4 /* ListPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D401AE677DE001A1BF4 /* ListPatient.m */; };
 		EF4E88BF1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E88BD1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m */; };
 		EF4E88C01AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4E88BE1AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib */; };
 		EF566A701AD6CB720083F781 /* PatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF566A6F1AD6CB720083F781 /* PatientViewController.m */; };
@@ -533,6 +534,8 @@
 		EF400CF21AE640E0001A1BF4 /* updatePrescriptionsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePrescriptionsResponse.m; sourceTree = "<group>"; };
 		EF400CF31AE640E0001A1BF4 /* webServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webServiceResult.h; sourceTree = "<group>"; };
 		EF400CF41AE640E0001A1BF4 /* webServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webServiceResult.m; sourceTree = "<group>"; };
+		EF400D3F1AE677DE001A1BF4 /* ListPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPatient.h; sourceTree = "<group>"; };
+		EF400D401AE677DE001A1BF4 /* ListPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPatient.m; sourceTree = "<group>"; };
 		EF4E88BC1AE1549B00DB5BE4 /* PrescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrescriptionTableViewCell.h; sourceTree = "<group>"; };
 		EF4E88BD1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrescriptionTableViewCell.m; sourceTree = "<group>"; };
 		EF4E88BE1AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrescriptionTableViewCell.xib; sourceTree = "<group>"; };
@@ -2060,6 +2063,8 @@
 			children = (
 				EFD9A2511AD3C4F200DF7E10 /* Patient.h */,
 				EFD9A2521AD3C4F200DF7E10 /* Patient.m */,
+				EF400D3F1AE677DE001A1BF4 /* ListPatient.h */,
+				EF400D401AE677DE001A1BF4 /* ListPatient.m */,
 			);
 			name = "Managed Objects";
 			sourceTree = "<group>";
@@ -2453,6 +2458,7 @@
 				EFAD36B61ACD2C80000E978E /* ZXOneDimensionalCodeWriter.m in Sources */,
 				EFAD36191ACD2C80000E978E /* ZXAztecDecoder.m in Sources */,
 				EFAD36E61ACD2C80000E978E /* ZXQRCodeFinderPattern.m in Sources */,
+				EF400D411AE677DE001A1BF4 /* ListPatient.m in Sources */,
 				EF400D361AE640E0001A1BF4 /* trspMedication.m in Sources */,
 				EF400D3D1AE640E0001A1BF4 /* updatePrescriptionsResponse.m in Sources */,
 				EF400D3B1AE640E0001A1BF4 /* updatePreparedMedicationsResponse.m in Sources */,
