@@ -23,86 +23,89 @@
 		EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3656891AAF95E000A0B64D /* Images.xcassets */; };
 		EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF36568B1AAF95E000A0B64D /* LaunchScreen.xib */; };
 		EF3656991AAF95E000A0B64D /* BedsideMatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */; };
-		EF400C5C1AE6408A001A1BF4 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C511AE6408A001A1BF4 /* DDXMLElementAdditions.m */; };
-		EF400C5D1AE6408A001A1BF4 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C531AE6408A001A1BF4 /* NSString+DDXML.m */; };
-		EF400C5E1AE6408A001A1BF4 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C561AE6408A001A1BF4 /* DDXMLDocument.m */; };
-		EF400C5F1AE6408A001A1BF4 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C581AE6408A001A1BF4 /* DDXMLElement.m */; };
-		EF400C601AE6408A001A1BF4 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C5A1AE6408A001A1BF4 /* DDXMLNode.m */; };
-		EF400CF51AE640E0001A1BF4 /* bloodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C621AE640DF001A1BF4 /* bloodGroup.m */; };
-		EF400CF61AE640E0001A1BF4 /* checkinItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C641AE640DF001A1BF4 /* checkinItems.m */; };
-		EF400CF71AE640E0001A1BF4 /* checkinItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C661AE640DF001A1BF4 /* checkinItemsResponse.m */; };
-		EF400CF81AE640E0001A1BF4 /* checkoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C681AE640DF001A1BF4 /* checkoutItems.m */; };
-		EF400CF91AE640E0001A1BF4 /* checkoutItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C6A1AE640DF001A1BF4 /* checkoutItemsResponse.m */; };
-		EF400CFA1AE640E0001A1BF4 /* company.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C6C1AE640E0001A1BF4 /* company.m */; };
-		EF400CFB1AE640E0001A1BF4 /* gender.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C6E1AE640E0001A1BF4 /* gender.m */; };
-		EF400CFC1AE640E0001A1BF4 /* getCheckedInItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C701AE640E0001A1BF4 /* getCheckedInItems.m */; };
-		EF400CFD1AE640E0001A1BF4 /* getCheckedInItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C721AE640E0001A1BF4 /* getCheckedInItemsResponse.m */; };
-		EF400CFE1AE640E0001A1BF4 /* getDosetForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C741AE640E0001A1BF4 /* getDosetForPatient.m */; };
-		EF400CFF1AE640E0001A1BF4 /* getDosetForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C761AE640E0001A1BF4 /* getDosetForPatientResponse.m */; };
-		EF400D001AE640E0001A1BF4 /* getItemByIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C781AE640E0001A1BF4 /* getItemByIdentifier.m */; };
-		EF400D011AE640E0001A1BF4 /* getItemByIdentifierResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C7A1AE640E0001A1BF4 /* getItemByIdentifierResponse.m */; };
-		EF400D021AE640E0001A1BF4 /* getItemsByBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C7C1AE640E0001A1BF4 /* getItemsByBatch.m */; };
-		EF400D031AE640E0001A1BF4 /* getItemsByBatchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C7E1AE640E0001A1BF4 /* getItemsByBatchResponse.m */; };
-		EF400D041AE640E0001A1BF4 /* getItemsByGSIN.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C801AE640E0001A1BF4 /* getItemsByGSIN.m */; };
-		EF400D051AE640E0001A1BF4 /* getItemsByGSINResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C821AE640E0001A1BF4 /* getItemsByGSINResponse.m */; };
-		EF400D061AE640E0001A1BF4 /* getItemsBySSCC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C841AE640E0001A1BF4 /* getItemsBySSCC.m */; };
-		EF400D071AE640E0001A1BF4 /* getItemsBySSCCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C861AE640E0001A1BF4 /* getItemsBySSCCResponse.m */; };
-		EF400D081AE640E0001A1BF4 /* getLogisticUnitsForProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C881AE640E0001A1BF4 /* getLogisticUnitsForProduct.m */; };
-		EF400D091AE640E0001A1BF4 /* getLogisticUnitsForProductResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C8A1AE640E0001A1BF4 /* getLogisticUnitsForProductResponse.m */; };
-		EF400D0A1AE640E0001A1BF4 /* getOpenOrdersByGLN.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C8C1AE640E0001A1BF4 /* getOpenOrdersByGLN.m */; };
-		EF400D0B1AE640E0001A1BF4 /* getOpenOrdersByGLNResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C8E1AE640E0001A1BF4 /* getOpenOrdersByGLNResponse.m */; };
-		EF400D0C1AE640E0001A1BF4 /* getOrderForSSCC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C901AE640E0001A1BF4 /* getOrderForSSCC.m */; };
-		EF400D0D1AE640E0001A1BF4 /* getOrderForSSCCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C921AE640E0001A1BF4 /* getOrderForSSCCResponse.m */; };
-		EF400D0E1AE640E0001A1BF4 /* getPatients.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C941AE640E0001A1BF4 /* getPatients.m */; };
-		EF400D0F1AE640E0001A1BF4 /* getPatientsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C961AE640E0001A1BF4 /* getPatientsResponse.m */; };
-		EF400D101AE640E0001A1BF4 /* getPreparedMedicationsForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C981AE640E0001A1BF4 /* getPreparedMedicationsForPatient.m */; };
-		EF400D111AE640E0001A1BF4 /* getPreparedMedicationsForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C9A1AE640E0001A1BF4 /* getPreparedMedicationsForPatientResponse.m */; };
-		EF400D121AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C9C1AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatient.m */; };
-		EF400D131AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400C9E1AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.m */; };
-		EF400D141AE640E0001A1BF4 /* getPrescriptionsForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CA01AE640E0001A1BF4 /* getPrescriptionsForPatient.m */; };
-		EF400D151AE640E0001A1BF4 /* getPrescriptionsForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CA21AE640E0001A1BF4 /* getPrescriptionsForPatientResponse.m */; };
-		EF400D161AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CA41AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.m */; };
-		EF400D171AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CA61AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m */; };
-		EF400D181AE640E0001A1BF4 /* getQuantities.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CA81AE640E0001A1BF4 /* getQuantities.m */; };
-		EF400D191AE640E0001A1BF4 /* getQuantitiesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CAA1AE640E0001A1BF4 /* getQuantitiesResponse.m */; };
-		EF400D1A1AE640E0001A1BF4 /* getStations.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CAC1AE640E0001A1BF4 /* getStations.m */; };
-		EF400D1B1AE640E0001A1BF4 /* getStationsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CAE1AE640E0001A1BF4 /* getStationsResponse.m */; };
-		EF400D1C1AE640E0001A1BF4 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CB01AE640E0001A1BF4 /* Helper.m */; };
-		EF400D1D1AE640E0001A1BF4 /* insertTrackingItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CB21AE640E0001A1BF4 /* insertTrackingItems.m */; };
-		EF400D1E1AE640E0001A1BF4 /* insertTrackingItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CB41AE640E0001A1BF4 /* insertTrackingItemsResponse.m */; };
-		EF400D1F1AE640E0001A1BF4 /* item.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CB61AE640E0001A1BF4 /* item.m */; };
-		EF400D201AE640E0001A1BF4 /* medicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CB81AE640E0001A1BF4 /* medicationState.m */; };
-		EF400D211AE640E0001A1BF4 /* mediPrepResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CBA1AE640E0001A1BF4 /* mediPrepResult.m */; };
-		EF400D221AE640E0001A1BF4 /* order.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CBC1AE640E0001A1BF4 /* order.m */; };
-		EF400D231AE640E0001A1BF4 /* position.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CBE1AE640E0001A1BF4 /* position.m */; };
-		EF400D241AE640E0001A1BF4 /* prescriptionState.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CC01AE640E0001A1BF4 /* prescriptionState.m */; };
-		EF400D251AE640E0001A1BF4 /* processOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CC21AE640E0001A1BF4 /* processOrder.m */; };
-		EF400D261AE640E0001A1BF4 /* processOrderResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CC41AE640E0001A1BF4 /* processOrderResponse.m */; };
-		EF400D271AE640E0001A1BF4 /* production.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CC61AE640E0001A1BF4 /* production.m */; };
-		EF400D281AE640E0001A1BF4 /* quantity.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CC81AE640E0001A1BF4 /* quantity.m */; };
-		EF400D291AE640E0001A1BF4 /* RequestResultHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CCA1AE640E0001A1BF4 /* RequestResultHandler.m */; };
-		EF400D2A1AE640E0001A1BF4 /* resetTrackedItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CCC1AE640E0001A1BF4 /* resetTrackedItems.m */; };
-		EF400D2B1AE640E0001A1BF4 /* resetTrackedItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CCE1AE640E0001A1BF4 /* resetTrackedItemsResponse.m */; };
-		EF400D2C1AE640E0001A1BF4 /* savePreparedMedications.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CD01AE640E0001A1BF4 /* savePreparedMedications.m */; };
-		EF400D2D1AE640E0001A1BF4 /* savePreparedMedicationsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CD21AE640E0001A1BF4 /* savePreparedMedicationsResponse.m */; };
-		EF400D2E1AE640E0001A1BF4 /* sayHelloWorldFrom.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CD41AE640E0001A1BF4 /* sayHelloWorldFrom.m */; };
-		EF400D2F1AE640E0001A1BF4 /* sayHelloWorldFromResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CD61AE640E0001A1BF4 /* sayHelloWorldFromResponse.m */; };
-		EF400D301AE640E0001A1BF4 /* setOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CD81AE640E0001A1BF4 /* setOrder.m */; };
-		EF400D311AE640E0001A1BF4 /* setOrderResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CDA1AE640E0001A1BF4 /* setOrderResponse.m */; };
-		EF400D321AE640E0001A1BF4 /* shipment.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CDC1AE640E0001A1BF4 /* shipment.m */; };
-		EF400D331AE640E0001A1BF4 /* SoapError.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CDE1AE640E0001A1BF4 /* SoapError.m */; };
-		EF400D341AE640E0001A1BF4 /* station.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CE01AE640E0001A1BF4 /* station.m */; };
-		EF400D351AE640E0001A1BF4 /* SupplyChainServicePortBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CE21AE640E0001A1BF4 /* SupplyChainServicePortBinding.m */; };
-		EF400D361AE640E0001A1BF4 /* trspMedication.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CE41AE640E0001A1BF4 /* trspMedication.m */; };
-		EF400D371AE640E0001A1BF4 /* trspPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CE61AE640E0001A1BF4 /* trspPatient.m */; };
-		EF400D381AE640E0001A1BF4 /* trspPreparedMedication.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CE81AE640E0001A1BF4 /* trspPreparedMedication.m */; };
-		EF400D391AE640E0001A1BF4 /* trspPrescription.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CEA1AE640E0001A1BF4 /* trspPrescription.m */; };
-		EF400D3A1AE640E0001A1BF4 /* updatePreparedMedications.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CEC1AE640E0001A1BF4 /* updatePreparedMedications.m */; };
-		EF400D3B1AE640E0001A1BF4 /* updatePreparedMedicationsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CEE1AE640E0001A1BF4 /* updatePreparedMedicationsResponse.m */; };
-		EF400D3C1AE640E0001A1BF4 /* updatePrescriptions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CF01AE640E0001A1BF4 /* updatePrescriptions.m */; };
-		EF400D3D1AE640E0001A1BF4 /* updatePrescriptionsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CF21AE640E0001A1BF4 /* updatePrescriptionsResponse.m */; };
-		EF400D3E1AE640E0001A1BF4 /* webServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400CF41AE640E0001A1BF4 /* webServiceResult.m */; };
 		EF400D411AE677DE001A1BF4 /* ListPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D401AE677DE001A1BF4 /* ListPatient.m */; };
+		EF400DDC1AE69F93001A1BF4 /* bloodGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D431AE69F92001A1BF4 /* bloodGroup.m */; };
+		EF400DDD1AE69F93001A1BF4 /* checkinItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D451AE69F92001A1BF4 /* checkinItems.m */; };
+		EF400DDE1AE69F93001A1BF4 /* checkinItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D471AE69F92001A1BF4 /* checkinItemsResponse.m */; };
+		EF400DDF1AE69F93001A1BF4 /* checkoutItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D491AE69F92001A1BF4 /* checkoutItems.m */; };
+		EF400DE01AE69F93001A1BF4 /* checkoutItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D4B1AE69F92001A1BF4 /* checkoutItemsResponse.m */; };
+		EF400DE11AE69F93001A1BF4 /* company.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D4D1AE69F92001A1BF4 /* company.m */; };
+		EF400DE21AE69F93001A1BF4 /* gender.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D4F1AE69F92001A1BF4 /* gender.m */; };
+		EF400DE31AE69F93001A1BF4 /* getCheckedInItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D511AE69F92001A1BF4 /* getCheckedInItems.m */; };
+		EF400DE41AE69F93001A1BF4 /* getCheckedInItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D531AE69F92001A1BF4 /* getCheckedInItemsResponse.m */; };
+		EF400DE51AE69F93001A1BF4 /* getDosetForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D551AE69F92001A1BF4 /* getDosetForPatient.m */; };
+		EF400DE61AE69F93001A1BF4 /* getDosetForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D571AE69F92001A1BF4 /* getDosetForPatientResponse.m */; };
+		EF400DE71AE69F93001A1BF4 /* getItemByIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D591AE69F92001A1BF4 /* getItemByIdentifier.m */; };
+		EF400DE81AE69F93001A1BF4 /* getItemByIdentifierResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D5B1AE69F92001A1BF4 /* getItemByIdentifierResponse.m */; };
+		EF400DE91AE69F93001A1BF4 /* getItemsByBatch.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D5D1AE69F92001A1BF4 /* getItemsByBatch.m */; };
+		EF400DEA1AE69F93001A1BF4 /* getItemsByBatchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D5F1AE69F92001A1BF4 /* getItemsByBatchResponse.m */; };
+		EF400DEB1AE69F93001A1BF4 /* getItemsByGSIN.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D611AE69F92001A1BF4 /* getItemsByGSIN.m */; };
+		EF400DEC1AE69F93001A1BF4 /* getItemsByGSINResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D631AE69F92001A1BF4 /* getItemsByGSINResponse.m */; };
+		EF400DED1AE69F93001A1BF4 /* getItemsBySSCC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D651AE69F92001A1BF4 /* getItemsBySSCC.m */; };
+		EF400DEE1AE69F93001A1BF4 /* getItemsBySSCCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D671AE69F92001A1BF4 /* getItemsBySSCCResponse.m */; };
+		EF400DEF1AE69F93001A1BF4 /* getLogisticUnitsForProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D691AE69F92001A1BF4 /* getLogisticUnitsForProduct.m */; };
+		EF400DF01AE69F93001A1BF4 /* getLogisticUnitsForProductResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D6B1AE69F92001A1BF4 /* getLogisticUnitsForProductResponse.m */; };
+		EF400DF11AE69F93001A1BF4 /* getOpenOrdersByGLN.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D6D1AE69F92001A1BF4 /* getOpenOrdersByGLN.m */; };
+		EF400DF21AE69F93001A1BF4 /* getOpenOrdersByGLNResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D6F1AE69F92001A1BF4 /* getOpenOrdersByGLNResponse.m */; };
+		EF400DF31AE69F93001A1BF4 /* getOrderForSSCC.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D711AE69F92001A1BF4 /* getOrderForSSCC.m */; };
+		EF400DF41AE69F93001A1BF4 /* getOrderForSSCCResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D731AE69F92001A1BF4 /* getOrderForSSCCResponse.m */; };
+		EF400DF51AE69F93001A1BF4 /* getPatients.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D751AE69F92001A1BF4 /* getPatients.m */; };
+		EF400DF61AE69F93001A1BF4 /* getPatientsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D771AE69F92001A1BF4 /* getPatientsResponse.m */; };
+		EF400DF71AE69F93001A1BF4 /* getPreparedMedicationsForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D791AE69F92001A1BF4 /* getPreparedMedicationsForPatient.m */; };
+		EF400DF81AE69F93001A1BF4 /* getPreparedMedicationsForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D7B1AE69F92001A1BF4 /* getPreparedMedicationsForPatientResponse.m */; };
+		EF400DF91AE69F93001A1BF4 /* getPreparedPrescriptionsCountForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D7D1AE69F92001A1BF4 /* getPreparedPrescriptionsCountForPatient.m */; };
+		EF400DFA1AE69F93001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D7F1AE69F92001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.m */; };
+		EF400DFB1AE69F93001A1BF4 /* getPrescriptionsForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D811AE69F92001A1BF4 /* getPrescriptionsForPatient.m */; };
+		EF400DFC1AE69F93001A1BF4 /* getPrescriptionsForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D831AE69F92001A1BF4 /* getPrescriptionsForPatientResponse.m */; };
+		EF400DFD1AE69F93001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D851AE69F92001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.m */; };
+		EF400DFE1AE69F93001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D871AE69F92001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m */; };
+		EF400DFF1AE69F93001A1BF4 /* getQuantities.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D891AE69F92001A1BF4 /* getQuantities.m */; };
+		EF400E001AE69F93001A1BF4 /* getQuantitiesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D8B1AE69F92001A1BF4 /* getQuantitiesResponse.m */; };
+		EF400E011AE69F93001A1BF4 /* getStations.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D8D1AE69F92001A1BF4 /* getStations.m */; };
+		EF400E021AE69F93001A1BF4 /* getStationsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D8F1AE69F92001A1BF4 /* getStationsResponse.m */; };
+		EF400E031AE69F93001A1BF4 /* getToDoListPrescriptions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D911AE69F92001A1BF4 /* getToDoListPrescriptions.m */; };
+		EF400E041AE69F93001A1BF4 /* getToDoListPrescriptionsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D931AE69F92001A1BF4 /* getToDoListPrescriptionsResponse.m */; };
+		EF400E051AE69F93001A1BF4 /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D951AE69F92001A1BF4 /* Helper.m */; };
+		EF400E061AE69F93001A1BF4 /* insertTrackingItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D971AE69F92001A1BF4 /* insertTrackingItems.m */; };
+		EF400E071AE69F93001A1BF4 /* insertTrackingItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D991AE69F92001A1BF4 /* insertTrackingItemsResponse.m */; };
+		EF400E081AE69F93001A1BF4 /* item.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D9B1AE69F92001A1BF4 /* item.m */; };
+		EF400E091AE69F93001A1BF4 /* medicationState.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D9D1AE69F92001A1BF4 /* medicationState.m */; };
+		EF400E0A1AE69F93001A1BF4 /* mediPrepResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400D9F1AE69F92001A1BF4 /* mediPrepResult.m */; };
+		EF400E0B1AE69F93001A1BF4 /* order.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DA11AE69F92001A1BF4 /* order.m */; };
+		EF400E0C1AE69F93001A1BF4 /* position.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DA31AE69F92001A1BF4 /* position.m */; };
+		EF400E0D1AE69F93001A1BF4 /* prescriptionState.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DA51AE69F92001A1BF4 /* prescriptionState.m */; };
+		EF400E0E1AE69F93001A1BF4 /* processOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DA71AE69F92001A1BF4 /* processOrder.m */; };
+		EF400E0F1AE69F93001A1BF4 /* processOrderResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DA91AE69F92001A1BF4 /* processOrderResponse.m */; };
+		EF400E101AE69F93001A1BF4 /* production.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DAB1AE69F92001A1BF4 /* production.m */; };
+		EF400E111AE69F93001A1BF4 /* quantity.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DAD1AE69F92001A1BF4 /* quantity.m */; };
+		EF400E121AE69F93001A1BF4 /* RequestResultHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DAF1AE69F92001A1BF4 /* RequestResultHandler.m */; };
+		EF400E131AE69F93001A1BF4 /* resetTrackedItems.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DB11AE69F92001A1BF4 /* resetTrackedItems.m */; };
+		EF400E141AE69F93001A1BF4 /* resetTrackedItemsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DB31AE69F92001A1BF4 /* resetTrackedItemsResponse.m */; };
+		EF400E151AE69F93001A1BF4 /* savePreparedMedications.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DB51AE69F93001A1BF4 /* savePreparedMedications.m */; };
+		EF400E161AE69F93001A1BF4 /* savePreparedMedicationsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DB71AE69F93001A1BF4 /* savePreparedMedicationsResponse.m */; };
+		EF400E171AE69F93001A1BF4 /* sayHelloWorldFrom.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DB91AE69F93001A1BF4 /* sayHelloWorldFrom.m */; };
+		EF400E181AE69F93001A1BF4 /* sayHelloWorldFromResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DBB1AE69F93001A1BF4 /* sayHelloWorldFromResponse.m */; };
+		EF400E191AE69F93001A1BF4 /* setOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DBD1AE69F93001A1BF4 /* setOrder.m */; };
+		EF400E1A1AE69F93001A1BF4 /* setOrderResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DBF1AE69F93001A1BF4 /* setOrderResponse.m */; };
+		EF400E1B1AE69F93001A1BF4 /* shipment.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DC11AE69F93001A1BF4 /* shipment.m */; };
+		EF400E1C1AE69F93001A1BF4 /* SoapError.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DC31AE69F93001A1BF4 /* SoapError.m */; };
+		EF400E1D1AE69F93001A1BF4 /* station.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DC51AE69F93001A1BF4 /* station.m */; };
+		EF400E1E1AE69F93001A1BF4 /* SupplyChainServicePortBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DC71AE69F93001A1BF4 /* SupplyChainServicePortBinding.m */; };
+		EF400E1F1AE69F93001A1BF4 /* toDoListPrescriptions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DC91AE69F93001A1BF4 /* toDoListPrescriptions.m */; };
+		EF400E201AE69F93001A1BF4 /* trspMedication.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DCB1AE69F93001A1BF4 /* trspMedication.m */; };
+		EF400E211AE69F93001A1BF4 /* trspPatient.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DCD1AE69F93001A1BF4 /* trspPatient.m */; };
+		EF400E221AE69F93001A1BF4 /* trspPreparedMedication.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DCF1AE69F93001A1BF4 /* trspPreparedMedication.m */; };
+		EF400E231AE69F93001A1BF4 /* trspPrescription.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DD11AE69F93001A1BF4 /* trspPrescription.m */; };
+		EF400E241AE69F93001A1BF4 /* updatePreparedMedications.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DD31AE69F93001A1BF4 /* updatePreparedMedications.m */; };
+		EF400E251AE69F93001A1BF4 /* updatePreparedMedicationsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DD51AE69F93001A1BF4 /* updatePreparedMedicationsResponse.m */; };
+		EF400E261AE69F93001A1BF4 /* updatePrescriptions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DD71AE69F93001A1BF4 /* updatePrescriptions.m */; };
+		EF400E271AE69F93001A1BF4 /* updatePrescriptionsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DD91AE69F93001A1BF4 /* updatePrescriptionsResponse.m */; };
+		EF400E281AE69F93001A1BF4 /* webServiceResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400DDB1AE69F93001A1BF4 /* webServiceResult.m */; };
+		EF400E351AE69FAD001A1BF4 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400E2A1AE69FAD001A1BF4 /* DDXMLElementAdditions.m */; };
+		EF400E361AE69FAD001A1BF4 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400E2C1AE69FAD001A1BF4 /* NSString+DDXML.m */; };
+		EF400E371AE69FAD001A1BF4 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400E2F1AE69FAD001A1BF4 /* DDXMLDocument.m */; };
+		EF400E381AE69FAD001A1BF4 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400E311AE69FAD001A1BF4 /* DDXMLElement.m */; };
+		EF400E391AE69FAD001A1BF4 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400E331AE69FAD001A1BF4 /* DDXMLNode.m */; };
 		EF4E88BF1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E88BD1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m */; };
 		EF4E88C01AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4E88BE1AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib */; };
 		EF566A701AD6CB720083F781 /* PatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF566A6F1AD6CB720083F781 /* PatientViewController.m */; };
@@ -374,168 +377,174 @@
 		EF3656921AAF95E000A0B64D /* BedsideMatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BedsideMatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3656971AAF95E000A0B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF3656981AAF95E000A0B64D /* BedsideMatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BedsideMatcherTests.m; sourceTree = "<group>"; };
-		EF400C501AE6408A001A1BF4 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
-		EF400C511AE6408A001A1BF4 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
-		EF400C521AE6408A001A1BF4 /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
-		EF400C531AE6408A001A1BF4 /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
-		EF400C541AE6408A001A1BF4 /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
-		EF400C551AE6408A001A1BF4 /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
-		EF400C561AE6408A001A1BF4 /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
-		EF400C571AE6408A001A1BF4 /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
-		EF400C581AE6408A001A1BF4 /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
-		EF400C591AE6408A001A1BF4 /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
-		EF400C5A1AE6408A001A1BF4 /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
-		EF400C5B1AE6408A001A1BF4 /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
-		EF400C611AE640DF001A1BF4 /* bloodGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bloodGroup.h; sourceTree = "<group>"; };
-		EF400C621AE640DF001A1BF4 /* bloodGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bloodGroup.m; sourceTree = "<group>"; };
-		EF400C631AE640DF001A1BF4 /* checkinItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkinItems.h; sourceTree = "<group>"; };
-		EF400C641AE640DF001A1BF4 /* checkinItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkinItems.m; sourceTree = "<group>"; };
-		EF400C651AE640DF001A1BF4 /* checkinItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkinItemsResponse.h; sourceTree = "<group>"; };
-		EF400C661AE640DF001A1BF4 /* checkinItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkinItemsResponse.m; sourceTree = "<group>"; };
-		EF400C671AE640DF001A1BF4 /* checkoutItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutItems.h; sourceTree = "<group>"; };
-		EF400C681AE640DF001A1BF4 /* checkoutItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutItems.m; sourceTree = "<group>"; };
-		EF400C691AE640DF001A1BF4 /* checkoutItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutItemsResponse.h; sourceTree = "<group>"; };
-		EF400C6A1AE640DF001A1BF4 /* checkoutItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutItemsResponse.m; sourceTree = "<group>"; };
-		EF400C6B1AE640E0001A1BF4 /* company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = company.h; sourceTree = "<group>"; };
-		EF400C6C1AE640E0001A1BF4 /* company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = company.m; sourceTree = "<group>"; };
-		EF400C6D1AE640E0001A1BF4 /* gender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gender.h; sourceTree = "<group>"; };
-		EF400C6E1AE640E0001A1BF4 /* gender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gender.m; sourceTree = "<group>"; };
-		EF400C6F1AE640E0001A1BF4 /* getCheckedInItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getCheckedInItems.h; sourceTree = "<group>"; };
-		EF400C701AE640E0001A1BF4 /* getCheckedInItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getCheckedInItems.m; sourceTree = "<group>"; };
-		EF400C711AE640E0001A1BF4 /* getCheckedInItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getCheckedInItemsResponse.h; sourceTree = "<group>"; };
-		EF400C721AE640E0001A1BF4 /* getCheckedInItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getCheckedInItemsResponse.m; sourceTree = "<group>"; };
-		EF400C731AE640E0001A1BF4 /* getDosetForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getDosetForPatient.h; sourceTree = "<group>"; };
-		EF400C741AE640E0001A1BF4 /* getDosetForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getDosetForPatient.m; sourceTree = "<group>"; };
-		EF400C751AE640E0001A1BF4 /* getDosetForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getDosetForPatientResponse.h; sourceTree = "<group>"; };
-		EF400C761AE640E0001A1BF4 /* getDosetForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getDosetForPatientResponse.m; sourceTree = "<group>"; };
-		EF400C771AE640E0001A1BF4 /* getItemByIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemByIdentifier.h; sourceTree = "<group>"; };
-		EF400C781AE640E0001A1BF4 /* getItemByIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemByIdentifier.m; sourceTree = "<group>"; };
-		EF400C791AE640E0001A1BF4 /* getItemByIdentifierResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemByIdentifierResponse.h; sourceTree = "<group>"; };
-		EF400C7A1AE640E0001A1BF4 /* getItemByIdentifierResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemByIdentifierResponse.m; sourceTree = "<group>"; };
-		EF400C7B1AE640E0001A1BF4 /* getItemsByBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByBatch.h; sourceTree = "<group>"; };
-		EF400C7C1AE640E0001A1BF4 /* getItemsByBatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByBatch.m; sourceTree = "<group>"; };
-		EF400C7D1AE640E0001A1BF4 /* getItemsByBatchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByBatchResponse.h; sourceTree = "<group>"; };
-		EF400C7E1AE640E0001A1BF4 /* getItemsByBatchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByBatchResponse.m; sourceTree = "<group>"; };
-		EF400C7F1AE640E0001A1BF4 /* getItemsByGSIN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByGSIN.h; sourceTree = "<group>"; };
-		EF400C801AE640E0001A1BF4 /* getItemsByGSIN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByGSIN.m; sourceTree = "<group>"; };
-		EF400C811AE640E0001A1BF4 /* getItemsByGSINResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByGSINResponse.h; sourceTree = "<group>"; };
-		EF400C821AE640E0001A1BF4 /* getItemsByGSINResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByGSINResponse.m; sourceTree = "<group>"; };
-		EF400C831AE640E0001A1BF4 /* getItemsBySSCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsBySSCC.h; sourceTree = "<group>"; };
-		EF400C841AE640E0001A1BF4 /* getItemsBySSCC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsBySSCC.m; sourceTree = "<group>"; };
-		EF400C851AE640E0001A1BF4 /* getItemsBySSCCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsBySSCCResponse.h; sourceTree = "<group>"; };
-		EF400C861AE640E0001A1BF4 /* getItemsBySSCCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsBySSCCResponse.m; sourceTree = "<group>"; };
-		EF400C871AE640E0001A1BF4 /* getLogisticUnitsForProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getLogisticUnitsForProduct.h; sourceTree = "<group>"; };
-		EF400C881AE640E0001A1BF4 /* getLogisticUnitsForProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getLogisticUnitsForProduct.m; sourceTree = "<group>"; };
-		EF400C891AE640E0001A1BF4 /* getLogisticUnitsForProductResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getLogisticUnitsForProductResponse.h; sourceTree = "<group>"; };
-		EF400C8A1AE640E0001A1BF4 /* getLogisticUnitsForProductResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getLogisticUnitsForProductResponse.m; sourceTree = "<group>"; };
-		EF400C8B1AE640E0001A1BF4 /* getOpenOrdersByGLN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOpenOrdersByGLN.h; sourceTree = "<group>"; };
-		EF400C8C1AE640E0001A1BF4 /* getOpenOrdersByGLN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOpenOrdersByGLN.m; sourceTree = "<group>"; };
-		EF400C8D1AE640E0001A1BF4 /* getOpenOrdersByGLNResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOpenOrdersByGLNResponse.h; sourceTree = "<group>"; };
-		EF400C8E1AE640E0001A1BF4 /* getOpenOrdersByGLNResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOpenOrdersByGLNResponse.m; sourceTree = "<group>"; };
-		EF400C8F1AE640E0001A1BF4 /* getOrderForSSCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOrderForSSCC.h; sourceTree = "<group>"; };
-		EF400C901AE640E0001A1BF4 /* getOrderForSSCC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOrderForSSCC.m; sourceTree = "<group>"; };
-		EF400C911AE640E0001A1BF4 /* getOrderForSSCCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOrderForSSCCResponse.h; sourceTree = "<group>"; };
-		EF400C921AE640E0001A1BF4 /* getOrderForSSCCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOrderForSSCCResponse.m; sourceTree = "<group>"; };
-		EF400C931AE640E0001A1BF4 /* getPatients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPatients.h; sourceTree = "<group>"; };
-		EF400C941AE640E0001A1BF4 /* getPatients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPatients.m; sourceTree = "<group>"; };
-		EF400C951AE640E0001A1BF4 /* getPatientsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPatientsResponse.h; sourceTree = "<group>"; };
-		EF400C961AE640E0001A1BF4 /* getPatientsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPatientsResponse.m; sourceTree = "<group>"; };
-		EF400C971AE640E0001A1BF4 /* getPreparedMedicationsForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPreparedMedicationsForPatient.h; sourceTree = "<group>"; };
-		EF400C981AE640E0001A1BF4 /* getPreparedMedicationsForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPreparedMedicationsForPatient.m; sourceTree = "<group>"; };
-		EF400C991AE640E0001A1BF4 /* getPreparedMedicationsForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPreparedMedicationsForPatientResponse.h; sourceTree = "<group>"; };
-		EF400C9A1AE640E0001A1BF4 /* getPreparedMedicationsForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPreparedMedicationsForPatientResponse.m; sourceTree = "<group>"; };
-		EF400C9B1AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPreparedPrescriptionsCountForPatient.h; sourceTree = "<group>"; };
-		EF400C9C1AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPreparedPrescriptionsCountForPatient.m; sourceTree = "<group>"; };
-		EF400C9D1AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPreparedPrescriptionsCountForPatientResponse.h; sourceTree = "<group>"; };
-		EF400C9E1AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPreparedPrescriptionsCountForPatientResponse.m; sourceTree = "<group>"; };
-		EF400C9F1AE640E0001A1BF4 /* getPrescriptionsForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsForPatient.h; sourceTree = "<group>"; };
-		EF400CA01AE640E0001A1BF4 /* getPrescriptionsForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsForPatient.m; sourceTree = "<group>"; };
-		EF400CA11AE640E0001A1BF4 /* getPrescriptionsForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsForPatientResponse.h; sourceTree = "<group>"; };
-		EF400CA21AE640E0001A1BF4 /* getPrescriptionsForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsForPatientResponse.m; sourceTree = "<group>"; };
-		EF400CA31AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsWithPreparedMedicationsForPatient.h; sourceTree = "<group>"; };
-		EF400CA41AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsWithPreparedMedicationsForPatient.m; sourceTree = "<group>"; };
-		EF400CA51AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsWithPreparedMedicationsForPatientResponse.h; sourceTree = "<group>"; };
-		EF400CA61AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsWithPreparedMedicationsForPatientResponse.m; sourceTree = "<group>"; };
-		EF400CA71AE640E0001A1BF4 /* getQuantities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getQuantities.h; sourceTree = "<group>"; };
-		EF400CA81AE640E0001A1BF4 /* getQuantities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getQuantities.m; sourceTree = "<group>"; };
-		EF400CA91AE640E0001A1BF4 /* getQuantitiesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getQuantitiesResponse.h; sourceTree = "<group>"; };
-		EF400CAA1AE640E0001A1BF4 /* getQuantitiesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getQuantitiesResponse.m; sourceTree = "<group>"; };
-		EF400CAB1AE640E0001A1BF4 /* getStations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getStations.h; sourceTree = "<group>"; };
-		EF400CAC1AE640E0001A1BF4 /* getStations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getStations.m; sourceTree = "<group>"; };
-		EF400CAD1AE640E0001A1BF4 /* getStationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getStationsResponse.h; sourceTree = "<group>"; };
-		EF400CAE1AE640E0001A1BF4 /* getStationsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getStationsResponse.m; sourceTree = "<group>"; };
-		EF400CAF1AE640E0001A1BF4 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
-		EF400CB01AE640E0001A1BF4 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
-		EF400CB11AE640E0001A1BF4 /* insertTrackingItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertTrackingItems.h; sourceTree = "<group>"; };
-		EF400CB21AE640E0001A1BF4 /* insertTrackingItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insertTrackingItems.m; sourceTree = "<group>"; };
-		EF400CB31AE640E0001A1BF4 /* insertTrackingItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertTrackingItemsResponse.h; sourceTree = "<group>"; };
-		EF400CB41AE640E0001A1BF4 /* insertTrackingItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insertTrackingItemsResponse.m; sourceTree = "<group>"; };
-		EF400CB51AE640E0001A1BF4 /* item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = item.h; sourceTree = "<group>"; };
-		EF400CB61AE640E0001A1BF4 /* item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = item.m; sourceTree = "<group>"; };
-		EF400CB71AE640E0001A1BF4 /* medicationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = medicationState.h; sourceTree = "<group>"; };
-		EF400CB81AE640E0001A1BF4 /* medicationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = medicationState.m; sourceTree = "<group>"; };
-		EF400CB91AE640E0001A1BF4 /* mediPrepResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mediPrepResult.h; sourceTree = "<group>"; };
-		EF400CBA1AE640E0001A1BF4 /* mediPrepResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mediPrepResult.m; sourceTree = "<group>"; };
-		EF400CBB1AE640E0001A1BF4 /* order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = order.h; sourceTree = "<group>"; };
-		EF400CBC1AE640E0001A1BF4 /* order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = order.m; sourceTree = "<group>"; };
-		EF400CBD1AE640E0001A1BF4 /* position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = position.h; sourceTree = "<group>"; };
-		EF400CBE1AE640E0001A1BF4 /* position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = position.m; sourceTree = "<group>"; };
-		EF400CBF1AE640E0001A1BF4 /* prescriptionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prescriptionState.h; sourceTree = "<group>"; };
-		EF400CC01AE640E0001A1BF4 /* prescriptionState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prescriptionState.m; sourceTree = "<group>"; };
-		EF400CC11AE640E0001A1BF4 /* processOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = processOrder.h; sourceTree = "<group>"; };
-		EF400CC21AE640E0001A1BF4 /* processOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = processOrder.m; sourceTree = "<group>"; };
-		EF400CC31AE640E0001A1BF4 /* processOrderResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = processOrderResponse.h; sourceTree = "<group>"; };
-		EF400CC41AE640E0001A1BF4 /* processOrderResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = processOrderResponse.m; sourceTree = "<group>"; };
-		EF400CC51AE640E0001A1BF4 /* production.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = production.h; sourceTree = "<group>"; };
-		EF400CC61AE640E0001A1BF4 /* production.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = production.m; sourceTree = "<group>"; };
-		EF400CC71AE640E0001A1BF4 /* quantity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quantity.h; sourceTree = "<group>"; };
-		EF400CC81AE640E0001A1BF4 /* quantity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = quantity.m; sourceTree = "<group>"; };
-		EF400CC91AE640E0001A1BF4 /* RequestResultHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestResultHandler.h; sourceTree = "<group>"; };
-		EF400CCA1AE640E0001A1BF4 /* RequestResultHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestResultHandler.m; sourceTree = "<group>"; };
-		EF400CCB1AE640E0001A1BF4 /* resetTrackedItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resetTrackedItems.h; sourceTree = "<group>"; };
-		EF400CCC1AE640E0001A1BF4 /* resetTrackedItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resetTrackedItems.m; sourceTree = "<group>"; };
-		EF400CCD1AE640E0001A1BF4 /* resetTrackedItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resetTrackedItemsResponse.h; sourceTree = "<group>"; };
-		EF400CCE1AE640E0001A1BF4 /* resetTrackedItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resetTrackedItemsResponse.m; sourceTree = "<group>"; };
-		EF400CCF1AE640E0001A1BF4 /* savePreparedMedications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = savePreparedMedications.h; sourceTree = "<group>"; };
-		EF400CD01AE640E0001A1BF4 /* savePreparedMedications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = savePreparedMedications.m; sourceTree = "<group>"; };
-		EF400CD11AE640E0001A1BF4 /* savePreparedMedicationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = savePreparedMedicationsResponse.h; sourceTree = "<group>"; };
-		EF400CD21AE640E0001A1BF4 /* savePreparedMedicationsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = savePreparedMedicationsResponse.m; sourceTree = "<group>"; };
-		EF400CD31AE640E0001A1BF4 /* sayHelloWorldFrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sayHelloWorldFrom.h; sourceTree = "<group>"; };
-		EF400CD41AE640E0001A1BF4 /* sayHelloWorldFrom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sayHelloWorldFrom.m; sourceTree = "<group>"; };
-		EF400CD51AE640E0001A1BF4 /* sayHelloWorldFromResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sayHelloWorldFromResponse.h; sourceTree = "<group>"; };
-		EF400CD61AE640E0001A1BF4 /* sayHelloWorldFromResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sayHelloWorldFromResponse.m; sourceTree = "<group>"; };
-		EF400CD71AE640E0001A1BF4 /* setOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setOrder.h; sourceTree = "<group>"; };
-		EF400CD81AE640E0001A1BF4 /* setOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setOrder.m; sourceTree = "<group>"; };
-		EF400CD91AE640E0001A1BF4 /* setOrderResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setOrderResponse.h; sourceTree = "<group>"; };
-		EF400CDA1AE640E0001A1BF4 /* setOrderResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setOrderResponse.m; sourceTree = "<group>"; };
-		EF400CDB1AE640E0001A1BF4 /* shipment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shipment.h; sourceTree = "<group>"; };
-		EF400CDC1AE640E0001A1BF4 /* shipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shipment.m; sourceTree = "<group>"; };
-		EF400CDD1AE640E0001A1BF4 /* SoapError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapError.h; sourceTree = "<group>"; };
-		EF400CDE1AE640E0001A1BF4 /* SoapError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapError.m; sourceTree = "<group>"; };
-		EF400CDF1AE640E0001A1BF4 /* station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = station.h; sourceTree = "<group>"; };
-		EF400CE01AE640E0001A1BF4 /* station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = station.m; sourceTree = "<group>"; };
-		EF400CE11AE640E0001A1BF4 /* SupplyChainServicePortBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplyChainServicePortBinding.h; sourceTree = "<group>"; };
-		EF400CE21AE640E0001A1BF4 /* SupplyChainServicePortBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplyChainServicePortBinding.m; sourceTree = "<group>"; };
-		EF400CE31AE640E0001A1BF4 /* trspMedication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspMedication.h; sourceTree = "<group>"; };
-		EF400CE41AE640E0001A1BF4 /* trspMedication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspMedication.m; sourceTree = "<group>"; };
-		EF400CE51AE640E0001A1BF4 /* trspPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspPatient.h; sourceTree = "<group>"; };
-		EF400CE61AE640E0001A1BF4 /* trspPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspPatient.m; sourceTree = "<group>"; };
-		EF400CE71AE640E0001A1BF4 /* trspPreparedMedication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspPreparedMedication.h; sourceTree = "<group>"; };
-		EF400CE81AE640E0001A1BF4 /* trspPreparedMedication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspPreparedMedication.m; sourceTree = "<group>"; };
-		EF400CE91AE640E0001A1BF4 /* trspPrescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspPrescription.h; sourceTree = "<group>"; };
-		EF400CEA1AE640E0001A1BF4 /* trspPrescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspPrescription.m; sourceTree = "<group>"; };
-		EF400CEB1AE640E0001A1BF4 /* updatePreparedMedications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePreparedMedications.h; sourceTree = "<group>"; };
-		EF400CEC1AE640E0001A1BF4 /* updatePreparedMedications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePreparedMedications.m; sourceTree = "<group>"; };
-		EF400CED1AE640E0001A1BF4 /* updatePreparedMedicationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePreparedMedicationsResponse.h; sourceTree = "<group>"; };
-		EF400CEE1AE640E0001A1BF4 /* updatePreparedMedicationsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePreparedMedicationsResponse.m; sourceTree = "<group>"; };
-		EF400CEF1AE640E0001A1BF4 /* updatePrescriptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePrescriptions.h; sourceTree = "<group>"; };
-		EF400CF01AE640E0001A1BF4 /* updatePrescriptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePrescriptions.m; sourceTree = "<group>"; };
-		EF400CF11AE640E0001A1BF4 /* updatePrescriptionsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePrescriptionsResponse.h; sourceTree = "<group>"; };
-		EF400CF21AE640E0001A1BF4 /* updatePrescriptionsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePrescriptionsResponse.m; sourceTree = "<group>"; };
-		EF400CF31AE640E0001A1BF4 /* webServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webServiceResult.h; sourceTree = "<group>"; };
-		EF400CF41AE640E0001A1BF4 /* webServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webServiceResult.m; sourceTree = "<group>"; };
 		EF400D3F1AE677DE001A1BF4 /* ListPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPatient.h; sourceTree = "<group>"; };
 		EF400D401AE677DE001A1BF4 /* ListPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPatient.m; sourceTree = "<group>"; };
+		EF400D421AE69F92001A1BF4 /* bloodGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bloodGroup.h; sourceTree = "<group>"; };
+		EF400D431AE69F92001A1BF4 /* bloodGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bloodGroup.m; sourceTree = "<group>"; };
+		EF400D441AE69F92001A1BF4 /* checkinItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkinItems.h; sourceTree = "<group>"; };
+		EF400D451AE69F92001A1BF4 /* checkinItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkinItems.m; sourceTree = "<group>"; };
+		EF400D461AE69F92001A1BF4 /* checkinItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkinItemsResponse.h; sourceTree = "<group>"; };
+		EF400D471AE69F92001A1BF4 /* checkinItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkinItemsResponse.m; sourceTree = "<group>"; };
+		EF400D481AE69F92001A1BF4 /* checkoutItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutItems.h; sourceTree = "<group>"; };
+		EF400D491AE69F92001A1BF4 /* checkoutItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutItems.m; sourceTree = "<group>"; };
+		EF400D4A1AE69F92001A1BF4 /* checkoutItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkoutItemsResponse.h; sourceTree = "<group>"; };
+		EF400D4B1AE69F92001A1BF4 /* checkoutItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkoutItemsResponse.m; sourceTree = "<group>"; };
+		EF400D4C1AE69F92001A1BF4 /* company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = company.h; sourceTree = "<group>"; };
+		EF400D4D1AE69F92001A1BF4 /* company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = company.m; sourceTree = "<group>"; };
+		EF400D4E1AE69F92001A1BF4 /* gender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gender.h; sourceTree = "<group>"; };
+		EF400D4F1AE69F92001A1BF4 /* gender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gender.m; sourceTree = "<group>"; };
+		EF400D501AE69F92001A1BF4 /* getCheckedInItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getCheckedInItems.h; sourceTree = "<group>"; };
+		EF400D511AE69F92001A1BF4 /* getCheckedInItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getCheckedInItems.m; sourceTree = "<group>"; };
+		EF400D521AE69F92001A1BF4 /* getCheckedInItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getCheckedInItemsResponse.h; sourceTree = "<group>"; };
+		EF400D531AE69F92001A1BF4 /* getCheckedInItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getCheckedInItemsResponse.m; sourceTree = "<group>"; };
+		EF400D541AE69F92001A1BF4 /* getDosetForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getDosetForPatient.h; sourceTree = "<group>"; };
+		EF400D551AE69F92001A1BF4 /* getDosetForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getDosetForPatient.m; sourceTree = "<group>"; };
+		EF400D561AE69F92001A1BF4 /* getDosetForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getDosetForPatientResponse.h; sourceTree = "<group>"; };
+		EF400D571AE69F92001A1BF4 /* getDosetForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getDosetForPatientResponse.m; sourceTree = "<group>"; };
+		EF400D581AE69F92001A1BF4 /* getItemByIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemByIdentifier.h; sourceTree = "<group>"; };
+		EF400D591AE69F92001A1BF4 /* getItemByIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemByIdentifier.m; sourceTree = "<group>"; };
+		EF400D5A1AE69F92001A1BF4 /* getItemByIdentifierResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemByIdentifierResponse.h; sourceTree = "<group>"; };
+		EF400D5B1AE69F92001A1BF4 /* getItemByIdentifierResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemByIdentifierResponse.m; sourceTree = "<group>"; };
+		EF400D5C1AE69F92001A1BF4 /* getItemsByBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByBatch.h; sourceTree = "<group>"; };
+		EF400D5D1AE69F92001A1BF4 /* getItemsByBatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByBatch.m; sourceTree = "<group>"; };
+		EF400D5E1AE69F92001A1BF4 /* getItemsByBatchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByBatchResponse.h; sourceTree = "<group>"; };
+		EF400D5F1AE69F92001A1BF4 /* getItemsByBatchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByBatchResponse.m; sourceTree = "<group>"; };
+		EF400D601AE69F92001A1BF4 /* getItemsByGSIN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByGSIN.h; sourceTree = "<group>"; };
+		EF400D611AE69F92001A1BF4 /* getItemsByGSIN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByGSIN.m; sourceTree = "<group>"; };
+		EF400D621AE69F92001A1BF4 /* getItemsByGSINResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsByGSINResponse.h; sourceTree = "<group>"; };
+		EF400D631AE69F92001A1BF4 /* getItemsByGSINResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsByGSINResponse.m; sourceTree = "<group>"; };
+		EF400D641AE69F92001A1BF4 /* getItemsBySSCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsBySSCC.h; sourceTree = "<group>"; };
+		EF400D651AE69F92001A1BF4 /* getItemsBySSCC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsBySSCC.m; sourceTree = "<group>"; };
+		EF400D661AE69F92001A1BF4 /* getItemsBySSCCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getItemsBySSCCResponse.h; sourceTree = "<group>"; };
+		EF400D671AE69F92001A1BF4 /* getItemsBySSCCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getItemsBySSCCResponse.m; sourceTree = "<group>"; };
+		EF400D681AE69F92001A1BF4 /* getLogisticUnitsForProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getLogisticUnitsForProduct.h; sourceTree = "<group>"; };
+		EF400D691AE69F92001A1BF4 /* getLogisticUnitsForProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getLogisticUnitsForProduct.m; sourceTree = "<group>"; };
+		EF400D6A1AE69F92001A1BF4 /* getLogisticUnitsForProductResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getLogisticUnitsForProductResponse.h; sourceTree = "<group>"; };
+		EF400D6B1AE69F92001A1BF4 /* getLogisticUnitsForProductResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getLogisticUnitsForProductResponse.m; sourceTree = "<group>"; };
+		EF400D6C1AE69F92001A1BF4 /* getOpenOrdersByGLN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOpenOrdersByGLN.h; sourceTree = "<group>"; };
+		EF400D6D1AE69F92001A1BF4 /* getOpenOrdersByGLN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOpenOrdersByGLN.m; sourceTree = "<group>"; };
+		EF400D6E1AE69F92001A1BF4 /* getOpenOrdersByGLNResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOpenOrdersByGLNResponse.h; sourceTree = "<group>"; };
+		EF400D6F1AE69F92001A1BF4 /* getOpenOrdersByGLNResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOpenOrdersByGLNResponse.m; sourceTree = "<group>"; };
+		EF400D701AE69F92001A1BF4 /* getOrderForSSCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOrderForSSCC.h; sourceTree = "<group>"; };
+		EF400D711AE69F92001A1BF4 /* getOrderForSSCC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOrderForSSCC.m; sourceTree = "<group>"; };
+		EF400D721AE69F92001A1BF4 /* getOrderForSSCCResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getOrderForSSCCResponse.h; sourceTree = "<group>"; };
+		EF400D731AE69F92001A1BF4 /* getOrderForSSCCResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getOrderForSSCCResponse.m; sourceTree = "<group>"; };
+		EF400D741AE69F92001A1BF4 /* getPatients.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPatients.h; sourceTree = "<group>"; };
+		EF400D751AE69F92001A1BF4 /* getPatients.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPatients.m; sourceTree = "<group>"; };
+		EF400D761AE69F92001A1BF4 /* getPatientsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPatientsResponse.h; sourceTree = "<group>"; };
+		EF400D771AE69F92001A1BF4 /* getPatientsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPatientsResponse.m; sourceTree = "<group>"; };
+		EF400D781AE69F92001A1BF4 /* getPreparedMedicationsForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPreparedMedicationsForPatient.h; sourceTree = "<group>"; };
+		EF400D791AE69F92001A1BF4 /* getPreparedMedicationsForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPreparedMedicationsForPatient.m; sourceTree = "<group>"; };
+		EF400D7A1AE69F92001A1BF4 /* getPreparedMedicationsForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPreparedMedicationsForPatientResponse.h; sourceTree = "<group>"; };
+		EF400D7B1AE69F92001A1BF4 /* getPreparedMedicationsForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPreparedMedicationsForPatientResponse.m; sourceTree = "<group>"; };
+		EF400D7C1AE69F92001A1BF4 /* getPreparedPrescriptionsCountForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPreparedPrescriptionsCountForPatient.h; sourceTree = "<group>"; };
+		EF400D7D1AE69F92001A1BF4 /* getPreparedPrescriptionsCountForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPreparedPrescriptionsCountForPatient.m; sourceTree = "<group>"; };
+		EF400D7E1AE69F92001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPreparedPrescriptionsCountForPatientResponse.h; sourceTree = "<group>"; };
+		EF400D7F1AE69F92001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPreparedPrescriptionsCountForPatientResponse.m; sourceTree = "<group>"; };
+		EF400D801AE69F92001A1BF4 /* getPrescriptionsForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsForPatient.h; sourceTree = "<group>"; };
+		EF400D811AE69F92001A1BF4 /* getPrescriptionsForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsForPatient.m; sourceTree = "<group>"; };
+		EF400D821AE69F92001A1BF4 /* getPrescriptionsForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsForPatientResponse.h; sourceTree = "<group>"; };
+		EF400D831AE69F92001A1BF4 /* getPrescriptionsForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsForPatientResponse.m; sourceTree = "<group>"; };
+		EF400D841AE69F92001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsWithPreparedMedicationsForPatient.h; sourceTree = "<group>"; };
+		EF400D851AE69F92001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsWithPreparedMedicationsForPatient.m; sourceTree = "<group>"; };
+		EF400D861AE69F92001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getPrescriptionsWithPreparedMedicationsForPatientResponse.h; sourceTree = "<group>"; };
+		EF400D871AE69F92001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getPrescriptionsWithPreparedMedicationsForPatientResponse.m; sourceTree = "<group>"; };
+		EF400D881AE69F92001A1BF4 /* getQuantities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getQuantities.h; sourceTree = "<group>"; };
+		EF400D891AE69F92001A1BF4 /* getQuantities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getQuantities.m; sourceTree = "<group>"; };
+		EF400D8A1AE69F92001A1BF4 /* getQuantitiesResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getQuantitiesResponse.h; sourceTree = "<group>"; };
+		EF400D8B1AE69F92001A1BF4 /* getQuantitiesResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getQuantitiesResponse.m; sourceTree = "<group>"; };
+		EF400D8C1AE69F92001A1BF4 /* getStations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getStations.h; sourceTree = "<group>"; };
+		EF400D8D1AE69F92001A1BF4 /* getStations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getStations.m; sourceTree = "<group>"; };
+		EF400D8E1AE69F92001A1BF4 /* getStationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getStationsResponse.h; sourceTree = "<group>"; };
+		EF400D8F1AE69F92001A1BF4 /* getStationsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getStationsResponse.m; sourceTree = "<group>"; };
+		EF400D901AE69F92001A1BF4 /* getToDoListPrescriptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getToDoListPrescriptions.h; sourceTree = "<group>"; };
+		EF400D911AE69F92001A1BF4 /* getToDoListPrescriptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getToDoListPrescriptions.m; sourceTree = "<group>"; };
+		EF400D921AE69F92001A1BF4 /* getToDoListPrescriptionsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getToDoListPrescriptionsResponse.h; sourceTree = "<group>"; };
+		EF400D931AE69F92001A1BF4 /* getToDoListPrescriptionsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getToDoListPrescriptionsResponse.m; sourceTree = "<group>"; };
+		EF400D941AE69F92001A1BF4 /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		EF400D951AE69F92001A1BF4 /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
+		EF400D961AE69F92001A1BF4 /* insertTrackingItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertTrackingItems.h; sourceTree = "<group>"; };
+		EF400D971AE69F92001A1BF4 /* insertTrackingItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insertTrackingItems.m; sourceTree = "<group>"; };
+		EF400D981AE69F92001A1BF4 /* insertTrackingItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = insertTrackingItemsResponse.h; sourceTree = "<group>"; };
+		EF400D991AE69F92001A1BF4 /* insertTrackingItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = insertTrackingItemsResponse.m; sourceTree = "<group>"; };
+		EF400D9A1AE69F92001A1BF4 /* item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = item.h; sourceTree = "<group>"; };
+		EF400D9B1AE69F92001A1BF4 /* item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = item.m; sourceTree = "<group>"; };
+		EF400D9C1AE69F92001A1BF4 /* medicationState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = medicationState.h; sourceTree = "<group>"; };
+		EF400D9D1AE69F92001A1BF4 /* medicationState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = medicationState.m; sourceTree = "<group>"; };
+		EF400D9E1AE69F92001A1BF4 /* mediPrepResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mediPrepResult.h; sourceTree = "<group>"; };
+		EF400D9F1AE69F92001A1BF4 /* mediPrepResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mediPrepResult.m; sourceTree = "<group>"; };
+		EF400DA01AE69F92001A1BF4 /* order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = order.h; sourceTree = "<group>"; };
+		EF400DA11AE69F92001A1BF4 /* order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = order.m; sourceTree = "<group>"; };
+		EF400DA21AE69F92001A1BF4 /* position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = position.h; sourceTree = "<group>"; };
+		EF400DA31AE69F92001A1BF4 /* position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = position.m; sourceTree = "<group>"; };
+		EF400DA41AE69F92001A1BF4 /* prescriptionState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prescriptionState.h; sourceTree = "<group>"; };
+		EF400DA51AE69F92001A1BF4 /* prescriptionState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prescriptionState.m; sourceTree = "<group>"; };
+		EF400DA61AE69F92001A1BF4 /* processOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = processOrder.h; sourceTree = "<group>"; };
+		EF400DA71AE69F92001A1BF4 /* processOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = processOrder.m; sourceTree = "<group>"; };
+		EF400DA81AE69F92001A1BF4 /* processOrderResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = processOrderResponse.h; sourceTree = "<group>"; };
+		EF400DA91AE69F92001A1BF4 /* processOrderResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = processOrderResponse.m; sourceTree = "<group>"; };
+		EF400DAA1AE69F92001A1BF4 /* production.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = production.h; sourceTree = "<group>"; };
+		EF400DAB1AE69F92001A1BF4 /* production.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = production.m; sourceTree = "<group>"; };
+		EF400DAC1AE69F92001A1BF4 /* quantity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quantity.h; sourceTree = "<group>"; };
+		EF400DAD1AE69F92001A1BF4 /* quantity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = quantity.m; sourceTree = "<group>"; };
+		EF400DAE1AE69F92001A1BF4 /* RequestResultHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestResultHandler.h; sourceTree = "<group>"; };
+		EF400DAF1AE69F92001A1BF4 /* RequestResultHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestResultHandler.m; sourceTree = "<group>"; };
+		EF400DB01AE69F92001A1BF4 /* resetTrackedItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resetTrackedItems.h; sourceTree = "<group>"; };
+		EF400DB11AE69F92001A1BF4 /* resetTrackedItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resetTrackedItems.m; sourceTree = "<group>"; };
+		EF400DB21AE69F92001A1BF4 /* resetTrackedItemsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resetTrackedItemsResponse.h; sourceTree = "<group>"; };
+		EF400DB31AE69F92001A1BF4 /* resetTrackedItemsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resetTrackedItemsResponse.m; sourceTree = "<group>"; };
+		EF400DB41AE69F92001A1BF4 /* savePreparedMedications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = savePreparedMedications.h; sourceTree = "<group>"; };
+		EF400DB51AE69F93001A1BF4 /* savePreparedMedications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = savePreparedMedications.m; sourceTree = "<group>"; };
+		EF400DB61AE69F93001A1BF4 /* savePreparedMedicationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = savePreparedMedicationsResponse.h; sourceTree = "<group>"; };
+		EF400DB71AE69F93001A1BF4 /* savePreparedMedicationsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = savePreparedMedicationsResponse.m; sourceTree = "<group>"; };
+		EF400DB81AE69F93001A1BF4 /* sayHelloWorldFrom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sayHelloWorldFrom.h; sourceTree = "<group>"; };
+		EF400DB91AE69F93001A1BF4 /* sayHelloWorldFrom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sayHelloWorldFrom.m; sourceTree = "<group>"; };
+		EF400DBA1AE69F93001A1BF4 /* sayHelloWorldFromResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sayHelloWorldFromResponse.h; sourceTree = "<group>"; };
+		EF400DBB1AE69F93001A1BF4 /* sayHelloWorldFromResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sayHelloWorldFromResponse.m; sourceTree = "<group>"; };
+		EF400DBC1AE69F93001A1BF4 /* setOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setOrder.h; sourceTree = "<group>"; };
+		EF400DBD1AE69F93001A1BF4 /* setOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setOrder.m; sourceTree = "<group>"; };
+		EF400DBE1AE69F93001A1BF4 /* setOrderResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setOrderResponse.h; sourceTree = "<group>"; };
+		EF400DBF1AE69F93001A1BF4 /* setOrderResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = setOrderResponse.m; sourceTree = "<group>"; };
+		EF400DC01AE69F93001A1BF4 /* shipment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shipment.h; sourceTree = "<group>"; };
+		EF400DC11AE69F93001A1BF4 /* shipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shipment.m; sourceTree = "<group>"; };
+		EF400DC21AE69F93001A1BF4 /* SoapError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoapError.h; sourceTree = "<group>"; };
+		EF400DC31AE69F93001A1BF4 /* SoapError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoapError.m; sourceTree = "<group>"; };
+		EF400DC41AE69F93001A1BF4 /* station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = station.h; sourceTree = "<group>"; };
+		EF400DC51AE69F93001A1BF4 /* station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = station.m; sourceTree = "<group>"; };
+		EF400DC61AE69F93001A1BF4 /* SupplyChainServicePortBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SupplyChainServicePortBinding.h; sourceTree = "<group>"; };
+		EF400DC71AE69F93001A1BF4 /* SupplyChainServicePortBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SupplyChainServicePortBinding.m; sourceTree = "<group>"; };
+		EF400DC81AE69F93001A1BF4 /* toDoListPrescriptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toDoListPrescriptions.h; sourceTree = "<group>"; };
+		EF400DC91AE69F93001A1BF4 /* toDoListPrescriptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = toDoListPrescriptions.m; sourceTree = "<group>"; };
+		EF400DCA1AE69F93001A1BF4 /* trspMedication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspMedication.h; sourceTree = "<group>"; };
+		EF400DCB1AE69F93001A1BF4 /* trspMedication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspMedication.m; sourceTree = "<group>"; };
+		EF400DCC1AE69F93001A1BF4 /* trspPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspPatient.h; sourceTree = "<group>"; };
+		EF400DCD1AE69F93001A1BF4 /* trspPatient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspPatient.m; sourceTree = "<group>"; };
+		EF400DCE1AE69F93001A1BF4 /* trspPreparedMedication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspPreparedMedication.h; sourceTree = "<group>"; };
+		EF400DCF1AE69F93001A1BF4 /* trspPreparedMedication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspPreparedMedication.m; sourceTree = "<group>"; };
+		EF400DD01AE69F93001A1BF4 /* trspPrescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trspPrescription.h; sourceTree = "<group>"; };
+		EF400DD11AE69F93001A1BF4 /* trspPrescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trspPrescription.m; sourceTree = "<group>"; };
+		EF400DD21AE69F93001A1BF4 /* updatePreparedMedications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePreparedMedications.h; sourceTree = "<group>"; };
+		EF400DD31AE69F93001A1BF4 /* updatePreparedMedications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePreparedMedications.m; sourceTree = "<group>"; };
+		EF400DD41AE69F93001A1BF4 /* updatePreparedMedicationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePreparedMedicationsResponse.h; sourceTree = "<group>"; };
+		EF400DD51AE69F93001A1BF4 /* updatePreparedMedicationsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePreparedMedicationsResponse.m; sourceTree = "<group>"; };
+		EF400DD61AE69F93001A1BF4 /* updatePrescriptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePrescriptions.h; sourceTree = "<group>"; };
+		EF400DD71AE69F93001A1BF4 /* updatePrescriptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePrescriptions.m; sourceTree = "<group>"; };
+		EF400DD81AE69F93001A1BF4 /* updatePrescriptionsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updatePrescriptionsResponse.h; sourceTree = "<group>"; };
+		EF400DD91AE69F93001A1BF4 /* updatePrescriptionsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updatePrescriptionsResponse.m; sourceTree = "<group>"; };
+		EF400DDA1AE69F93001A1BF4 /* webServiceResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webServiceResult.h; sourceTree = "<group>"; };
+		EF400DDB1AE69F93001A1BF4 /* webServiceResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webServiceResult.m; sourceTree = "<group>"; };
+		EF400E291AE69FAD001A1BF4 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
+		EF400E2A1AE69FAD001A1BF4 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		EF400E2B1AE69FAD001A1BF4 /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
+		EF400E2C1AE69FAD001A1BF4 /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
+		EF400E2D1AE69FAD001A1BF4 /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
+		EF400E2E1AE69FAD001A1BF4 /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
+		EF400E2F1AE69FAD001A1BF4 /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
+		EF400E301AE69FAD001A1BF4 /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
+		EF400E311AE69FAD001A1BF4 /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
+		EF400E321AE69FAD001A1BF4 /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
+		EF400E331AE69FAD001A1BF4 /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
+		EF400E341AE69FAD001A1BF4 /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
 		EF4E88BC1AE1549B00DB5BE4 /* PrescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrescriptionTableViewCell.h; sourceTree = "<group>"; };
 		EF4E88BD1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrescriptionTableViewCell.m; sourceTree = "<group>"; };
 		EF4E88BE1AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrescriptionTableViewCell.xib; sourceTree = "<group>"; };
@@ -1121,166 +1130,172 @@
 		EF3656A21AAF960100A0B64D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				EF400C611AE640DF001A1BF4 /* bloodGroup.h */,
-				EF400C621AE640DF001A1BF4 /* bloodGroup.m */,
-				EF400C631AE640DF001A1BF4 /* checkinItems.h */,
-				EF400C641AE640DF001A1BF4 /* checkinItems.m */,
-				EF400C651AE640DF001A1BF4 /* checkinItemsResponse.h */,
-				EF400C661AE640DF001A1BF4 /* checkinItemsResponse.m */,
-				EF400C671AE640DF001A1BF4 /* checkoutItems.h */,
-				EF400C681AE640DF001A1BF4 /* checkoutItems.m */,
-				EF400C691AE640DF001A1BF4 /* checkoutItemsResponse.h */,
-				EF400C6A1AE640DF001A1BF4 /* checkoutItemsResponse.m */,
-				EF400C6B1AE640E0001A1BF4 /* company.h */,
-				EF400C6C1AE640E0001A1BF4 /* company.m */,
-				EF400C6D1AE640E0001A1BF4 /* gender.h */,
-				EF400C6E1AE640E0001A1BF4 /* gender.m */,
-				EF400C6F1AE640E0001A1BF4 /* getCheckedInItems.h */,
-				EF400C701AE640E0001A1BF4 /* getCheckedInItems.m */,
-				EF400C711AE640E0001A1BF4 /* getCheckedInItemsResponse.h */,
-				EF400C721AE640E0001A1BF4 /* getCheckedInItemsResponse.m */,
-				EF400C731AE640E0001A1BF4 /* getDosetForPatient.h */,
-				EF400C741AE640E0001A1BF4 /* getDosetForPatient.m */,
-				EF400C751AE640E0001A1BF4 /* getDosetForPatientResponse.h */,
-				EF400C761AE640E0001A1BF4 /* getDosetForPatientResponse.m */,
-				EF400C771AE640E0001A1BF4 /* getItemByIdentifier.h */,
-				EF400C781AE640E0001A1BF4 /* getItemByIdentifier.m */,
-				EF400C791AE640E0001A1BF4 /* getItemByIdentifierResponse.h */,
-				EF400C7A1AE640E0001A1BF4 /* getItemByIdentifierResponse.m */,
-				EF400C7B1AE640E0001A1BF4 /* getItemsByBatch.h */,
-				EF400C7C1AE640E0001A1BF4 /* getItemsByBatch.m */,
-				EF400C7D1AE640E0001A1BF4 /* getItemsByBatchResponse.h */,
-				EF400C7E1AE640E0001A1BF4 /* getItemsByBatchResponse.m */,
-				EF400C7F1AE640E0001A1BF4 /* getItemsByGSIN.h */,
-				EF400C801AE640E0001A1BF4 /* getItemsByGSIN.m */,
-				EF400C811AE640E0001A1BF4 /* getItemsByGSINResponse.h */,
-				EF400C821AE640E0001A1BF4 /* getItemsByGSINResponse.m */,
-				EF400C831AE640E0001A1BF4 /* getItemsBySSCC.h */,
-				EF400C841AE640E0001A1BF4 /* getItemsBySSCC.m */,
-				EF400C851AE640E0001A1BF4 /* getItemsBySSCCResponse.h */,
-				EF400C861AE640E0001A1BF4 /* getItemsBySSCCResponse.m */,
-				EF400C871AE640E0001A1BF4 /* getLogisticUnitsForProduct.h */,
-				EF400C881AE640E0001A1BF4 /* getLogisticUnitsForProduct.m */,
-				EF400C891AE640E0001A1BF4 /* getLogisticUnitsForProductResponse.h */,
-				EF400C8A1AE640E0001A1BF4 /* getLogisticUnitsForProductResponse.m */,
-				EF400C8B1AE640E0001A1BF4 /* getOpenOrdersByGLN.h */,
-				EF400C8C1AE640E0001A1BF4 /* getOpenOrdersByGLN.m */,
-				EF400C8D1AE640E0001A1BF4 /* getOpenOrdersByGLNResponse.h */,
-				EF400C8E1AE640E0001A1BF4 /* getOpenOrdersByGLNResponse.m */,
-				EF400C8F1AE640E0001A1BF4 /* getOrderForSSCC.h */,
-				EF400C901AE640E0001A1BF4 /* getOrderForSSCC.m */,
-				EF400C911AE640E0001A1BF4 /* getOrderForSSCCResponse.h */,
-				EF400C921AE640E0001A1BF4 /* getOrderForSSCCResponse.m */,
-				EF400C931AE640E0001A1BF4 /* getPatients.h */,
-				EF400C941AE640E0001A1BF4 /* getPatients.m */,
-				EF400C951AE640E0001A1BF4 /* getPatientsResponse.h */,
-				EF400C961AE640E0001A1BF4 /* getPatientsResponse.m */,
-				EF400C971AE640E0001A1BF4 /* getPreparedMedicationsForPatient.h */,
-				EF400C981AE640E0001A1BF4 /* getPreparedMedicationsForPatient.m */,
-				EF400C991AE640E0001A1BF4 /* getPreparedMedicationsForPatientResponse.h */,
-				EF400C9A1AE640E0001A1BF4 /* getPreparedMedicationsForPatientResponse.m */,
-				EF400C9B1AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatient.h */,
-				EF400C9C1AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatient.m */,
-				EF400C9D1AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.h */,
-				EF400C9E1AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.m */,
-				EF400C9F1AE640E0001A1BF4 /* getPrescriptionsForPatient.h */,
-				EF400CA01AE640E0001A1BF4 /* getPrescriptionsForPatient.m */,
-				EF400CA11AE640E0001A1BF4 /* getPrescriptionsForPatientResponse.h */,
-				EF400CA21AE640E0001A1BF4 /* getPrescriptionsForPatientResponse.m */,
-				EF400CA31AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.h */,
-				EF400CA41AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.m */,
-				EF400CA51AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.h */,
-				EF400CA61AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m */,
-				EF400CA71AE640E0001A1BF4 /* getQuantities.h */,
-				EF400CA81AE640E0001A1BF4 /* getQuantities.m */,
-				EF400CA91AE640E0001A1BF4 /* getQuantitiesResponse.h */,
-				EF400CAA1AE640E0001A1BF4 /* getQuantitiesResponse.m */,
-				EF400CAB1AE640E0001A1BF4 /* getStations.h */,
-				EF400CAC1AE640E0001A1BF4 /* getStations.m */,
-				EF400CAD1AE640E0001A1BF4 /* getStationsResponse.h */,
-				EF400CAE1AE640E0001A1BF4 /* getStationsResponse.m */,
-				EF400CAF1AE640E0001A1BF4 /* Helper.h */,
-				EF400CB01AE640E0001A1BF4 /* Helper.m */,
-				EF400CB11AE640E0001A1BF4 /* insertTrackingItems.h */,
-				EF400CB21AE640E0001A1BF4 /* insertTrackingItems.m */,
-				EF400CB31AE640E0001A1BF4 /* insertTrackingItemsResponse.h */,
-				EF400CB41AE640E0001A1BF4 /* insertTrackingItemsResponse.m */,
-				EF400CB51AE640E0001A1BF4 /* item.h */,
-				EF400CB61AE640E0001A1BF4 /* item.m */,
-				EF400CB71AE640E0001A1BF4 /* medicationState.h */,
-				EF400CB81AE640E0001A1BF4 /* medicationState.m */,
-				EF400CB91AE640E0001A1BF4 /* mediPrepResult.h */,
-				EF400CBA1AE640E0001A1BF4 /* mediPrepResult.m */,
-				EF400CBB1AE640E0001A1BF4 /* order.h */,
-				EF400CBC1AE640E0001A1BF4 /* order.m */,
-				EF400CBD1AE640E0001A1BF4 /* position.h */,
-				EF400CBE1AE640E0001A1BF4 /* position.m */,
-				EF400CBF1AE640E0001A1BF4 /* prescriptionState.h */,
-				EF400CC01AE640E0001A1BF4 /* prescriptionState.m */,
-				EF400CC11AE640E0001A1BF4 /* processOrder.h */,
-				EF400CC21AE640E0001A1BF4 /* processOrder.m */,
-				EF400CC31AE640E0001A1BF4 /* processOrderResponse.h */,
-				EF400CC41AE640E0001A1BF4 /* processOrderResponse.m */,
-				EF400CC51AE640E0001A1BF4 /* production.h */,
-				EF400CC61AE640E0001A1BF4 /* production.m */,
-				EF400CC71AE640E0001A1BF4 /* quantity.h */,
-				EF400CC81AE640E0001A1BF4 /* quantity.m */,
-				EF400CC91AE640E0001A1BF4 /* RequestResultHandler.h */,
-				EF400CCA1AE640E0001A1BF4 /* RequestResultHandler.m */,
-				EF400CCB1AE640E0001A1BF4 /* resetTrackedItems.h */,
-				EF400CCC1AE640E0001A1BF4 /* resetTrackedItems.m */,
-				EF400CCD1AE640E0001A1BF4 /* resetTrackedItemsResponse.h */,
-				EF400CCE1AE640E0001A1BF4 /* resetTrackedItemsResponse.m */,
-				EF400CCF1AE640E0001A1BF4 /* savePreparedMedications.h */,
-				EF400CD01AE640E0001A1BF4 /* savePreparedMedications.m */,
-				EF400CD11AE640E0001A1BF4 /* savePreparedMedicationsResponse.h */,
-				EF400CD21AE640E0001A1BF4 /* savePreparedMedicationsResponse.m */,
-				EF400CD31AE640E0001A1BF4 /* sayHelloWorldFrom.h */,
-				EF400CD41AE640E0001A1BF4 /* sayHelloWorldFrom.m */,
-				EF400CD51AE640E0001A1BF4 /* sayHelloWorldFromResponse.h */,
-				EF400CD61AE640E0001A1BF4 /* sayHelloWorldFromResponse.m */,
-				EF400CD71AE640E0001A1BF4 /* setOrder.h */,
-				EF400CD81AE640E0001A1BF4 /* setOrder.m */,
-				EF400CD91AE640E0001A1BF4 /* setOrderResponse.h */,
-				EF400CDA1AE640E0001A1BF4 /* setOrderResponse.m */,
-				EF400CDB1AE640E0001A1BF4 /* shipment.h */,
-				EF400CDC1AE640E0001A1BF4 /* shipment.m */,
-				EF400CDD1AE640E0001A1BF4 /* SoapError.h */,
-				EF400CDE1AE640E0001A1BF4 /* SoapError.m */,
-				EF400CDF1AE640E0001A1BF4 /* station.h */,
-				EF400CE01AE640E0001A1BF4 /* station.m */,
-				EF400CE11AE640E0001A1BF4 /* SupplyChainServicePortBinding.h */,
-				EF400CE21AE640E0001A1BF4 /* SupplyChainServicePortBinding.m */,
-				EF400CE31AE640E0001A1BF4 /* trspMedication.h */,
-				EF400CE41AE640E0001A1BF4 /* trspMedication.m */,
-				EF400CE51AE640E0001A1BF4 /* trspPatient.h */,
-				EF400CE61AE640E0001A1BF4 /* trspPatient.m */,
-				EF400CE71AE640E0001A1BF4 /* trspPreparedMedication.h */,
-				EF400CE81AE640E0001A1BF4 /* trspPreparedMedication.m */,
-				EF400CE91AE640E0001A1BF4 /* trspPrescription.h */,
-				EF400CEA1AE640E0001A1BF4 /* trspPrescription.m */,
-				EF400CEB1AE640E0001A1BF4 /* updatePreparedMedications.h */,
-				EF400CEC1AE640E0001A1BF4 /* updatePreparedMedications.m */,
-				EF400CED1AE640E0001A1BF4 /* updatePreparedMedicationsResponse.h */,
-				EF400CEE1AE640E0001A1BF4 /* updatePreparedMedicationsResponse.m */,
-				EF400CEF1AE640E0001A1BF4 /* updatePrescriptions.h */,
-				EF400CF01AE640E0001A1BF4 /* updatePrescriptions.m */,
-				EF400CF11AE640E0001A1BF4 /* updatePrescriptionsResponse.h */,
-				EF400CF21AE640E0001A1BF4 /* updatePrescriptionsResponse.m */,
-				EF400CF31AE640E0001A1BF4 /* webServiceResult.h */,
-				EF400CF41AE640E0001A1BF4 /* webServiceResult.m */,
-				EF400C501AE6408A001A1BF4 /* DDXMLElementAdditions.h */,
-				EF400C511AE6408A001A1BF4 /* DDXMLElementAdditions.m */,
-				EF400C521AE6408A001A1BF4 /* NSString+DDXML.h */,
-				EF400C531AE6408A001A1BF4 /* NSString+DDXML.m */,
-				EF400C541AE6408A001A1BF4 /* DDXML.h */,
-				EF400C551AE6408A001A1BF4 /* DDXMLDocument.h */,
-				EF400C561AE6408A001A1BF4 /* DDXMLDocument.m */,
-				EF400C571AE6408A001A1BF4 /* DDXMLElement.h */,
-				EF400C581AE6408A001A1BF4 /* DDXMLElement.m */,
-				EF400C591AE6408A001A1BF4 /* DDXMLNode.h */,
-				EF400C5A1AE6408A001A1BF4 /* DDXMLNode.m */,
-				EF400C5B1AE6408A001A1BF4 /* DDXMLPrivate.h */,
+				EF400E291AE69FAD001A1BF4 /* DDXMLElementAdditions.h */,
+				EF400E2A1AE69FAD001A1BF4 /* DDXMLElementAdditions.m */,
+				EF400E2B1AE69FAD001A1BF4 /* NSString+DDXML.h */,
+				EF400E2C1AE69FAD001A1BF4 /* NSString+DDXML.m */,
+				EF400E2D1AE69FAD001A1BF4 /* DDXML.h */,
+				EF400E2E1AE69FAD001A1BF4 /* DDXMLDocument.h */,
+				EF400E2F1AE69FAD001A1BF4 /* DDXMLDocument.m */,
+				EF400E301AE69FAD001A1BF4 /* DDXMLElement.h */,
+				EF400E311AE69FAD001A1BF4 /* DDXMLElement.m */,
+				EF400E321AE69FAD001A1BF4 /* DDXMLNode.h */,
+				EF400E331AE69FAD001A1BF4 /* DDXMLNode.m */,
+				EF400E341AE69FAD001A1BF4 /* DDXMLPrivate.h */,
+				EF400D421AE69F92001A1BF4 /* bloodGroup.h */,
+				EF400D431AE69F92001A1BF4 /* bloodGroup.m */,
+				EF400D441AE69F92001A1BF4 /* checkinItems.h */,
+				EF400D451AE69F92001A1BF4 /* checkinItems.m */,
+				EF400D461AE69F92001A1BF4 /* checkinItemsResponse.h */,
+				EF400D471AE69F92001A1BF4 /* checkinItemsResponse.m */,
+				EF400D481AE69F92001A1BF4 /* checkoutItems.h */,
+				EF400D491AE69F92001A1BF4 /* checkoutItems.m */,
+				EF400D4A1AE69F92001A1BF4 /* checkoutItemsResponse.h */,
+				EF400D4B1AE69F92001A1BF4 /* checkoutItemsResponse.m */,
+				EF400D4C1AE69F92001A1BF4 /* company.h */,
+				EF400D4D1AE69F92001A1BF4 /* company.m */,
+				EF400D4E1AE69F92001A1BF4 /* gender.h */,
+				EF400D4F1AE69F92001A1BF4 /* gender.m */,
+				EF400D501AE69F92001A1BF4 /* getCheckedInItems.h */,
+				EF400D511AE69F92001A1BF4 /* getCheckedInItems.m */,
+				EF400D521AE69F92001A1BF4 /* getCheckedInItemsResponse.h */,
+				EF400D531AE69F92001A1BF4 /* getCheckedInItemsResponse.m */,
+				EF400D541AE69F92001A1BF4 /* getDosetForPatient.h */,
+				EF400D551AE69F92001A1BF4 /* getDosetForPatient.m */,
+				EF400D561AE69F92001A1BF4 /* getDosetForPatientResponse.h */,
+				EF400D571AE69F92001A1BF4 /* getDosetForPatientResponse.m */,
+				EF400D581AE69F92001A1BF4 /* getItemByIdentifier.h */,
+				EF400D591AE69F92001A1BF4 /* getItemByIdentifier.m */,
+				EF400D5A1AE69F92001A1BF4 /* getItemByIdentifierResponse.h */,
+				EF400D5B1AE69F92001A1BF4 /* getItemByIdentifierResponse.m */,
+				EF400D5C1AE69F92001A1BF4 /* getItemsByBatch.h */,
+				EF400D5D1AE69F92001A1BF4 /* getItemsByBatch.m */,
+				EF400D5E1AE69F92001A1BF4 /* getItemsByBatchResponse.h */,
+				EF400D5F1AE69F92001A1BF4 /* getItemsByBatchResponse.m */,
+				EF400D601AE69F92001A1BF4 /* getItemsByGSIN.h */,
+				EF400D611AE69F92001A1BF4 /* getItemsByGSIN.m */,
+				EF400D621AE69F92001A1BF4 /* getItemsByGSINResponse.h */,
+				EF400D631AE69F92001A1BF4 /* getItemsByGSINResponse.m */,
+				EF400D641AE69F92001A1BF4 /* getItemsBySSCC.h */,
+				EF400D651AE69F92001A1BF4 /* getItemsBySSCC.m */,
+				EF400D661AE69F92001A1BF4 /* getItemsBySSCCResponse.h */,
+				EF400D671AE69F92001A1BF4 /* getItemsBySSCCResponse.m */,
+				EF400D681AE69F92001A1BF4 /* getLogisticUnitsForProduct.h */,
+				EF400D691AE69F92001A1BF4 /* getLogisticUnitsForProduct.m */,
+				EF400D6A1AE69F92001A1BF4 /* getLogisticUnitsForProductResponse.h */,
+				EF400D6B1AE69F92001A1BF4 /* getLogisticUnitsForProductResponse.m */,
+				EF400D6C1AE69F92001A1BF4 /* getOpenOrdersByGLN.h */,
+				EF400D6D1AE69F92001A1BF4 /* getOpenOrdersByGLN.m */,
+				EF400D6E1AE69F92001A1BF4 /* getOpenOrdersByGLNResponse.h */,
+				EF400D6F1AE69F92001A1BF4 /* getOpenOrdersByGLNResponse.m */,
+				EF400D701AE69F92001A1BF4 /* getOrderForSSCC.h */,
+				EF400D711AE69F92001A1BF4 /* getOrderForSSCC.m */,
+				EF400D721AE69F92001A1BF4 /* getOrderForSSCCResponse.h */,
+				EF400D731AE69F92001A1BF4 /* getOrderForSSCCResponse.m */,
+				EF400D741AE69F92001A1BF4 /* getPatients.h */,
+				EF400D751AE69F92001A1BF4 /* getPatients.m */,
+				EF400D761AE69F92001A1BF4 /* getPatientsResponse.h */,
+				EF400D771AE69F92001A1BF4 /* getPatientsResponse.m */,
+				EF400D781AE69F92001A1BF4 /* getPreparedMedicationsForPatient.h */,
+				EF400D791AE69F92001A1BF4 /* getPreparedMedicationsForPatient.m */,
+				EF400D7A1AE69F92001A1BF4 /* getPreparedMedicationsForPatientResponse.h */,
+				EF400D7B1AE69F92001A1BF4 /* getPreparedMedicationsForPatientResponse.m */,
+				EF400D7C1AE69F92001A1BF4 /* getPreparedPrescriptionsCountForPatient.h */,
+				EF400D7D1AE69F92001A1BF4 /* getPreparedPrescriptionsCountForPatient.m */,
+				EF400D7E1AE69F92001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.h */,
+				EF400D7F1AE69F92001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.m */,
+				EF400D801AE69F92001A1BF4 /* getPrescriptionsForPatient.h */,
+				EF400D811AE69F92001A1BF4 /* getPrescriptionsForPatient.m */,
+				EF400D821AE69F92001A1BF4 /* getPrescriptionsForPatientResponse.h */,
+				EF400D831AE69F92001A1BF4 /* getPrescriptionsForPatientResponse.m */,
+				EF400D841AE69F92001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.h */,
+				EF400D851AE69F92001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.m */,
+				EF400D861AE69F92001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.h */,
+				EF400D871AE69F92001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m */,
+				EF400D881AE69F92001A1BF4 /* getQuantities.h */,
+				EF400D891AE69F92001A1BF4 /* getQuantities.m */,
+				EF400D8A1AE69F92001A1BF4 /* getQuantitiesResponse.h */,
+				EF400D8B1AE69F92001A1BF4 /* getQuantitiesResponse.m */,
+				EF400D8C1AE69F92001A1BF4 /* getStations.h */,
+				EF400D8D1AE69F92001A1BF4 /* getStations.m */,
+				EF400D8E1AE69F92001A1BF4 /* getStationsResponse.h */,
+				EF400D8F1AE69F92001A1BF4 /* getStationsResponse.m */,
+				EF400D901AE69F92001A1BF4 /* getToDoListPrescriptions.h */,
+				EF400D911AE69F92001A1BF4 /* getToDoListPrescriptions.m */,
+				EF400D921AE69F92001A1BF4 /* getToDoListPrescriptionsResponse.h */,
+				EF400D931AE69F92001A1BF4 /* getToDoListPrescriptionsResponse.m */,
+				EF400D941AE69F92001A1BF4 /* Helper.h */,
+				EF400D951AE69F92001A1BF4 /* Helper.m */,
+				EF400D961AE69F92001A1BF4 /* insertTrackingItems.h */,
+				EF400D971AE69F92001A1BF4 /* insertTrackingItems.m */,
+				EF400D981AE69F92001A1BF4 /* insertTrackingItemsResponse.h */,
+				EF400D991AE69F92001A1BF4 /* insertTrackingItemsResponse.m */,
+				EF400D9A1AE69F92001A1BF4 /* item.h */,
+				EF400D9B1AE69F92001A1BF4 /* item.m */,
+				EF400D9C1AE69F92001A1BF4 /* medicationState.h */,
+				EF400D9D1AE69F92001A1BF4 /* medicationState.m */,
+				EF400D9E1AE69F92001A1BF4 /* mediPrepResult.h */,
+				EF400D9F1AE69F92001A1BF4 /* mediPrepResult.m */,
+				EF400DA01AE69F92001A1BF4 /* order.h */,
+				EF400DA11AE69F92001A1BF4 /* order.m */,
+				EF400DA21AE69F92001A1BF4 /* position.h */,
+				EF400DA31AE69F92001A1BF4 /* position.m */,
+				EF400DA41AE69F92001A1BF4 /* prescriptionState.h */,
+				EF400DA51AE69F92001A1BF4 /* prescriptionState.m */,
+				EF400DA61AE69F92001A1BF4 /* processOrder.h */,
+				EF400DA71AE69F92001A1BF4 /* processOrder.m */,
+				EF400DA81AE69F92001A1BF4 /* processOrderResponse.h */,
+				EF400DA91AE69F92001A1BF4 /* processOrderResponse.m */,
+				EF400DAA1AE69F92001A1BF4 /* production.h */,
+				EF400DAB1AE69F92001A1BF4 /* production.m */,
+				EF400DAC1AE69F92001A1BF4 /* quantity.h */,
+				EF400DAD1AE69F92001A1BF4 /* quantity.m */,
+				EF400DAE1AE69F92001A1BF4 /* RequestResultHandler.h */,
+				EF400DAF1AE69F92001A1BF4 /* RequestResultHandler.m */,
+				EF400DB01AE69F92001A1BF4 /* resetTrackedItems.h */,
+				EF400DB11AE69F92001A1BF4 /* resetTrackedItems.m */,
+				EF400DB21AE69F92001A1BF4 /* resetTrackedItemsResponse.h */,
+				EF400DB31AE69F92001A1BF4 /* resetTrackedItemsResponse.m */,
+				EF400DB41AE69F92001A1BF4 /* savePreparedMedications.h */,
+				EF400DB51AE69F93001A1BF4 /* savePreparedMedications.m */,
+				EF400DB61AE69F93001A1BF4 /* savePreparedMedicationsResponse.h */,
+				EF400DB71AE69F93001A1BF4 /* savePreparedMedicationsResponse.m */,
+				EF400DB81AE69F93001A1BF4 /* sayHelloWorldFrom.h */,
+				EF400DB91AE69F93001A1BF4 /* sayHelloWorldFrom.m */,
+				EF400DBA1AE69F93001A1BF4 /* sayHelloWorldFromResponse.h */,
+				EF400DBB1AE69F93001A1BF4 /* sayHelloWorldFromResponse.m */,
+				EF400DBC1AE69F93001A1BF4 /* setOrder.h */,
+				EF400DBD1AE69F93001A1BF4 /* setOrder.m */,
+				EF400DBE1AE69F93001A1BF4 /* setOrderResponse.h */,
+				EF400DBF1AE69F93001A1BF4 /* setOrderResponse.m */,
+				EF400DC01AE69F93001A1BF4 /* shipment.h */,
+				EF400DC11AE69F93001A1BF4 /* shipment.m */,
+				EF400DC21AE69F93001A1BF4 /* SoapError.h */,
+				EF400DC31AE69F93001A1BF4 /* SoapError.m */,
+				EF400DC41AE69F93001A1BF4 /* station.h */,
+				EF400DC51AE69F93001A1BF4 /* station.m */,
+				EF400DC61AE69F93001A1BF4 /* SupplyChainServicePortBinding.h */,
+				EF400DC71AE69F93001A1BF4 /* SupplyChainServicePortBinding.m */,
+				EF400DC81AE69F93001A1BF4 /* toDoListPrescriptions.h */,
+				EF400DC91AE69F93001A1BF4 /* toDoListPrescriptions.m */,
+				EF400DCA1AE69F93001A1BF4 /* trspMedication.h */,
+				EF400DCB1AE69F93001A1BF4 /* trspMedication.m */,
+				EF400DCC1AE69F93001A1BF4 /* trspPatient.h */,
+				EF400DCD1AE69F93001A1BF4 /* trspPatient.m */,
+				EF400DCE1AE69F93001A1BF4 /* trspPreparedMedication.h */,
+				EF400DCF1AE69F93001A1BF4 /* trspPreparedMedication.m */,
+				EF400DD01AE69F93001A1BF4 /* trspPrescription.h */,
+				EF400DD11AE69F93001A1BF4 /* trspPrescription.m */,
+				EF400DD21AE69F93001A1BF4 /* updatePreparedMedications.h */,
+				EF400DD31AE69F93001A1BF4 /* updatePreparedMedications.m */,
+				EF400DD41AE69F93001A1BF4 /* updatePreparedMedicationsResponse.h */,
+				EF400DD51AE69F93001A1BF4 /* updatePreparedMedicationsResponse.m */,
+				EF400DD61AE69F93001A1BF4 /* updatePrescriptions.h */,
+				EF400DD71AE69F93001A1BF4 /* updatePrescriptions.m */,
+				EF400DD81AE69F93001A1BF4 /* updatePrescriptionsResponse.h */,
+				EF400DD91AE69F93001A1BF4 /* updatePrescriptionsResponse.m */,
+				EF400DDA1AE69F93001A1BF4 /* webServiceResult.h */,
+				EF400DDB1AE69F93001A1BF4 /* webServiceResult.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -2181,153 +2196,168 @@
 			files = (
 				EFAD36B31ACD2C80000E978E /* ZXITFWriter.m in Sources */,
 				EF3656821AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld in Sources */,
-				EF400D131AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.m in Sources */,
-				EF400D041AE640E0001A1BF4 /* getItemsByGSIN.m in Sources */,
 				EFAD36341ACD2C80000E978E /* ZXISBNResultParser.m in Sources */,
 				EFAD36401ACD2C80000E978E /* ZXURIParsedResult.m in Sources */,
+				EF400E191AE69F93001A1BF4 /* setOrder.m in Sources */,
 				EFAD36371ACD2C80000E978E /* ZXProductResultParser.m in Sources */,
+				EF400E221AE69F93001A1BF4 /* trspPreparedMedication.m in Sources */,
+				EF400E361AE69FAD001A1BF4 /* NSString+DDXML.m in Sources */,
 				EFAD36951ACD2C80000E978E /* ZXRSSExpandedCurrentParsingState.m in Sources */,
 				EFAD368A1ACD2C80000E978E /* ZXAI013103decoder.m in Sources */,
 				EFAD367B1ACD2C80000E978E /* ZXDataMatrixErrorCorrection.m in Sources */,
 				EF4E88BF1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m in Sources */,
 				EFAD36641ACD2C80000E978E /* ZXByteMatrix.m in Sources */,
-				EF400D211AE640E0001A1BF4 /* mediPrepResult.m in Sources */,
 				EFAD36BD1ACD2C80000E978E /* ZXUPCEANReader.m in Sources */,
 				EFAD36D61ACD2C80000E978E /* ZXPDF417Reader.m in Sources */,
+				EF400DE81AE69F93001A1BF4 /* getItemByIdentifierResponse.m in Sources */,
 				EFAD361A1ACD2C80000E978E /* ZXAztecDetector.m in Sources */,
-				EF400C5E1AE6408A001A1BF4 /* DDXMLDocument.m in Sources */,
 				EFAD364E1ACD2C80000E978E /* ZXWhiteRectangleDetector.m in Sources */,
-				EF400D241AE640E0001A1BF4 /* prescriptionState.m in Sources */,
+				EF400DE21AE69F93001A1BF4 /* gender.m in Sources */,
+				EF400DEC1AE69F93001A1BF4 /* getItemsByGSINResponse.m in Sources */,
+				EF400DE61AE69F93001A1BF4 /* getDosetForPatientResponse.m in Sources */,
 				EFAD36B81ACD2C80000E978E /* ZXUPCAReader.m in Sources */,
+				EF400E391AE69FAD001A1BF4 /* DDXMLNode.m in Sources */,
 				EFAD36D91ACD2C80000E978E /* ZXQRCodeBitMatrixParser.m in Sources */,
 				EF6339191AB0EB0D002ACE34 /* VerordnungenViewController.m in Sources */,
+				EF400DE91AE69F93001A1BF4 /* getItemsByBatch.m in Sources */,
 				EFAD363B1ACD2C80000E978E /* ZXSMSTOMMSTOResultParser.m in Sources */,
+				EF400DF01AE69F93001A1BF4 /* getLogisticUnitsForProductResponse.m in Sources */,
 				EFAD36721ACD2C80000E978E /* ZXDataMatrixDecoder.m in Sources */,
-				EF400D0B1AE640E0001A1BF4 /* getOpenOrdersByGLNResponse.m in Sources */,
+				EF400E011AE69F93001A1BF4 /* getStations.m in Sources */,
 				EFAD364D1ACD2C80000E978E /* ZXMonochromeRectangleDetector.m in Sources */,
 				EFAD36511ACD2C80000E978E /* ZXReedSolomonDecoder.m in Sources */,
-				EF400C5F1AE6408A001A1BF4 /* DDXMLElement.m in Sources */,
 				EFAD36841ACD2C80000E978E /* ZXMaxiCodeDecodedBitStreamParser.m in Sources */,
 				EFAD36881ACD2C80000E978E /* ZXGenericMultipleBarcodeReader.m in Sources */,
+				EF400DED1AE69F93001A1BF4 /* getItemsBySSCC.m in Sources */,
 				EFAD36DC1ACD2C80000E978E /* ZXQRCodeDecodedBitStreamParser.m in Sources */,
 				EFAD36351ACD2C80000E978E /* ZXParsedResult.m in Sources */,
-				EF400D271AE640E0001A1BF4 /* production.m in Sources */,
+				EF400DDD1AE69F93001A1BF4 /* checkinItems.m in Sources */,
 				EFAD36601ACD2C80000E978E /* ZXPerspectiveTransform.m in Sources */,
 				EFAD361D1ACD2C80000E978E /* ZXAztecEncoder.m in Sources */,
 				EFAD362D1ACD2C80000E978E /* ZXEmailAddressResultParser.m in Sources */,
 				EFAD36EA1ACD2C80000E978E /* ZXQRCodeBlockPair.m in Sources */,
+				EF400DFF1AE69F93001A1BF4 /* getQuantities.m in Sources */,
 				EFAD36C01ACD2C80000E978E /* ZXModulusGF.m in Sources */,
 				EFAD369A1ACD2C80000E978E /* ZXRSSExpandedFieldParser.m in Sources */,
+				EF400DF11AE69F93001A1BF4 /* getOpenOrdersByGLN.m in Sources */,
 				EFAD367D1ACD2C80000E978E /* ZXDataMatrixSymbolInfo.m in Sources */,
 				EFAD36B91ACD2C80000E978E /* ZXUPCAWriter.m in Sources */,
-				EF400D321AE640E0001A1BF4 /* shipment.m in Sources */,
-				EF400D0E1AE640E0001A1BF4 /* getPatients.m in Sources */,
 				EFAD36DE1ACD2C80000E978E /* ZXQRCodeDecoderMetaData.m in Sources */,
 				EFAD36E81ACD2C80000E978E /* ZXQRCodeFinderPatternInfo.m in Sources */,
-				EF400D061AE640E0001A1BF4 /* getItemsBySSCC.m in Sources */,
+				EF400E0E1AE69F93001A1BF4 /* processOrder.m in Sources */,
 				EFAD36E41ACD2C80000E978E /* ZXQRCodeAlignmentPatternFinder.m in Sources */,
+				EF400E201AE69F93001A1BF4 /* trspMedication.m in Sources */,
 				EFAD36AC1ACD2C80000E978E /* ZXCode93Reader.m in Sources */,
 				EFAD362B1ACD2C80000E978E /* ZXCalendarParsedResult.m in Sources */,
 				EFAD367C1ACD2C80000E978E /* ZXDataMatrixHighLevelEncoder.m in Sources */,
 				EFAD36F01ACD2C80000E978E /* ZXQRCodeMultiReader.m in Sources */,
 				EFAD36C91ACD2C80000E978E /* ZXPDF417DetectionResult.m in Sources */,
 				EFAD36D51ACD2C80000E978E /* ZXPDF417Common.m in Sources */,
-				EF400CFE1AE640E0001A1BF4 /* getDosetForPatient.m in Sources */,
 				EFAD36BC1ACD2C80000E978E /* ZXUPCEANExtensionSupport.m in Sources */,
 				EFAD36A51ACD2C80000E978E /* ZXRSSUtils.m in Sources */,
-				EF400D051AE640E0001A1BF4 /* getItemsByGSINResponse.m in Sources */,
 				EFAD36731ACD2C80000E978E /* ZXDataMatrixVersion.m in Sources */,
 				EFAD36F11ACD2C80000E978E /* ZXQRCodeReader.m in Sources */,
+				EF400E001AE69F93001A1BF4 /* getQuantitiesResponse.m in Sources */,
+				EF400DDF1AE69F93001A1BF4 /* checkoutItems.m in Sources */,
 				EFAD36CC1ACD2C80000E978E /* ZXPDF417ScanningDecoder.m in Sources */,
-				EF400D291AE640E0001A1BF4 /* RequestResultHandler.m in Sources */,
 				EFAD36A91ACD2C80000E978E /* ZXCode128Writer.m in Sources */,
 				EFAD369B1ACD2C80000E978E /* ZXRSSExpandedGeneralAppIdDecoder.m in Sources */,
 				EFAD36701ACD2C80000E978E /* ZXDataMatrixDataBlock.m in Sources */,
 				EFAD36411ACD2C80000E978E /* ZXURIResultParser.m in Sources */,
+				EF400DEE1AE69F93001A1BF4 /* getItemsBySSCCResponse.m in Sources */,
 				EFEB130F1ADBBAE500EA204F /* VerordnungDetailViewController.m in Sources */,
+				EF400E1A1AE69F93001A1BF4 /* setOrderResponse.m in Sources */,
+				EF400E121AE69F93001A1BF4 /* RequestResultHandler.m in Sources */,
+				EF400DEA1AE69F93001A1BF4 /* getItemsByBatchResponse.m in Sources */,
 				EFAD36A11ACD2C80000E978E /* ZXRSS14Reader.m in Sources */,
-				EF400D031AE640E0001A1BF4 /* getItemsByBatchResponse.m in Sources */,
 				EFAD362C1ACD2C80000E978E /* ZXEmailAddressParsedResult.m in Sources */,
+				EF400DF41AE69F93001A1BF4 /* getOrderForSSCCResponse.m in Sources */,
 				EF902E8B1AB0A7BF00347176 /* LoginViewController.m in Sources */,
+				EF400E211AE69F93001A1BF4 /* trspPatient.m in Sources */,
 				EFAD36BE1ACD2C80000E978E /* ZXUPCEANWriter.m in Sources */,
 				EFAD368D1ACD2C80000E978E /* ZXAI01393xDecoder.m in Sources */,
+				EF400DF31AE69F93001A1BF4 /* getOrderForSSCC.m in Sources */,
 				EFAD36761ACD2C80000E978E /* ZXDataMatrixBase256Encoder.m in Sources */,
-				EF400D0D1AE640E0001A1BF4 /* getOrderForSSCCResponse.m in Sources */,
 				EFAD36501ACD2C80000E978E /* ZXGenericGFPoly.m in Sources */,
+				EF400E0A1AE69F93001A1BF4 /* mediPrepResult.m in Sources */,
 				EFAD36EC1ACD2C80000E978E /* ZXQRCodeMaskUtil.m in Sources */,
-				EF400D1A1AE640E0001A1BF4 /* getStations.m in Sources */,
+				EF400DFB1AE69F93001A1BF4 /* getPrescriptionsForPatient.m in Sources */,
 				EFAD36261ACD2C80000E978E /* ZXAddressBookAUResultParser.m in Sources */,
 				EFAD36551ACD2C80000E978E /* ZXBitSource.m in Sources */,
+				EF400DE41AE69F93001A1BF4 /* getCheckedInItemsResponse.m in Sources */,
 				EFAD36E51ACD2C80000E978E /* ZXQRCodeDetector.m in Sources */,
-				EF400D2D1AE640E0001A1BF4 /* savePreparedMedicationsResponse.m in Sources */,
-				EF400D081AE640E0001A1BF4 /* getLogisticUnitsForProduct.m in Sources */,
 				EFAD36861ACD2C80000E978E /* ZXMaxiCodeReader.m in Sources */,
 				EFAD36D01ACD2C80000E978E /* ZXPDF417BarcodeMatrix.m in Sources */,
-				EF400D011AE640E0001A1BF4 /* getItemByIdentifierResponse.m in Sources */,
-				EF400D1C1AE640E0001A1BF4 /* Helper.m in Sources */,
 				EFAD36B41ACD2C80000E978E /* ZXMultiFormatOneDReader.m in Sources */,
-				EF400CF61AE640E0001A1BF4 /* checkinItems.m in Sources */,
 				EFAD367F1ACD2C80000E978E /* ZXDataMatrixTextEncoder.m in Sources */,
 				EFAD36801ACD2C80000E978E /* ZXDataMatrixX12Encoder.m in Sources */,
-				EF400D2E1AE640E0001A1BF4 /* sayHelloWorldFrom.m in Sources */,
-				EF400D351AE640E0001A1BF4 /* SupplyChainServicePortBinding.m in Sources */,
 				EFAD36781ACD2C80000E978E /* ZXDataMatrixDefaultPlacement.m in Sources */,
 				EFAD36B71ACD2C80000E978E /* ZXOneDReader.m in Sources */,
 				EFAD366D1ACD2C80000E978E /* ZXResultPoint.m in Sources */,
 				EFAD36B51ACD2C80000E978E /* ZXMultiFormatUPCEANReader.m in Sources */,
 				EFAD36331ACD2C80000E978E /* ZXISBNParsedResult.m in Sources */,
-				EF400D1B1AE640E0001A1BF4 /* getStationsResponse.m in Sources */,
-				EF400CFC1AE640E0001A1BF4 /* getCheckedInItems.m in Sources */,
-				EF400D121AE640E0001A1BF4 /* getPreparedPrescriptionsCountForPatient.m in Sources */,
-				EF400D2C1AE640E0001A1BF4 /* savePreparedMedications.m in Sources */,
+				EF400E241AE69F93001A1BF4 /* updatePreparedMedications.m in Sources */,
 				EFAD363C1ACD2C80000E978E /* ZXSMTPResultParser.m in Sources */,
-				EF400D311AE640E0001A1BF4 /* setOrderResponse.m in Sources */,
-				EF400CFF1AE640E0001A1BF4 /* getDosetForPatientResponse.m in Sources */,
 				EFAD36CE1ACD2C80000E978E /* ZXPDF417DetectorResult.m in Sources */,
 				EFAD36871ACD2C80000E978E /* ZXByQuadrantReader.m in Sources */,
 				EFAD36611ACD2C80000E978E /* ZXStringUtils.m in Sources */,
+				EF400E0F1AE69F93001A1BF4 /* processOrderResponse.m in Sources */,
 				EFAD36C41ACD2C80000E978E /* ZXPDF417BarcodeValue.m in Sources */,
 				EFAD36241ACD2C80000E978E /* ZXAztecWriter.m in Sources */,
-				EF400D3A1AE640E0001A1BF4 /* updatePreparedMedications.m in Sources */,
+				EF400E031AE69F93001A1BF4 /* getToDoListPrescriptions.m in Sources */,
+				EF400DF51AE69F93001A1BF4 /* getPatients.m in Sources */,
 				EFAD36621ACD2C80000E978E /* ZXBinarizer.m in Sources */,
-				EF400D341AE640E0001A1BF4 /* station.m in Sources */,
 				EFAD363D1ACD2C80000E978E /* ZXTelParsedResult.m in Sources */,
 				EFAD36251ACD2C80000E978E /* ZXAbstractDoCoMoResultParser.m in Sources */,
+				EF400DFE1AE69F93001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m in Sources */,
+				EF400E0B1AE69F93001A1BF4 /* order.m in Sources */,
 				EFAD36681ACD2C80000E978E /* ZXErrors.m in Sources */,
 				EFAD362F1ACD2C80000E978E /* ZXExpandedProductParsedResult.m in Sources */,
+				EF400E101AE69F93001A1BF4 /* production.m in Sources */,
 				EFAD36821ACD2C80000E978E /* ZXDataMatrixWriter.m in Sources */,
 				EFAD36D31ACD2C80000E978E /* ZXPDF417ErrorCorrection.m in Sources */,
+				EF400E351AE69FAD001A1BF4 /* DDXMLElementAdditions.m in Sources */,
+				EF400DFC1AE69F93001A1BF4 /* getPrescriptionsForPatientResponse.m in Sources */,
+				EF400E021AE69F93001A1BF4 /* getStationsResponse.m in Sources */,
+				EF400DDE1AE69F93001A1BF4 /* checkinItemsResponse.m in Sources */,
+				EF400DE01AE69F93001A1BF4 /* checkoutItemsResponse.m in Sources */,
 				EFAD36911ACD2C80000E978E /* ZXAI01decoder.m in Sources */,
-				EF400D221AE640E0001A1BF4 /* order.m in Sources */,
-				EF400C5D1AE6408A001A1BF4 /* NSString+DDXML.m in Sources */,
 				EF36567F1AAF95E000A0B64D /* AppDelegate.m in Sources */,
+				EF400DFA1AE69F93001A1BF4 /* getPreparedPrescriptionsCountForPatientResponse.m in Sources */,
 				EFAD36CF1ACD2C80000E978E /* ZXPDF417.m in Sources */,
+				EF400E181AE69F93001A1BF4 /* sayHelloWorldFromResponse.m in Sources */,
 				EFAD363F1ACD2C80000E978E /* ZXTextParsedResult.m in Sources */,
 				EFAD36B11ACD2C80000E978E /* ZXEANManufacturerOrgSupport.m in Sources */,
+				EF400E141AE69F93001A1BF4 /* resetTrackedItemsResponse.m in Sources */,
 				EFAD365B1ACD2C80000E978E /* ZXDetectorResult.m in Sources */,
 				EFAD36BB1ACD2C80000E978E /* ZXUPCEANExtension5Support.m in Sources */,
+				EF400E081AE69F93001A1BF4 /* item.m in Sources */,
+				EF400E1C1AE69F93001A1BF4 /* SoapError.m in Sources */,
 				EFAD368C1ACD2C80000E978E /* ZXAI01392xDecoder.m in Sources */,
-				EF400D261AE640E0001A1BF4 /* processOrderResponse.m in Sources */,
 				EFAD365A1ACD2C80000E978E /* ZXDefaultGridSampler.m in Sources */,
 				EFAD36221ACD2C80000E978E /* ZXAztecDetectorResult.m in Sources */,
+				EF400DF91AE69F93001A1BF4 /* getPreparedPrescriptionsCountForPatient.m in Sources */,
 				EFAD36D81ACD2C80000E978E /* ZXPDF417Writer.m in Sources */,
+				EF400E071AE69F93001A1BF4 /* insertTrackingItemsResponse.m in Sources */,
+				EF400E381AE69FAD001A1BF4 /* DDXMLElement.m in Sources */,
 				EFAD362A1ACD2C80000E978E /* ZXBookmarkDoCoMoResultParser.m in Sources */,
+				EF400DF71AE69F93001A1BF4 /* getPreparedMedicationsForPatient.m in Sources */,
 				EF6339161AB0EAFE002ACE34 /* BeaconViewController.m in Sources */,
+				EF400E161AE69F93001A1BF4 /* savePreparedMedicationsResponse.m in Sources */,
 				EFAD36E11ACD2C80000E978E /* ZXQRCodeMode.m in Sources */,
 				EFAD36CD1ACD2C80000E978E /* ZXPDF417Detector.m in Sources */,
-				EF400CF71AE640E0001A1BF4 /* checkinItemsResponse.m in Sources */,
 				EFAD36521ACD2C80000E978E /* ZXReedSolomonEncoder.m in Sources */,
+				EF400E371AE69FAD001A1BF4 /* DDXMLDocument.m in Sources */,
 				EFAD36961ACD2C80000E978E /* ZXRSSExpandedDecodedChar.m in Sources */,
 				EFAD366B1ACD2C80000E978E /* ZXPlanarYUVLuminanceSource.m in Sources */,
 				EFAD36211ACD2C80000E978E /* ZXAztecToken.m in Sources */,
 				EFAD36E71ACD2C80000E978E /* ZXQRCodeFinderPatternFinder.m in Sources */,
 				EFAD361F1ACD2C80000E978E /* ZXAztecSimpleToken.m in Sources */,
-				EF400D251AE640E0001A1BF4 /* processOrder.m in Sources */,
+				EF400E0D1AE69F93001A1BF4 /* prescriptionState.m in Sources */,
 				EFAD363E1ACD2C80000E978E /* ZXTelResultParser.m in Sources */,
 				EFAD36ED1ACD2C80000E978E /* ZXQRCodeMatrixUtil.m in Sources */,
 				EFAD362E1ACD2C80000E978E /* ZXEmailDoCoMoResultParser.m in Sources */,
 				EFAD36AD1ACD2C80000E978E /* ZXEAN13Reader.m in Sources */,
-				EF400D381AE640E0001A1BF4 /* trspPreparedMedication.m in Sources */,
 				EFAD36581ACD2C80000E978E /* ZXCharacterSetECI.m in Sources */,
 				EFAD36421ACD2C80000E978E /* ZXURLTOResultParser.m in Sources */,
 				EFAD36991ACD2C80000E978E /* ZXRSSExpandedDecodedObject.m in Sources */,
@@ -2335,53 +2365,49 @@
 				EFAD36DD1ACD2C80000E978E /* ZXQRCodeDecoder.m in Sources */,
 				EFAD36AB1ACD2C80000E978E /* ZXCode39Writer.m in Sources */,
 				EFAD36431ACD2C80000E978E /* ZXVCardResultParser.m in Sources */,
+				EF400E171AE69F93001A1BF4 /* sayHelloWorldFrom.m in Sources */,
 				EFAD366C1ACD2C80000E978E /* ZXResult.m in Sources */,
-				EF400D021AE640E0001A1BF4 /* getItemsByBatch.m in Sources */,
 				EFAD36631ACD2C80000E978E /* ZXBinaryBitmap.m in Sources */,
 				EFAD36281ACD2C80000E978E /* ZXAddressBookParsedResult.m in Sources */,
 				EFAD36531ACD2C80000E978E /* ZXBitArray.m in Sources */,
 				EFAD36C81ACD2C80000E978E /* ZXPDF417DecodedBitStreamParser.m in Sources */,
-				EF400D151AE640E0001A1BF4 /* getPrescriptionsForPatientResponse.m in Sources */,
 				EFAD36461ACD2C80000E978E /* ZXVINResultParser.m in Sources */,
-				EF400CFA1AE640E0001A1BF4 /* company.m in Sources */,
+				EF400DF21AE69F93001A1BF4 /* getOpenOrdersByGLNResponse.m in Sources */,
 				EFAD365F1ACD2C80000E978E /* ZXIntArray.m in Sources */,
-				EF400D101AE640E0001A1BF4 /* getPreparedMedicationsForPatient.m in Sources */,
 				EFAD36751ACD2C80000E978E /* ZXDataMatrixASCIIEncoder.m in Sources */,
-				EF400D141AE640E0001A1BF4 /* getPrescriptionsForPatient.m in Sources */,
 				EFAD36E91ACD2C80000E978E /* ZXQRCode.m in Sources */,
-				EF400D2F1AE640E0001A1BF4 /* sayHelloWorldFromResponse.m in Sources */,
 				EFAD36AA1ACD2C80000E978E /* ZXCode39Reader.m in Sources */,
 				EFAD36811ACD2C80000E978E /* ZXDataMatrixReader.m in Sources */,
+				EF400E041AE69F93001A1BF4 /* getToDoListPrescriptionsResponse.m in Sources */,
 				EFAD36361ACD2C80000E978E /* ZXProductParsedResult.m in Sources */,
-				EF400D161AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.m in Sources */,
 				EFAD36301ACD2C80000E978E /* ZXExpandedProductResultParser.m in Sources */,
+				EF400DEB1AE69F93001A1BF4 /* getItemsByGSIN.m in Sources */,
 				EFAD364F1ACD2C80000E978E /* ZXGenericGF.m in Sources */,
-				EF400D0F1AE640E0001A1BF4 /* getPatientsResponse.m in Sources */,
 				EFAD361C1ACD2C80000E978E /* ZXAztecCode.m in Sources */,
 				E09B23491ACD7D32004B4088 /* TableViewCellVerordnung.m in Sources */,
 				EFAD36A41ACD2C80000E978E /* ZXRSSPair.m in Sources */,
-				EF400C601AE6408A001A1BF4 /* DDXMLNode.m in Sources */,
 				EFAD36941ACD2C80000E978E /* ZXRSSExpandedBlockParsedResult.m in Sources */,
+				EF400E1D1AE69F93001A1BF4 /* station.m in Sources */,
 				EFAD36E31ACD2C80000E978E /* ZXQRCodeAlignmentPattern.m in Sources */,
+				EF400DFD1AE69F93001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatient.m in Sources */,
 				EFAD36F31ACD2C80000E978E /* ZXMultiFormatReader.m in Sources */,
-				EF400D0A1AE640E0001A1BF4 /* getOpenOrdersByGLN.m in Sources */,
+				EF400E271AE69F93001A1BF4 /* updatePrescriptionsResponse.m in Sources */,
 				EFAD36BF1ACD2C80000E978E /* ZXUPCEReader.m in Sources */,
 				EFAD36AF1ACD2C80000E978E /* ZXEAN8Reader.m in Sources */,
+				EF400E251AE69F93001A1BF4 /* updatePreparedMedicationsResponse.m in Sources */,
 				EFAD368B1ACD2C80000E978E /* ZXAI01320xDecoder.m in Sources */,
-				EF400CFD1AE640E0001A1BF4 /* getCheckedInItemsResponse.m in Sources */,
 				EFAD36981ACD2C80000E978E /* ZXRSSExpandedDecodedNumeric.m in Sources */,
 				EFAD367E1ACD2C80000E978E /* ZXDataMatrixSymbolInfo144.m in Sources */,
+				EF400E091AE69F93001A1BF4 /* medicationState.m in Sources */,
 				EFAD363A1ACD2C80000E978E /* ZXSMSParsedResult.m in Sources */,
-				EF400D071AE640E0001A1BF4 /* getItemsBySSCCResponse.m in Sources */,
-				EF400CF51AE640E0001A1BF4 /* bloodGroup.m in Sources */,
 				EFAD369D1ACD2C80000E978E /* ZXRSSExpandedPair.m in Sources */,
 				EFAD36481ACD2C80000E978E /* ZXWifiResultParser.m in Sources */,
 				EFAD36A71ACD2C80000E978E /* ZXCodaBarWriter.m in Sources */,
 				EF6339131AB0EAEB002ACE34 /* MedikamenteViewController.m in Sources */,
-				EF400CFB1AE640E0001A1BF4 /* gender.m in Sources */,
+				EF400DE71AE69F93001A1BF4 /* getItemByIdentifier.m in Sources */,
+				EF400DEF1AE69F93001A1BF4 /* getLogisticUnitsForProduct.m in Sources */,
+				EF400DDC1AE69F93001A1BF4 /* bloodGroup.m in Sources */,
 				EFAD36C21ACD2C80000E978E /* ZXPDF417ECErrorCorrection.m in Sources */,
-				EF400D2A1AE640E0001A1BF4 /* resetTrackedItems.m in Sources */,
-				EF400D2B1AE640E0001A1BF4 /* resetTrackedItemsResponse.m in Sources */,
 				EFAD36C71ACD2C80000E978E /* ZXPDF417CodewordDecoder.m in Sources */,
 				EFAD36F21ACD2C80000E978E /* ZXQRCodeWriter.m in Sources */,
 				EFAD36271ACD2C80000E978E /* ZXAddressBookDoCoMoResultParser.m in Sources */,
@@ -2389,54 +2415,55 @@
 				EFAD36D11ACD2C80000E978E /* ZXPDF417BarcodeRow.m in Sources */,
 				EFAD36541ACD2C80000E978E /* ZXBitMatrix.m in Sources */,
 				EFAD36DA1ACD2C80000E978E /* ZXQRCodeDataBlock.m in Sources */,
-				EF400D1E1AE640E0001A1BF4 /* insertTrackingItemsResponse.m in Sources */,
 				EFAD36A31ACD2C80000E978E /* ZXRSSFinderPattern.m in Sources */,
+				EF400E0C1AE69F93001A1BF4 /* position.m in Sources */,
 				EFAD369C1ACD2C80000E978E /* ZXBitArrayBuilder.m in Sources */,
 				EFAD368F1ACD2C80000E978E /* ZXAI013x0xDecoder.m in Sources */,
 				EFAD36F41ACD2C80000E978E /* ZXMultiFormatWriter.m in Sources */,
 				EFAD36791ACD2C80000E978E /* ZXDataMatrixEdifactEncoder.m in Sources */,
 				EFAD36DF1ACD2C80000E978E /* ZXQRCodeErrorCorrectionLevel.m in Sources */,
-				EF400D391AE640E0001A1BF4 /* trspPrescription.m in Sources */,
 				EFAD36EB1ACD2C80000E978E /* ZXQRCodeEncoder.m in Sources */,
 				EFAD364B1ACD2C80000E978E /* ZXImage.m in Sources */,
 				EFAD36591ACD2C80000E978E /* ZXDecoderResult.m in Sources */,
 				EFAD36741ACD2C80000E978E /* ZXDataMatrixDetector.m in Sources */,
 				EFAD36AE1ACD2C80000E978E /* ZXEAN13Writer.m in Sources */,
 				EFAD361B1ACD2C80000E978E /* ZXAztecBinaryShiftToken.m in Sources */,
+				EF400E151AE69F93001A1BF4 /* savePreparedMedications.m in Sources */,
 				EFAD36C51ACD2C80000E978E /* ZXPDF417BoundingBox.m in Sources */,
+				EF400E1F1AE69F93001A1BF4 /* toDoListPrescriptions.m in Sources */,
 				EFAD366F1ACD2C80000E978E /* ZXDataMatrixBitMatrixParser.m in Sources */,
 				EFAD36CA1ACD2C80000E978E /* ZXPDF417DetectionResultColumn.m in Sources */,
 				EFAD36691ACD2C80000E978E /* ZXInvertedLuminanceSource.m in Sources */,
+				EF400E261AE69F93001A1BF4 /* updatePrescriptions.m in Sources */,
+				EF400DE51AE69F93001A1BF4 /* getDosetForPatient.m in Sources */,
 				EFAD36671ACD2C80000E978E /* ZXEncodeHints.m in Sources */,
 				EFAD36CB1ACD2C80000E978E /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
 				EFAD36851ACD2C80000E978E /* ZXMaxiCodeDecoder.m in Sources */,
+				EF400E111AE69F93001A1BF4 /* quantity.m in Sources */,
 				EFAD36B01ACD2C80000E978E /* ZXEAN8Writer.m in Sources */,
-				EF400D1F1AE640E0001A1BF4 /* item.m in Sources */,
 				EFAD36D41ACD2C80000E978E /* ZXPDF417HighLevelEncoder.m in Sources */,
+				EF400E281AE69F93001A1BF4 /* webServiceResult.m in Sources */,
 				EFAD36901ACD2C80000E978E /* ZXAI01AndOtherAIs.m in Sources */,
 				EFAD36DB1ACD2C80000E978E /* ZXQRCodeDataMask.m in Sources */,
 				EFAD365E1ACD2C80000E978E /* ZXHybridBinarizer.m in Sources */,
 				EFAD36321ACD2C80000E978E /* ZXGeoResultParser.m in Sources */,
 				EFAD36381ACD2C80000E978E /* ZXResultParser.m in Sources */,
 				EFAD36E01ACD2C80000E978E /* ZXQRCodeFormatInformation.m in Sources */,
+				EF400E131AE69F93001A1BF4 /* resetTrackedItems.m in Sources */,
 				EFAD36A01ACD2C80000E978E /* ZXAbstractRSSReader.m in Sources */,
-				EF400D281AE640E0001A1BF4 /* quantity.m in Sources */,
 				EFAD367A1ACD2C80000E978E /* ZXDataMatrixEncoderContext.m in Sources */,
 				E0440DE71ACC28D70024E445 /* BarcodeViewController.m in Sources */,
-				EF400D001AE640E0001A1BF4 /* getItemByIdentifier.m in Sources */,
 				EFAD36A21ACD2C80000E978E /* ZXRSSDataCharacter.m in Sources */,
+				EF400E051AE69F93001A1BF4 /* Helper.m in Sources */,
 				EF3656851AAF95E000A0B64D /* ViewController.m in Sources */,
-				EF400D231AE640E0001A1BF4 /* position.m in Sources */,
 				EFAD36651ACD2C80000E978E /* ZXDecodeHints.m in Sources */,
 				EFAD36831ACD2C80000E978E /* ZXMaxiCodeBitMatrixParser.m in Sources */,
 				EFAD36231ACD2C80000E978E /* ZXAztecReader.m in Sources */,
-				EF400D191AE640E0001A1BF4 /* getQuantitiesResponse.m in Sources */,
+				EF400E1E1AE69F93001A1BF4 /* SupplyChainServicePortBinding.m in Sources */,
 				EFAD36391ACD2C80000E978E /* ZXSMSMMSResultParser.m in Sources */,
+				EF400E061AE69F93001A1BF4 /* insertTrackingItems.m in Sources */,
 				EFAD36291ACD2C80000E978E /* ZXBizcardResultParser.m in Sources */,
-				EF400D331AE640E0001A1BF4 /* SoapError.m in Sources */,
-				EF400D371AE640E0001A1BF4 /* trspPatient.m in Sources */,
 				EFAD36E21ACD2C80000E978E /* ZXQRCodeVersion.m in Sources */,
-				EF400D3E1AE640E0001A1BF4 /* webServiceResult.m in Sources */,
 				EFAD361E1ACD2C80000E978E /* ZXAztecHighLevelEncoder.m in Sources */,
 				EFAD36771ACD2C80000E978E /* ZXDataMatrixC40Encoder.m in Sources */,
 				EFAD36A81ACD2C80000E978E /* ZXCode128Reader.m in Sources */,
@@ -2444,55 +2471,46 @@
 				EFD9A2531AD3C4F200DF7E10 /* Patient.m in Sources */,
 				EFAD36471ACD2C80000E978E /* ZXWifiParsedResult.m in Sources */,
 				EFAD365D1ACD2C80000E978E /* ZXGridSampler.m in Sources */,
-				EF400D181AE640E0001A1BF4 /* getQuantities.m in Sources */,
 				EFAD366A1ACD2C80000E978E /* ZXLuminanceSource.m in Sources */,
+				EF400DE11AE69F93001A1BF4 /* company.m in Sources */,
 				EFAD36D71ACD2C80000E978E /* ZXPDF417ResultMetadata.m in Sources */,
 				EFAD36891ACD2C80000E978E /* ZXAbstractExpandedDecoder.m in Sources */,
 				EFAD36661ACD2C80000E978E /* ZXDimension.m in Sources */,
 				EFAD36EE1ACD2C80000E978E /* ZXMultiDetector.m in Sources */,
 				EFAD36931ACD2C80000E978E /* ZXAnyAIDecoder.m in Sources */,
 				EFAD364A1ACD2C80000E978E /* ZXCGImageLuminanceSource.m in Sources */,
+				EF400DE31AE69F93001A1BF4 /* getCheckedInItems.m in Sources */,
 				EFAD36D21ACD2C80000E978E /* ZXPDF417Dimensions.m in Sources */,
 				EFAD36EF1ACD2C80000E978E /* ZXMultiFinderPatternFinder.m in Sources */,
-				EF400CF91AE640E0001A1BF4 /* checkoutItemsResponse.m in Sources */,
 				EFAD36B61ACD2C80000E978E /* ZXOneDimensionalCodeWriter.m in Sources */,
 				EFAD36191ACD2C80000E978E /* ZXAztecDecoder.m in Sources */,
 				EFAD36E61ACD2C80000E978E /* ZXQRCodeFinderPattern.m in Sources */,
 				EF400D411AE677DE001A1BF4 /* ListPatient.m in Sources */,
-				EF400D361AE640E0001A1BF4 /* trspMedication.m in Sources */,
-				EF400D3D1AE640E0001A1BF4 /* updatePrescriptionsResponse.m in Sources */,
-				EF400D3B1AE640E0001A1BF4 /* updatePreparedMedicationsResponse.m in Sources */,
-				EF400D301AE640E0001A1BF4 /* setOrder.m in Sources */,
 				EFAD36491ACD2C80000E978E /* ZXCapture.m in Sources */,
 				EFAD36B21ACD2C80000E978E /* ZXITFReader.m in Sources */,
-				EF400D3C1AE640E0001A1BF4 /* updatePrescriptions.m in Sources */,
 				EF36567C1AAF95E000A0B64D /* main.m in Sources */,
 				EFAD364C1ACD2C80000E978E /* ZXMathUtils.m in Sources */,
+				EF400E1B1AE69F93001A1BF4 /* shipment.m in Sources */,
 				EFAD36C31ACD2C80000E978E /* ZXPDF417BarcodeMetadata.m in Sources */,
 				EFAD36441ACD2C80000E978E /* ZXVEventResultParser.m in Sources */,
-				EF400D0C1AE640E0001A1BF4 /* getOrderForSSCC.m in Sources */,
 				EFAD369F1ACD2C80000E978E /* ZXRSSExpandedRow.m in Sources */,
 				EFAD36311ACD2C80000E978E /* ZXGeoParsedResult.m in Sources */,
-				EF400D111AE640E0001A1BF4 /* getPreparedMedicationsForPatientResponse.m in Sources */,
-				EF400D171AE640E0001A1BF4 /* getPrescriptionsWithPreparedMedicationsForPatientResponse.m in Sources */,
 				EFAD366E1ACD2C80000E978E /* ZXRGBLuminanceSource.m in Sources */,
 				EF566A701AD6CB720083F781 /* PatientViewController.m in Sources */,
-				EF400D201AE640E0001A1BF4 /* medicationState.m in Sources */,
+				EF400DF81AE69F93001A1BF4 /* getPreparedMedicationsForPatientResponse.m in Sources */,
 				EFAD36921ACD2C80000E978E /* ZXAI01weightDecoder.m in Sources */,
 				EFAD36451ACD2C80000E978E /* ZXVINParsedResult.m in Sources */,
+				EF400E231AE69F93001A1BF4 /* trspPrescription.m in Sources */,
 				EFAD36BA1ACD2C80000E978E /* ZXUPCEANExtension2Support.m in Sources */,
 				EFAD36C11ACD2C80000E978E /* ZXModulusPoly.m in Sources */,
 				EFAD369E1ACD2C80000E978E /* ZXRSSExpandedReader.m in Sources */,
-				EF400D091AE640E0001A1BF4 /* getLogisticUnitsForProductResponse.m in Sources */,
 				EFAD36571ACD2C80000E978E /* ZXByteArray.m in Sources */,
-				EF400C5C1AE6408A001A1BF4 /* DDXMLElementAdditions.m in Sources */,
 				EFAD36201ACD2C80000E978E /* ZXAztecState.m in Sources */,
-				EF400D1D1AE640E0001A1BF4 /* insertTrackingItems.m in Sources */,
 				EFAD36711ACD2C80000E978E /* ZXDataMatrixDecodedBitStreamParser.m in Sources */,
 				EFAD36A61ACD2C80000E978E /* ZXCodaBarReader.m in Sources */,
 				EFAD36561ACD2C80000E978E /* ZXBoolArray.m in Sources */,
-				EF400CF81AE640E0001A1BF4 /* checkoutItems.m in Sources */,
 				EFAD368E1ACD2C80000E978E /* ZXAI013x0x1xDecoder.m in Sources */,
+				EF400DF61AE69F93001A1BF4 /* getPatientsResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

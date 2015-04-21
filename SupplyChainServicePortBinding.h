@@ -25,6 +25,7 @@
 #import "mediPrepResult.h"
 #import "updatePreparedMedications.h"
 #import "updatePrescriptions.h"
+#import "toDoListPrescriptions.h"
 #import "getLogisticUnitsForProductResponse.h"
 #import "getStationsResponse.h"
 #import "getPatientsResponse.h"
@@ -120,6 +121,10 @@
 -(NSString*) getDosetForPatient:(NSString*) arg0 __error:(NSError**) __error;
 -(RequestResultHandler*) getDosetForPatientAsync:(NSString*) arg0 __target:(id) __target __handler:(SEL) __handler;
 -(RequestResultHandler*) getDosetForPatientAsync:(NSString*) arg0 __target:(id<SoapServiceResponse>) __target;
+-(NSMutableURLRequest*) creategetToDoListPrescriptionsRequest:(RequestResultHandler*) __request;
+-(toDoListPrescriptions*) getToDoListPrescriptions:(NSError**) __error;
+-(RequestResultHandler*) getToDoListPrescriptionsAsync:(id) __target __handler:(SEL) __handler;
+-(RequestResultHandler*) getToDoListPrescriptionsAsync:(id<SoapServiceResponse>) __target;
 -(NSMutableURLRequest*) creategetLogisticUnitsForProductRequest:(NSString*) arg0 __request:(RequestResultHandler*) __request;
 -(getLogisticUnitsForProductResponse*) getLogisticUnitsForProduct:(NSString*) arg0 __error:(NSError**) __error;
 -(RequestResultHandler*) getLogisticUnitsForProductAsync:(NSString*) arg0 __target:(id) __target __handler:(SEL) __handler;

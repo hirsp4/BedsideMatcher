@@ -64,6 +64,9 @@
 #import "insertTrackingItemsResponse.h"
 #import "getQuantities.h"
 #import "quantity.h"
+#import "getToDoListPrescriptions.h"
+#import "getToDoListPrescriptionsResponse.h"
+#import "toDoListPrescriptions.h"
 #import "getPrescriptionsForPatientResponse.h"
 #import "getLogisticUnitsForProductResponse.h"
 #import "getOpenOrdersByGLNResponse.h"
@@ -163,6 +166,9 @@ static NSDictionary* classNames;
             [insertTrackingItemsResponse class],@"http://service/^^insertTrackingItemsResponse",
             [getQuantities class],@"http://service/^^getQuantities",
             [quantity class],@"http://service/^^quantity",
+            [getToDoListPrescriptions class],@"http://service/^^getToDoListPrescriptions",
+            [getToDoListPrescriptionsResponse class],@"http://service/^^getToDoListPrescriptionsResponse",
+            [toDoListPrescriptions class],@"http://service/^^toDoListPrescriptions",
             [getPrescriptionsForPatientResponse class],@"http://service/^^getPrescriptionsForPatientResponse",
             [getLogisticUnitsForProductResponse class],@"http://service/^^getLogisticUnitsForProductResponse",
             [getOpenOrdersByGLNResponse class],@"http://service/^^getOpenOrdersByGLNResponse",

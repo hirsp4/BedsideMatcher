@@ -1328,6 +1328,72 @@
     DDXMLElement *__result=[Helper getResultElement:__request.OutputBody name:@"return"];
     return [__result stringValue];
 }
+-(NSMutableURLRequest*) creategetToDoListPrescriptionsRequest:(RequestResultHandler*) __request
+{
+    DDXMLElement *__methodElement=[__request writeElement:@"getToDoListPrescriptions" URI:@"http://service/" parent:__request.Body];
+    [self addAdornments:__methodElement];
+    
+    NSMutableURLRequest* __requestObj= [self createRequest:@""  __request:__request];
+    return __requestObj;
+    }
+    
+-(RequestResultHandler*) getToDoListPrescriptionsAsync:(id) __target __handler:(SEL) __handler
+{
+    RequestResultHandler* __request = [self CreateRequestResultHandler];
+    NSMutableURLRequest *__requestObj=[self creategetToDoListPrescriptionsRequest:__request];
+    [self sendImplementation:__requestObj requestMgr:__request callback:^(RequestResultHandler *__requestMgr) {
+    id __res;
+    if(__requestMgr.OutputFault==nil)
+    {
+        DDXMLElement *__result=[Helper getResultElement:__request.OutputBody name:@"return"];
+        __res= (toDoListPrescriptions*)[__request createObject:__result type:[toDoListPrescriptions class]];
+    }
+    else
+    {
+        __res=__requestMgr.OutputFault;
+    }
+    
+    IMP imp = [__target methodForSelector:__handler];
+    void (*func)(id, SEL,id) = (void *)imp;
+    func(__target, __handler,__res);
+    }];
+    return __request;
+}
+
+-(RequestResultHandler*) getToDoListPrescriptionsAsync:(id<SoapServiceResponse>) __target
+{
+    RequestResultHandler* __request = [self CreateRequestResultHandler];
+    NSMutableURLRequest *__requestObj=[self creategetToDoListPrescriptionsRequest:__request];
+    [self sendImplementation:__requestObj requestMgr:__request callback:^(RequestResultHandler *__requestMgr) {
+    if(__requestMgr.OutputFault==nil)
+    {
+        DDXMLElement *__result=[Helper getResultElement:__request.OutputBody name:@"return"];
+        [__target onSuccess:(toDoListPrescriptions*)[__request createObject:__result type:[toDoListPrescriptions class]] methodName:@"getToDoListPrescriptions"];
+    }
+    else
+    {
+        [__target onError:__requestMgr.OutputFault];
+    }
+    }];
+    return __request;
+}
+
+-(toDoListPrescriptions*) getToDoListPrescriptions:(NSError**) __error
+{
+    RequestResultHandler* __request = [self CreateRequestResultHandler];
+    NSMutableURLRequest *__requestObj=[self creategetToDoListPrescriptionsRequest:__request];
+    [self sendImplementation:__requestObj requestMgr:__request ];
+    if(__request.OutputFault!=nil)
+    {
+        if(__error)
+        {
+            *__error=__request.OutputFault;
+        }
+        return nil;
+    }
+    DDXMLElement *__result=[Helper getResultElement:__request.OutputBody name:@"return"];
+    return (toDoListPrescriptions*)[__request createObject:__result type:[toDoListPrescriptions class]];
+}
 -(NSMutableURLRequest*) creategetLogisticUnitsForProductRequest:(NSString*) arg0 __request:(RequestResultHandler*) __request
 {
     DDXMLElement *__methodElement=[__request writeElement:@"getLogisticUnitsForProduct" URI:@"http://service/" parent:__request.Body];
