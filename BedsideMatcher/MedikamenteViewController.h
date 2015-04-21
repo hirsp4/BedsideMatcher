@@ -8,6 +8,14 @@
 
 #import "ViewController.h"
 
-@interface MedikamenteViewController : ViewController
-
+@interface MedikamenteViewController : ViewController <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) NSMutableArray *scheduledPrescriptionsMorning;
+@property (nonatomic, strong) NSMutableArray *scheduledPrescriptionsEvening;
+@property (nonatomic, strong) NSMutableArray *scheduledPrescriptionsNight;
+@property (nonatomic, strong) NSMutableArray *scheduledPrescriptionsNoon;
+@property (nonatomic, strong) NSMutableArray *scheduledPrescriptions;
+@property (weak, nonatomic) IBOutlet UITableView *scheduledPrescriptionsTable;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+@property (nonatomic, strong) NSArray *patients;
 @end

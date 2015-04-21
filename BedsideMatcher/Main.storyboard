@@ -21,7 +21,11 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="22I-D8-OkA">
                                 <rect key="frame" x="0.0" y="108" width="320" height="411"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.84752548579999998" green="0.901853919" blue="0.99919462199999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="AvX-Cp-KJH" id="mCo-u5-110"/>
+                                    <outlet property="delegate" destination="AvX-Cp-KJH" id="39D-zl-7hD"/>
+                                </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDK-do-EN6">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -41,6 +45,10 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="scheduledPrescriptionsTable" destination="22I-D8-OkA" id="vLu-tI-qVi"/>
+                        <outlet property="searchBar" destination="kkO-T5-vtt" id="6Xo-V9-tGQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHz-bv-JlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

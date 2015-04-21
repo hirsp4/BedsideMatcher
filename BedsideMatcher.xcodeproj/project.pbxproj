@@ -106,6 +106,8 @@
 		EF400E371AE69FAD001A1BF4 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400E2F1AE69FAD001A1BF4 /* DDXMLDocument.m */; };
 		EF400E381AE69FAD001A1BF4 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400E311AE69FAD001A1BF4 /* DDXMLElement.m */; };
 		EF400E391AE69FAD001A1BF4 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400E331AE69FAD001A1BF4 /* DDXMLNode.m */; };
+		EF400E3D1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF400E3B1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.m */; };
+		EF400E3E1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF400E3C1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.xib */; };
 		EF4E88BF1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4E88BD1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m */; };
 		EF4E88C01AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF4E88BE1AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib */; };
 		EF566A701AD6CB720083F781 /* PatientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF566A6F1AD6CB720083F781 /* PatientViewController.m */; };
@@ -545,6 +547,9 @@
 		EF400E321AE69FAD001A1BF4 /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
 		EF400E331AE69FAD001A1BF4 /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
 		EF400E341AE69FAD001A1BF4 /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
+		EF400E3A1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduledPrescriptionCell.h; sourceTree = "<group>"; };
+		EF400E3B1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduledPrescriptionCell.m; sourceTree = "<group>"; };
+		EF400E3C1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduledPrescriptionCell.xib; sourceTree = "<group>"; };
 		EF4E88BC1AE1549B00DB5BE4 /* PrescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrescriptionTableViewCell.h; sourceTree = "<group>"; };
 		EF4E88BD1AE1549B00DB5BE4 /* PrescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrescriptionTableViewCell.m; sourceTree = "<group>"; };
 		EF4E88BE1AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrescriptionTableViewCell.xib; sourceTree = "<group>"; };
@@ -1335,6 +1340,9 @@
 			children = (
 				EF6339111AB0EAEB002ACE34 /* MedikamenteViewController.h */,
 				EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */,
+				EF400E3A1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.h */,
+				EF400E3B1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.m */,
+				EF400E3C1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.xib */,
 			);
 			name = "Medikamente Tab";
 			sourceTree = "<group>";
@@ -2171,6 +2179,7 @@
 				E09B234A1ACD7D32004B4088 /* TableViewCellVerordnung.xib in Resources */,
 				EF4E88C01AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib in Resources */,
 				E09C91E71AC15E98006804E9 /* notebook.png in Resources */,
+				EF400E3E1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.xib in Resources */,
 				EFD9A2591AD3D29600DF7E10 /* male.png in Resources */,
 				EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */,
 				E09C91E91AC15FA2006804E9 /* medicine.png in Resources */,
@@ -2437,6 +2446,7 @@
 				EF400E261AE69F93001A1BF4 /* updatePrescriptions.m in Sources */,
 				EF400DE51AE69F93001A1BF4 /* getDosetForPatient.m in Sources */,
 				EFAD36671ACD2C80000E978E /* ZXEncodeHints.m in Sources */,
+				EF400E3D1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.m in Sources */,
 				EFAD36CB1ACD2C80000E978E /* ZXPDF417DetectionResultRowIndicatorColumn.m in Sources */,
 				EFAD36851ACD2C80000E978E /* ZXMaxiCodeDecoder.m in Sources */,
 				EF400E111AE69F93001A1BF4 /* quantity.m in Sources */,
