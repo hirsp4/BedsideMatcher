@@ -154,7 +154,7 @@
     Patient *patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
                                                      inManagedObjectContext:self.managedObjectContext];
     // set the values of trspPatient to Patient
-    [patient setValue:@"1990-01-12" forKey:@"birthdate"];
+    [patient setValue:trsppatient.birthDate forKey:@"birthdate"];
     [patient setValue:trsppatient.beaconID forKey:@"minorid"];
     [patient setValue:trsppatient.lastname forKey:@"name"];
     [patient setValue:trsppatient.firstname forKey:@"firstname"];

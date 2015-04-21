@@ -10,7 +10,10 @@
 
 @implementation TableViewCellVerordnung
 
-@synthesize verordnungsLabelPatient=_verordnungsLabelPatient;
+@synthesize nameLabel=_nameLabel;
+@synthesize patientImage=_patientImage;
+@synthesize birthdateLabel=_birthdateLabel;
+@synthesize prescriptionNbLabel=_prescriptionNbLabel;
 
 - (void)awakeFromNib {
     // Initialization code
