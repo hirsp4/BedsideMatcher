@@ -2,7 +2,11 @@
 //  BeaconViewController.m
 //  BedsideMatcher
 //
-//  Modified by Fresh Prince on 11.03.15.
+//  Modified by Patrick Hirschi on 11.03.2015.
+//
+//  Main view controller of the application. Provides the possibility to perform bluetooth scans
+//  for patients and display them in a table view. Alternatively the user can press the navigation bar
+//  button to get to the BarcodeViewController and select the patient with a barcode scan.
 //
 //  Originally Created by Nick Toumpelis on 2013-10-06.
 //  Copyright (c) 2013-2014 Nick Toumpelis.
@@ -72,6 +76,9 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 
 @implementation BeaconViewController
 @synthesize patients,managedObjectContext;
+/**
+ *  always called when the view did load
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     // geth the managed object context from AppDelegate
@@ -83,7 +90,9 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     [self setBarcodeButton];
 }
 
-// create Barcode-Button
+/**
+ *  create and set the barcode button in the navigation bar
+ */
 - (void)setBarcodeButton{
     // setup the barcode button
     UIImage *barcodeImage = [[UIImage imageNamed:@"barcode.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
@@ -94,18 +103,21 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     barcode.bounds = CGRectMake( 0, 0, 36, 31);
     [barcode setImage:barcodeImage forState:UIControlStateNormal];
     UIBarButtonItem *barcodeButton = [[UIBarButtonItem alloc] initWithCustomView:barcode];
+    // set the view title
     UINavigationItem *item = [[UINavigationItem alloc] initWithTitle: @"Patienten in der Nähe"];
     item.leftBarButtonItem = barcodeButton;
     [_navBarBeacon pushNavigationItem:item animated:NO];
 }
-/*
+/**
  *  Action method for the barcode button.
+ *
+ *  @param sender UIButton
  */
 - (IBAction)showBarcodeView:(id)sender {
     [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
     [self performSegueWithIdentifier:@"showBarcodeView" sender:self];
 }
-/*
+/**
  *  get the patients from core data
  */
 -(void)performFetch{
@@ -118,11 +130,19 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 }
 
 #pragma mark - Index path management
+/**
+ *  Returns an array of all index paths of the removed beacons
+ *
+ *  @param beacons NSArray of beacons
+ *
+ *  @return NSArray with the index paths of all removed beacons
+ */
 - (NSArray *)indexPathsOfRemovedBeacons:(NSArray *)beacons
 {
+    // initialize the array
     NSMutableArray *indexPaths = nil;
-    
     NSUInteger row = 0;
+    // iterate over all detected beacons and check if they still exist
     for (CLBeacon *existingBeacon in self.detectedBeacons) {
         BOOL stillExists = NO;
         for (CLBeacon *beacon in beacons) {
@@ -139,15 +159,21 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         }
         row++;
     }
-    
     return indexPaths;
 }
-
+/**
+ *  Returns an array of all index paths of the inserted beacons
+ *
+ *  @param beacons NSArray of beacons
+ *
+ *  @return NSArray with the index paths of all inserted beacons
+ */
 - (NSArray *)indexPathsOfInsertedBeacons:(NSArray *)beacons
 {
+    // initialize the array
     NSMutableArray *indexPaths = nil;
-    
     NSUInteger row = 0;
+    // iterate over all detected beacons and check if they are new
     for (CLBeacon *beacon in beacons) {
         BOOL isNewBeacon = YES;
         for (CLBeacon *existingBeacon in self.detectedBeacons) {
@@ -164,20 +190,24 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         }
         row++;
     }
-    
     return indexPaths;
 }
-/*
- *  handle the user selection
+/**
+ *  handles the user selection
+ *
+ *  @param tableView a UITableView
+ *  @param indexPath a NSIndexPath
  */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section!=0) {
         [self performSegueWithIdentifier:@"showPatientView" sender:[self.beaconTableView cellForRowAtIndexPath:indexPath]];
     }
-    
 }
-/*
+/**
  *  pass patient data to destination view controller
+ *
+ *  @param segue  UIStoryboardSegue
+ *  @param sender
  */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showPatientView"]) {
@@ -205,17 +235,26 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
     }
 }
-
+/**
+ *  returns an array of index paths for an array of beacons
+ *
+ *  @param beacons NSArray of beacons
+ *
+ *  @return NSArray of NSIndexPaths
+ */
 - (NSArray *)indexPathsForBeacons:(NSArray *)beacons
 {
     NSMutableArray *indexPaths = [NSMutableArray new];
     for (NSUInteger row = 0; row < beacons.count; row++) {
         [indexPaths addObject:[NSIndexPath indexPathForRow:row inSection:NTDetectedBeaconsSection]];
     }
-    
     return indexPaths;
 }
-
+/**
+ *  returns a set of inserted sections
+ *
+ *  @return NSIndexSet
+ */
 - (NSIndexSet *)insertedSections
 {
     if (self.rangingSwitch.on && [self.beaconTableView numberOfSections] == kNumberOfSections - 1) {
@@ -224,7 +263,11 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         return nil;
     }
 }
-
+/**
+ *  returns a set of deleted sections
+ *
+ *  @return NSIndexSet
+ */
 - (NSIndexSet *)deletedSections
 {
     if (!self.rangingSwitch.on && [self.beaconTableView numberOfSections] == kNumberOfSections) {
@@ -233,7 +276,13 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         return nil;
     }
 }
-
+/**
+ *  returns a filtered array of beacons (delete duplicates)
+ *
+ *  @param beacons NSArray of beacons
+ *
+ *  @return NSArray of filtered beacons
+ */
 - (NSArray *)filteredBeacons:(NSArray *)beacons
 {
     // Filters duplicate beacons out; this may happen temporarily if the originating device changes its Bluetooth id
@@ -256,6 +305,14 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 }
 
 #pragma mark - Table view functionality
+/**
+ *  returns a formatted detail string of beacon information (used for beacons that arent yet
+ *  of a specific patient)
+ *
+ *  @param beacon CLBeacon
+ *
+ *  @return NSString of beacon details
+ */
 - (NSString *)detailsStringForBeacon:(CLBeacon *)beacon
 {
     NSString *proximity;
@@ -278,8 +335,13 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     NSString *format = @"%@, %@ • %@ • %f • %li";
     return [NSString stringWithFormat:format, beacon.major, beacon.minor, proximity, beacon.accuracy, beacon.rssi];
 }
-/*
- *  sets the detail string for a given beacon and patient
+/**
+ *  returns a formatted detail string of beacon and patient information
+ *
+ *  @param beacon  CLBeacon
+ *  @param patient Patient
+ *
+ *  @return NSString of beacon details
  */
 - (NSString *)detailsStringForBeacon:(CLBeacon *)beacon andPatient:(Patient *)patient
 {
@@ -299,15 +361,23 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             proximity = @"Unbekannt";
             break;
     }
-    
     NSString *format = @"%@, %@ • %@ • %@ • %@";
     return [NSString stringWithFormat:format, beacon.minor, patient.birthdate,[@"Geschlecht: " stringByAppendingString:patient.gender],patient.station,patient.polypointPID];
 }
-
+/**
+ *  customizing the table view cells
+ *
+ *  @param tableView UITableView
+ *  @param indexPath NSIndexPath
+ *
+ *  @return UITableViewCell
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = nil;
+    // check the section
     switch (indexPath.section) {
+            // set the cell with a UISwitch to start and stop ranging for beacons
         case NTOperationsSection: {
             cell = [tableView dequeueReusableCellWithIdentifier:kOperationCellIdentifier];
             switch (indexPath.row) {
@@ -324,6 +394,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             break;
         case NTDetectedBeaconsSection:
         default: {
+            // we found a beacon and set its cell
             CLBeacon *beacon = self.detectedBeacons[indexPath.row];
             
             cell = [tableView dequeueReusableCellWithIdentifier:kBeaconCellIdentifier];
@@ -352,10 +423,15 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         }
             break;
     }
-    
     return cell;
 }
-
+/**
+ *  returns a NSInteger holding the number of sections in the table view
+ *
+ *  @param tableView UITableView
+ *
+ *  @return NSInteger number of sections
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     if (self.rangingSwitch.on) {
@@ -364,7 +440,14 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         return kNumberOfSections - 1;   // Beacons section not visible
     }
 }
-
+/**
+ *  returns a NSInteger holding the number of rows in a section
+ *
+ *  @param tableView UITableView
+ *  @param section   NSInteger
+ *
+ *  @return NSInteger number of rows in section
+ */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     switch (section) {
@@ -375,7 +458,14 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             return self.detectedBeacons.count;
     }
 }
-
+/**
+ *  returns a title for the header
+ *
+ *  @param tableView UITableView
+ *  @param section   NSInteger
+ *
+ *  @return NSString header title
+ */
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     switch (section) {
@@ -386,7 +476,14 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             return kBeaconSectionTitle;
     }
 }
-
+/**
+ *  returns the height for a row at specific index path
+ *
+ *  @param tableView UITableView
+ *  @param indexPath NSIndexPath
+ *
+ *  @return CGFloat
+ */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
@@ -397,25 +494,31 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             return kBeaconCellHeight;
     }
 }
-
+/**
+ *  return a view for the header in a section
+ *
+ *  @param tableView UITableView
+ *  @param section   NSInteger
+ *
+ *  @return UIView view for the header in a section
+ */
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UITableViewHeaderFooterView *headerView =
     [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:kBeaconsHeaderViewIdentifier];
-    
     // Adds an activity indicator view to the section header
     UIActivityIndicatorView *indicatorView =
     [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [headerView addSubview:indicatorView];
-    
     indicatorView.frame = (CGRect){kActivityIndicatorPosition, indicatorView.frame.size};
-    
     [indicatorView startAnimating];
-    
     return headerView;
 }
 
 #pragma mark - Common
+/**
+ *  creates a beacon region with specified proximity UUID and identifier
+ */
 - (void)createBeaconRegion
 {
     if (self.beaconRegion)
@@ -425,7 +528,9 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID identifier:kIdentifier];
     self.beaconRegion.notifyEntryStateOnDisplay = YES;
 }
-
+/**
+ *  creates the location manager (if nil)
+ */
 - (void)createLocationManager
 {
     if (!self.locationManager) {
@@ -435,6 +540,9 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 }
 
 #pragma mark - Beacon ranging
+/**
+ *  checks the state of the ranging switch
+ */
 - (void)changeRangingState:sender
 {
     UISwitch *theSwitch = (UISwitch *)sender;
@@ -444,61 +552,62 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         [self stopRangingForBeacons];
     }
 }
-
+/**
+ *  starts ranging for beacons in the specified region
+ */
 - (void)startRangingForBeacons
 {
     self.operationContext = kRangingOperationContext;
-    
     [self createLocationManager];
-    
     [self checkLocationAccessForRanging];
-    
     self.detectedBeacons = [NSArray array];
     [self turnOnRanging];
 }
-
+/**
+ *  turn on ranging for beacons
+ */
 - (void)turnOnRanging
 {
     NSLog(@"Turning on ranging...");
-    
     if (![CLLocationManager isRangingAvailable]) {
         NSLog(@"Couldn't turn on ranging: Ranging is not available.");
         self.rangingSwitch.on = NO;
         return;
     }
-    
     if (self.locationManager.rangedRegions.count > 0) {
         NSLog(@"Didn't turn on ranging: Ranging already on.");
         return;
     }
-    
     [self createBeaconRegion];
     [self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
-    
     NSLog(@"Ranging turned on for region: %@.", self.beaconRegion);
 }
-
+/**
+ *  stop ranging for beacons (used for UISwitch state NO)
+ */
 - (void)stopRangingForBeacons
 {
     if (self.locationManager.rangedRegions.count == 0) {
         NSLog(@"Didn't turn off ranging: Ranging already off.");
         return;
     }
-    
     [self.locationManager stopRangingBeaconsInRegion:self.beaconRegion];
-    
     NSIndexSet *deletedSections = [self deletedSections];
     self.detectedBeacons = [NSArray array];
-    
     [self.beaconTableView beginUpdates];
     if (deletedSections)
         [self.beaconTableView deleteSections:deletedSections withRowAnimation:UITableViewRowAnimationFade];
     [self.beaconTableView endUpdates];
-    
     NSLog(@"Turned off ranging.");
 }
 
 #pragma mark - Location manager delegate methods
+/**
+ *  method that is called if user changes the authorization of location manager
+ *
+ *  @param manager CLLocationManager
+ *  @param status  CLAuthorizationStatus
+ */
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
     if (![CLLocationManager locationServicesEnabled]) {
@@ -511,7 +620,6 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             return;
         }
     }
-    
     CLAuthorizationStatus authorizationStatus = [CLLocationManager authorizationStatus];
     switch (authorizationStatus) {
         case kCLAuthorizationStatusAuthorizedAlways:
@@ -520,7 +628,6 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
                 self.rangingSwitch.on = YES;
             }
             return;
-            
         case kCLAuthorizationStatusAuthorizedWhenInUse:
             if (self.operationContext == kMonitoringOperationContext) {
                 NSLog(@"Couldn't turn on monitoring: Required Location Access(Always) missing.");
@@ -528,7 +635,6 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
                 self.rangingSwitch.on = YES;
             }
             return;
-            
         default:
             if (self.operationContext == kMonitoringOperationContext) {
                 NSLog(@"Couldn't turn on monitoring: Required Location Access(Always) missing.");
@@ -541,7 +647,13 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             break;
     }
 }
-
+/**
+ *  called if beacons are ranged in the specified region
+ *
+ *  @param manager CLLocationManager
+ *  @param beacons NSArray
+ *  @param region  CLBeaconRegion
+ */
 - (void)locationManager:(CLLocationManager *)manager
         didRangeBeacons:(NSArray *)beacons
                inRegion:(CLBeaconRegion *)region {
@@ -577,7 +689,11 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         [self.beaconTableView reloadRowsAtIndexPaths:reloadedRows withRowAnimation:UITableViewRowAnimationNone];
     [self.beaconTableView endUpdates];
 }
-
+/**
+ *  @param manager CLLocationManager
+ *  @param state   CLRegionState
+ *  @param region  CLRegion
+ */
 - (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
 {
     NSString *stateString = nil;

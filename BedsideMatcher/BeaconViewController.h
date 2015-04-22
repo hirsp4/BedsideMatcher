@@ -2,7 +2,11 @@
 //  BeaconViewController.h
 //  BedsideMatcher
 //
-//  Modified by Fresh Prince on 11.03.15.
+//  Modified by Patrick Hirschi on 11.03.2015.
+//
+//  Main view controller of the application. Provides the possibility to perform bluetooth scans
+//  for patients and display them in a table view. Alternatively the user can press the navigation bar
+//  button to get to the BarcodeViewController and select the patient with a barcode scan.
 //
 //  Originally Created by Nick Toumpelis on 2013-10-06.
 //  Copyright (c) 2013-2014 Nick Toumpelis.

@@ -6,7 +6,7 @@
 //  initializes a patient view with the stored values for the given patient
 //  in the database.
 //
-//  Created by Patrizia Zehnder on 01/04/15.
+//  Created by Patrizia Zehnder on 01.04.2015.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
 #import <AudioToolbox/AudioToolbox.h>
@@ -21,6 +21,9 @@
 
 @implementation BarcodeViewController
 @synthesize patients,managedObjectContext,minorID;
+/**
+ *  always called when view did load
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     // set the back button in the navigation bar to get back to beacon view controller
@@ -36,7 +39,6 @@
     self.capture.camera = self.capture.back;
     self.capture.focusMode = AVCaptureFocusModeContinuousAutoFocus;
     self.capture.rotation = 90.0f;
-    
     self.capture.layer.frame = self.scanRectView.frame;
     [self.scanRectView setBackgroundColor:[[UIColor blackColor] colorWithAlphaComponent:0.0]];
     CGFloat borderWidth = 2.0f;
@@ -47,9 +49,17 @@
     [self.view bringSubviewToFront:self.scanRectView];
     [self.view bringSubviewToFront:self.decodedLabel];
 }
+/**
+ *  dealloc method to remove the capture layer from its superlayer
+ */
 - (void)dealloc {
     [self.capture.layer removeFromSuperlayer];
 }
+/**
+ *  always called when view will appear
+ *
+ *  @param animated a BOOL
+ */
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.hasScannedResult=NO;
@@ -65,25 +75,31 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-// create Back-Button
+/**
+ *  create the back button and set it in the navigation bar
+ */
 - (void)setBackButton{
-    
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Zurück" style:UIBarButtonItemStyleDone target:nil action:@selector(showBeaconView:)];
-    
-        UINavigationItem *item = [[UINavigationItem alloc] initWithTitle: @"Barcode scannen"];
+    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle: @"Barcode scannen"];
     item.leftBarButtonItem=backButton;
     [_navBarBarcode pushNavigationItem:item animated:NO];
 }
-/*
+/**
  *  Action method for the back button.
+ *
+ *  @param sender a UIButton
  */
 - (IBAction)showBeaconView:(id)sender {
-    
     [self performSegueWithIdentifier:@"showBeaconView" sender:self];
 }
 #pragma mark - Private Methods
-// private helper method to convert the scanned barcode formats to strings
+/**
+ *  private helper method to convert the scanned barcode formats to strings
+ *
+ *  @param format ZXBarcodeFormat
+ *
+ *  @return a NSString
+ */
 - (NSString *)barcodeFormatToString:(ZXBarcodeFormat)format {
     switch (format) {
         case kBarcodeFormatAztec:
@@ -140,8 +156,11 @@
 }
 
 #pragma mark - ZXCaptureDelegate Methods
-/*
+/**
  *  capture method of the scanner
+ *
+ *  @param capture ZXCapture
+ *  @param result  ZXResult
  */
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
     // check if there's a valid result
@@ -152,50 +171,49 @@
     {
         self.hasScannedResult = YES;
         [self.capture stop];
-        
-    NSString *numberString;
-    // extract numbers from the scanned string (trims the first sign of the barcode which
-    // is defined as a "¿"
-    NSScanner *scanner = [NSScanner scannerWithString:result.text];
-    NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
-    
-    // Throw away characters before the first number.
-    [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
-    
-    // Collect numbers.
-    [scanner scanCharactersFromSet:numbers intoString:&numberString];
-    
-
-    // We got a result. Display information about the result onscreen.
-    NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
-    NSString *display = [NSString stringWithFormat:@"Gescannt!\n\nFormat: %@\nInhalt:\n%@", formatString, numberString];
-    [self.decodedLabel performSelectorOnMainThread:@selector(setText:) withObject:display waitUntilDone:YES];
-    NSLog(@"%@",display);
-    
-    // Vibrate
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    // set the minor id instance variable
-    minorID = [NSMutableString string];
-    [minorID appendString:numberString];
-    // perform the segue to patient view
-    [self performSegueWithIdentifier:@"scanToPatientView" sender:self];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self.capture start];
-    });
+        NSString *numberString;
+        // extract numbers from the scanned string (trims the first sign of the barcode which
+        // is defined as a "¿"
+        NSScanner *scanner = [NSScanner scannerWithString:result.text];
+        NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+        // Throw away characters before the first number.
+        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+        // Collect numbers.
+        [scanner scanCharactersFromSet:numbers intoString:&numberString];
+        // We got a result. Display information about the result onscreen.
+        NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
+        NSString *display = [NSString stringWithFormat:@"Gescannt!\n\nFormat: %@\nInhalt:\n%@", formatString, numberString];
+        [self.decodedLabel performSelectorOnMainThread:@selector(setText:) withObject:display waitUntilDone:YES];
+        NSLog(@"%@",display);
+        // Vibrate
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        // set the minor id instance variable
+        minorID = [NSMutableString string];
+        [minorID appendString:numberString];
+        // perform the segue to patient view
+        [self performSegueWithIdentifier:@"scanToPatientView" sender:self];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [self.capture start];
+        });
     }
-    
-    
-   
 }
 
-/*
- *  Tap recognizer to get back to beacon view (tap because the scan view is full screen and 
+/**
+ *  Tap recognizer to get back to beacon view (tap because the scan view is full screen and
  *  we dont want to have buttons here).
+ *
+ *  @param sender UITapRecognizer
  */
 - (IBAction)didTap:(id)sender {
     [self performSegueWithIdentifier:@"showBeaconView" sender:self];
 }
-
+/**
+ *  gets called before the segue gets actually performed. sets all values in the destination
+ *  view controller.
+ *
+ *  @param segue  UIStoryboardSegue
+ *  @param sender
+ */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"scanToPatientView"]) {
         // set the destination view controller
@@ -240,8 +258,9 @@
         }
     }
 }
-/*
- *      get the patients from core data.
+
+/**
+ *  get the patients from core data.
  */
 -(void)performFetch{
     NSFetchRequest *fetchRequestPatient = [[NSFetchRequest alloc] init];
@@ -251,16 +270,5 @@
     NSError *error;
     self.patients = [managedObjectContext executeFetchRequest:fetchRequestPatient error:&error];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 
 @end

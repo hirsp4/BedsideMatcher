@@ -6,7 +6,7 @@
 //  initializes a patient view with the stored values for the given patient
 //  in the database.
 //
-//  Created by Patrizia Zehnder on 01/04/15.
+//  Created by Patrizia Zehnder on 01.04.2015.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
 
