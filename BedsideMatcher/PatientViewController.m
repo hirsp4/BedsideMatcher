@@ -2,7 +2,10 @@
 //  PatientViewController.m
 //  BedsideMatcher
 //
-//  Created by Fresh Prince on 09.04.15.
+//  View controller for the visualization of patient information. The view consists of
+//  a segmented controler (general patient information and prescription informations / scanning).
+//
+//  Created by Fresh Prince on 09.04.2015.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
 
@@ -21,7 +24,9 @@
 
 @implementation PatientViewController
 @synthesize nameLabel,firstnameLabel,genderLabel,birthdateLabel,navBar,patientImage,name,firstname,birthdate,caseid,reastate,bloodgroup,room,pid,gender,image,stationLabel,station,patientView,prescriptionView,segmentedControl,prescriptionTable, roomLabel,pidLabel,fidLabel,bloodgroupLabel,reaLabel;
-
+/**
+ *  always called when view did load
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     // fill the labels with the values of the instance variables
@@ -63,7 +68,11 @@
     [self.scanView bringSubviewToFront:self.scanRectView];
     
 }
-
+/**
+ *  always called when view will appear
+ *
+ *  @param animated BOOL
+ */
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.capture.delegate = self;
@@ -71,22 +80,40 @@
     // get prescriptions from the webservice
     [self performFetch];
 }
-
-// Customize the number of sections in the table view
+/**
+ *  Customize the number of sections in the table view
+ *
+ *  @param tableView UITableView
+ *
+ *  @return NSInteger number of sections
+ */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
-
-// Customize the number of rows in the section
+/**
+ *  Customize the number of rows in the section
+ *
+ *  @param tableView UITableView
+ *  @param section   NSInteger
+ *
+ *  @return NSInteger number of rows in section
+ */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return prescriptions.count;
 }
-
+/**
+ *  Sets and returns the view for the header in the specified section.
+ *
+ *  @param tableView UITableView
+ *  @param section   NSInteger
+ *
+ *  @return UIView view for the header in the specified section
+ */
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 38)];
-    /* Create custom view to display section header... */
+    // Create custom view to display section header...
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, tableView.frame.size.width, 18)];
     [label setFont:[UIFont boldSystemFontOfSize:14]];
     NSString *string =[[[@"Verordnungen für: " stringByAppendingString:name]stringByAppendingString:@" "]stringByAppendingString:firstname];
@@ -95,9 +122,14 @@
     [view setBackgroundColor:[UIColor colorWithRed:0.85 green:0.84 blue:0.84 alpha:1.0]];
     return view;
 }
-
-
-// Customize the appearance of table view cells
+/**
+ *  Customize the appearance of table view cells
+ *
+ *  @param tableView UITableView
+ *  @param indexPath NSIndexPath
+ *
+ *  @return UITableViewCell custom cell of class "PrescriptionTableViewCell.h"
+ */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
@@ -131,12 +163,22 @@
     cell.backgroundColor = [UIColor colorWithRed:1.00 green:0.94 blue:0.87 alpha:1.0];
     return cell;
 }
-// define cell-height
+/**
+ *  customizing the row height
+ *
+ *  @param tableView UITableView
+ *  @param indexPath NSIndexPath
+ *
+ *  @return CGFloat height for the row at a specific index path
+ */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 65.0;
 }
-// set the back button and the title of the navigation bar
+/**
+ *  set the back button and the title of the navigation bar
+ */
 - (void)setBackButtonAndTitle{
+    // initialize button
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [backButton addTarget:self
                 action:@selector(backToBeaconView:)
@@ -144,6 +186,7 @@
     backButton.bounds = CGRectMake( 0, 0, 66, 31);
     [backButton setTitle:@"< Zurück" forState:UIControlStateNormal];
     UIBarButtonItem *backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    // set the title in the navigation bar
     UINavigationItem *item = [[UINavigationItem alloc] initWithTitle: @"Patienteninfo"];
     item.leftBarButtonItem = backButtonItem;
     [navBar pushNavigationItem:item animated:NO];
@@ -153,17 +196,26 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-/*
- *  Action method for the back button
+/**
+ *  action method for the back button
+ *
+ *  @param sender UIButton
  */
 - (void) backToBeaconView: (id) sender{
+    // remove the capture layer from the superlayer
     [self.capture.layer removeFromSuperlayer];
     self.hasScannedResult = YES;
     [self performSegueWithIdentifier:@"backToBeaconView" sender:self];
 }
 
 #pragma mark - Private Methods
-// private helper method to convert the scanned barcode formats to strings
+/**
+ *  private helper method to convert the scanned barcode formats to strings
+ *
+ *  @param format ZXBarcodeFormat
+ *
+ *  @return NSString
+ */
 - (NSString *)barcodeFormatToString:(ZXBarcodeFormat)format {
     switch (format) {
         case kBarcodeFormatAztec:
@@ -220,8 +272,11 @@
 }
 
 #pragma mark - ZXCaptureDelegate Methods
-/*
+/**
  *  capture method of the scanner
+ *
+ *  @param capture ZXCapture
+ *  @param result  ZXResult
  */
 - (void)captureResult:(ZXCapture *)capture result:(ZXResult *)result {
     // check if we have a valid result
@@ -246,7 +301,9 @@
     });
     }
 }
-// get the prescriptions from the webservice
+/**
+ *  get all prescriptions for the selected patient from supply chain service.
+ */
 -(void) performFetch{
     prescriptions =[[NSMutableArray alloc] init];
     [prescriptions removeAllObjects];
@@ -258,7 +315,12 @@
     }
     [self.prescriptionTable reloadData];
 }
-// handle the user selections and set the accessory checkmark
+/**
+ *  handle the user selections and set the accessory checkmark
+ *
+ *  @param tableView UITableView
+ *  @param indexPath NSIndexPath
+ */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [self.prescriptionTable cellForRowAtIndexPath:indexPath];
@@ -275,8 +337,10 @@
     // force table view to reload the content
     [tableView reloadData];
 }
-/*
+/**
  *  managing the views of the segmented control
+ *
+ *  @param sender UISegmentedControl
  */
 - (IBAction)segmentedValueChanged:(UISegmentedControl *)sender {
     switch (sender.selectedSegmentIndex) {
@@ -295,8 +359,10 @@
             break;
     }
 }
-/*
+/**
  *  show information for a selected prescription row to the user
+ *
+ *  @param sender UIButton
  */
 -(void)showInfoAlert:(UIButton*)sender
 {
@@ -317,11 +383,18 @@
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
-
 }
+/**
+ *  dealloc method to remove capture layer from superlayer
+ */
 - (void)dealloc {
     [self.capture.layer removeFromSuperlayer];
 }
+/**
+ *  Translater method for bloodgroup values.
+ *
+ *  @return NSString translated bloodgroup
+ */
 -(NSString*)getBloodGroupString{
     if([bloodgroup isEqualToString:@"Apositive"]){
         return @"A+";
@@ -338,11 +411,21 @@
     }
 
 }
+/**
+ *  extracts the station identifer e.g. "A" or "B" from the station string ("Station A" or "Station B")
+ *
+ *  @return a NSString holding the identifier e.g. "A" or "B"
+ */
 -(NSString*)getStationString{
     NSString *stationString = station;
     NSArray *stationSplitted = [stationString componentsSeparatedByString:@" "];
     return stationSplitted[1];
 }
+/**
+ *  converts NSString values of the birthdate (cosmetical issues)
+ *
+ *  @return a NSString of format dd.mm.yyyy
+ */
 -(NSString*)getBirthdateString{
     NSString *birthdateString = birthdate;
     if([birthdateString isEqualToString:@""]){

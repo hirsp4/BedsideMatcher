@@ -711,21 +711,13 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     NSLog(@"State changed to %@ for region %@.", stateString, region);
 }
 
-#pragma mark - Local notifications
-- (void)sendLocalNotificationForBeaconRegion:(CLBeaconRegion *)region
-{
-    UILocalNotification *notification = [UILocalNotification new];
-    
-    // Notification details
-    notification.alertBody = [NSString stringWithFormat:@"Entered beacon region for UUID: %@",
-                              region.proximityUUID.UUIDString];   // Major and minor are not available at the monitoring stage
-    notification.alertAction = NSLocalizedString(@"View Details", nil);
-    notification.soundName = UILocalNotificationDefaultSoundName;
-    
-    [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-}
-
-
+/**
+ *  returns a Patient object for a specified NSString holding the beacon minor id.
+ *
+ *  @param beaconID NSString minor id of the beacon
+ *
+ *  @return Patient
+ */
 -(Patient*)getPatientForBeacon:(NSString*)beaconID{
     NSString *numberString;
     // extract numbers from the scanned string (trims the first sign of the barcode which
@@ -756,7 +748,9 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     
     return [fetchedObjects firstObject];
 }
-
+/**
+ *  @param peripheralManager CBPeripheralManager
+ */
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheralManager
 {
     if (peripheralManager.state != CBPeripheralManagerStatePoweredOn) {
@@ -768,14 +762,20 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
 }
 
 #pragma mark - Location access methods (iOS8/Xcode6)
+/**
+ *  check access in CoreLocation
+ */
 - (void)checkLocationAccessForRanging {
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [self.locationManager requestWhenInUseAuthorization];
     }
 }
 
-
 #pragma mark - Alert view delegate methods
+/**
+ *  @param alertView   UIAlertView
+ *  @param buttonIndex NSInteger
+ */
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];

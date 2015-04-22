@@ -2,7 +2,10 @@
 //  PatientViewController.h
 //  BedsideMatcher
 //
-//  Created by Fresh Prince on 09.04.15.
+//  View controller for the visualization of patient information. The view consists of
+//  a segmented controler (general patient information and prescription informations / scanning).
+//
+//  Created by Patrick Hirschi on 09.04.2015.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
 
