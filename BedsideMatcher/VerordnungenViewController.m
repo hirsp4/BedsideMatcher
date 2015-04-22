@@ -83,6 +83,10 @@
         }
     }
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 38;
+}
 
 // Customize the appearance of table view cells
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -94,33 +98,13 @@
         }else{
             listPatients=[searchResultsB mutableCopy];
         }
-        static NSString *CellIdentifier = @"TableViewCellVerordnung";
-        
-        TableViewCellVerordnung *cell = (TableViewCellVerordnung *)[tableView dequeueReusableCellWithIdentifier: CellIdentifier];
-        if (cell == nil) {
-            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TableViewCellVerordnung" owner:self options:nil];
-            cell = [nib objectAtIndex:0];
-        }
-        cell.nameLabel.text=[[[[[listPatients objectAtIndex:indexPath.row]patient ]name]stringByAppendingString:@" "]stringByAppendingString:[[[listPatients objectAtIndex:indexPath.row]patient ]firstname]];
-        cell.birthdateLabel.text=[self getBirthdateString:[[[listPatients objectAtIndex:indexPath.row]patient ]birthdate]];
-        if([@"weiblich" isEqualToString:[[[listPatients objectAtIndex:indexPath.row]patient ]gender]]){
-            cell.imageView.image = [UIImage imageNamed:@"female.png"];
+    }else{
+        // check if its section 0 (Station A) or section 1 (Station B)
+        if(indexPath.section==0){
+            listPatients=listPatientsA;
         }else{
-            cell.imageView.image = [UIImage imageNamed:@"male.png"];
+            listPatients=listPatientsB;
         }
-        
-        if([[[listPatients objectAtIndex:indexPath.row ]openPrescriptions] integerValue]>0){
-            cell.backgroundColor = [UIColor colorWithRed:0.99 green:0.81 blue:0.63 alpha:1.0];
-        }
-        cell.prescriptionNbLabel.text=[[[listPatients objectAtIndex:indexPath.row ]openPrescriptions]stringValue];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        return cell;
-    }else{
-    // check if its section 0 (Station A) or section 1 (Station B)
-    if(indexPath.section==0){
-        listPatients=listPatientsA;
-    }else{
-        listPatients=listPatientsB;
     }
     static NSString *CellIdentifier = @"TableViewCellVerordnung";
     
@@ -143,7 +127,6 @@
     cell.prescriptionNbLabel.text=[[[listPatients objectAtIndex:indexPath.row ]openPrescriptions]stringValue];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
-    }
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"showVerordnungDetail" sender:[self.tableViewVerordnungen cellForRowAtIndexPath:indexPath]];
@@ -265,5 +248,21 @@
     [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles]objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex] ]];
     return YES;
 }
+
+-(void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller{
+    self.searchDisplayController.searchBar.showsCancelButton = YES;
+    UIButton *cancelButton;
+    UIView *topView = self.searchDisplayController.searchBar.subviews[0];
+    for (UIView *subView in topView.subviews) {
+        if ([subView isKindOfClass:NSClassFromString(@"UINavigationButton")]) {
+            cancelButton = (UIButton*)subView;
+        }
+    }
+    if (cancelButton) {
+        //Set the new title of the cancel button
+        [cancelButton setTitle:@"Abbrechen" forState:UIControlStateNormal];
+    }
+}
+
 
 @end

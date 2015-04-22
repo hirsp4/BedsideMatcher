@@ -16,6 +16,7 @@
 		E09C91E71AC15E98006804E9 /* notebook.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E61AC15E98006804E9 /* notebook.png */; };
 		E09C91E91AC15FA2006804E9 /* medicine.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91E81AC15FA2006804E9 /* medicine.png */; };
 		E09C91F31AC166D2006804E9 /* LogoApp.png in Resources */ = {isa = PBXBuildFile; fileRef = E09C91F21AC166D2006804E9 /* LogoApp.png */; };
+		EF0301831AE7E19E005617E7 /* ListScheduledPrescription.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0301821AE7E19E005617E7 /* ListScheduledPrescription.m */; };
 		EF36567C1AAF95E000A0B64D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF36567B1AAF95E000A0B64D /* main.m */; };
 		EF36567F1AAF95E000A0B64D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF36567E1AAF95E000A0B64D /* AppDelegate.m */; };
 		EF3656821AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF3656801AAF95E000A0B64D /* BedsideMatcher.xcdatamodeld */; };
@@ -366,6 +367,8 @@
 		E09C91E61AC15E98006804E9 /* notebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notebook.png; sourceTree = "<group>"; };
 		E09C91E81AC15FA2006804E9 /* medicine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medicine.png; sourceTree = "<group>"; };
 		E09C91F21AC166D2006804E9 /* LogoApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoApp.png; sourceTree = "<group>"; };
+		EF0301811AE7E19E005617E7 /* ListScheduledPrescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListScheduledPrescription.h; sourceTree = "<group>"; };
+		EF0301821AE7E19E005617E7 /* ListScheduledPrescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListScheduledPrescription.m; sourceTree = "<group>"; };
 		EF3656761AAF95E000A0B64D /* BedsideMatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BedsideMatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF36567A1AAF95E000A0B64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF36567B1AAF95E000A0B64D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -2088,6 +2091,8 @@
 				EFD9A2521AD3C4F200DF7E10 /* Patient.m */,
 				EF400D3F1AE677DE001A1BF4 /* ListPatient.h */,
 				EF400D401AE677DE001A1BF4 /* ListPatient.m */,
+				EF0301811AE7E19E005617E7 /* ListScheduledPrescription.h */,
+				EF0301821AE7E19E005617E7 /* ListScheduledPrescription.m */,
 			);
 			name = "Managed Objects";
 			sourceTree = "<group>";
@@ -2431,6 +2436,7 @@
 				EFAD36F41ACD2C80000E978E /* ZXMultiFormatWriter.m in Sources */,
 				EFAD36791ACD2C80000E978E /* ZXDataMatrixEdifactEncoder.m in Sources */,
 				EFAD36DF1ACD2C80000E978E /* ZXQRCodeErrorCorrectionLevel.m in Sources */,
+				EF0301831AE7E19E005617E7 /* ListScheduledPrescription.m in Sources */,
 				EFAD36EB1ACD2C80000E978E /* ZXQRCodeEncoder.m in Sources */,
 				EFAD364B1ACD2C80000E978E /* ZXImage.m in Sources */,
 				EFAD36591ACD2C80000E978E /* ZXDecoderResult.m in Sources */,
