@@ -2,7 +2,9 @@
 //  ScheduledPrescriptionCell.m
 //  BedsideMatcher
 //
-//  Created by Fresh Prince on 21.04.15.
+//  Cell to display a scheduled prescription for a patient. Inherits from UITableViewCell.
+//
+//  Created by Patrick Hirschi on 21.04.2015.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
 

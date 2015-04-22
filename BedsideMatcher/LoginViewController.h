@@ -2,9 +2,9 @@
 //  LoginViewController.h
 //  BedsideMatcher
 //
-//  Class that handles the login UI of BedisdeMatcher. Input values not validated.
+//  Class that handles the login UI of BedsideMatcher. Input values not validated.
 //
-//  Created by Fresh Prince on 11.03.15.
+//  Created by Patrick Hirschi on 11.03.2015.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
 

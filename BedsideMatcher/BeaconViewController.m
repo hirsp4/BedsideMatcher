@@ -348,6 +348,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             }
             cell.detailTextLabel.textColor = [UIColor grayColor];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            //cell.backgroundColor = [UIColor colorWithRed:0.847 green:0.902 blue:1 alpha:1];
         }
             break;
     }

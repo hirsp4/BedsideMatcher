@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BedsideMatcher/BeaconViewController.m"
-            timestampString = "451301522.474085"
+            timestampString = "451408578.473481"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "482"
-            endingLineNumber = "482"
+            startingLineNumber = "483"
+            endingLineNumber = "483"
             landmarkName = "-stopRangingForBeacons"
             landmarkType = "5">
          </BreakpointContent>

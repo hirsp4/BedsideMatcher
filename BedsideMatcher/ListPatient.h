@@ -2,7 +2,9 @@
 //  ListPatient.h
 //  BedsideMatcher
 //
-//  Created by Fresh Prince on 21.04.15.
+//  Object class for a patient with corresponding number of open prescriptions.
+//
+//  Created by Patrick Hirschi on 07.04.2015.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
 

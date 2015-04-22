@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  BedsideMatcher
 //
-//  Created by Fresh Prince on 10.03.15.
+//  Created by Patrick Hirschi on 10.03.2015.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
 
@@ -132,23 +132,28 @@
 }
 
 /**
- * deletes the stored patient objects in coredata and saves the newest patient list
- * from the webservice.
-**/
+ *  deletes the stored patient objects in coredata and saves the newest patient list
+ *  from the webservice.
+ */
 -(void)resetPatients
 {
-    [self deleteAllObjects:@"Patient"];    
+    // reset the core data patients
+    [self deleteAllObjects:@"Patient"];
+    // get a connection to supply chain service
     SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
+    // fetch all patients
     getPatientsResponse *result=[service getPatients:nil];
+    // iterate and store all patients in core data
     for(int i=0;i<result.count;i++){
         [self savePatient:[result objectAtIndex:i]];
     }
     
 }
 /**
- * saves a trspPatient object to core data
+ *  saves a trspPatient object to core data
  *
- **/
+ *  @param trsppatient an object of class trspPatient
+ */
 -(void)savePatient:(trspPatient *)trsppatient{
     // initialize a managed object inherited patient
     Patient *patient = [NSEntityDescription insertNewObjectForEntityForName:@"Patient"
@@ -169,6 +174,7 @@
     [patient setValue:trsppatient.stationName forKey:@"station"];
     [patient setValue:trsppatient.room forKey:@"room"];
     BOOL flag = trsppatient.getReaState;
+    // convert the reha boolean enumeration value to german strings
     NSString *string = flag ? @"Ja" : @"Nein";
     [patient setValue:string forKey:@"reastate"];
     [patient setValue:[NSString stringWithFormat:@"%d",trsppatient.fid] forKey:@"caseID"];
@@ -184,8 +190,10 @@
 }
 
 /**
- * deletes managed objects for the given entity description (string)
-**/
+ *  deletes managed objects for the given entity description (string)
+ *
+ *  @param entityDescription NSString value for the description of the core data entity
+ */
 - (void) deleteAllObjects: (NSString *) entityDescription  {
     // build the fetch request
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];

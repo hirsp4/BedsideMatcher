@@ -2,7 +2,12 @@
 //  MedikamenteViewController.h
 //  BedsideMatcher
 //
-//  Created by Fresh Prince on 11.03.15.
+//  Controller to list all scheduled prescriptions of the hospital sectioned in
+//  morning, noon, evening and night. The view provides a search bar allowing to search
+//  for patient name, patient firstname or the station identifier. Provides a quick overview
+//  of the situation for the employees.
+//
+//  Created by Patrick Hirschi on 11.03.2015.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
 
