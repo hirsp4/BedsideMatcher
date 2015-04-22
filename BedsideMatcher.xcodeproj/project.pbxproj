@@ -342,7 +342,6 @@
 		EFD9A2551AD3C52000DF7E10 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD9A2541AD3C52000DF7E10 /* CoreData.framework */; };
 		EFD9A2581AD3D29600DF7E10 /* female.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD9A2561AD3D29600DF7E10 /* female.png */; };
 		EFD9A2591AD3D29600DF7E10 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = EFD9A2571AD3D29600DF7E10 /* male.png */; };
-		EFEB130F1ADBBAE500EA204F /* VerordnungDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEB130E1ADBBAE500EA204F /* VerordnungDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1030,8 +1029,6 @@
 		EFD9A2541AD3C52000DF7E10 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EFD9A2561AD3D29600DF7E10 /* female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = female.png; sourceTree = "<group>"; };
 		EFD9A2571AD3D29600DF7E10 /* male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = male.png; sourceTree = "<group>"; };
-		EFEB130D1ADBBAE500EA204F /* VerordnungDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerordnungDetailViewController.h; sourceTree = "<group>"; };
-		EFEB130E1ADBBAE500EA204F /* VerordnungDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerordnungDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1332,8 +1329,6 @@
 				E09B23461ACD7D32004B4088 /* TableViewCellVerordnung.h */,
 				E09B23471ACD7D32004B4088 /* TableViewCellVerordnung.m */,
 				E09B23481ACD7D32004B4088 /* TableViewCellVerordnung.xib */,
-				EFEB130D1ADBBAE500EA204F /* VerordnungDetailViewController.h */,
-				EFEB130E1ADBBAE500EA204F /* VerordnungDetailViewController.m */,
 			);
 			name = "Verordnungen Tab";
 			sourceTree = "<group>";
@@ -2279,7 +2274,6 @@
 				EFAD36701ACD2C80000E978E /* ZXDataMatrixDataBlock.m in Sources */,
 				EFAD36411ACD2C80000E978E /* ZXURIResultParser.m in Sources */,
 				EF400DEE1AE69F93001A1BF4 /* getItemsBySSCCResponse.m in Sources */,
-				EFEB130F1ADBBAE500EA204F /* VerordnungDetailViewController.m in Sources */,
 				EF400E1A1AE69F93001A1BF4 /* setOrderResponse.m in Sources */,
 				EF400E121AE69F93001A1BF4 /* RequestResultHandler.m in Sources */,
 				EF400DEA1AE69F93001A1BF4 /* getItemsByBatchResponse.m in Sources */,

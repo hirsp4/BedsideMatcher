@@ -2,7 +2,10 @@
 //  VerordnungenViewController.h
 //  BedsideMatcher
 //
-//  Created by Fresh Prince on 11.03.15.
+//  Controller to list the patients sectioned in stations with the corresponding count of
+//  open prescriptions.
+//
+//  Created by Patrick Hirschi on 11.03.2015.
 //  Copyright (c) 2015 Berner Fachhochschule. All rights reserved.
 //
 
