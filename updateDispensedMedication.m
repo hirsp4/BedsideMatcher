@@ -8,17 +8,16 @@
 //---------------------------------------------------
 
 
-#import "order.h"
+#import "trspPrescription.h"
 #import "Helper.h"
-#import "processOrder.h"
+#import "updateDispensedMedication.h"
 
 
-@implementation processOrder
+@implementation updateDispensedMedication
 @synthesize arg0;
 @synthesize arg1;
-@synthesize arg2;
 
-+ (processOrder *)createWithXml:(DDXMLElement *)__node __request:(RequestResultHandler*) __request
++ (updateDispensedMedication *)createWithXml:(DDXMLElement *)__node __request:(RequestResultHandler*) __request
 {
     if(__node == nil) { return nil; }
     return [[self alloc] initWithXml: __node __request:__request];
@@ -35,15 +34,11 @@
     {
         if([Helper hasValue:__node name:@"arg0" index:0])
         {
-            self.arg0 = (order*)[__request createObject:[Helper getNode:__node name:@"arg0" index:0] type:[order class]];
+            self.arg0 = (trspPrescription*)[__request createObject:[Helper getNode:__node name:@"arg0" index:0] type:[trspPrescription class]];
         }
         if([Helper hasValue:__node name:@"arg1" index:0])
         {
             self.arg1 = [[Helper getNode:__node name:@"arg1" index:0] stringValue];
-        }
-        if([Helper hasValue:__node name:@"arg2" index:0])
-        {
-            self.arg2 = [[Helper getNode:__node name:@"arg2" index:0] stringValue];
         }
     }
     return self;
@@ -53,7 +48,7 @@
 {
 
              
-    DDXMLElement* __arg0ItemElement=[__request writeElement:arg0 type:[order class] name:@"arg0" URI:@"" parent:__parent skipNullProperty:YES];
+    DDXMLElement* __arg0ItemElement=[__request writeElement:arg0 type:[trspPrescription class] name:@"arg0" URI:@"" parent:__parent skipNullProperty:YES];
     if(__arg0ItemElement!=nil)
     {
         [self.arg0 serialize:__arg0ItemElement __request: __request];
@@ -63,12 +58,6 @@
     if(__arg1ItemElement!=nil)
     {
         [__arg1ItemElement setStringValue:self.arg1];
-    }
-             
-    DDXMLElement* __arg2ItemElement=[__request writeElement:arg2 type:[NSString class] name:@"arg2" URI:@"" parent:__parent skipNullProperty:YES];
-    if(__arg2ItemElement!=nil)
-    {
-        [__arg2ItemElement setStringValue:self.arg2];
     }
 
 

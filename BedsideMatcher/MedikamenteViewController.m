@@ -219,7 +219,8 @@
     }
     // setup cell labels
     cell.nameLabel.text=[[patient.name stringByAppendingString:@" "]stringByAppendingString:patient.firstname];
-    cell.birthdateLabel.text=[self getBirthdateString:patient.birthdate];
+    cell.birthdateLabel.text= [[[[self getBirthdateString:patient.birthdate]stringByAppendingString:@" ("]stringByAppendingString:[self getAgeFromDateString:[self getBirthdateString:patient.birthdate]]]stringByAppendingString:@")"];
+    [self getBirthdateString:patient.birthdate];
     cell.schemeLabel.text = [self getSchemeString:[listPresc.presc getSchedule]];
     cell.descriptionLabel.numberOfLines=0;
     cell.descriptionLabel.text = [listPresc.presc getDescription];
@@ -522,6 +523,31 @@
     // split after the spaces
     NSArray *stationSplitted = [stationString componentsSeparatedByString:@" "];
     return stationSplitted[1];
+}
+
+/**
+ *  calculates the age of a patient based on a given date of birth (dd.MM.yyyy)
+ *
+ *  @param dateOfBirth a birthdate of format dd.MM.yyyy
+ *
+ *  @return NSString age in years
+ */
+-(NSString *)getAgeFromDateString:(NSString*)dateOfBirth{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    // this is imporant - we set our input date format to match our input string
+    // if format doesn't match you'll get nil from your string, so be careful
+    [dateFormatter setDateFormat:@"dd.MM.yyyy"];
+    NSDate *dateFromString = [[NSDate alloc] init];
+    // voila!
+    dateFromString = [dateFormatter dateFromString:dateOfBirth];
+    
+    NSDate *today = [NSDate date];
+    NSDateComponents *ageComponents = [[NSCalendar currentCalendar]
+                                       components:NSYearCalendarUnit
+                                       fromDate:dateFromString
+                                       toDate:today
+                                       options:0];
+    return [NSString stringWithFormat:@"%ld",(long)ageComponents.year];
 }
 
 @end

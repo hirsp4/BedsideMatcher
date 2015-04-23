@@ -161,7 +161,7 @@
     }
     // setup cell labels
     cell.nameLabel.text=[[[[[listPatients objectAtIndex:indexPath.row]patient ]name]stringByAppendingString:@" "]stringByAppendingString:[[[listPatients objectAtIndex:indexPath.row]patient ]firstname]];
-    cell.birthdateLabel.text=[self getBirthdateString:[[[listPatients objectAtIndex:indexPath.row]patient ]birthdate]];
+    cell.birthdateLabel.text=[[[[self getBirthdateString:[[[listPatients objectAtIndex:indexPath.row]patient ]birthdate]]stringByAppendingString:@" ("]stringByAppendingString:[self getAgeFromDateString:[self getBirthdateString:[[[listPatients objectAtIndex:indexPath.row]patient ]birthdate]]]]stringByAppendingString:@")"];
     if([@"weiblich" isEqualToString:[[[listPatients objectAtIndex:indexPath.row]patient ]gender]]){
         cell.imageView.image = [UIImage imageNamed:@"female.png"];
     }else{
@@ -356,6 +356,29 @@
         [cancelButton setTitle:@"Abbrechen" forState:UIControlStateNormal];
     }
 }
-
+/**
+ *  calculates the age of a patient based on a given date of birth (dd.MM.yyyy)
+ *
+ *  @param dateOfBirth a birthdate of format dd.MM.yyyy
+ *
+ *  @return NSString age in years
+ */
+-(NSString *)getAgeFromDateString:(NSString*)dateOfBirth{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    // this is imporant - we set our input date format to match our input string
+    // if format doesn't match you'll get nil from your string, so be careful
+    [dateFormatter setDateFormat:@"dd.MM.yyyy"];
+    NSDate *dateFromString = [[NSDate alloc] init];
+    // voila!
+    dateFromString = [dateFormatter dateFromString:dateOfBirth];
+    
+    NSDate *today = [NSDate date];
+    NSDateComponents *ageComponents = [[NSCalendar currentCalendar]
+                                       components:NSYearCalendarUnit
+                                       fromDate:dateFromString
+                                       toDate:today
+                                       options:0];
+    return [NSString stringWithFormat:@"%ld",(long)ageComponents.year];
+}
 
 @end

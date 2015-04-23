@@ -35,7 +35,7 @@
     nameLabel.text=name;
     firstnameLabel.text=firstname;
     patientImage.image=image;
-    birthdateLabel.text=[self getBirthdateString];
+    birthdateLabel.text=[[[[self getBirthdateString]stringByAppendingString:@" ("]stringByAppendingString:[self getAgeFromDateString:[self getBirthdateString]]]stringByAppendingString:@")"];
     genderLabel.text=gender;
     stationLabel.text=[self getStationString];
     roomLabel.text=room;
@@ -315,7 +315,14 @@
             NSLog(@"%@",[[[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]]getPrescriptionState]stringValue]);
             [self.prescriptionTable reloadData];
             SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
-            // TODO
+            [service updateDispensedMedication:[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]] arg1:@"7640166731009" __error:nil];
+            NSString *alertMessage = @"Die Verordnung und die gescannte Etikette stimmen überein und wurden erfolgreich abgegeben.";
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Zuweisung erfolgreich"
+                                                            message:alertMessage
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
         }
         
         // Vibrate
@@ -461,4 +468,29 @@
     NSArray *birthdateSplitted = [birthdateString componentsSeparatedByString:@"-"];
     return [[[[birthdateSplitted[2] stringByAppendingString:@"."]stringByAppendingString:birthdateSplitted[1]]stringByAppendingString:@"."]stringByAppendingString:birthdateSplitted[0]];
 }
+/**
+ *  calculates the age of a patient based on a given date of birth (dd.MM.yyyy)
+ *
+ *  @param dateOfBirth a birthdate of format dd.MM.yyyy
+ *
+ *  @return NSString age in years
+ */
+-(NSString *)getAgeFromDateString:(NSString*)dateOfBirth{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    // this is imporant - we set our input date format to match our input string
+    // if format doesn't match you'll get nil from your string, so be careful
+    [dateFormatter setDateFormat:@"dd.MM.yyyy"];
+    NSDate *dateFromString = [[NSDate alloc] init];
+    // voila!
+    dateFromString = [dateFormatter dateFromString:dateOfBirth];
+    
+    NSDate *today = [NSDate date];
+    NSDateComponents *ageComponents = [[NSCalendar currentCalendar]
+                                       components:NSYearCalendarUnit
+                                       fromDate:dateFromString
+                                       toDate:today
+                                       options:0];
+    return [NSString stringWithFormat:@"%ld",(long)ageComponents.year];
+}
+
 @end

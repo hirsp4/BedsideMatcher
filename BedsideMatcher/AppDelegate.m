@@ -210,7 +210,6 @@
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Failed to delete - error: %@", [error localizedDescription]);
     }
-    
 }
 
 @end
