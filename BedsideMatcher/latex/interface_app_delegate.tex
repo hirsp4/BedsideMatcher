@@ -1,0 +1,164 @@
+\hypertarget{interface_app_delegate}{}\section{App\+Delegate Class Reference}
+\label{interface_app_delegate}\index{App\+Delegate@{App\+Delegate}}
+
+
+{\ttfamily \#import $<$App\+Delegate.\+h$>$}
+
+Inheritance diagram for App\+Delegate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_app_delegate}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_app_delegate_affcb482ed45b506b0659be7277e805f9}{save\+Context}
+\item 
+(N\+S\+U\+R\+L $\ast$) -\/ \hyperlink{interface_app_delegate_a09e82eab31a341400477030e8b474b13}{application\+Documents\+Directory}
+\item 
+(B\+O\+O\+L) -\/ \hyperlink{interface_app_delegate_a0eeb7690788c7164f03af6252048d198}{application\+:did\+Finish\+Launching\+With\+Options\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_app_delegate_ad4e9549671ce8c4fc31bd6e4836b5a91}{application\+Will\+Resign\+Active\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_app_delegate_a26d9be79224184ef974a09c1793eb360}{application\+Did\+Enter\+Background\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_app_delegate_ad9916739a43349edad2877110be31059}{application\+Will\+Enter\+Foreground\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_app_delegate_a73aa814398c205f47f21ed59b616e492}{application\+Did\+Become\+Active\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_app_delegate_ae08d55e0d58680354fceb7c8341055eb}{application\+Will\+Terminate\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_app_delegate_ace75f70e22c54ded995fc3d6b2b1aef8}{reset\+Patients}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_app_delegate_a882e53c73c2ad28f263f8321e85550d7}{save\+Patient\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_app_delegate_ae4dd9162700124ad5d2ee447309b08eb}{delete\+All\+Objects\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+U\+I\+Window $\ast$ \hyperlink{interface_app_delegate_acf48ac24125e688cac1a85445cd7fac2}{window}
+\item 
+N\+S\+Managed\+Object\+Context $\ast$ \hyperlink{interface_app_delegate_a1fa650ded1ca9bb0eecda69d1f41cc1f}{managed\+Object\+Context}
+\item 
+N\+S\+Managed\+Object\+Model $\ast$ \hyperlink{interface_app_delegate_a9f3cb4e87e96ee48a07e2b72cf3f6d13}{managed\+Object\+Model}
+\item 
+N\+S\+Persistent\+Store\+Coordinator $\ast$ \hyperlink{interface_app_delegate_a4169fdb1085cc13479280e10d44c039a}{persistent\+Store\+Coordinator}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_app_delegate_a0eeb7690788c7164f03af6252048d198}{}\index{App\+Delegate@{App\+Delegate}!application\+:did\+Finish\+Launching\+With\+Options\+:@{application\+:did\+Finish\+Launching\+With\+Options\+:}}
+\index{application\+:did\+Finish\+Launching\+With\+Options\+:@{application\+:did\+Finish\+Launching\+With\+Options\+:}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{application\+:did\+Finish\+Launching\+With\+Options\+:(\+U\+I\+Application $\ast$application, [did\+Finish\+Launching\+With\+Options] N\+S\+Dictionary $\ast$launch\+Options)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) application\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Application $\ast$)}]{application}
+\item[{didFinishLaunchingWithOptions:(N\+S\+Dictionary $\ast$)}]{launch\+Options}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_app_delegate_a0eeb7690788c7164f03af6252048d198}
+\hypertarget{interface_app_delegate_a73aa814398c205f47f21ed59b616e492}{}\index{App\+Delegate@{App\+Delegate}!application\+Did\+Become\+Active\+:@{application\+Did\+Become\+Active\+:}}
+\index{application\+Did\+Become\+Active\+:@{application\+Did\+Become\+Active\+:}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{application\+Did\+Become\+Active\+:(\+U\+I\+Application $\ast$application)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) application\+Did\+Become\+Active\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Application $\ast$)}]{application}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_app_delegate_a73aa814398c205f47f21ed59b616e492}
+\hypertarget{interface_app_delegate_a26d9be79224184ef974a09c1793eb360}{}\index{App\+Delegate@{App\+Delegate}!application\+Did\+Enter\+Background\+:@{application\+Did\+Enter\+Background\+:}}
+\index{application\+Did\+Enter\+Background\+:@{application\+Did\+Enter\+Background\+:}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{application\+Did\+Enter\+Background\+:(\+U\+I\+Application $\ast$application)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) application\+Did\+Enter\+Background\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Application $\ast$)}]{application}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_app_delegate_a26d9be79224184ef974a09c1793eb360}
+\hypertarget{interface_app_delegate_a09e82eab31a341400477030e8b474b13}{}\index{App\+Delegate@{App\+Delegate}!application\+Documents\+Directory@{application\+Documents\+Directory}}
+\index{application\+Documents\+Directory@{application\+Documents\+Directory}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{application\+Documents\+Directory()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+U\+R\+L $\ast$) application\+Documents\+Directory 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{interface_app_delegate_a09e82eab31a341400477030e8b474b13}
+\hypertarget{interface_app_delegate_ad9916739a43349edad2877110be31059}{}\index{App\+Delegate@{App\+Delegate}!application\+Will\+Enter\+Foreground\+:@{application\+Will\+Enter\+Foreground\+:}}
+\index{application\+Will\+Enter\+Foreground\+:@{application\+Will\+Enter\+Foreground\+:}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{application\+Will\+Enter\+Foreground\+:(\+U\+I\+Application $\ast$application)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) application\+Will\+Enter\+Foreground\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Application $\ast$)}]{application}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_app_delegate_ad9916739a43349edad2877110be31059}
+\hypertarget{interface_app_delegate_ad4e9549671ce8c4fc31bd6e4836b5a91}{}\index{App\+Delegate@{App\+Delegate}!application\+Will\+Resign\+Active\+:@{application\+Will\+Resign\+Active\+:}}
+\index{application\+Will\+Resign\+Active\+:@{application\+Will\+Resign\+Active\+:}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{application\+Will\+Resign\+Active\+:(\+U\+I\+Application $\ast$application)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) application\+Will\+Resign\+Active\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Application $\ast$)}]{application}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_app_delegate_ad4e9549671ce8c4fc31bd6e4836b5a91}
+\hypertarget{interface_app_delegate_ae08d55e0d58680354fceb7c8341055eb}{}\index{App\+Delegate@{App\+Delegate}!application\+Will\+Terminate\+:@{application\+Will\+Terminate\+:}}
+\index{application\+Will\+Terminate\+:@{application\+Will\+Terminate\+:}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{application\+Will\+Terminate\+:(\+U\+I\+Application $\ast$application)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) application\+Will\+Terminate\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Application $\ast$)}]{application}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_app_delegate_ae08d55e0d58680354fceb7c8341055eb}
+\hypertarget{interface_app_delegate_ae4dd9162700124ad5d2ee447309b08eb}{}\index{App\+Delegate@{App\+Delegate}!delete\+All\+Objects\+:@{delete\+All\+Objects\+:}}
+\index{delete\+All\+Objects\+:@{delete\+All\+Objects\+:}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{delete\+All\+Objects\+:(\+N\+S\+String $\ast$entity\+Description)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) delete\+All\+Objects\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+String $\ast$)}]{entity\+Description}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_app_delegate_ae4dd9162700124ad5d2ee447309b08eb}
+deletes managed objects for the given entity description (string)
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity\+Description} & N\+S\+String value for the description of the core data entity \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_app_delegate_ace75f70e22c54ded995fc3d6b2b1aef8}{}\index{App\+Delegate@{App\+Delegate}!reset\+Patients@{reset\+Patients}}
+\index{reset\+Patients@{reset\+Patients}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{reset\+Patients()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) reset\+Patients 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_app_delegate_ace75f70e22c54ded995fc3d6b2b1aef8}
+deletes the stored patient objects in coredata and saves the newest patient list from the webservice. \hypertarget{interface_app_delegate_affcb482ed45b506b0659be7277e805f9}{}\index{App\+Delegate@{App\+Delegate}!save\+Context@{save\+Context}}
+\index{save\+Context@{save\+Context}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{save\+Context()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) save\+Context 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{interface_app_delegate_affcb482ed45b506b0659be7277e805f9}
+\hypertarget{interface_app_delegate_a882e53c73c2ad28f263f8321e85550d7}{}\index{App\+Delegate@{App\+Delegate}!save\+Patient\+:@{save\+Patient\+:}}
+\index{save\+Patient\+:@{save\+Patient\+:}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{save\+Patient\+:(trsp\+Patient $\ast$trsppatient)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) save\+Patient\+: 
+\begin{DoxyParamCaption}
+\item[{(trsp\+Patient $\ast$)}]{trsppatient}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_app_delegate_a882e53c73c2ad28f263f8321e85550d7}
+saves a trsp\+Patient object to core data
+
+
+\begin{DoxyParams}{Parameters}
+{\em trsppatient} & an object of class trsp\+Patient \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_app_delegate_a1fa650ded1ca9bb0eecda69d1f41cc1f}{}\index{App\+Delegate@{App\+Delegate}!managed\+Object\+Context@{managed\+Object\+Context}}
+\index{managed\+Object\+Context@{managed\+Object\+Context}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{managed\+Object\+Context}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Managed\+Object\+Context $\ast$) managed\+Object\+Context\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_app_delegate_a1fa650ded1ca9bb0eecda69d1f41cc1f}
+\hypertarget{interface_app_delegate_a9f3cb4e87e96ee48a07e2b72cf3f6d13}{}\index{App\+Delegate@{App\+Delegate}!managed\+Object\+Model@{managed\+Object\+Model}}
+\index{managed\+Object\+Model@{managed\+Object\+Model}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{managed\+Object\+Model}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Managed\+Object\+Model $\ast$) managed\+Object\+Model\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_app_delegate_a9f3cb4e87e96ee48a07e2b72cf3f6d13}
+\hypertarget{interface_app_delegate_a4169fdb1085cc13479280e10d44c039a}{}\index{App\+Delegate@{App\+Delegate}!persistent\+Store\+Coordinator@{persistent\+Store\+Coordinator}}
+\index{persistent\+Store\+Coordinator@{persistent\+Store\+Coordinator}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{persistent\+Store\+Coordinator}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Persistent\+Store\+Coordinator $\ast$) persistent\+Store\+Coordinator\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_app_delegate_a4169fdb1085cc13479280e10d44c039a}
+\hypertarget{interface_app_delegate_acf48ac24125e688cac1a85445cd7fac2}{}\index{App\+Delegate@{App\+Delegate}!window@{window}}
+\index{window@{window}!App\+Delegate@{App\+Delegate}}
+\subsubsection[{window}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (U\+I\+Window$\ast$) window\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_app_delegate_acf48ac24125e688cac1a85445cd7fac2}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_app_delegate_8h}{App\+Delegate.\+h}\item 
+\hyperlink{_app_delegate_8m}{App\+Delegate.\+m}\end{DoxyCompactItemize}

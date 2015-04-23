@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['scanuuids',['scanUUIDs',['../interface_le_device.html#a138401006375847b3eab465a9a6938d5',1,'LeDevice']]],
+  ['sendcsvccommand_3abytes_3alength_3a',['sendCSVCCommand:bytes:length:',['../interface_le_device.html#a1b7e9253d93c79b976c10641cec8c165',1,'LeDevice']]],
+  ['sendcsvccommand_3acontext_3acompletion_3a',['sendCSVCCommand:context:completion:',['../interface_le_device.html#ade987b54148443272bad5a226e2cba80',1,'LeDevice']]],
+  ['senddiscoverservicecommand',['sendDiscoverServiceCommand',['../interface_le_device.html#ac6617913f42e7afc6b672312a610fda7',1,'LeDevice']]],
+  ['setattributes_3a',['setAttributes:',['../interface_d_d_x_m_l_element.html#a09fe6369b02f710c120fd77ea60b9dc8',1,'DDXMLElement']]],
+  ['setbeaconrate_3atxpower_3abeacontype_3acontext_3acompletion_3a',['setBeaconRate:txPower:beaconType:context:completion:',['../interface_le_snf_device.html#a1c6251a5588bfb099fedf668deb81a3e',1,'LeSnfDevice']]],
+  ['setbeaconrateday_3atxpowerday_3aratenight_3atxpowernight_3abeacontype_3acontext_3acompletion_3a',['setBeaconRateDay:txPowerDay:rateNight:txPowerNight:beaconType:context:completion:',['../interface_le_snf_device.html#a6b42f33a33d12fcae1572b845a4eb361',1,'LeSnfDevice']]],
+  ['setbeaconrsprateconnectable_3ascannable_3anonconnectable_3atype_3acontext_3acompletion_3a',['setBeaconRspRateConnectable:scannable:nonconnectable:type:context:completion:',['../interface_le_snf_device.html#a01df3c1e33aec5783931e242a2ee85fd',1,'LeSnfDevice']]],
+  ['setbroadcastmode_3a',['setBroadcastMode:',['../interface_le_snf_device.html#a2776ece86862b493d68de33578b96af1',1,'LeSnfDevice']]],
+  ['setdevicetime_3a',['setDeviceTime:',['../interface_le_snf_device.html#a8d9efd906807caddb8b349b13330c848',1,'LeSnfDevice']]],
+  ['setpowerofftimeout_3a',['setPowerOffTimeout:',['../interface_le_snf_device.html#ad131aa4d261172fa1a61375466bf088b',1,'LeSnfDevice']]],
+  ['setrssi_3a',['setRssi:',['../interface_le_device.html#ae65731fce7d8c485231ea7d012b3e5e7',1,'LeDevice']]],
+  ['setsbeaconid_3acontext_3acompletion_3a',['setSBeaconID:context:completion:',['../interface_le_snf_device.html#a65a6df0b7a59e48b3370f4411772aae2',1,'LeSnfDevice']]],
+  ['setsbeaconrate_3atxpower_3acontext_3acompletion_3a',['setSbeaconRate:txPower:context:completion:',['../interface_le_snf_device.html#a324d2225101dd7c4c2063710e96b9a9a',1,'LeSnfDevice']]],
+  ['setsbeaconrateday_3atxpowerday_3aratenight_3atxpowernight_3acontext_3acompletion_3a',['setSbeaconRateDay:txPowerDay:rateNight:txPowerNight:context:completion:',['../interface_le_snf_device.html#a93b1c0c6a116ce8b9cd9f89e06ff49b3',1,'LeSnfDevice']]],
+  ['seturi_3a',['setURI:',['../interface_d_d_x_m_l_node.html#a06169ef5abf38a2418781ee6b0f2498c',1,'DDXMLNode']]],
+  ['sizeforfirmwaredata_3a',['sizeForFirmwareData:',['../interface_le_snf_device.html#a9be881cab4d4489c75e59649c32b751b',1,'LeSnfDevice']]],
+  ['startscan',['startScan',['../interface_le_device_manager.html#a53b10ce8eea270e388011903c30fa42f',1,'LeDeviceManager']]],
+  ['stopscan',['stopScan',['../interface_le_device_manager.html#a09ec21757544ceaafdc4a20052b22c32',1,'LeDeviceManager']]],
+  ['stringvalue',['stringValue',['../interface_d_d_x_m_l_node.html#a73adc413bbaed8586083500cfafbb046',1,'DDXMLNode']]]
+];

@@ -1,0 +1,25 @@
+\hypertarget{struct__xml_kind}{}\section{\+\_\+xml\+Kind Struct Reference}
+\label{struct__xml_kind}\index{\+\_\+xml\+Kind@{\+\_\+xml\+Kind}}
+
+
+{\ttfamily \#include $<$D\+D\+X\+M\+L\+Private.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{struct__xml_kind_a68696d3e1766674f6484969c00dcbaae}{}void $\ast$ {\bfseries ignore}\label{struct__xml_kind_a68696d3e1766674f6484969c00dcbaae}
+
+\item 
+\hypertarget{struct__xml_kind_a41b217705b818e9d32f2ee1b8db78bd7}{}xml\+Element\+Type {\bfseries type}\label{struct__xml_kind_a41b217705b818e9d32f2ee1b8db78bd7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{interface_d_d_x_m_l_node}{D\+D\+X\+M\+L\+Node} can represent several underlying types, such as xml\+Node\+Ptr, xml\+Doc\+Ptr, xml\+Attr\+Ptr, xml\+Ns\+Ptr, etc. All of these are pointers to structures, and all of those structures start with a pointer, and a type. The xml\+Kind struct is used as a generic structure, and a stepping stone. We use it to check the type of a structure, and then perform the appropriate cast.
+
+For example\+: if(generic\+Ptr-\/$>$type == X\+M\+L\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+N\+O\+D\+E) \{ xml\+Attr\+Ptr attr = (xml\+Attr\+Ptr)generic\+Ptr; // Do something with attr \} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+D\+X\+M\+L\+Private.\+h\end{DoxyCompactItemize}

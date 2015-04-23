@@ -15,6 +15,8 @@
 #import "SupplyChainServicePortBinding.h"
 #import "trspPrescription.h"
 #import "trspMedication.h"
+#import "prescriptionState.h"
+
 
 @interface PatientViewController (){
     NSMutableArray *prescriptions;
@@ -160,7 +162,10 @@
     cell.dateLabel.text=[prescription getDateCreated];
     cell.nameLabel.text=@"Verordnung";
     cell.descriptionLabel.text=[prescription getDescription];
-    cell.backgroundColor = [UIColor colorWithRed:1.00 green:0.94 blue:0.87 alpha:1.0];
+    if([[[prescription getPrescriptionState]stringValue]isEqualToString:@"stopped"]){
+        cell.backgroundColor = [UIColor greenColor];
+    }else cell.backgroundColor = [UIColor colorWithRed:1.00 green:0.94 blue:0.87 alpha:1.0];
+
     return cell;
 }
 /**
@@ -286,19 +291,41 @@
     if(self.hasScannedResult == NO)
     {
         self.hasScannedResult = YES;
-    // We got a result. Display information about the result onscreen.
-    NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
-    NSString *display = [NSString stringWithFormat:@"Gescannt!\n\nFormat: %@\nInhalt:\n%@", formatString, result.text];
-    NSLog(@"%@",display);
-    
-    // Vibrate
-    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    
-    [self.capture stop];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self.capture start];
-    });
+        // We got a result. Display information about the result onscreen.
+        NSString *formatString = [self barcodeFormatToString:result.barcodeFormat];
+        NSString *display = [NSString stringWithFormat:@"Gescannt!\n\nFormat: %@\nInhalt:\n%@", formatString, result.text];
+        NSLog(@"%@",display);
+
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        trspPrescription *presc = [prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]];
+
+        NSString *vid =presc.polypointID;
+        NSString *numberString;
+        // extract numbers from the scanned string (trims the first sign of the barcode which
+        // is defined as a "¿"
+        NSScanner *scanner = [NSScanner scannerWithString:result.text];
+        NSCharacterSet *numbers = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
+        // Throw away characters before the first number.
+        [scanner scanUpToCharactersFromSet:numbers intoString:NULL];
+        // Collect numbers.
+        [scanner scanCharactersFromSet:numbers intoString:&numberString];
+
+        if([vid isEqualToString:numberString]){
+            [[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]]setPrescriptionState:[prescriptionState createWithString:@"stopped"]];
+            NSLog(@"%@",[[[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]]getPrescriptionState]stringValue]);
+            [self.prescriptionTable reloadData];
+            SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
+            // TODO
+        }
+        
+        // Vibrate
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+        
+        [self.capture stop];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [self.capture start];
+        });
     }
 }
 /**

@@ -1,0 +1,92 @@
+\hypertarget{interface_le_device_manager}{}\section{Le\+Device\+Manager Class Reference}
+\label{interface_le_device_manager}\index{Le\+Device\+Manager@{Le\+Device\+Manager}}
+
+
+{\ttfamily \#import $<$snfsdk.\+h$>$}
+
+Inheritance diagram for Le\+Device\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_le_device_manager}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_le_device_manager_a803f720122e8eb4f852c9b6fd0473b52}{init\+With\+Supported\+Devices\+:delegate\+:}
+\item 
+(void) -\/ \hyperlink{interface_le_device_manager_a53b10ce8eea270e388011903c30fa42f}{start\+Scan}
+\item 
+(void) -\/ \hyperlink{interface_le_device_manager_a09ec21757544ceaafdc4a20052b22c32}{stop\+Scan}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+Mutable\+Array $\ast$ \hyperlink{interface_le_device_manager_a82f221588b5f9c8d9a9b823bcea56886}{dev\+List}
+\item 
+C\+B\+Central\+Manager $\ast$ \hyperlink{interface_le_device_manager_a6d2af12cf6c4f9473bd7bc4068770ddd}{btmgr}
+\item 
+id$<$ \hyperlink{protocol_le_device_manager_delegate-p}{Le\+Device\+Manager\+Delegate} $>$ \hyperlink{interface_le_device_manager_ac2ed7dcffc6d3fa1f1ab67cb6ed302f0}{delegate}
+\item 
+bool \hyperlink{interface_le_device_manager_a91fd6bfdd674498e4c10995eec97a609}{blind\+Scan}
+\item 
+\hypertarget{interface_le_device_manager_a7f1dd2e6e7e504aea5273b677ebf6335}{}bool {\bfseries is\+Scanning}\label{interface_le_device_manager_a7f1dd2e6e7e504aea5273b677ebf6335}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{interface_le_device_manager}{Le\+Device\+Manager} is responsible for handling the management of the C\+B\+Central\+Manager class The main purposes include\+:
+\begin{DoxyItemize}
+\item Scanning for B\+L\+E peripherals
+\item Associating compatible peripherals with the device classes included in this S\+D\+K (e.\+g. \hyperlink{interface_le_snf_device}{Le\+Snf\+Device})
+\item Creating and storing a list of visible S\+D\+K devices 
+\end{DoxyItemize}
+
+\subsection{Method Documentation}
+\hypertarget{interface_le_device_manager_a803f720122e8eb4f852c9b6fd0473b52}{}\index{Le\+Device\+Manager@{Le\+Device\+Manager}!init\+With\+Supported\+Devices\+:delegate\+:@{init\+With\+Supported\+Devices\+:delegate\+:}}
+\index{init\+With\+Supported\+Devices\+:delegate\+:@{init\+With\+Supported\+Devices\+:delegate\+:}!Le\+Device\+Manager@{Le\+Device\+Manager}}
+\subsubsection[{init\+With\+Supported\+Devices\+:delegate\+:(\+N\+S\+Array $\ast$dev\+Cls,[delegate] id$<$ Le\+Device\+Manager\+Delegate $>$ del)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\+With\+Supported\+Devices\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+Array $\ast$)}]{dev\+Cls}
+\item[{delegate:(id$<$ {\bf Le\+Device\+Manager\+Delegate} $>$)}]{del}
+\end{DoxyParamCaption}
+}\label{interface_le_device_manager_a803f720122e8eb4f852c9b6fd0473b52}
+\hyperlink{interface_le_device_manager}{Le\+Device\+Manager} initialization Supported devices determine\+:
+\begin{DoxyItemize}
+\item Service U\+U\+I\+Ds to scan for if blind\+Scan is set to N\+O
+\item Device classes for which the manager can add instances to its device list For each app, there should only be one instance of \hyperlink{interface_le_device_manager}{Le\+Device\+Manager} 
+\end{DoxyItemize}\hypertarget{interface_le_device_manager_a53b10ce8eea270e388011903c30fa42f}{}\index{Le\+Device\+Manager@{Le\+Device\+Manager}!start\+Scan@{start\+Scan}}
+\index{start\+Scan@{start\+Scan}!Le\+Device\+Manager@{Le\+Device\+Manager}}
+\subsubsection[{start\+Scan()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) start\+Scan 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{interface_le_device_manager_a53b10ce8eea270e388011903c30fa42f}
+Starts the scan for B\+L\+E devices \hypertarget{interface_le_device_manager_a09ec21757544ceaafdc4a20052b22c32}{}\index{Le\+Device\+Manager@{Le\+Device\+Manager}!stop\+Scan@{stop\+Scan}}
+\index{stop\+Scan@{stop\+Scan}!Le\+Device\+Manager@{Le\+Device\+Manager}}
+\subsubsection[{stop\+Scan()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) stop\+Scan 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{interface_le_device_manager_a09ec21757544ceaafdc4a20052b22c32}
+Stops the scan for B\+L\+E devices 
+
+\subsection{Property Documentation}
+\hypertarget{interface_le_device_manager_a91fd6bfdd674498e4c10995eec97a609}{}\index{Le\+Device\+Manager@{Le\+Device\+Manager}!blind\+Scan@{blind\+Scan}}
+\index{blind\+Scan@{blind\+Scan}!Le\+Device\+Manager@{Le\+Device\+Manager}}
+\subsubsection[{blind\+Scan}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (bool) blind\+Scan\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_device_manager_a91fd6bfdd674498e4c10995eec97a609}
+Determines whether the C\+B\+Central\+Manager should scan for distinct Service U\+U\+I\+Ds (e.\+g. only for peripherals compatible with the \hyperlink{interface_le_snf_device}{Le\+Snf\+Device} class) If set to Y\+E\+S, C\+B\+Central\+Manager will scan for A\+N\+Y visible B\+L\+E device \hypertarget{interface_le_device_manager_a6d2af12cf6c4f9473bd7bc4068770ddd}{}\index{Le\+Device\+Manager@{Le\+Device\+Manager}!btmgr@{btmgr}}
+\index{btmgr@{btmgr}!Le\+Device\+Manager@{Le\+Device\+Manager}}
+\subsubsection[{btmgr}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\+B\+Central\+Manager$\ast$) btmgr\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_device_manager_a6d2af12cf6c4f9473bd7bc4068770ddd}
+The Core Bluetooth Central Manager \hypertarget{interface_le_device_manager_ac2ed7dcffc6d3fa1f1ab67cb6ed302f0}{}\index{Le\+Device\+Manager@{Le\+Device\+Manager}!delegate@{delegate}}
+\index{delegate@{delegate}!Le\+Device\+Manager@{Le\+Device\+Manager}}
+\subsubsection[{delegate}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<${\bf Le\+Device\+Manager\+Delegate}$>$) delegate\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_le_device_manager_ac2ed7dcffc6d3fa1f1ab67cb6ed302f0}
+\hyperlink{interface_le_device_manager}{Le\+Device\+Manager}\textquotesingle{}s delegate \hypertarget{interface_le_device_manager_a82f221588b5f9c8d9a9b823bcea56886}{}\index{Le\+Device\+Manager@{Le\+Device\+Manager}!dev\+List@{dev\+List}}
+\index{dev\+List@{dev\+List}!Le\+Device\+Manager@{Le\+Device\+Manager}}
+\subsubsection[{dev\+List}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Mutable\+Array$\ast$) dev\+List\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_le_device_manager_a82f221588b5f9c8d9a9b823bcea56886}
+A list of S\+D\+K compatible device class instances (e.\+g. \hyperlink{interface_le_device}{Le\+Device}) The list is recreated in each session and populated with currently visible devices The list is not persistent in between sessions A session ends with the dealloc of the \hyperlink{interface_le_device_manager}{Le\+Device\+Manager} 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+snfsdk.\+h\end{DoxyCompactItemize}

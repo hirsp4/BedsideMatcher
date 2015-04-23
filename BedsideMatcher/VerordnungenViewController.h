@@ -12,6 +12,7 @@
 #import "ViewController.h"
 
 @interface VerordnungenViewController : ViewController <UITableViewDelegate, UITableViewDataSource,UISearchDisplayDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableViewVerordnungen;
 @property (nonatomic, strong) NSArray *patientsA;
 @property (nonatomic, strong) NSArray *patientsB;

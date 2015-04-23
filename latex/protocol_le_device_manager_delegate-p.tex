@@ -1,0 +1,110 @@
+\hypertarget{protocol_le_device_manager_delegate-p}{}\section{$<$Le\+Device\+Manager\+Delegate$>$ Protocol Reference}
+\label{protocol_le_device_manager_delegate-p}\index{$<$\+Le\+Device\+Manager\+Delegate$>$@{$<$\+Le\+Device\+Manager\+Delegate$>$}}
+Inheritance diagram for $<$Le\+Device\+Manager\+Delegate$>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{protocol_le_device_manager_delegate-p}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{protocol_le_device_manager_delegate-p_a70db1bc2a4ce609c765ae519401d1427}{le\+Device\+Manager\+:did\+Add\+New\+Device\+:}
+\item 
+(void) -\/ \hyperlink{protocol_le_device_manager_delegate-p_afa9c0da81490f05e3d731b894334b5d7}{le\+Device\+Manager\+:set\+Value\+:for\+Device\+U\+U\+I\+D\+:key\+:}
+\item 
+(N\+S\+Array $\ast$) -\/ \hyperlink{protocol_le_device_manager_delegate-p_a6498142b98177f629ad9cbdd97f4036b}{retrieve\+Stored\+Device\+U\+U\+I\+Ds\+For\+Le\+Device\+Manager\+:}
+\item 
+(id) -\/ \hyperlink{protocol_le_device_manager_delegate-p_adad854dfca7660d5c97969c9fd62531f}{le\+Device\+Manager\+:value\+For\+Device\+U\+U\+I\+D\+:key\+:}
+\item 
+(B\+O\+O\+L) -\/ \hyperlink{protocol_le_device_manager_delegate-p_a70f1349287ebda8fa3d212730f7a1286}{le\+Device\+Manager\+:will\+Add\+New\+Device\+For\+Peripheral\+:advertisement\+Data\+:}
+\item 
+(Class) -\/ \hyperlink{protocol_le_device_manager_delegate-p_a3794cb5995e3f06aceacfa93a40215c5}{le\+Device\+Manager\+:did\+Discover\+Unknown\+Peripheral\+:advertisement\+Data\+:\+R\+S\+S\+I\+:}
+\item 
+(void) -\/ \hyperlink{protocol_le_device_manager_delegate-p_a5df86897aece02a0b211ddab6d844021}{le\+Device\+Manager\+:did\+Discover\+Device\+:advertisement\+Data\+:\+R\+S\+S\+I\+:}
+\item 
+(void) -\/ \hyperlink{protocol_le_device_manager_delegate-p_a7111555a9dbd844c7e2720acf40380fc}{le\+Device\+Manager\+:central\+Manager\+Did\+Change\+State\+:}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{protocol_le_device_manager_delegate-p_a7111555a9dbd844c7e2720acf40380fc}{}\index{Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}!le\+Device\+Manager\+:central\+Manager\+Did\+Change\+State\+:@{le\+Device\+Manager\+:central\+Manager\+Did\+Change\+State\+:}}
+\index{le\+Device\+Manager\+:central\+Manager\+Did\+Change\+State\+:@{le\+Device\+Manager\+:central\+Manager\+Did\+Change\+State\+:}!Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}}
+\subsubsection[{le\+Device\+Manager\+:central\+Manager\+Did\+Change\+State\+:(\+Le\+Device\+Manager $\ast$mgr,[central\+Manager\+Did\+Change\+State] C\+B\+Central\+Manager\+State state)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) le\+Device\+Manager\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf Le\+Device\+Manager} $\ast$)}]{mgr}
+\item[{centralManagerDidChangeState:(C\+B\+Central\+Manager\+State)}]{state}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [optional]}}\label{protocol_le_device_manager_delegate-p_a7111555a9dbd844c7e2720acf40380fc}
+Called upon changes in the C\+B\+Central\+Manager\textquotesingle{}s state States can be used to determine whether the app is authorized to act as a Bluetooth central and whether Bluetooth is powered on on the device the app is running on \hypertarget{protocol_le_device_manager_delegate-p_a70db1bc2a4ce609c765ae519401d1427}{}\index{Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}!le\+Device\+Manager\+:did\+Add\+New\+Device\+:@{le\+Device\+Manager\+:did\+Add\+New\+Device\+:}}
+\index{le\+Device\+Manager\+:did\+Add\+New\+Device\+:@{le\+Device\+Manager\+:did\+Add\+New\+Device\+:}!Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}}
+\subsubsection[{le\+Device\+Manager\+:did\+Add\+New\+Device\+:(\+Le\+Device\+Manager $\ast$mgr,[did\+Add\+New\+Device] Le\+Device $\ast$dev)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) le\+Device\+Manager\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf Le\+Device\+Manager} $\ast$)}]{mgr}
+\item[{didAddNewDevice:({\bf Le\+Device} $\ast$)}]{dev}
+\end{DoxyParamCaption}
+}\label{protocol_le_device_manager_delegate-p_a70db1bc2a4ce609c765ae519401d1427}
+Called when a previously unknown peripheral has been added to the manager\textquotesingle{}s device list as an instance of \hyperlink{interface_le_device}{Le\+Device} Only called once per peripheral. \hypertarget{protocol_le_device_manager_delegate-p_a5df86897aece02a0b211ddab6d844021}{}\index{Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}!le\+Device\+Manager\+:did\+Discover\+Device\+:advertisement\+Data\+:\+R\+S\+S\+I\+:@{le\+Device\+Manager\+:did\+Discover\+Device\+:advertisement\+Data\+:\+R\+S\+S\+I\+:}}
+\index{le\+Device\+Manager\+:did\+Discover\+Device\+:advertisement\+Data\+:\+R\+S\+S\+I\+:@{le\+Device\+Manager\+:did\+Discover\+Device\+:advertisement\+Data\+:\+R\+S\+S\+I\+:}!Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}}
+\subsubsection[{le\+Device\+Manager\+:did\+Discover\+Device\+:advertisement\+Data\+:\+R\+S\+S\+I\+:(\+Le\+Device\+Manager $\ast$mgr,[did\+Discover\+Device] Le\+Device $\ast$dev,[advertisement\+Data] N\+S\+Dictionary $\ast$adv\+Data,[R\+S\+S\+I] N\+S\+Number $\ast$\+R\+S\+S\+I)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) le\+Device\+Manager\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf Le\+Device\+Manager} $\ast$)}]{mgr}
+\item[{didDiscoverDevice:({\bf Le\+Device} $\ast$)}]{dev}
+\item[{advertisementData:(N\+S\+Dictionary $\ast$)}]{adv\+Data}
+\item[{RSSI:(N\+S\+Number $\ast$)}]{R\+S\+S\+I}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [optional]}}\label{protocol_le_device_manager_delegate-p_a5df86897aece02a0b211ddab6d844021}
+Called each time the C\+B\+Central\+Manager picks up a broadcast from a given device Passes on the latest advertisement data and rssi values for that device \hypertarget{protocol_le_device_manager_delegate-p_a3794cb5995e3f06aceacfa93a40215c5}{}\index{Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}!le\+Device\+Manager\+:did\+Discover\+Unknown\+Peripheral\+:advertisement\+Data\+:\+R\+S\+S\+I\+:@{le\+Device\+Manager\+:did\+Discover\+Unknown\+Peripheral\+:advertisement\+Data\+:\+R\+S\+S\+I\+:}}
+\index{le\+Device\+Manager\+:did\+Discover\+Unknown\+Peripheral\+:advertisement\+Data\+:\+R\+S\+S\+I\+:@{le\+Device\+Manager\+:did\+Discover\+Unknown\+Peripheral\+:advertisement\+Data\+:\+R\+S\+S\+I\+:}!Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}}
+\subsubsection[{le\+Device\+Manager\+:did\+Discover\+Unknown\+Peripheral\+:advertisement\+Data\+:\+R\+S\+S\+I\+:(\+Le\+Device\+Manager $\ast$mgr,[did\+Discover\+Unknown\+Peripheral] C\+B\+Peripheral $\ast$peripheral,[advertisement\+Data] N\+S\+Dictionary $\ast$adv\+Data,[R\+S\+S\+I] N\+S\+Number $\ast$\+R\+S\+S\+I)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (Class) le\+Device\+Manager\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf Le\+Device\+Manager} $\ast$)}]{mgr}
+\item[{didDiscoverUnknownPeripheral:(C\+B\+Peripheral $\ast$)}]{peripheral}
+\item[{advertisementData:(N\+S\+Dictionary $\ast$)}]{adv\+Data}
+\item[{RSSI:(N\+S\+Number $\ast$)}]{R\+S\+S\+I}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [optional]}}\label{protocol_le_device_manager_delegate-p_a3794cb5995e3f06aceacfa93a40215c5}
+Called to request an appropriate device class for an unknown peripheral The manager couldn\textquotesingle{}t determine this device class itself. Either it hasn\textquotesingle{}t been initialized with all the necessary device classes or this device is in fact incompatible. Receiver can check the peripheral\textquotesingle{}s details and advertisement data to\+:
+\begin{DoxyItemize}
+\item return the correct class and have the manager add a new instance of that class to its device list
+\item return nil and keep the manager from adding a new device instance 
+\end{DoxyItemize}\hypertarget{protocol_le_device_manager_delegate-p_afa9c0da81490f05e3d731b894334b5d7}{}\index{Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}!le\+Device\+Manager\+:set\+Value\+:for\+Device\+U\+U\+I\+D\+:key\+:@{le\+Device\+Manager\+:set\+Value\+:for\+Device\+U\+U\+I\+D\+:key\+:}}
+\index{le\+Device\+Manager\+:set\+Value\+:for\+Device\+U\+U\+I\+D\+:key\+:@{le\+Device\+Manager\+:set\+Value\+:for\+Device\+U\+U\+I\+D\+:key\+:}!Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}}
+\subsubsection[{le\+Device\+Manager\+:set\+Value\+:for\+Device\+U\+U\+I\+D\+:key\+:(\+Le\+Device\+Manager $\ast$mgr,[set\+Value] id value,[for\+Device\+U\+U\+I\+D] N\+S\+U\+U\+I\+D $\ast$uuid,[key] N\+S\+String $\ast$key)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) le\+Device\+Manager\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf Le\+Device\+Manager} $\ast$)}]{mgr}
+\item[{setValue:(id)}]{value}
+\item[{forDeviceUUID:(N\+S\+U\+U\+I\+D $\ast$)}]{uuid}
+\item[{key:(N\+S\+String $\ast$)}]{key}
+\end{DoxyParamCaption}
+}\label{protocol_le_device_manager_delegate-p_afa9c0da81490f05e3d731b894334b5d7}
+Called when certain key-\/value pairs are associated with a distinct peripheral identifier e.\+g. \hyperlink{interface_le_device}{Le\+Device} is associated with peripheral. device.\+peripheral\+Identifier = peripheral.\+identifier Peripheral Identifier can be used to retrieve the same peripheral in a later session Key-\/value pair can be used to assign values to certain device keys after device retrieval \hypertarget{protocol_le_device_manager_delegate-p_adad854dfca7660d5c97969c9fd62531f}{}\index{Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}!le\+Device\+Manager\+:value\+For\+Device\+U\+U\+I\+D\+:key\+:@{le\+Device\+Manager\+:value\+For\+Device\+U\+U\+I\+D\+:key\+:}}
+\index{le\+Device\+Manager\+:value\+For\+Device\+U\+U\+I\+D\+:key\+:@{le\+Device\+Manager\+:value\+For\+Device\+U\+U\+I\+D\+:key\+:}!Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}}
+\subsubsection[{le\+Device\+Manager\+:value\+For\+Device\+U\+U\+I\+D\+:key\+:(\+Le\+Device\+Manager $\ast$mgr,[value\+For\+Device\+U\+U\+I\+D] N\+S\+U\+U\+I\+D $\ast$uuid,[key] N\+S\+String $\ast$key)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) le\+Device\+Manager\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf Le\+Device\+Manager} $\ast$)}]{mgr}
+\item[{valueForDeviceUUID:(N\+S\+U\+U\+I\+D $\ast$)}]{uuid}
+\item[{key:(N\+S\+String $\ast$)}]{key}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [optional]}}\label{protocol_le_device_manager_delegate-p_adad854dfca7660d5c97969c9fd62531f}
+Called if a known device was retrieved, but is missing certain values Requests the appropriate device value for the given key \hypertarget{protocol_le_device_manager_delegate-p_a70f1349287ebda8fa3d212730f7a1286}{}\index{Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}!le\+Device\+Manager\+:will\+Add\+New\+Device\+For\+Peripheral\+:advertisement\+Data\+:@{le\+Device\+Manager\+:will\+Add\+New\+Device\+For\+Peripheral\+:advertisement\+Data\+:}}
+\index{le\+Device\+Manager\+:will\+Add\+New\+Device\+For\+Peripheral\+:advertisement\+Data\+:@{le\+Device\+Manager\+:will\+Add\+New\+Device\+For\+Peripheral\+:advertisement\+Data\+:}!Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}}
+\subsubsection[{le\+Device\+Manager\+:will\+Add\+New\+Device\+For\+Peripheral\+:advertisement\+Data\+:(\+Le\+Device\+Manager $\ast$mgr,[will\+Add\+New\+Device\+For\+Peripheral] C\+B\+Peripheral $\ast$peripheral,[advertisement\+Data] N\+S\+Dictionary $\ast$adv\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) le\+Device\+Manager\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf Le\+Device\+Manager} $\ast$)}]{mgr}
+\item[{willAddNewDeviceForPeripheral:(C\+B\+Peripheral $\ast$)}]{peripheral}
+\item[{advertisementData:(N\+S\+Dictionary $\ast$)}]{adv\+Data}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [optional]}}\label{protocol_le_device_manager_delegate-p_a70f1349287ebda8fa3d212730f7a1286}
+Called before a new S\+D\+K device class instance is added to the manager\textquotesingle{}s device list Receiver can check the peripheral\textquotesingle{}s details and advertisement data and either allow or prohibit adding the new device \hypertarget{protocol_le_device_manager_delegate-p_a6498142b98177f629ad9cbdd97f4036b}{}\index{Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}!retrieve\+Stored\+Device\+U\+U\+I\+Ds\+For\+Le\+Device\+Manager\+:@{retrieve\+Stored\+Device\+U\+U\+I\+Ds\+For\+Le\+Device\+Manager\+:}}
+\index{retrieve\+Stored\+Device\+U\+U\+I\+Ds\+For\+Le\+Device\+Manager\+:@{retrieve\+Stored\+Device\+U\+U\+I\+Ds\+For\+Le\+Device\+Manager\+:}!Le\+Device\+Manager\+Delegate-\/p@{Le\+Device\+Manager\+Delegate-\/p}}
+\subsubsection[{retrieve\+Stored\+Device\+U\+U\+I\+Ds\+For\+Le\+Device\+Manager\+:(\+Le\+Device\+Manager $\ast$mgr)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Array $\ast$) retrieve\+Stored\+Device\+U\+U\+I\+Ds\+For\+Le\+Device\+Manager\+: 
+\begin{DoxyParamCaption}
+\item[{({\bf Le\+Device\+Manager} $\ast$)}]{mgr}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [optional]}}\label{protocol_le_device_manager_delegate-p_a6498142b98177f629ad9cbdd97f4036b}
+Requests a list of known peripheral identifiers for which the devices shall be retrieved and added to the device list 
+
+The documentation for this protocol was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+snfsdk.\+h\end{DoxyCompactItemize}

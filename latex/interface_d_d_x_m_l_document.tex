@@ -1,0 +1,84 @@
+\hypertarget{interface_d_d_x_m_l_document}{}\section{D\+D\+X\+M\+L\+Document Class Reference}
+\label{interface_d_d_x_m_l_document}\index{D\+D\+X\+M\+L\+Document@{D\+D\+X\+M\+L\+Document}}
+Inheritance diagram for D\+D\+X\+M\+L\+Document\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_d_d_x_m_l_document}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_d_d_x_m_l_document_a1333963c4716f6fa3242ced4cdc8dee9}{init\+With\+X\+M\+L\+String\+:options\+:error\+:}
+\item 
+(id) -\/ \hyperlink{interface_d_d_x_m_l_document_ada1a30f2955d3dd07ece93ef8ce6ed5e}{init\+With\+Data\+:options\+:error\+:}
+\item 
+(\hyperlink{interface_d_d_x_m_l_element}{D\+D\+X\+M\+L\+Element} $\ast$) -\/ \hyperlink{interface_d_d_x_m_l_document_adccca136208b099d33b1e78e4d8ffd57}{root\+Element}
+\item 
+\hypertarget{interface_d_d_x_m_l_document_a4971dd75b69a275c86d0750b667e1487}{}(N\+S\+Data $\ast$) -\/ {\bfseries X\+M\+L\+Data}\label{interface_d_d_x_m_l_document_a4971dd75b69a275c86d0750b667e1487}
+
+\item 
+\hypertarget{interface_d_d_x_m_l_document_a84be93c9f946b0d449bc762bb24f7c58}{}(N\+S\+Data $\ast$) -\/ {\bfseries X\+M\+L\+Data\+With\+Options\+:}\label{interface_d_d_x_m_l_document_a84be93c9f946b0d449bc762bb24f7c58}
+
+\item 
+\hypertarget{interface_d_d_x_m_l_document_a569fafe1eaeddd4731cc8b56142a012e}{}(id) -\/ {\bfseries init\+With\+Doc\+Primitive\+:owner\+:}\label{interface_d_d_x_m_l_document_a569fafe1eaeddd4731cc8b56142a012e}
+
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_d_d_x_m_l_document_af35340e7c287b74dc8e89ec65c57722e}{}(id) + {\bfseries node\+With\+Doc\+Primitive\+:owner\+:}\label{interface_d_d_x_m_l_document_af35340e7c287b74dc8e89ec65c57722e}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Welcome to Kiss\+X\+M\+L.
+
+The project page has documentation if you have questions. \href{https://github.com/robbiehanson/KissXML}{\tt https\+://github.\+com/robbiehanson/\+Kiss\+X\+M\+L}
+
+If you\textquotesingle{}re new to the project you may wish to read the \char`\"{}\+Getting Started\char`\"{} wiki. \href{https://github.com/robbiehanson/KissXML/wiki/GettingStarted}{\tt https\+://github.\+com/robbiehanson/\+Kiss\+X\+M\+L/wiki/\+Getting\+Started}
+
+Kiss\+X\+M\+L provides a drop-\/in replacement for Apple\textquotesingle{}s N\+S\+X\+M\+L class cluster. The goal is to get the exact same behavior as the N\+S\+X\+M\+L classes.
+
+For A\+P\+I Reference, see Apple\textquotesingle{}s excellent documentation, either via Xcode\textquotesingle{}s Mac O\+S X documentation, or via the web\+:
+
+\href{https://github.com/robbiehanson/KissXML/wiki/Reference}{\tt https\+://github.\+com/robbiehanson/\+Kiss\+X\+M\+L/wiki/\+Reference} 
+
+\subsection{Method Documentation}
+\hypertarget{interface_d_d_x_m_l_document_ada1a30f2955d3dd07ece93ef8ce6ed5e}{}\index{D\+D\+X\+M\+L\+Document@{D\+D\+X\+M\+L\+Document}!init\+With\+Data\+:options\+:error\+:@{init\+With\+Data\+:options\+:error\+:}}
+\index{init\+With\+Data\+:options\+:error\+:@{init\+With\+Data\+:options\+:error\+:}!D\+D\+X\+M\+L\+Document@{D\+D\+X\+M\+L\+Document}}
+\subsubsection[{init\+With\+Data\+:options\+:error\+:(\+N\+S\+Data $\ast$data,[options] N\+S\+U\+Integer mask,[error] N\+S\+Error $\ast$$\ast$error)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\+With\+Data\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+Data $\ast$)}]{data}
+\item[{options:(N\+S\+U\+Integer)}]{mask}
+\item[{error:(N\+S\+Error $\ast$$\ast$)}]{error}
+\end{DoxyParamCaption}
+}\label{interface_d_d_x_m_l_document_ada1a30f2955d3dd07ece93ef8ce6ed5e}
+Initializes and returns a \hyperlink{interface_d_d_x_m_l_document}{D\+D\+X\+M\+L\+Document} object created from an N\+S\+Data object.
+
+Returns an initialized \hyperlink{interface_d_d_x_m_l_document}{D\+D\+X\+M\+L\+Document} object, or nil if initialization fails because of parsing errors or other reasons. \hypertarget{interface_d_d_x_m_l_document_a1333963c4716f6fa3242ced4cdc8dee9}{}\index{D\+D\+X\+M\+L\+Document@{D\+D\+X\+M\+L\+Document}!init\+With\+X\+M\+L\+String\+:options\+:error\+:@{init\+With\+X\+M\+L\+String\+:options\+:error\+:}}
+\index{init\+With\+X\+M\+L\+String\+:options\+:error\+:@{init\+With\+X\+M\+L\+String\+:options\+:error\+:}!D\+D\+X\+M\+L\+Document@{D\+D\+X\+M\+L\+Document}}
+\subsubsection[{init\+With\+X\+M\+L\+String\+:options\+:error\+:(\+N\+S\+String $\ast$string,[options] N\+S\+U\+Integer mask,[error] N\+S\+Error $\ast$$\ast$error)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\+With\+X\+M\+L\+String\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+String $\ast$)}]{string}
+\item[{options:(N\+S\+U\+Integer)}]{mask}
+\item[{error:(N\+S\+Error $\ast$$\ast$)}]{error}
+\end{DoxyParamCaption}
+}\label{interface_d_d_x_m_l_document_a1333963c4716f6fa3242ced4cdc8dee9}
+Initializes and returns a \hyperlink{interface_d_d_x_m_l_document}{D\+D\+X\+M\+L\+Document} object created from an N\+S\+Data object.
+
+Returns an initialized \hyperlink{interface_d_d_x_m_l_document}{D\+D\+X\+M\+L\+Document} object, or nil if initialization fails because of parsing errors or other reasons. \hypertarget{interface_d_d_x_m_l_document_adccca136208b099d33b1e78e4d8ffd57}{}\index{D\+D\+X\+M\+L\+Document@{D\+D\+X\+M\+L\+Document}!root\+Element@{root\+Element}}
+\index{root\+Element@{root\+Element}!D\+D\+X\+M\+L\+Document@{D\+D\+X\+M\+L\+Document}}
+\subsubsection[{root\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf D\+D\+X\+M\+L\+Element} $\ast$) root\+Element 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{interface_d_d_x_m_l_document_adccca136208b099d33b1e78e4d8ffd57}
+Returns the root element of the receiver. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+D\+X\+M\+L\+Document.\+h\item 
+D\+D\+X\+M\+L\+Document.\+m\end{DoxyCompactItemize}

@@ -1,0 +1,508 @@
+\hypertarget{interface_le_snf_device}{}\section{Le\+Snf\+Device Class Reference}
+\label{interface_le_snf_device}\index{Le\+Snf\+Device@{Le\+Snf\+Device}}
+
+
+{\ttfamily \#import $<$snfsdk.\+h$>$}
+
+Inheritance diagram for Le\+Snf\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{interface_le_snf_device}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(bool) -\/ \hyperlink{interface_le_snf_device_a65a6df0b7a59e48b3370f4411772aae2}{set\+S\+Beacon\+I\+D\+:context\+:completion\+:}
+\item 
+(bool) -\/ \hyperlink{interface_le_snf_device_a1c6251a5588bfb099fedf668deb81a3e}{set\+Beacon\+Rate\+:tx\+Power\+:beacon\+Type\+:context\+:completion\+:}
+\item 
+(bool) -\/ \hyperlink{interface_le_snf_device_a6b42f33a33d12fcae1572b845a4eb361}{set\+Beacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:beacon\+Type\+:context\+:completion\+:}
+\item 
+(bool) -\/ \hyperlink{interface_le_snf_device_a70c456167e98302dcfdc2e89332198b0}{enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+:tx\+Power\+:context\+:completion\+:}
+\item 
+(bool) -\/ \hyperlink{interface_le_snf_device_a2b6dcfb3598d0b08c4cd11ed83dbbc34}{enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:}
+\item 
+(bool) -\/ \hyperlink{interface_le_snf_device_a324d2225101dd7c4c2063710e96b9a9a}{set\+Sbeacon\+Rate\+:tx\+Power\+:context\+:completion\+:}
+\item 
+(bool) -\/ \hyperlink{interface_le_snf_device_a93b1c0c6a116ce8b9cd9f89e06ff49b3}{set\+Sbeacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:}
+\item 
+(bool) -\/ \hyperlink{interface_le_snf_device_a01df3c1e33aec5783931e242a2ee85fd}{set\+Beacon\+Rsp\+Rate\+Connectable\+:scannable\+:nonconnectable\+:type\+:context\+:completion\+:}
+\item 
+(B\+O\+O\+L) -\/ \hyperlink{interface_le_snf_device_a8f8ffff42458130c01aa5152cf2f857c}{disable\+Legacy\+Broadcasting\+:completion\+:}
+\item 
+\hypertarget{interface_le_snf_device_a60f5ee8daa8102dcacc69f1c2d0b413f}{}(B\+O\+O\+L) -\/ {\bfseries set\+Broadcast\+Data\+:at\+Index\+:dyn\+Data\+:dyn\+Ofs\+:}\label{interface_le_snf_device_a60f5ee8daa8102dcacc69f1c2d0b413f}
+
+\item 
+\hypertarget{interface_le_snf_device_a0d2108ce33ab51b9b036e232fde740e6}{}(B\+O\+O\+L) -\/ {\bfseries set\+Encrypted\+Broadcast\+Data\+:at\+Index\+:dyn\+Data\+:dyn\+Ofs\+:key\+Index\+:encryption\+Range\+:random\+Length\+:}\label{interface_le_snf_device_a0d2108ce33ab51b9b036e232fde740e6}
+
+\item 
+\hypertarget{interface_le_snf_device_ab9dd353cec24c089989a63302ce80022}{}(B\+O\+O\+L) -\/ {\bfseries set\+Encrypted\+Raw\+Broadcast\+Data\+:at\+Index\+:interval\+Skip\+:hw\+Addr\+:hw\+Addr\+Public\+:adv\+Type\+:tx\+Power\+:dyn\+Ofs\+:dyn\+Length\+:key\+Index\+:encryption\+Range\+:random\+Length\+:}\label{interface_le_snf_device_ab9dd353cec24c089989a63302ce80022}
+
+\item 
+\hypertarget{interface_le_snf_device_a762f16585692d51dcd0ea5539806f86e}{}(B\+O\+O\+L) -\/ {\bfseries set\+I\+Beacon\+Broadcast\+Data\+At\+Index\+:proximity\+U\+U\+I\+D\+:major\+:minor\+:signal\+At1m\+:}\label{interface_le_snf_device_a762f16585692d51dcd0ea5539806f86e}
+
+\item 
+\hypertarget{interface_le_snf_device_a9f03c68b1339d2f8c65ba6848b62b582}{}(B\+O\+O\+L) -\/ {\bfseries set\+Broadcast\+Key\+:at\+Index\+:}\label{interface_le_snf_device_a9f03c68b1339d2f8c65ba6848b62b582}
+
+\item 
+\hypertarget{interface_le_snf_device_a5452551e9c9d2609aebc8bf1026031b0}{}(B\+O\+O\+L) -\/ {\bfseries read\+Broadcast\+Data\+At\+Index\+:}\label{interface_le_snf_device_a5452551e9c9d2609aebc8bf1026031b0}
+
+\item 
+(B\+O\+O\+L) -\/ \hyperlink{interface_le_snf_device_adaca216df5b86a27a553777401ef938b}{read\+Beacon\+Adv\+Range\+:context\+:completion\+:}
+\item 
+\hypertarget{interface_le_snf_device_a528e6dafc2f6603e8cf0c6d6ca342361}{}(B\+O\+O\+L) -\/ {\bfseries set\+Authentication\+Key\+:context\+:completion\+:}\label{interface_le_snf_device_a528e6dafc2f6603e8cf0c6d6ca342361}
+
+\item 
+\hypertarget{interface_le_snf_device_a36f8cdc79d73970df72b564f3aeccae7}{}(B\+O\+O\+L) -\/ {\bfseries set\+Broadcast\+Rate\+:timeout\+:rate2\+:context\+:completion\+:}\label{interface_le_snf_device_a36f8cdc79d73970df72b564f3aeccae7}
+
+\item 
+\hypertarget{interface_le_snf_device_a8674f3f7cf89af780f889f3cb28fc262}{}(B\+O\+O\+L) -\/ {\bfseries set\+Broadcast\+Interval\+:timeout\+:interval2\+:timeout2\+:interval3\+:tx\+Power\+:}\label{interface_le_snf_device_a8674f3f7cf89af780f889f3cb28fc262}
+
+\item 
+\hypertarget{interface_le_snf_device_a8ed4c60fb45317a501cbbfc228c6f445}{}(B\+O\+O\+L) -\/ {\bfseries enable\+Distance\+Measurement\+:}\label{interface_le_snf_device_a8ed4c60fb45317a501cbbfc228c6f445}
+
+\item 
+\hypertarget{interface_le_snf_device_a966c291cf3fdc0d55367a5676a9181e8}{}(B\+O\+O\+L) -\/ {\bfseries set\+Connection\+Rate\+:}\label{interface_le_snf_device_a966c291cf3fdc0d55367a5676a9181e8}
+
+\item 
+\hypertarget{interface_le_snf_device_a4349f37ab6bdb2fb1eecbbc65cad7f58}{}(B\+O\+O\+L) -\/ {\bfseries set\+Pairing\+Rssi\+:}\label{interface_le_snf_device_a4349f37ab6bdb2fb1eecbbc65cad7f58}
+
+\item 
+\hypertarget{interface_le_snf_device_a244a9a67ae8c4776e83195e72ae843b0}{}(B\+O\+O\+L) -\/ {\bfseries enable\+Alert\+Sound\+:light\+:}\label{interface_le_snf_device_a244a9a67ae8c4776e83195e72ae843b0}
+
+\item 
+\hypertarget{interface_le_snf_device_ae4ffd60bf67f6a556966411f27b1661e}{}(B\+O\+O\+L) -\/ {\bfseries enable\+Connection\+Loss\+Alert\+Sound\+:light\+:}\label{interface_le_snf_device_ae4ffd60bf67f6a556966411f27b1661e}
+
+\item 
+\hypertarget{interface_le_snf_device_a98bffc69f90e9977ad819a6717028fc7}{}(B\+O\+O\+L) -\/ {\bfseries read\+Temperature}\label{interface_le_snf_device_a98bffc69f90e9977ad819a6717028fc7}
+
+\item 
+\hypertarget{interface_le_snf_device_a5d5194c13d27b3e0e34371e4fc78d057}{}(B\+O\+O\+L) -\/ {\bfseries set\+Temperature\+Calibration\+:}\label{interface_le_snf_device_a5d5194c13d27b3e0e34371e4fc78d057}
+
+\item 
+\hypertarget{interface_le_snf_device_a69c4af24f46dba7f75bbc0b8d9057cb0}{}(B\+O\+O\+L) -\/ {\bfseries write\+Temperature\+Calibration}\label{interface_le_snf_device_a69c4af24f46dba7f75bbc0b8d9057cb0}
+
+\item 
+\hypertarget{interface_le_snf_device_a586693cc1283546f4b79ab0dfaf7201a}{}(B\+O\+O\+L) -\/ {\bfseries read\+Battery\+Level}\label{interface_le_snf_device_a586693cc1283546f4b79ab0dfaf7201a}
+
+\item 
+\hypertarget{interface_le_snf_device_a33428be447bbe982c8ffcdfe3c7f648b}{}(N\+S\+Data $\ast$) -\/ {\bfseries decrypt\+Broadcast\+Data\+:key\+:encryption\+Range\+:random\+Length\+:}\label{interface_le_snf_device_a33428be447bbe982c8ffcdfe3c7f648b}
+
+\item 
+\hypertarget{interface_le_snf_device_abfc2491916c2511608e7d68f951163bb}{}(B\+O\+O\+L) -\/ {\bfseries set\+Broadcast\+Data\+Name\+:at\+Index\+:}\label{interface_le_snf_device_abfc2491916c2511608e7d68f951163bb}
+
+\item 
+(B\+O\+O\+L) -\/ \hyperlink{interface_le_snf_device_a32cce57a0f7b9253335ba0f7576ebc7f}{enable\+Temperature\+Logging\+With\+Interval\+:}
+\item 
+(float) -\/ \hyperlink{interface_le_snf_device_a39dffcc59e9d57552f8f847de108474a}{calibrated\+Temperature\+Value\+:}
+\item 
+(B\+O\+O\+L) -\/ \hyperlink{interface_le_snf_device_a4e6ee8cb46c047450dd86b1ae28879c3}{read\+Temperature\+Log}
+\item 
+(B\+O\+O\+L) -\/ \hyperlink{interface_le_snf_device_a89137a083145c77d4d484dc4d4e28ab6}{erase\+Temperature\+Log}
+\item 
+(void) -\/ \hyperlink{interface_le_snf_device_aa7d312b1ee7e42a087e841baf46732b9}{write\+Device\+Name\+:}
+\item 
+(void) -\/ \hyperlink{interface_le_snf_device_a815cc4d8c0d467b161d14996319a2d9d}{read\+Adv\+Stats\+Context\+:completion\+:}
+\item 
+(void) -\/ \hyperlink{interface_le_snf_device_a3a6a8036eef4dfba5690cad34bd273d0}{read\+Adv\+Settings\+Context\+:completion\+:}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{interface_le_snf_device_a6a19f4dd51795cd69173a7f3c5adab2e}{battery\+Type\+String}
+\item 
+(B\+O\+O\+L) -\/ \hyperlink{interface_le_snf_device_a8d9efd906807caddb8b349b13330c848}{set\+Device\+Time\+:}
+\item 
+(B\+O\+O\+L) -\/ \hyperlink{interface_le_snf_device_af245bd548bfe861a06342cfbb37383b4}{update\+Firmware}
+\item 
+(B\+O\+O\+L) -\/ \hyperlink{interface_le_snf_device_ad131aa4d261172fa1a61375466bf088b}{set\+Power\+Off\+Timeout\+:}
+\item 
+(void) -\/ \hyperlink{interface_le_snf_device_a2776ece86862b493d68de33578b96af1}{set\+Broadcast\+Mode\+:}
+\item 
+(void) -\/ \hyperlink{interface_le_snf_device_ab25cfa820f6bd87a3f64961a6be21a2e}{write\+Snf\+Beacon\+Packet\+With\+Id\+:tx\+Power\+:s\+Bcn\+Skip\+:i\+Beacon\+U\+U\+I\+D\+:i\+Bcn\+Skip\+:}
+\item 
+\hypertarget{interface_le_snf_device_a7cc7248c5898bac554fa50d9c2f7f534}{}(void) -\/ {\bfseries write\+Snf\+Beacon\+Packet\+With\+Id\+:tx\+Power\+:s\+Bcn\+Skip\+:i\+Beacon\+U\+U\+I\+D\+:i\+Bcn\+Skip\+:major\+:minor\+:}\label{interface_le_snf_device_a7cc7248c5898bac554fa50d9c2f7f534}
+
+\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_le_snf_device_aa66b5a9396a599684b91299069fa3797}{}(N\+S\+Data $\ast$) + {\bfseries decrypt\+E\+C\+B\+Broadcast\+Data\+:key\+:encryption\+Range\+:}\label{interface_le_snf_device_aa66b5a9396a599684b91299069fa3797}
+
+\item 
+(uint32\+\_\+t) + \hyperlink{interface_le_snf_device_a913ced45cb36f4b6252d213996cdaee7}{revision\+For\+Firmware\+Data\+:}
+\item 
+(uint32\+\_\+t) + \hyperlink{interface_le_snf_device_a9be881cab4d4489c75e59649c32b751b}{size\+For\+Firmware\+Data\+:}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+B\+O\+O\+L \hyperlink{interface_le_snf_device_a21f7ccd07695a5dec79fa82a6cce2b17}{distance\+Measurement\+Enabled}
+\item 
+enum L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+E \hyperlink{interface_le_snf_device_a55e2289b72eb76ecd680df1e988d9814}{state}
+\item 
+id$<$ \hyperlink{protocol_le_snf_device_delegate-p}{Le\+Snf\+Device\+Delegate} $>$ \hyperlink{interface_le_snf_device_ab0bd07be677cb82e236c31730a4e56ae}{delegate}
+\item 
+uint32\+\_\+t \hyperlink{interface_le_snf_device_a87d28e38945f818bc093da48ecdbb182}{sw\+Revision}
+\item 
+int \hyperlink{interface_le_snf_device_ac2b0d74394b6ba30b0306ef86a4504c9}{battery\+Level}
+\item 
+float \hyperlink{interface_le_snf_device_a8bb8a1bce35bd386ac909c35215a4b8a}{temperature}
+\item 
+float \hyperlink{interface_le_snf_device_a8cdcdf37d487556008e5421dc353ac3a}{temperature\+Raw}
+\item 
+N\+S\+Array $\ast$ \hyperlink{interface_le_snf_device_a06108c7aecbfe26a075ce43fa010333f}{temperature\+Calibration\+Values}
+\item 
+N\+S\+Mutable\+Array $\ast$ \hyperlink{interface_le_snf_device_a0e3007ac5be7500511a19704b7223af2}{temperature\+Log}
+\item 
+int \hyperlink{interface_le_snf_device_aa38afc50f6dd03cc391715cbc8186111}{button\+Counter}
+\item 
+float \hyperlink{interface_le_snf_device_ab5b9db7753a961a6062947950e516688}{distance\+Estimate}
+\item 
+int \hyperlink{interface_le_snf_device_ad640963aa99ea3073ecc6d526d75c113}{connection\+Counter}
+\item 
+int \hyperlink{interface_le_snf_device_a8a5dfc51f0558ed63728b030986603f1}{connection\+Success\+Counter}
+\item 
+N\+S\+Data $\ast$ \hyperlink{interface_le_snf_device_a5981e716effb9c1bc130c68384065cdd}{devid}
+\item 
+uint8\+\_\+t \hyperlink{interface_le_snf_device_aa5fd5e351c6b9da96031fa5574e4873d}{battery\+Type}
+\item 
+uint8\+\_\+t \hyperlink{interface_le_snf_device_a6477df781a728d6f7f7e8ecdcca2205d}{device\+Type}
+\item 
+uint16\+\_\+t \hyperlink{interface_le_snf_device_a308aab38e366fee52c6f9fbb860d2290}{device\+Caps}
+\item 
+uint16\+\_\+t \hyperlink{interface_le_snf_device_a27787e4c4cac8f6d4e79fbb0f02ab596}{battery\+Voltage}
+\item 
+B\+O\+O\+L \hyperlink{interface_le_snf_device_a1d28882e6c954a9e0799071dcd6f8774}{firmware\+Update\+On\+Connect}
+\item 
+B\+O\+O\+L \hyperlink{interface_le_snf_device_ab9d2622f456128d419c6ca8f9a277524}{allow\+Firmware\+Downgrade}
+\item 
+int \hyperlink{interface_le_snf_device_a3453d599afd1532dc29f04762271bc7e}{auth\+Counter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{interface_le_device}{Le\+Device} subclass Base S\+N\+F/\+Blu\+Vision beacon class 
+
+\subsection{Method Documentation}
+\hypertarget{interface_le_snf_device_a6a19f4dd51795cd69173a7f3c5adab2e}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!battery\+Type\+String@{battery\+Type\+String}}
+\index{battery\+Type\+String@{battery\+Type\+String}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{battery\+Type\+String()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) battery\+Type\+String 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a6a19f4dd51795cd69173a7f3c5adab2e}
+Returns a human readable battery type string for the device\textquotesingle{}s battery type \hypertarget{interface_le_snf_device_a39dffcc59e9d57552f8f847de108474a}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!calibrated\+Temperature\+Value\+:@{calibrated\+Temperature\+Value\+:}}
+\index{calibrated\+Temperature\+Value\+:@{calibrated\+Temperature\+Value\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{calibrated\+Temperature\+Value\+:(int16\+\_\+t raw\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) calibrated\+Temperature\+Value\+: 
+\begin{DoxyParamCaption}
+\item[{(int16\+\_\+t)}]{raw\+\_\+value}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a39dffcc59e9d57552f8f847de108474a}
+Returns calibrated temperature value for given raw value in dec C \hypertarget{interface_le_snf_device_a8f8ffff42458130c01aa5152cf2f857c}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!disable\+Legacy\+Broadcasting\+:completion\+:@{disable\+Legacy\+Broadcasting\+:completion\+:}}
+\index{disable\+Legacy\+Broadcasting\+:completion\+:@{disable\+Legacy\+Broadcasting\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{disable\+Legacy\+Broadcasting\+:completion\+:(id donecontext,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) disable\+Legacy\+Broadcasting\+: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{donecontext}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a8f8ffff42458130c01aa5152cf2f857c}
+Disables any v1 broadcasts for the given device Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed \hypertarget{interface_le_snf_device_a70c456167e98302dcfdc2e89332198b0}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+:tx\+Power\+:context\+:completion\+:@{enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+:tx\+Power\+:context\+:completion\+:}}
+\index{enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+:tx\+Power\+:context\+:completion\+:@{enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+:tx\+Power\+:context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+:tx\+Power\+:context\+:completion\+:(\+N\+S\+U\+U\+I\+D $\ast$uuid,[major] uint16\+\_\+t major,[minor] uint16\+\_\+t minor,[rate] uint8\+\_\+t rate,[tx\+Power] int8\+\_\+t tx\+Power,[context] id donecontext,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (bool) enable\+Ibeacon\+Broadcast\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+U\+U\+I\+D $\ast$)}]{uuid}
+\item[{major:(uint16\+\_\+t)}]{major}
+\item[{minor:(uint16\+\_\+t)}]{minor}
+\item[{rate:(uint8\+\_\+t)}]{rate}
+\item[{txPower:(int8\+\_\+t)}]{tx\+Power}
+\item[{context:(id)}]{donecontext}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a70c456167e98302dcfdc2e89332198b0}
+Used to switch on i\+Beacon broadcasts for the peripheral with the given i\+Beacon U\+U\+I\+D, Major and Minor values Calls \textquotesingle{}set\+Beacon\+Rate\+:\textquotesingle{} method for the i\+Beacon frame after setting up the U\+U\+I\+D, Major and Minor on the device Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed \hypertarget{interface_le_snf_device_a2b6dcfb3598d0b08c4cd11ed83dbbc34}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:@{enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:}}
+\index{enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:@{enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{enable\+Ibeacon\+Broadcast\+:major\+:minor\+:rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:(\+N\+S\+U\+U\+I\+D $\ast$uuid,[major] uint16\+\_\+t major,[minor] uint16\+\_\+t minor,[rate\+Day] uint8\+\_\+t rate\+Day,[tx\+Power\+Day] int8\+\_\+t tx\+Power\+Day,[rate\+Night] uint8\+\_\+t rate\+Night,[tx\+Power\+Night] int8\+\_\+t tx\+Power\+Night,[context] id donecontext,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (bool) enable\+Ibeacon\+Broadcast\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+U\+U\+I\+D $\ast$)}]{uuid}
+\item[{major:(uint16\+\_\+t)}]{major}
+\item[{minor:(uint16\+\_\+t)}]{minor}
+\item[{rateDay:(uint8\+\_\+t)}]{rate\+Day}
+\item[{txPowerDay:(int8\+\_\+t)}]{tx\+Power\+Day}
+\item[{rateNight:(uint8\+\_\+t)}]{rate\+Night}
+\item[{txPowerNight:(int8\+\_\+t)}]{tx\+Power\+Night}
+\item[{context:(id)}]{donecontext}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a2b6dcfb3598d0b08c4cd11ed83dbbc34}
+Used to switch on i\+Beacon broadcasts for the peripheral with the given i\+Beacon U\+U\+I\+D, Major and Minor values Calls \textquotesingle{}set\+Beacon\+Rate\+Day\+:\textquotesingle{} method for the i\+Beacon frame after setting up the U\+U\+I\+D, Major and Minor on the device Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed \hypertarget{interface_le_snf_device_a32cce57a0f7b9253335ba0f7576ebc7f}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!enable\+Temperature\+Logging\+With\+Interval\+:@{enable\+Temperature\+Logging\+With\+Interval\+:}}
+\index{enable\+Temperature\+Logging\+With\+Interval\+:@{enable\+Temperature\+Logging\+With\+Interval\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{enable\+Temperature\+Logging\+With\+Interval\+:(uint16\+\_\+t interval)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) enable\+Temperature\+Logging\+With\+Interval\+: 
+\begin{DoxyParamCaption}
+\item[{(uint16\+\_\+t)}]{interval}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a32cce57a0f7b9253335ba0f7576ebc7f}
+Enables device temperature logging with given interval \hypertarget{interface_le_snf_device_a89137a083145c77d4d484dc4d4e28ab6}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!erase\+Temperature\+Log@{erase\+Temperature\+Log}}
+\index{erase\+Temperature\+Log@{erase\+Temperature\+Log}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{erase\+Temperature\+Log()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) erase\+Temperature\+Log 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a89137a083145c77d4d484dc4d4e28ab6}
+Clears device temperature log \hypertarget{interface_le_snf_device_a3a6a8036eef4dfba5690cad34bd273d0}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!read\+Adv\+Settings\+Context\+:completion\+:@{read\+Adv\+Settings\+Context\+:completion\+:}}
+\index{read\+Adv\+Settings\+Context\+:completion\+:@{read\+Adv\+Settings\+Context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{read\+Adv\+Settings\+Context\+:completion\+:(id context,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) read\+Adv\+Settings\+Context\+: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{context}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a3a6a8036eef4dfba5690cad34bd273d0}
+Read device advertisement settings Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed Le\+Device\+Done\+Block returns an instance of N\+S\+Dictionary as context. This dictionary includes\+:
+\begin{DoxyItemize}
+\item N\+S\+Data instance containing the settings (broadcast rates etc.)
+\item the original context (key\+: "context") 
+\end{DoxyItemize}\hypertarget{interface_le_snf_device_a815cc4d8c0d467b161d14996319a2d9d}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!read\+Adv\+Stats\+Context\+:completion\+:@{read\+Adv\+Stats\+Context\+:completion\+:}}
+\index{read\+Adv\+Stats\+Context\+:completion\+:@{read\+Adv\+Stats\+Context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{read\+Adv\+Stats\+Context\+:completion\+:(id context,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) read\+Adv\+Stats\+Context\+: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{context}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a815cc4d8c0d467b161d14996319a2d9d}
+Read device advertisement stats Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed Le\+Device\+Done\+Block returns an instance of N\+S\+Dictionary as context. This dictionary includes\+:
+\begin{DoxyItemize}
+\item each stats value
+\item the original context (key\+: "context") 
+\end{DoxyItemize}\hypertarget{interface_le_snf_device_adaca216df5b86a27a553777401ef938b}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!read\+Beacon\+Adv\+Range\+:context\+:completion\+:@{read\+Beacon\+Adv\+Range\+:context\+:completion\+:}}
+\index{read\+Beacon\+Adv\+Range\+:context\+:completion\+:@{read\+Beacon\+Adv\+Range\+:context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{read\+Beacon\+Adv\+Range\+:context\+:completion\+:(\+N\+S\+Range range,[context] id context,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) read\+Beacon\+Adv\+Range\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+Range)}]{range}
+\item[{context:(id)}]{context}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_adaca216df5b86a27a553777401ef938b}
+Reads back the details of a given range of advertisement frames If range is specified as (0,0), all available frames will be read Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed Le\+Device\+Done\+Block returns an instance of N\+S\+Dictionary as context. This dictionary includes\+:
+\begin{DoxyItemize}
+\item an N\+S\+Dictionary instance for each advertisement frame type
+\item the original context (key\+: "context") 
+\end{DoxyItemize}\hypertarget{interface_le_snf_device_a4e6ee8cb46c047450dd86b1ae28879c3}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!read\+Temperature\+Log@{read\+Temperature\+Log}}
+\index{read\+Temperature\+Log@{read\+Temperature\+Log}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{read\+Temperature\+Log()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) read\+Temperature\+Log 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a4e6ee8cb46c047450dd86b1ae28879c3}
+Reads device temperature log and stores it in \textquotesingle{}temperature\+Log\textquotesingle{} property \hypertarget{interface_le_snf_device_a913ced45cb36f4b6252d213996cdaee7}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!revision\+For\+Firmware\+Data\+:@{revision\+For\+Firmware\+Data\+:}}
+\index{revision\+For\+Firmware\+Data\+:@{revision\+For\+Firmware\+Data\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{revision\+For\+Firmware\+Data\+:(\+N\+S\+Data $\ast$firmware\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}+ (uint32\+\_\+t) revision\+For\+Firmware\+Data\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+Data $\ast$)}]{firmware\+Data}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a913ced45cb36f4b6252d213996cdaee7}
+Returns the firmware revision from a given firmware image \hypertarget{interface_le_snf_device_a1c6251a5588bfb099fedf668deb81a3e}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!set\+Beacon\+Rate\+:tx\+Power\+:beacon\+Type\+:context\+:completion\+:@{set\+Beacon\+Rate\+:tx\+Power\+:beacon\+Type\+:context\+:completion\+:}}
+\index{set\+Beacon\+Rate\+:tx\+Power\+:beacon\+Type\+:context\+:completion\+:@{set\+Beacon\+Rate\+:tx\+Power\+:beacon\+Type\+:context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{set\+Beacon\+Rate\+:tx\+Power\+:beacon\+Type\+:context\+:completion\+:(uint8\+\_\+t rate,[tx\+Power] int8\+\_\+t tx\+Power,[beacon\+Type] uint8\+\_\+t type,[context] id donecontext,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (bool) set\+Beacon\+Rate\+: 
+\begin{DoxyParamCaption}
+\item[{(uint8\+\_\+t)}]{rate}
+\item[{txPower:(int8\+\_\+t)}]{tx\+Power}
+\item[{beaconType:(uint8\+\_\+t)}]{type}
+\item[{context:(id)}]{donecontext}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a1c6251a5588bfb099fedf668deb81a3e}
+Used to switch on peripheral broadcasts for the given advertisement type (beacon frame) \textquotesingle{}rate\textquotesingle{} specifies the individual interleaving pattern for the specified beacon advertisement frame
+\begin{DoxyItemize}
+\item e.\+g. if the i\+Beacon frame has a rate of 20 and the s\+Beacon frame a rate of 1, 20 i\+Beacon advertisements will be broadcast for 1 s\+Beacon broadcast
+\item This results in individual broadcast rates for each beacon frame
+\item In this case\+: i\+Beacon broadcast rate = broadcast rate / 21 $\ast$ 20 \textquotesingle{}tx\+Power\textquotesingle{} specifies the individual transmit power for the specified beacon advertisement frame Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed 
+\end{DoxyItemize}\hypertarget{interface_le_snf_device_a6b42f33a33d12fcae1572b845a4eb361}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!set\+Beacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:beacon\+Type\+:context\+:completion\+:@{set\+Beacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:beacon\+Type\+:context\+:completion\+:}}
+\index{set\+Beacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:beacon\+Type\+:context\+:completion\+:@{set\+Beacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:beacon\+Type\+:context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{set\+Beacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:beacon\+Type\+:context\+:completion\+:(uint8\+\_\+t rate\+Day,[tx\+Power\+Day] int8\+\_\+t tx\+Power\+Day,[rate\+Night] uint8\+\_\+t rate\+Night,[tx\+Power\+Night] int8\+\_\+t tx\+Power\+Night,[beacon\+Type] uint8\+\_\+t type,[context] id donecontext,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (bool) set\+Beacon\+Rate\+Day\+: 
+\begin{DoxyParamCaption}
+\item[{(uint8\+\_\+t)}]{rate\+Day}
+\item[{txPowerDay:(int8\+\_\+t)}]{tx\+Power\+Day}
+\item[{rateNight:(uint8\+\_\+t)}]{rate\+Night}
+\item[{txPowerNight:(int8\+\_\+t)}]{tx\+Power\+Night}
+\item[{beaconType:(uint8\+\_\+t)}]{type}
+\item[{context:(id)}]{donecontext}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a6b42f33a33d12fcae1572b845a4eb361}
+See above Recent device firmwares allow setting individual \textquotesingle{}rate\textquotesingle{} and \textquotesingle{}tx\+Power\textquotesingle{} values for energy saving mode As soon as a device enters energy saving mode, those \textquotesingle{}night values\textquotesingle{} will be used instead of their \textquotesingle{}day\textquotesingle{} counterparts \hypertarget{interface_le_snf_device_a01df3c1e33aec5783931e242a2ee85fd}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!set\+Beacon\+Rsp\+Rate\+Connectable\+:scannable\+:nonconnectable\+:type\+:context\+:completion\+:@{set\+Beacon\+Rsp\+Rate\+Connectable\+:scannable\+:nonconnectable\+:type\+:context\+:completion\+:}}
+\index{set\+Beacon\+Rsp\+Rate\+Connectable\+:scannable\+:nonconnectable\+:type\+:context\+:completion\+:@{set\+Beacon\+Rsp\+Rate\+Connectable\+:scannable\+:nonconnectable\+:type\+:context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{set\+Beacon\+Rsp\+Rate\+Connectable\+:scannable\+:nonconnectable\+:type\+:context\+:completion\+:(uint8\+\_\+t con,[scannable] uint8\+\_\+t scan,[nonconnectable] uint8\+\_\+t nocon,[type] uint8\+\_\+t type,[context] id donecontext,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (bool) set\+Beacon\+Rsp\+Rate\+Connectable\+: 
+\begin{DoxyParamCaption}
+\item[{(uint8\+\_\+t)}]{con}
+\item[{scannable:(uint8\+\_\+t)}]{scan}
+\item[{nonconnectable:(uint8\+\_\+t)}]{nocon}
+\item[{type:(uint8\+\_\+t)}]{type}
+\item[{context:(id)}]{donecontext}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a01df3c1e33aec5783931e242a2ee85fd}
+Sets up the specified beacon frame with individual rates for\+:
+\begin{DoxyItemize}
+\item Connectable advertisements
+\item Non-\/connectable advertisements
+\item Scan-\/response advertisements The actual broadcast rate for each of those advertisement types is based on the global broadcast rate and the frame\textquotesingle{}s interleave rate Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed 
+\end{DoxyItemize}\hypertarget{interface_le_snf_device_a2776ece86862b493d68de33578b96af1}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!set\+Broadcast\+Mode\+:@{set\+Broadcast\+Mode\+:}}
+\index{set\+Broadcast\+Mode\+:@{set\+Broadcast\+Mode\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{set\+Broadcast\+Mode\+:(uint8\+\_\+t mode)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\+Broadcast\+Mode\+: 
+\begin{DoxyParamCaption}
+\item[{(uint8\+\_\+t)}]{mode}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a2776ece86862b493d68de33578b96af1}
+Sets different device broadcast modes e.\+g.\+: broadcast with or without manufacturer data \hypertarget{interface_le_snf_device_a8d9efd906807caddb8b349b13330c848}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!set\+Device\+Time\+:@{set\+Device\+Time\+:}}
+\index{set\+Device\+Time\+:@{set\+Device\+Time\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{set\+Device\+Time\+:(uint32\+\_\+t time)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) set\+Device\+Time\+: 
+\begin{DoxyParamCaption}
+\item[{(uint32\+\_\+t)}]{time}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a8d9efd906807caddb8b349b13330c848}
+Set the device time value \hypertarget{interface_le_snf_device_ad131aa4d261172fa1a61375466bf088b}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!set\+Power\+Off\+Timeout\+:@{set\+Power\+Off\+Timeout\+:}}
+\index{set\+Power\+Off\+Timeout\+:@{set\+Power\+Off\+Timeout\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{set\+Power\+Off\+Timeout\+:(uint32\+\_\+t timeout)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) set\+Power\+Off\+Timeout\+: 
+\begin{DoxyParamCaption}
+\item[{(uint32\+\_\+t)}]{timeout}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_ad131aa4d261172fa1a61375466bf088b}
+Set a time interval for the device power off \hypertarget{interface_le_snf_device_a65a6df0b7a59e48b3370f4411772aae2}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!set\+S\+Beacon\+I\+D\+:context\+:completion\+:@{set\+S\+Beacon\+I\+D\+:context\+:completion\+:}}
+\index{set\+S\+Beacon\+I\+D\+:context\+:completion\+:@{set\+S\+Beacon\+I\+D\+:context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{set\+S\+Beacon\+I\+D\+:context\+:completion\+:(\+N\+S\+Number $\ast$s\+I\+D,[context] id done\+Context,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (bool) set\+S\+Beacon\+I\+D\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+Number $\ast$)}]{s\+I\+D}
+\item[{context:(id)}]{done\+Context}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a65a6df0b7a59e48b3370f4411772aae2}
+U\+N\+T\+E\+S\+T\+E\+D Used to write an 64 bit s\+Beacon v2 I\+D (id64) to the peripheral I\+D value must be within a valid range Most S\+N\+F/\+Blu\+Vision beacons already have a factory I\+D that is not supposed to be changed Only call this for devices with 0x\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F\+F or 0x0000000000000000 I\+Ds Can only be used once Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed \hypertarget{interface_le_snf_device_a324d2225101dd7c4c2063710e96b9a9a}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!set\+Sbeacon\+Rate\+:tx\+Power\+:context\+:completion\+:@{set\+Sbeacon\+Rate\+:tx\+Power\+:context\+:completion\+:}}
+\index{set\+Sbeacon\+Rate\+:tx\+Power\+:context\+:completion\+:@{set\+Sbeacon\+Rate\+:tx\+Power\+:context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{set\+Sbeacon\+Rate\+:tx\+Power\+:context\+:completion\+:(uint8\+\_\+t rate,[tx\+Power] int8\+\_\+t tx\+Power,[context] id donecontext,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (bool) set\+Sbeacon\+Rate\+: 
+\begin{DoxyParamCaption}
+\item[{(uint8\+\_\+t)}]{rate}
+\item[{txPower:(int8\+\_\+t)}]{tx\+Power}
+\item[{context:(id)}]{donecontext}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a324d2225101dd7c4c2063710e96b9a9a}
+Convenience method to set up the s\+Beacon v2 broadcast Calls \textquotesingle{}set\+Beacon\+Rate\+:\textquotesingle{} method for the s\+Beacon frame Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed \hypertarget{interface_le_snf_device_a93b1c0c6a116ce8b9cd9f89e06ff49b3}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!set\+Sbeacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:@{set\+Sbeacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:}}
+\index{set\+Sbeacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:@{set\+Sbeacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{set\+Sbeacon\+Rate\+Day\+:tx\+Power\+Day\+:rate\+Night\+:tx\+Power\+Night\+:context\+:completion\+:(uint8\+\_\+t rate\+Day,[tx\+Power\+Day] int8\+\_\+t tx\+Power\+Day,[rate\+Night] uint8\+\_\+t rate\+Night,[tx\+Power\+Night] int8\+\_\+t tx\+Power\+Night,[context] id donecontext,[completion] Le\+Device\+Done\+Block done)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (bool) set\+Sbeacon\+Rate\+Day\+: 
+\begin{DoxyParamCaption}
+\item[{(uint8\+\_\+t)}]{rate\+Day}
+\item[{txPowerDay:(int8\+\_\+t)}]{tx\+Power\+Day}
+\item[{rateNight:(uint8\+\_\+t)}]{rate\+Night}
+\item[{txPowerNight:(int8\+\_\+t)}]{tx\+Power\+Night}
+\item[{context:(id)}]{donecontext}
+\item[{completion:(Le\+Device\+Done\+Block)}]{done}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a93b1c0c6a116ce8b9cd9f89e06ff49b3}
+Convenience method to set up the s\+Beacon v2 broadcast Calls \textquotesingle{}set\+Beacon\+Rate\+Day\+:\textquotesingle{} method for the s\+Beacon frame Returns N\+O, if the write process could not be started successfully Le\+Device\+Done\+Block will be called if either the operation has been completed successfully or has failed \hypertarget{interface_le_snf_device_a9be881cab4d4489c75e59649c32b751b}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!size\+For\+Firmware\+Data\+:@{size\+For\+Firmware\+Data\+:}}
+\index{size\+For\+Firmware\+Data\+:@{size\+For\+Firmware\+Data\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{size\+For\+Firmware\+Data\+:(\+N\+S\+Data $\ast$firmware\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}+ (uint32\+\_\+t) size\+For\+Firmware\+Data\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+Data $\ast$)}]{firmware\+Data}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_a9be881cab4d4489c75e59649c32b751b}
+Returns the actual firmware size in bytes from a given firmware image This value differs from the firmware image size \hypertarget{interface_le_snf_device_af245bd548bfe861a06342cfbb37383b4}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!update\+Firmware@{update\+Firmware}}
+\index{update\+Firmware@{update\+Firmware}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{update\+Firmware()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) update\+Firmware 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_af245bd548bfe861a06342cfbb37383b4}
+Starts a firmware update Retrieves a firmware image from the device delegate Requests permission to start firmware update from the device delegate \hypertarget{interface_le_snf_device_aa7d312b1ee7e42a087e841baf46732b9}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!write\+Device\+Name\+:@{write\+Device\+Name\+:}}
+\index{write\+Device\+Name\+:@{write\+Device\+Name\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{write\+Device\+Name\+:(\+N\+S\+String $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) write\+Device\+Name\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+String $\ast$)}]{name}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_aa7d312b1ee7e42a087e841baf46732b9}
+Writes specified name to device \hypertarget{interface_le_snf_device_ab25cfa820f6bd87a3f64961a6be21a2e}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!write\+Snf\+Beacon\+Packet\+With\+Id\+:tx\+Power\+:s\+Bcn\+Skip\+:i\+Beacon\+U\+U\+I\+D\+:i\+Bcn\+Skip\+:@{write\+Snf\+Beacon\+Packet\+With\+Id\+:tx\+Power\+:s\+Bcn\+Skip\+:i\+Beacon\+U\+U\+I\+D\+:i\+Bcn\+Skip\+:}}
+\index{write\+Snf\+Beacon\+Packet\+With\+Id\+:tx\+Power\+:s\+Bcn\+Skip\+:i\+Beacon\+U\+U\+I\+D\+:i\+Bcn\+Skip\+:@{write\+Snf\+Beacon\+Packet\+With\+Id\+:tx\+Power\+:s\+Bcn\+Skip\+:i\+Beacon\+U\+U\+I\+D\+:i\+Bcn\+Skip\+:}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{write\+Snf\+Beacon\+Packet\+With\+Id\+:tx\+Power\+:s\+Bcn\+Skip\+:i\+Beacon\+U\+U\+I\+D\+:i\+Bcn\+Skip\+:(uint64\+\_\+t s\+I\+D,[tx\+Power] int tx\+Power,[s\+Bcn\+Skip] uint8\+\_\+t s\+Bcn\+Skip,[i\+Beacon\+U\+U\+I\+D] N\+S\+U\+U\+I\+D $\ast$uuid,[i\+Bcn\+Skip] uint8\+\_\+t i\+Bcn\+Skip)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) write\+Snf\+Beacon\+Packet\+With\+Id\+: 
+\begin{DoxyParamCaption}
+\item[{(uint64\+\_\+t)}]{s\+I\+D}
+\item[{txPower:(int)}]{tx\+Power}
+\item[{sBcnSkip:(uint8\+\_\+t)}]{s\+Bcn\+Skip}
+\item[{iBeaconUUID:(N\+S\+U\+U\+I\+D $\ast$)}]{uuid}
+\item[{iBcnSkip:(uint8\+\_\+t)}]{i\+Bcn\+Skip}
+\end{DoxyParamCaption}
+}\label{interface_le_snf_device_ab25cfa820f6bd87a3f64961a6be21a2e}
+V1 Call Used to setup s\+Beacon and i\+Beacon v1 advertisement data on the device Either including i\+Beacon major and minor values or not This method does not enable broadcasting. It only writes the advertised data to the device s\+Bcn\+Skip and i\+Bcn\+Skip work the opposite way of the v2 interleave rates\+:
+\begin{DoxyItemize}
+\item i\+Bcn\+Skip = 20 == i\+Beacon\+Rate = 1
+\item s\+Bcn\+Skip = 1 == s\+Beacon\+Rate = 20 
+\end{DoxyItemize}
+
+\subsection{Property Documentation}
+\hypertarget{interface_le_snf_device_ab9d2622f456128d419c6ca8f9a277524}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!allow\+Firmware\+Downgrade@{allow\+Firmware\+Downgrade}}
+\index{allow\+Firmware\+Downgrade@{allow\+Firmware\+Downgrade}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{allow\+Firmware\+Downgrade}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) allow\+Firmware\+Downgrade\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_ab9d2622f456128d419c6ca8f9a277524}
+Y\+E\+S = Allow firmware updates with lower revisions than installed on the peripheral N\+O = Don\textquotesingle{}t allow firmware updates with lower revisions than installed on the peripheral \hypertarget{interface_le_snf_device_a3453d599afd1532dc29f04762271bc7e}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!auth\+Counter@{auth\+Counter}}
+\index{auth\+Counter@{auth\+Counter}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{auth\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) auth\+Counter\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a3453d599afd1532dc29f04762271bc7e}
+Increments every time an authentication attempt is made during one connection If this counter exceeds the maximum retry value (A\+U\+T\+H\+\_\+\+M\+A\+X\+\_\+\+R\+E\+T\+R\+I\+E\+S), the auth key is considered wrong and the delegate will be called with an updated auth status
+\begin{DoxyItemize}
+\item (B\+O\+O\+L)broadcast\+Auth\+Status\+:(\+Le\+Snf\+Auth\+Status)status for\+Le\+Snf\+Device\+:(\+Le\+Snf\+Device $\ast$)dev Status\+: Le\+Snf\+Auth\+Status\+Wrong\+Key 
+\end{DoxyItemize}\hypertarget{interface_le_snf_device_ac2b0d74394b6ba30b0306ef86a4504c9}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!battery\+Level@{battery\+Level}}
+\index{battery\+Level@{battery\+Level}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{battery\+Level}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) battery\+Level\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_ac2b0d74394b6ba30b0306ef86a4504c9}
+Percentual device battery level (0 to 100 (\%)) Available once connected \hypertarget{interface_le_snf_device_aa5fd5e351c6b9da96031fa5574e4873d}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!battery\+Type@{battery\+Type}}
+\index{battery\+Type@{battery\+Type}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{battery\+Type}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (uint8\+\_\+t) battery\+Type\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_aa5fd5e351c6b9da96031fa5574e4873d}
+Device battery type Available once connected \hypertarget{interface_le_snf_device_a27787e4c4cac8f6d4e79fbb0f02ab596}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!battery\+Voltage@{battery\+Voltage}}
+\index{battery\+Voltage@{battery\+Voltage}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{battery\+Voltage}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (uint16\+\_\+t) battery\+Voltage\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a27787e4c4cac8f6d4e79fbb0f02ab596}
+Device battery voltage Available once connected \hypertarget{interface_le_snf_device_aa38afc50f6dd03cc391715cbc8186111}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!button\+Counter@{button\+Counter}}
+\index{button\+Counter@{button\+Counter}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{button\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) button\+Counter\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_aa38afc50f6dd03cc391715cbc8186111}
+Increments every time the device is tapped \hypertarget{interface_le_snf_device_ad640963aa99ea3073ecc6d526d75c113}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!connection\+Counter@{connection\+Counter}}
+\index{connection\+Counter@{connection\+Counter}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{connection\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) connection\+Counter\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_ad640963aa99ea3073ecc6d526d75c113}
+Increments every time the device is connected \hypertarget{interface_le_snf_device_a8a5dfc51f0558ed63728b030986603f1}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!connection\+Success\+Counter@{connection\+Success\+Counter}}
+\index{connection\+Success\+Counter@{connection\+Success\+Counter}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{connection\+Success\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (int) connection\+Success\+Counter\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a8a5dfc51f0558ed63728b030986603f1}
+Increments every time the device is connected successfully \hypertarget{interface_le_snf_device_ab0bd07be677cb82e236c31730a4e56ae}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!delegate@{delegate}}
+\index{delegate@{delegate}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{delegate}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id$<${\bf Le\+Snf\+Device\+Delegate}$>$) delegate\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_le_snf_device_ab0bd07be677cb82e236c31730a4e56ae}
+Device delegate \hypertarget{interface_le_snf_device_a308aab38e366fee52c6f9fbb860d2290}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!device\+Caps@{device\+Caps}}
+\index{device\+Caps@{device\+Caps}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{device\+Caps}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (uint16\+\_\+t) device\+Caps\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a308aab38e366fee52c6f9fbb860d2290}
+Device capabilities Available once connected \hypertarget{interface_le_snf_device_a6477df781a728d6f7f7e8ecdcca2205d}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!device\+Type@{device\+Type}}
+\index{device\+Type@{device\+Type}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{device\+Type}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (uint8\+\_\+t) device\+Type\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a6477df781a728d6f7f7e8ecdcca2205d}
+Device type Available once connected \hypertarget{interface_le_snf_device_a5981e716effb9c1bc130c68384065cdd}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!devid@{devid}}
+\index{devid@{devid}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{devid}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Data$\ast$) devid\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a5981e716effb9c1bc130c68384065cdd}
+Raw device I\+D value Read via C\+S\+C\+M\+D\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+D \hypertarget{interface_le_snf_device_ab5b9db7753a961a6062947950e516688}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!distance\+Estimate@{distance\+Estimate}}
+\index{distance\+Estimate@{distance\+Estimate}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{distance\+Estimate}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) distance\+Estimate\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_ab5b9db7753a961a6062947950e516688}
+Estimated distance \hypertarget{interface_le_snf_device_a21f7ccd07695a5dec79fa82a6cce2b17}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!distance\+Measurement\+Enabled@{distance\+Measurement\+Enabled}}
+\index{distance\+Measurement\+Enabled@{distance\+Measurement\+Enabled}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{distance\+Measurement\+Enabled}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) distance\+Measurement\+Enabled\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [atomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a21f7ccd07695a5dec79fa82a6cce2b17}
+Distance measurement status \hypertarget{interface_le_snf_device_a1d28882e6c954a9e0799071dcd6f8774}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!firmware\+Update\+On\+Connect@{firmware\+Update\+On\+Connect}}
+\index{firmware\+Update\+On\+Connect@{firmware\+Update\+On\+Connect}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{firmware\+Update\+On\+Connect}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) firmware\+Update\+On\+Connect\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a1d28882e6c954a9e0799071dcd6f8774}
+Y\+E\+S = Call \textquotesingle{}update\+Firmware\textquotesingle{} automatically once connected N\+O = Don\textquotesingle{}t call \textquotesingle{}update\+Firmware\textquotesingle{} automatically once connected \hypertarget{interface_le_snf_device_a55e2289b72eb76ecd680df1e988d9814}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!state@{state}}
+\index{state@{state}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (enum L\+E\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+S\+T\+A\+T\+E) state\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a55e2289b72eb76ecd680df1e988d9814}
+Current device connection state \hypertarget{interface_le_snf_device_a87d28e38945f818bc093da48ecdbb182}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!sw\+Revision@{sw\+Revision}}
+\index{sw\+Revision@{sw\+Revision}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{sw\+Revision}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (uint32\+\_\+t) sw\+Revision\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a87d28e38945f818bc093da48ecdbb182}
+Device\textquotesingle{}s software revision Available once connected \hypertarget{interface_le_snf_device_a8bb8a1bce35bd386ac909c35215a4b8a}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!temperature@{temperature}}
+\index{temperature@{temperature}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{temperature}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) temperature\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a8bb8a1bce35bd386ac909c35215a4b8a}
+Last measured temperature in dec C Updated via s\+Beacon (v2) advertisement \hypertarget{interface_le_snf_device_a06108c7aecbfe26a075ce43fa010333f}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!temperature\+Calibration\+Values@{temperature\+Calibration\+Values}}
+\index{temperature\+Calibration\+Values@{temperature\+Calibration\+Values}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{temperature\+Calibration\+Values}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Array$\ast$) temperature\+Calibration\+Values\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a06108c7aecbfe26a075ce43fa010333f}
+Raw temperature values at -\/10,0,10,20,30,40,50 deg C \hypertarget{interface_le_snf_device_a0e3007ac5be7500511a19704b7223af2}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!temperature\+Log@{temperature\+Log}}
+\index{temperature\+Log@{temperature\+Log}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{temperature\+Log}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Mutable\+Array$\ast$) temperature\+Log\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_le_snf_device_a0e3007ac5be7500511a19704b7223af2}
+Temperature log data \hypertarget{interface_le_snf_device_a8cdcdf37d487556008e5421dc353ac3a}{}\index{Le\+Snf\+Device@{Le\+Snf\+Device}!temperature\+Raw@{temperature\+Raw}}
+\index{temperature\+Raw@{temperature\+Raw}!Le\+Snf\+Device@{Le\+Snf\+Device}}
+\subsubsection[{temperature\+Raw}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) temperature\+Raw\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_le_snf_device_a8cdcdf37d487556008e5421dc353ac3a}
+Last measured raw uncalibrated temperature in deg C 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+snfsdk.\+h\end{DoxyCompactItemize}

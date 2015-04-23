@@ -1,0 +1,530 @@
+\hypertarget{interface_patient_view_controller}{}\section{Patient\+View\+Controller Class Reference}
+\label{interface_patient_view_controller}\index{Patient\+View\+Controller@{Patient\+View\+Controller}}
+
+
+{\ttfamily \#import $<$Patient\+View\+Controller.\+h$>$}
+
+Inheritance diagram for Patient\+View\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.637427cm]{interface_patient_view_controller}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(I\+B\+Action) -\/ \hyperlink{interface_patient_view_controller_a39180db40fe5c4aa670e805383f2d621}{segmented\+Value\+Changed\+:}
+\item 
+(void) -\/ \hyperlink{interface_patient_view_controller_a4087b7d6a65a276e66dc9fdbc55057b7}{view\+Did\+Load}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_patient_view_controller_a5c9ba66c80aac5155bd017122c01cce2}{view\+Will\+Appear\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\+S\+Integer) -\/ \hyperlink{interface_patient_view_controller_a4516edb72f52ef86133ea78631f23b57}{number\+Of\+Sections\+In\+Table\+View\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\+S\+Integer) -\/ \hyperlink{interface_patient_view_controller_af858a4e4476874cd85526f151c9d9f35}{table\+View\+:number\+Of\+Rows\+In\+Section\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(U\+I\+View $\ast$) -\/ \hyperlink{interface_patient_view_controller_a472e03fb9fcdbfe411abdc91ed75a52a}{table\+View\+:view\+For\+Header\+In\+Section\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(U\+I\+Table\+View\+Cell $\ast$) -\/ \hyperlink{interface_patient_view_controller_a0c4ebed4816b9b2d44e86c0caa6519c9}{table\+View\+:cell\+For\+Row\+At\+Index\+Path\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(C\+G\+Float) -\/ \hyperlink{interface_patient_view_controller_ab30073723a599de8ccbb7d86656562ff}{table\+View\+:height\+For\+Row\+At\+Index\+Path\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_patient_view_controller_a92a3843d8e1210f126ee995308bee690}{set\+Back\+Button\+And\+Title}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_patient_view_controller_ad92d050cac572fd5870193412a3ea81a}{did\+Receive\+Memory\+Warning}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_patient_view_controller_a5eae666e1f431ef996ce222909697dc9}{back\+To\+Beacon\+View\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{interface_patient_view_controller_a11f629dfcb05d614948e6a22a9b62609}{barcode\+Format\+To\+String\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_patient_view_controller_ab0d5b631e4984e8800de2614b454f6e0}{capture\+Result\+:result\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_patient_view_controller_a8cffe8050d49d33694655744748a830c}{perform\+Fetch}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_patient_view_controller_a5ed17bea4cad883582bc8bf280e08d59}{table\+View\+:did\+Select\+Row\+At\+Index\+Path\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(I\+B\+Action) -\/ \hyperlink{interface_patient_view_controller_ac4977d46c2378db860bab95582a89894}{segmented\+Value\+Changed\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_patient_view_controller_a733086f669eb38061d7095742689e013}{show\+Info\+Alert\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_patient_view_controller_ac5a2964da1dd5c8fe84d38c28846622c}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{interface_patient_view_controller_a25c12bd39732f6874a96e4d44f49b65e}{get\+Blood\+Group\+String}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{interface_patient_view_controller_a735c33ed351ce545b7ef752b678d701d}{get\+Station\+String}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{interface_patient_view_controller_a820ee166c056d50a5642319be75137c5}{get\+Birthdate\+String}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+Mutable\+Array $\ast$ \hyperlink{interface_patient_view_controller_a342561bab92448e254982cc47cb519d8}{prescriptions}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_patient_view_controller_a39c15f31779257705df01c2108c0aba9}{name\+Label}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_patient_view_controller_a4cfee9bd7ee50cc6f1837832ffbd7910}{firstname\+Label}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_patient_view_controller_afb8b6e7afb55140211ff94a97fd064ad}{birthdate\+Label}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_patient_view_controller_ad0d981f3b1c2cb2851446cfabcd0032a}{gender\+Label}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_patient_view_controller_a06ae3f2d4e7fe45821e2aa9661df2b55}{pid\+Label}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_patient_view_controller_a1e8d7e3299ef981d7bb3fb5f82ef26c7}{fid\+Label}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_patient_view_controller_ace000e14f7a33a1b3045f56d5f651f6c}{bloodgroup\+Label}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_patient_view_controller_a451dd98cd605789070aca8c1b0b2e2d0}{rea\+Label}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_patient_view_controller_afcfbf27fbe036c62012b45542f20b9c3}{room\+Label}
+\item 
+I\+B\+Outlet U\+I\+Image\+View $\ast$ \hyperlink{interface_patient_view_controller_a72f355ee819e7c30173bcb87ca9986aa}{patient\+Image}
+\item 
+I\+B\+Outlet U\+I\+Navigation\+Bar $\ast$ \hyperlink{interface_patient_view_controller_a4a621d64e3466fb134d27ade4e4c0040}{nav\+Bar}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_patient_view_controller_a5b5ce0c7b6ee9dfc07a360bcfd6d0292}{name}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_patient_view_controller_a222aa081edbb7f93c0fa4ebe327197c2}{firstname}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_patient_view_controller_acc02aaafd8297ae7e0528df2f7681c7d}{birthdate}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_patient_view_controller_af88192a4ffdea0941a06317aa61423c6}{gender}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_patient_view_controller_a8f8b7d70361185915526eef8d0ae605b}{station}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_patient_view_controller_a54160ca7411cb114520bc4b0ae56551e}{pid}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_patient_view_controller_a72468da76036a9488618a69465b69827}{reastate}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_patient_view_controller_a4538a82102e16bd3f2712c877bd9faea}{bloodgroup}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_patient_view_controller_aa65cb56326a9bbeb78c9b10172cfc01c}{room}
+\item 
+N\+S\+String $\ast$ \hyperlink{interface_patient_view_controller_a9562804261557424fa05ae41e73a70f5}{caseid}
+\item 
+U\+I\+Image $\ast$ \hyperlink{interface_patient_view_controller_a0552caf5f04effbd331af5816985f03c}{image}
+\item 
+I\+B\+Outlet U\+I\+View $\ast$ \hyperlink{interface_patient_view_controller_aef3bd4cf26a022b5b5cecb2976e72920}{utility\+View}
+\item 
+I\+B\+Outlet U\+I\+View $\ast$ \hyperlink{interface_patient_view_controller_aeea16cb49a3684ca14250a439f6a69ca}{scan\+View}
+\item 
+I\+B\+Outlet U\+I\+View $\ast$ \hyperlink{interface_patient_view_controller_a901293b287634f24a6fd42800069098a}{scan\+Rect\+View}
+\item 
+Z\+X\+Capture $\ast$ \hyperlink{interface_patient_view_controller_ae266fd8650c45e502a1a626d8af13618}{capture}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_patient_view_controller_a22bfc7a8180b3ea86643917b4c772333}{station\+Label}
+\item 
+B\+O\+O\+L \hyperlink{interface_patient_view_controller_a29feb452b2f29cd57fb8690fa7639546}{has\+Scanned\+Result}
+\item 
+I\+B\+Outlet U\+I\+View $\ast$ \hyperlink{interface_patient_view_controller_a3616c642880c65d15f5b0fc38fa01eb9}{main\+View}
+\item 
+I\+B\+Outlet U\+I\+View $\ast$ \hyperlink{interface_patient_view_controller_a004431d6cb69fce5b91e85ba4262b982}{patient\+View}
+\item 
+I\+B\+Outlet U\+I\+View $\ast$ \hyperlink{interface_patient_view_controller_a5e769391d88bd8e9c4124ceff8882291}{prescription\+View}
+\item 
+I\+B\+Outlet U\+I\+Segmented\+Control $\ast$ \hyperlink{interface_patient_view_controller_aed02d7fb5b20f35baf6d768e6d74ca2b}{segmented\+Control}
+\item 
+I\+B\+Outlet U\+I\+Table\+View $\ast$ \hyperlink{interface_patient_view_controller_ad7cdfbb763e9ad87ce978b28e11b43cb}{prescription\+Table}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_patient_view_controller_a5eae666e1f431ef996ce222909697dc9}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!back\+To\+Beacon\+View\+:@{back\+To\+Beacon\+View\+:}}
+\index{back\+To\+Beacon\+View\+:@{back\+To\+Beacon\+View\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{back\+To\+Beacon\+View\+:(id sender)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) back\+To\+Beacon\+View\+: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{sender}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a5eae666e1f431ef996ce222909697dc9}
+action method for the back button
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & U\+I\+Button \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_patient_view_controller_a11f629dfcb05d614948e6a22a9b62609}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!barcode\+Format\+To\+String\+:@{barcode\+Format\+To\+String\+:}}
+\index{barcode\+Format\+To\+String\+:@{barcode\+Format\+To\+String\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{barcode\+Format\+To\+String\+:(\+Z\+X\+Barcode\+Format format)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) barcode\+Format\+To\+String\+: 
+\begin{DoxyParamCaption}
+\item[{(Z\+X\+Barcode\+Format)}]{format}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a11f629dfcb05d614948e6a22a9b62609}
+private helper method to convert the scanned barcode formats to strings
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Z\+X\+Barcode\+Format\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+S\+String 
+\end{DoxyReturn}
+\hypertarget{interface_patient_view_controller_ab0d5b631e4984e8800de2614b454f6e0}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!capture\+Result\+:result\+:@{capture\+Result\+:result\+:}}
+\index{capture\+Result\+:result\+:@{capture\+Result\+:result\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{capture\+Result\+:result\+:(\+Z\+X\+Capture $\ast$capture, [result] Z\+X\+Result $\ast$result)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) capture\+Result\+: 
+\begin{DoxyParamCaption}
+\item[{(Z\+X\+Capture $\ast$)}]{capture}
+\item[{result:(Z\+X\+Result $\ast$)}]{result}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_ab0d5b631e4984e8800de2614b454f6e0}
+capture method of the scanner
+
+
+\begin{DoxyParams}{Parameters}
+{\em capture} & Z\+X\+Capture \\
+\hline
+{\em result} & Z\+X\+Result \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_patient_view_controller_ac5a2964da1dd5c8fe84d38c28846622c}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{dealloc()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_ac5a2964da1dd5c8fe84d38c28846622c}
+dealloc method to remove capture layer from superlayer \hypertarget{interface_patient_view_controller_ad92d050cac572fd5870193412a3ea81a}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!did\+Receive\+Memory\+Warning@{did\+Receive\+Memory\+Warning}}
+\index{did\+Receive\+Memory\+Warning@{did\+Receive\+Memory\+Warning}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{did\+Receive\+Memory\+Warning()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) did\+Receive\+Memory\+Warning 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_ad92d050cac572fd5870193412a3ea81a}
+\hypertarget{interface_patient_view_controller_a820ee166c056d50a5642319be75137c5}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!get\+Birthdate\+String@{get\+Birthdate\+String}}
+\index{get\+Birthdate\+String@{get\+Birthdate\+String}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{get\+Birthdate\+String()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) get\+Birthdate\+String 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a820ee166c056d50a5642319be75137c5}
+converts N\+S\+String values of the birthdate (cosmetical issues)
+
+\begin{DoxyReturn}{Returns}
+a N\+S\+String of format dd.\+mm.\+yyyy 
+\end{DoxyReturn}
+\hypertarget{interface_patient_view_controller_a25c12bd39732f6874a96e4d44f49b65e}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!get\+Blood\+Group\+String@{get\+Blood\+Group\+String}}
+\index{get\+Blood\+Group\+String@{get\+Blood\+Group\+String}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{get\+Blood\+Group\+String()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) get\+Blood\+Group\+String 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a25c12bd39732f6874a96e4d44f49b65e}
+Translater method for bloodgroup values.
+
+\begin{DoxyReturn}{Returns}
+N\+S\+String translated bloodgroup 
+\end{DoxyReturn}
+\hypertarget{interface_patient_view_controller_a735c33ed351ce545b7ef752b678d701d}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!get\+Station\+String@{get\+Station\+String}}
+\index{get\+Station\+String@{get\+Station\+String}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{get\+Station\+String()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) get\+Station\+String 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a735c33ed351ce545b7ef752b678d701d}
+extracts the station identifer e.\+g. \char`\"{}\+A\char`\"{} or \char`\"{}\+B\char`\"{} from the station string (\char`\"{}\+Station A\char`\"{} or \char`\"{}\+Station B\char`\"{})
+
+\begin{DoxyReturn}{Returns}
+a N\+S\+String holding the identifier e.\+g. \char`\"{}\+A\char`\"{} or \char`\"{}\+B\char`\"{} 
+\end{DoxyReturn}
+\hypertarget{interface_patient_view_controller_a4516edb72f52ef86133ea78631f23b57}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!number\+Of\+Sections\+In\+Table\+View\+:@{number\+Of\+Sections\+In\+Table\+View\+:}}
+\index{number\+Of\+Sections\+In\+Table\+View\+:@{number\+Of\+Sections\+In\+Table\+View\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{number\+Of\+Sections\+In\+Table\+View\+:(\+U\+I\+Table\+View $\ast$table\+View)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Integer) number\+Of\+Sections\+In\+Table\+View\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Table\+View $\ast$)}]{table\+View}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a4516edb72f52ef86133ea78631f23b57}
+Customize the number of sections in the table view
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+View} & U\+I\+Table\+View\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+S\+Integer number of sections 
+\end{DoxyReturn}
+\hypertarget{interface_patient_view_controller_a8cffe8050d49d33694655744748a830c}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!perform\+Fetch@{perform\+Fetch}}
+\index{perform\+Fetch@{perform\+Fetch}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{perform\+Fetch()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) perform\+Fetch 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a8cffe8050d49d33694655744748a830c}
+get all prescriptions for the selected patient from supply chain service. \hypertarget{interface_patient_view_controller_ac4977d46c2378db860bab95582a89894}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!segmented\+Value\+Changed\+:@{segmented\+Value\+Changed\+:}}
+\index{segmented\+Value\+Changed\+:@{segmented\+Value\+Changed\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{segmented\+Value\+Changed\+:(\+U\+I\+Segmented\+Control $\ast$sender)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Action) segmented\+Value\+Changed\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Segmented\+Control $\ast$)}]{sender}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_ac4977d46c2378db860bab95582a89894}
+managing the views of the segmented control
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & U\+I\+Segmented\+Control \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_patient_view_controller_a39180db40fe5c4aa670e805383f2d621}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!segmented\+Value\+Changed\+:@{segmented\+Value\+Changed\+:}}
+\index{segmented\+Value\+Changed\+:@{segmented\+Value\+Changed\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{segmented\+Value\+Changed\+:(id sender)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Action) segmented\+Value\+Changed\+: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{sender}
+\end{DoxyParamCaption}
+}\label{interface_patient_view_controller_a39180db40fe5c4aa670e805383f2d621}
+\hypertarget{interface_patient_view_controller_a92a3843d8e1210f126ee995308bee690}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!set\+Back\+Button\+And\+Title@{set\+Back\+Button\+And\+Title}}
+\index{set\+Back\+Button\+And\+Title@{set\+Back\+Button\+And\+Title}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{set\+Back\+Button\+And\+Title()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\+Back\+Button\+And\+Title 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a92a3843d8e1210f126ee995308bee690}
+set the back button and the title of the navigation bar \hypertarget{interface_patient_view_controller_a733086f669eb38061d7095742689e013}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!show\+Info\+Alert\+:@{show\+Info\+Alert\+:}}
+\index{show\+Info\+Alert\+:@{show\+Info\+Alert\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{show\+Info\+Alert\+:(\+U\+I\+Button $\ast$sender)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) show\+Info\+Alert\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Button$\ast$)}]{sender}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a733086f669eb38061d7095742689e013}
+show information for a selected prescription row to the user
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & U\+I\+Button \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_patient_view_controller_a0c4ebed4816b9b2d44e86c0caa6519c9}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!table\+View\+:cell\+For\+Row\+At\+Index\+Path\+:@{table\+View\+:cell\+For\+Row\+At\+Index\+Path\+:}}
+\index{table\+View\+:cell\+For\+Row\+At\+Index\+Path\+:@{table\+View\+:cell\+For\+Row\+At\+Index\+Path\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{table\+View\+:cell\+For\+Row\+At\+Index\+Path\+:(\+U\+I\+Table\+View $\ast$table\+View, [cell\+For\+Row\+At\+Index\+Path] N\+S\+Index\+Path $\ast$index\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (U\+I\+Table\+View\+Cell $\ast$) table\+View\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Table\+View $\ast$)}]{table\+View}
+\item[{cellForRowAtIndexPath:(N\+S\+Index\+Path $\ast$)}]{index\+Path}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a0c4ebed4816b9b2d44e86c0caa6519c9}
+Customize the appearance of table view cells
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+View} & U\+I\+Table\+View \\
+\hline
+{\em index\+Path} & N\+S\+Index\+Path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\+I\+Table\+View\+Cell custom cell of class \char`\"{}\+Prescription\+Table\+View\+Cell.\+h\char`\"{} 
+\end{DoxyReturn}
+\hypertarget{interface_patient_view_controller_a5ed17bea4cad883582bc8bf280e08d59}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!table\+View\+:did\+Select\+Row\+At\+Index\+Path\+:@{table\+View\+:did\+Select\+Row\+At\+Index\+Path\+:}}
+\index{table\+View\+:did\+Select\+Row\+At\+Index\+Path\+:@{table\+View\+:did\+Select\+Row\+At\+Index\+Path\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{table\+View\+:did\+Select\+Row\+At\+Index\+Path\+:(\+U\+I\+Table\+View $\ast$table\+View, [did\+Select\+Row\+At\+Index\+Path] N\+S\+Index\+Path $\ast$index\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) table\+View\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Table\+View $\ast$)}]{table\+View}
+\item[{didSelectRowAtIndexPath:(N\+S\+Index\+Path $\ast$)}]{index\+Path}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a5ed17bea4cad883582bc8bf280e08d59}
+handle the user selections and set the accessory checkmark
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+View} & U\+I\+Table\+View \\
+\hline
+{\em index\+Path} & N\+S\+Index\+Path \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_patient_view_controller_ab30073723a599de8ccbb7d86656562ff}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!table\+View\+:height\+For\+Row\+At\+Index\+Path\+:@{table\+View\+:height\+For\+Row\+At\+Index\+Path\+:}}
+\index{table\+View\+:height\+For\+Row\+At\+Index\+Path\+:@{table\+View\+:height\+For\+Row\+At\+Index\+Path\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{table\+View\+:height\+For\+Row\+At\+Index\+Path\+:(\+U\+I\+Table\+View $\ast$table\+View, [height\+For\+Row\+At\+Index\+Path] N\+S\+Index\+Path $\ast$index\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (C\+G\+Float) table\+View\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Table\+View $\ast$)}]{table\+View}
+\item[{heightForRowAtIndexPath:(N\+S\+Index\+Path $\ast$)}]{index\+Path}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_ab30073723a599de8ccbb7d86656562ff}
+customizing the row height
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+View} & U\+I\+Table\+View \\
+\hline
+{\em index\+Path} & N\+S\+Index\+Path\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+G\+Float height for the row at a specific index path 
+\end{DoxyReturn}
+\hypertarget{interface_patient_view_controller_af858a4e4476874cd85526f151c9d9f35}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!table\+View\+:number\+Of\+Rows\+In\+Section\+:@{table\+View\+:number\+Of\+Rows\+In\+Section\+:}}
+\index{table\+View\+:number\+Of\+Rows\+In\+Section\+:@{table\+View\+:number\+Of\+Rows\+In\+Section\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{table\+View\+:number\+Of\+Rows\+In\+Section\+:(\+U\+I\+Table\+View $\ast$table\+View, [number\+Of\+Rows\+In\+Section] N\+S\+Integer section)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Integer) table\+View\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Table\+View $\ast$)}]{table\+View}
+\item[{numberOfRowsInSection:(N\+S\+Integer)}]{section}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_af858a4e4476874cd85526f151c9d9f35}
+Customize the number of rows in the section
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+View} & U\+I\+Table\+View \\
+\hline
+{\em section} & N\+S\+Integer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+S\+Integer number of rows in section 
+\end{DoxyReturn}
+\hypertarget{interface_patient_view_controller_a472e03fb9fcdbfe411abdc91ed75a52a}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!table\+View\+:view\+For\+Header\+In\+Section\+:@{table\+View\+:view\+For\+Header\+In\+Section\+:}}
+\index{table\+View\+:view\+For\+Header\+In\+Section\+:@{table\+View\+:view\+For\+Header\+In\+Section\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{table\+View\+:view\+For\+Header\+In\+Section\+:(\+U\+I\+Table\+View $\ast$table\+View, [view\+For\+Header\+In\+Section] N\+S\+Integer section)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (U\+I\+View $\ast$) table\+View\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Table\+View $\ast$)}]{table\+View}
+\item[{viewForHeaderInSection:(N\+S\+Integer)}]{section}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a472e03fb9fcdbfe411abdc91ed75a52a}
+Sets and returns the view for the header in the specified section.
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+View} & U\+I\+Table\+View \\
+\hline
+{\em section} & N\+S\+Integer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+U\+I\+View view for the header in the specified section 
+\end{DoxyReturn}
+\hypertarget{interface_patient_view_controller_a4087b7d6a65a276e66dc9fdbc55057b7}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!view\+Did\+Load@{view\+Did\+Load}}
+\index{view\+Did\+Load@{view\+Did\+Load}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{view\+Did\+Load()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) view\+Did\+Load 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a4087b7d6a65a276e66dc9fdbc55057b7}
+always called when view did load \hypertarget{interface_patient_view_controller_a5c9ba66c80aac5155bd017122c01cce2}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!view\+Will\+Appear\+:@{view\+Will\+Appear\+:}}
+\index{view\+Will\+Appear\+:@{view\+Will\+Appear\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{view\+Will\+Appear\+:(\+B\+O\+O\+L animated)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) view\+Will\+Appear\+: 
+\begin{DoxyParamCaption}
+\item[{(B\+O\+O\+L)}]{animated}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a5c9ba66c80aac5155bd017122c01cce2}
+always called when view will appear
+
+
+\begin{DoxyParams}{Parameters}
+{\em animated} & B\+O\+O\+L \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{interface_patient_view_controller_a342561bab92448e254982cc47cb519d8}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!prescriptions@{prescriptions}}
+\index{prescriptions@{prescriptions}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{prescriptions}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Mutable\+Array$\ast$) prescriptions\hspace{0.3cm}{\ttfamily [protected]}}\label{interface_patient_view_controller_a342561bab92448e254982cc47cb519d8}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_patient_view_controller_acc02aaafd8297ae7e0528df2f7681c7d}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!birthdate@{birthdate}}
+\index{birthdate@{birthdate}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{birthdate}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String$\ast$) birthdate\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_acc02aaafd8297ae7e0528df2f7681c7d}
+\hypertarget{interface_patient_view_controller_afb8b6e7afb55140211ff94a97fd064ad}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!birthdate\+Label@{birthdate\+Label}}
+\index{birthdate\+Label@{birthdate\+Label}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{birthdate\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) birthdate\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_afb8b6e7afb55140211ff94a97fd064ad}
+\hypertarget{interface_patient_view_controller_a4538a82102e16bd3f2712c877bd9faea}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!bloodgroup@{bloodgroup}}
+\index{bloodgroup@{bloodgroup}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{bloodgroup}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String$\ast$) bloodgroup\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_a4538a82102e16bd3f2712c877bd9faea}
+\hypertarget{interface_patient_view_controller_ace000e14f7a33a1b3045f56d5f651f6c}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!bloodgroup\+Label@{bloodgroup\+Label}}
+\index{bloodgroup\+Label@{bloodgroup\+Label}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{bloodgroup\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) bloodgroup\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_ace000e14f7a33a1b3045f56d5f651f6c}
+\hypertarget{interface_patient_view_controller_ae266fd8650c45e502a1a626d8af13618}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!capture@{capture}}
+\index{capture@{capture}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{capture}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (Z\+X\+Capture$\ast$) capture\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_ae266fd8650c45e502a1a626d8af13618}
+\hypertarget{interface_patient_view_controller_a9562804261557424fa05ae41e73a70f5}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!caseid@{caseid}}
+\index{caseid@{caseid}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{caseid}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String$\ast$) caseid\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_a9562804261557424fa05ae41e73a70f5}
+\hypertarget{interface_patient_view_controller_a1e8d7e3299ef981d7bb3fb5f82ef26c7}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!fid\+Label@{fid\+Label}}
+\index{fid\+Label@{fid\+Label}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{fid\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) fid\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a1e8d7e3299ef981d7bb3fb5f82ef26c7}
+\hypertarget{interface_patient_view_controller_a222aa081edbb7f93c0fa4ebe327197c2}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!firstname@{firstname}}
+\index{firstname@{firstname}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{firstname}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String$\ast$) firstname\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_a222aa081edbb7f93c0fa4ebe327197c2}
+\hypertarget{interface_patient_view_controller_a4cfee9bd7ee50cc6f1837832ffbd7910}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!firstname\+Label@{firstname\+Label}}
+\index{firstname\+Label@{firstname\+Label}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{firstname\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) firstname\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a4cfee9bd7ee50cc6f1837832ffbd7910}
+\hypertarget{interface_patient_view_controller_af88192a4ffdea0941a06317aa61423c6}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!gender@{gender}}
+\index{gender@{gender}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{gender}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String$\ast$) gender\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_af88192a4ffdea0941a06317aa61423c6}
+\hypertarget{interface_patient_view_controller_ad0d981f3b1c2cb2851446cfabcd0032a}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!gender\+Label@{gender\+Label}}
+\index{gender\+Label@{gender\+Label}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{gender\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) gender\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_ad0d981f3b1c2cb2851446cfabcd0032a}
+\hypertarget{interface_patient_view_controller_a29feb452b2f29cd57fb8690fa7639546}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!has\+Scanned\+Result@{has\+Scanned\+Result}}
+\index{has\+Scanned\+Result@{has\+Scanned\+Result}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{has\+Scanned\+Result}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) has\+Scanned\+Result\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_patient_view_controller_a29feb452b2f29cd57fb8690fa7639546}
+\hypertarget{interface_patient_view_controller_a0552caf5f04effbd331af5816985f03c}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!image@{image}}
+\index{image@{image}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (U\+I\+Image$\ast$) image\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_a0552caf5f04effbd331af5816985f03c}
+\hypertarget{interface_patient_view_controller_a3616c642880c65d15f5b0fc38fa01eb9}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!main\+View@{main\+View}}
+\index{main\+View@{main\+View}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{main\+View}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+View$\ast$) main\+View\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_a3616c642880c65d15f5b0fc38fa01eb9}
+\hypertarget{interface_patient_view_controller_a5b5ce0c7b6ee9dfc07a360bcfd6d0292}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!name@{name}}
+\index{name@{name}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String$\ast$) name\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_a5b5ce0c7b6ee9dfc07a360bcfd6d0292}
+\hypertarget{interface_patient_view_controller_a39c15f31779257705df01c2108c0aba9}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!name\+Label@{name\+Label}}
+\index{name\+Label@{name\+Label}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{name\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) name\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a39c15f31779257705df01c2108c0aba9}
+\hypertarget{interface_patient_view_controller_a4a621d64e3466fb134d27ade4e4c0040}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!nav\+Bar@{nav\+Bar}}
+\index{nav\+Bar@{nav\+Bar}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{nav\+Bar}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Navigation\+Bar$\ast$) nav\+Bar\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a4a621d64e3466fb134d27ade4e4c0040}
+\hypertarget{interface_patient_view_controller_a72f355ee819e7c30173bcb87ca9986aa}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!patient\+Image@{patient\+Image}}
+\index{patient\+Image@{patient\+Image}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{patient\+Image}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Image\+View$\ast$) patient\+Image\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a72f355ee819e7c30173bcb87ca9986aa}
+\hypertarget{interface_patient_view_controller_a004431d6cb69fce5b91e85ba4262b982}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!patient\+View@{patient\+View}}
+\index{patient\+View@{patient\+View}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{patient\+View}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+View$\ast$) patient\+View\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a004431d6cb69fce5b91e85ba4262b982}
+\hypertarget{interface_patient_view_controller_a54160ca7411cb114520bc4b0ae56551e}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!pid@{pid}}
+\index{pid@{pid}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{pid}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String$\ast$) pid\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_a54160ca7411cb114520bc4b0ae56551e}
+\hypertarget{interface_patient_view_controller_a06ae3f2d4e7fe45821e2aa9661df2b55}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!pid\+Label@{pid\+Label}}
+\index{pid\+Label@{pid\+Label}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{pid\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) pid\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a06ae3f2d4e7fe45821e2aa9661df2b55}
+\hypertarget{interface_patient_view_controller_ad7cdfbb763e9ad87ce978b28e11b43cb}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!prescription\+Table@{prescription\+Table}}
+\index{prescription\+Table@{prescription\+Table}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{prescription\+Table}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Table\+View$\ast$) prescription\+Table\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_ad7cdfbb763e9ad87ce978b28e11b43cb}
+\hypertarget{interface_patient_view_controller_a5e769391d88bd8e9c4124ceff8882291}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!prescription\+View@{prescription\+View}}
+\index{prescription\+View@{prescription\+View}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{prescription\+View}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+View$\ast$) prescription\+View\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a5e769391d88bd8e9c4124ceff8882291}
+\hypertarget{interface_patient_view_controller_a451dd98cd605789070aca8c1b0b2e2d0}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!rea\+Label@{rea\+Label}}
+\index{rea\+Label@{rea\+Label}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{rea\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) rea\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a451dd98cd605789070aca8c1b0b2e2d0}
+\hypertarget{interface_patient_view_controller_a72468da76036a9488618a69465b69827}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!reastate@{reastate}}
+\index{reastate@{reastate}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{reastate}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String$\ast$) reastate\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_a72468da76036a9488618a69465b69827}
+\hypertarget{interface_patient_view_controller_aa65cb56326a9bbeb78c9b10172cfc01c}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!room@{room}}
+\index{room@{room}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{room}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String$\ast$) room\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_aa65cb56326a9bbeb78c9b10172cfc01c}
+\hypertarget{interface_patient_view_controller_afcfbf27fbe036c62012b45542f20b9c3}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!room\+Label@{room\+Label}}
+\index{room\+Label@{room\+Label}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{room\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) room\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_afcfbf27fbe036c62012b45542f20b9c3}
+\hypertarget{interface_patient_view_controller_a901293b287634f24a6fd42800069098a}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!scan\+Rect\+View@{scan\+Rect\+View}}
+\index{scan\+Rect\+View@{scan\+Rect\+View}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{scan\+Rect\+View}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+View$\ast$) scan\+Rect\+View\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a901293b287634f24a6fd42800069098a}
+\hypertarget{interface_patient_view_controller_aeea16cb49a3684ca14250a439f6a69ca}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!scan\+View@{scan\+View}}
+\index{scan\+View@{scan\+View}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{scan\+View}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+View$\ast$) scan\+View\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_aeea16cb49a3684ca14250a439f6a69ca}
+\hypertarget{interface_patient_view_controller_aed02d7fb5b20f35baf6d768e6d74ca2b}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!segmented\+Control@{segmented\+Control}}
+\index{segmented\+Control@{segmented\+Control}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{segmented\+Control}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Segmented\+Control$\ast$) segmented\+Control\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_aed02d7fb5b20f35baf6d768e6d74ca2b}
+\hypertarget{interface_patient_view_controller_a8f8b7d70361185915526eef8d0ae605b}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!station@{station}}
+\index{station@{station}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{station}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String$\ast$) station\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_patient_view_controller_a8f8b7d70361185915526eef8d0ae605b}
+\hypertarget{interface_patient_view_controller_a22bfc7a8180b3ea86643917b4c772333}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!station\+Label@{station\+Label}}
+\index{station\+Label@{station\+Label}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{station\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) station\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_a22bfc7a8180b3ea86643917b4c772333}
+\hypertarget{interface_patient_view_controller_aef3bd4cf26a022b5b5cecb2976e72920}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!utility\+View@{utility\+View}}
+\index{utility\+View@{utility\+View}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{utility\+View}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+View$\ast$) utility\+View\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_patient_view_controller_aef3bd4cf26a022b5b5cecb2976e72920}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_patient_view_controller_8h}{Patient\+View\+Controller.\+h}\item 
+\hyperlink{_patient_view_controller_8m}{Patient\+View\+Controller.\+m}\end{DoxyCompactItemize}

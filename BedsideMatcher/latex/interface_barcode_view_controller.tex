@@ -1,0 +1,225 @@
+\hypertarget{interface_barcode_view_controller}{}\section{Barcode\+View\+Controller Class Reference}
+\label{interface_barcode_view_controller}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+
+
+{\ttfamily \#import $<$Barcode\+View\+Controller.\+h$>$}
+
+Inheritance diagram for Barcode\+View\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_barcode_view_controller}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(I\+B\+Action) -\/ \hyperlink{interface_barcode_view_controller_aab661931483c96127ffa048e15d87917}{did\+Tap\+:}
+\item 
+(void) -\/ \hyperlink{interface_barcode_view_controller_ae823b1c85bf9a87c24efa38d24343a54}{view\+Did\+Load}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_barcode_view_controller_a2a70c76316176f47d4126e8fed1bb55a}{dealloc}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_barcode_view_controller_a50e3fe1c64b95f0d3d59466dbc2c900b}{view\+Will\+Appear\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_barcode_view_controller_a6fe8fd4a656ef6c0ac06462e5101d6ad}{did\+Receive\+Memory\+Warning}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_barcode_view_controller_a3388d45363c38c987deb03a74e4b3498}{set\+Back\+Button}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(I\+B\+Action) -\/ \hyperlink{interface_barcode_view_controller_a61c8bad86165dddbcdb6f64f891ba6d2}{show\+Beacon\+View\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{interface_barcode_view_controller_ae2135d864655c5618b2800e09d3fc9e7}{barcode\+Format\+To\+String\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_barcode_view_controller_a50f416e51dbeea0029f99e0cea014e08}{capture\+Result\+:result\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_barcode_view_controller_a0ec1c92483ae880605699a401d3418a6}{prepare\+For\+Segue\+:sender\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(void) -\/ \hyperlink{interface_barcode_view_controller_a5e6503242dd8c610ad4cea71aacc7bb1}{perform\+Fetch}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+I\+B\+Outlet U\+I\+View $\ast$ \hyperlink{interface_barcode_view_controller_a2733f3e6e1c326d62321ba509d39bb6f}{scan\+View}
+\item 
+I\+B\+Outlet U\+I\+Navigation\+Bar $\ast$ \hyperlink{interface_barcode_view_controller_a96c8cb4141354e340d52c1e8d656151e}{nav\+Bar\+Barcode}
+\item 
+I\+B\+Outlet U\+I\+View $\ast$ \hyperlink{interface_barcode_view_controller_a820df08353742fb3da5fdd38956a48d6}{scan\+Rect\+View}
+\item 
+I\+B\+Outlet U\+I\+Label $\ast$ \hyperlink{interface_barcode_view_controller_ac303e537fe38b1af7e7f6d651dbe65f5}{decoded\+Label}
+\item 
+Z\+X\+Capture $\ast$ \hyperlink{interface_barcode_view_controller_acf101db65cfacc9f061941ec4db8af8f}{capture}
+\item 
+N\+S\+Array $\ast$ \hyperlink{interface_barcode_view_controller_a54f25ada8ff436b3c8ec67a8d725d521}{patients}
+\item 
+N\+S\+Mutable\+String $\ast$ \hyperlink{interface_barcode_view_controller_af80fe825dd1d414a12956a40f7e3af27}{minor\+I\+D}
+\item 
+N\+S\+Managed\+Object\+Context $\ast$ \hyperlink{interface_barcode_view_controller_a317121a1951b5257639f9e83d53f4fd8}{managed\+Object\+Context}
+\item 
+B\+O\+O\+L \hyperlink{interface_barcode_view_controller_a0521d7de77a9ec27346a39327706c46a}{has\+Scanned\+Result}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_barcode_view_controller_ae2135d864655c5618b2800e09d3fc9e7}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!barcode\+Format\+To\+String\+:@{barcode\+Format\+To\+String\+:}}
+\index{barcode\+Format\+To\+String\+:@{barcode\+Format\+To\+String\+:}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{barcode\+Format\+To\+String\+:(\+Z\+X\+Barcode\+Format format)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) barcode\+Format\+To\+String\+: 
+\begin{DoxyParamCaption}
+\item[{(Z\+X\+Barcode\+Format)}]{format}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_barcode_view_controller_ae2135d864655c5618b2800e09d3fc9e7}
+private helper method to convert the scanned barcode formats to strings
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & Z\+X\+Barcode\+Format\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a N\+S\+String 
+\end{DoxyReturn}
+\hypertarget{interface_barcode_view_controller_a50f416e51dbeea0029f99e0cea014e08}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!capture\+Result\+:result\+:@{capture\+Result\+:result\+:}}
+\index{capture\+Result\+:result\+:@{capture\+Result\+:result\+:}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{capture\+Result\+:result\+:(\+Z\+X\+Capture $\ast$capture, [result] Z\+X\+Result $\ast$result)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) capture\+Result\+: 
+\begin{DoxyParamCaption}
+\item[{(Z\+X\+Capture $\ast$)}]{capture}
+\item[{result:(Z\+X\+Result $\ast$)}]{result}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_barcode_view_controller_a50f416e51dbeea0029f99e0cea014e08}
+capture method of the scanner
+
+
+\begin{DoxyParams}{Parameters}
+{\em capture} & Z\+X\+Capture \\
+\hline
+{\em result} & Z\+X\+Result \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_barcode_view_controller_a2a70c76316176f47d4126e8fed1bb55a}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!dealloc@{dealloc}}
+\index{dealloc@{dealloc}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{dealloc()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) dealloc 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_barcode_view_controller_a2a70c76316176f47d4126e8fed1bb55a}
+dealloc method to remove the capture layer from its superlayer \hypertarget{interface_barcode_view_controller_a6fe8fd4a656ef6c0ac06462e5101d6ad}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!did\+Receive\+Memory\+Warning@{did\+Receive\+Memory\+Warning}}
+\index{did\+Receive\+Memory\+Warning@{did\+Receive\+Memory\+Warning}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{did\+Receive\+Memory\+Warning()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) did\+Receive\+Memory\+Warning 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_barcode_view_controller_a6fe8fd4a656ef6c0ac06462e5101d6ad}
+\hypertarget{interface_barcode_view_controller_aab661931483c96127ffa048e15d87917}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!did\+Tap\+:@{did\+Tap\+:}}
+\index{did\+Tap\+:@{did\+Tap\+:}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{did\+Tap\+:(id sender)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Action) did\+Tap\+: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{sender}
+\end{DoxyParamCaption}
+}\label{interface_barcode_view_controller_aab661931483c96127ffa048e15d87917}
+Tap recognizer to get back to beacon view (tap because the scan view is full screen and we dont want to have buttons here).
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & U\+I\+Tap\+Recognizer \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_barcode_view_controller_a5e6503242dd8c610ad4cea71aacc7bb1}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!perform\+Fetch@{perform\+Fetch}}
+\index{perform\+Fetch@{perform\+Fetch}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{perform\+Fetch()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) perform\+Fetch 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_barcode_view_controller_a5e6503242dd8c610ad4cea71aacc7bb1}
+get the patients from core data. \hypertarget{interface_barcode_view_controller_a0ec1c92483ae880605699a401d3418a6}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!prepare\+For\+Segue\+:sender\+:@{prepare\+For\+Segue\+:sender\+:}}
+\index{prepare\+For\+Segue\+:sender\+:@{prepare\+For\+Segue\+:sender\+:}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{prepare\+For\+Segue\+:sender\+:(\+U\+I\+Storyboard\+Segue $\ast$segue, [sender] id sender)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) prepare\+For\+Segue\+: 
+\begin{DoxyParamCaption}
+\item[{(U\+I\+Storyboard\+Segue $\ast$)}]{segue}
+\item[{sender:(id)}]{sender}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_barcode_view_controller_a0ec1c92483ae880605699a401d3418a6}
+gets called before the segue gets actually performed. sets all values in the destination view controller.
+
+
+\begin{DoxyParams}{Parameters}
+{\em segue} & U\+I\+Storyboard\+Segue \\
+\hline
+{\em sender} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_barcode_view_controller_a3388d45363c38c987deb03a74e4b3498}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!set\+Back\+Button@{set\+Back\+Button}}
+\index{set\+Back\+Button@{set\+Back\+Button}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{set\+Back\+Button()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\+Back\+Button 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_barcode_view_controller_a3388d45363c38c987deb03a74e4b3498}
+create the back button and set it in the navigation bar \hypertarget{interface_barcode_view_controller_a61c8bad86165dddbcdb6f64f891ba6d2}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!show\+Beacon\+View\+:@{show\+Beacon\+View\+:}}
+\index{show\+Beacon\+View\+:@{show\+Beacon\+View\+:}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{show\+Beacon\+View\+:(id sender)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Action) show\+Beacon\+View\+: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{sender}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_barcode_view_controller_a61c8bad86165dddbcdb6f64f891ba6d2}
+Action method for the back button.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & a U\+I\+Button \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_barcode_view_controller_ae823b1c85bf9a87c24efa38d24343a54}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!view\+Did\+Load@{view\+Did\+Load}}
+\index{view\+Did\+Load@{view\+Did\+Load}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{view\+Did\+Load()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) view\+Did\+Load 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_barcode_view_controller_ae823b1c85bf9a87c24efa38d24343a54}
+always called when view did load \hypertarget{interface_barcode_view_controller_a50e3fe1c64b95f0d3d59466dbc2c900b}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!view\+Will\+Appear\+:@{view\+Will\+Appear\+:}}
+\index{view\+Will\+Appear\+:@{view\+Will\+Appear\+:}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{view\+Will\+Appear\+:(\+B\+O\+O\+L animated)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) view\+Will\+Appear\+: 
+\begin{DoxyParamCaption}
+\item[{(B\+O\+O\+L)}]{animated}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_barcode_view_controller_a50e3fe1c64b95f0d3d59466dbc2c900b}
+always called when view will appear
+
+
+\begin{DoxyParams}{Parameters}
+{\em animated} & a B\+O\+O\+L \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_barcode_view_controller_acf101db65cfacc9f061941ec4db8af8f}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!capture@{capture}}
+\index{capture@{capture}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{capture}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (Z\+X\+Capture$\ast$) capture\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_barcode_view_controller_acf101db65cfacc9f061941ec4db8af8f}
+\hypertarget{interface_barcode_view_controller_ac303e537fe38b1af7e7f6d651dbe65f5}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!decoded\+Label@{decoded\+Label}}
+\index{decoded\+Label@{decoded\+Label}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{decoded\+Label}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Label$\ast$) decoded\+Label\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_barcode_view_controller_ac303e537fe38b1af7e7f6d651dbe65f5}
+\hypertarget{interface_barcode_view_controller_a0521d7de77a9ec27346a39327706c46a}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!has\+Scanned\+Result@{has\+Scanned\+Result}}
+\index{has\+Scanned\+Result@{has\+Scanned\+Result}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{has\+Scanned\+Result}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\+O\+O\+L) has\+Scanned\+Result\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}\label{interface_barcode_view_controller_a0521d7de77a9ec27346a39327706c46a}
+\hypertarget{interface_barcode_view_controller_a317121a1951b5257639f9e83d53f4fd8}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!managed\+Object\+Context@{managed\+Object\+Context}}
+\index{managed\+Object\+Context@{managed\+Object\+Context}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{managed\+Object\+Context}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Managed\+Object\+Context$\ast$) managed\+Object\+Context\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_barcode_view_controller_a317121a1951b5257639f9e83d53f4fd8}
+\hypertarget{interface_barcode_view_controller_af80fe825dd1d414a12956a40f7e3af27}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!minor\+I\+D@{minor\+I\+D}}
+\index{minor\+I\+D@{minor\+I\+D}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{minor\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Mutable\+String$\ast$) minor\+I\+D\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_barcode_view_controller_af80fe825dd1d414a12956a40f7e3af27}
+\hypertarget{interface_barcode_view_controller_a96c8cb4141354e340d52c1e8d656151e}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!nav\+Bar\+Barcode@{nav\+Bar\+Barcode}}
+\index{nav\+Bar\+Barcode@{nav\+Bar\+Barcode}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{nav\+Bar\+Barcode}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Navigation\+Bar$\ast$) nav\+Bar\+Barcode\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_barcode_view_controller_a96c8cb4141354e340d52c1e8d656151e}
+\hypertarget{interface_barcode_view_controller_a54f25ada8ff436b3c8ec67a8d725d521}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!patients@{patients}}
+\index{patients@{patients}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{patients}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Array$\ast$) patients\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_barcode_view_controller_a54f25ada8ff436b3c8ec67a8d725d521}
+\hypertarget{interface_barcode_view_controller_a820df08353742fb3da5fdd38956a48d6}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!scan\+Rect\+View@{scan\+Rect\+View}}
+\index{scan\+Rect\+View@{scan\+Rect\+View}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{scan\+Rect\+View}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+View$\ast$) scan\+Rect\+View\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_barcode_view_controller_a820df08353742fb3da5fdd38956a48d6}
+\hypertarget{interface_barcode_view_controller_a2733f3e6e1c326d62321ba509d39bb6f}{}\index{Barcode\+View\+Controller@{Barcode\+View\+Controller}!scan\+View@{scan\+View}}
+\index{scan\+View@{scan\+View}!Barcode\+View\+Controller@{Barcode\+View\+Controller}}
+\subsubsection[{scan\+View}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+View$\ast$) scan\+View\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [strong]}}\label{interface_barcode_view_controller_a2733f3e6e1c326d62321ba509d39bb6f}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_barcode_view_controller_8h}{Barcode\+View\+Controller.\+h}\item 
+\hyperlink{_barcode_view_controller_8m}{Barcode\+View\+Controller.\+m}\end{DoxyCompactItemize}
