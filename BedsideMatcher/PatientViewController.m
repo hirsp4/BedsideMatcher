@@ -311,18 +311,20 @@
         [scanner scanCharactersFromSet:numbers intoString:&numberString];
 
         if([vid isEqualToString:numberString]){
+            SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
+            [service updateDispensedMedication:[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]] arg1:@"7640166731009" __error:nil];
             [[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]]setPrescriptionState:[prescriptionState createWithString:@"stopped"]];
             NSLog(@"%@",[[[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]]getPrescriptionState]stringValue]);
             [self.prescriptionTable reloadData];
-            SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
-            [service updateDispensedMedication:[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]] arg1:@"7640166731009" __error:nil];
-            NSString *alertMessage = @"Die Verordnung und die gescannte Etikette stimmen überein und wurden erfolgreich abgegeben.";
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Zuweisung erfolgreich"
+        }else{
+            NSString *alertMessage = @"Die Verordnung und die gescannte Etikette stimmen nicht überein. Überprüfen Sie ob die richtige Verordnung vorliegt.";
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Zuweisung fehlerhaft"
                                                             message:alertMessage
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
             [alert show];
+
         }
         
         // Vibrate
@@ -342,7 +344,7 @@
     prescriptions =[[NSMutableArray alloc] init];
     [prescriptions removeAllObjects];
     SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
-    getPrescriptionsForPatientResponse *result=[service getPrescriptionsForPatient:pid __error:nil];
+    getPreparedPrescriptionsForPatientResponse *result=[service getPreparedPrescriptionsForPatient:pid __error:nil];
     for(int i=0;i<result.count;i++){
         trspPrescription *trsppresc= [result objectAtIndex:i];
         [prescriptions addObject:trsppresc];

@@ -228,7 +228,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         destViewController.room=patient.room;
         destViewController.caseid=patient.caseID;
         // select the right patient image
-        if([patient.gender isEqualToString:@"f"]){
+        if([patient.gender isEqualToString:@"weiblich"]){
             destViewController.image=[UIImage imageNamed:@"female.png"];
         }else  destViewController.image=[UIImage imageNamed:@"male.png"];
         // stop ranging for beacons because we already selected a patient!
@@ -409,7 +409,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
                 if([[beacon.minor stringValue]isEqualToString:patient.minorid]){
                     cell.textLabel.text = [[patient.firstname stringByAppendingString:@" "]stringByAppendingString:patient.name];
                     cell.detailTextLabel.text = [self detailsStringForBeacon:beacon andPatient:patient];
-                    if([@"f" isEqualToString:patient.gender]){
+                    if([@"weiblich" isEqualToString:patient.gender]){
                         cell.imageView.image = [UIImage imageNamed:@"female.png"];
                     }else{
                         cell.imageView.image = [UIImage imageNamed:@"male.png"];
