@@ -42,6 +42,8 @@ Inheritance diagram for Verordnungen\+View\+Controller\+:\begin{figure}[H]
 (B\+O\+O\+L) -\/ \hyperlink{interface_verordnungen_view_controller_a21166fd9f608ff26819bcb0025ac2e0c}{search\+Display\+Controller\+:should\+Reload\+Table\+For\+Search\+String\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
 \item 
 (void) -\/ \hyperlink{interface_verordnungen_view_controller_a07d4e0defec451e82f3742165b22d8da}{search\+Display\+Controller\+Will\+Begin\+Search\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{interface_verordnungen_view_controller_ac889a83817d63664fda92c880541beef}{get\+Age\+From\+Date\+String\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
 \end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -95,6 +97,23 @@ filters the arrays of the table view based on a specified search text and a scop
 {\em scope} & a N\+S\+String holding the scope \\
 \hline
 \end{DoxyParams}
+\hypertarget{interface_verordnungen_view_controller_ac889a83817d63664fda92c880541beef}{}\index{Verordnungen\+View\+Controller@{Verordnungen\+View\+Controller}!get\+Age\+From\+Date\+String\+:@{get\+Age\+From\+Date\+String\+:}}
+\index{get\+Age\+From\+Date\+String\+:@{get\+Age\+From\+Date\+String\+:}!Verordnungen\+View\+Controller@{Verordnungen\+View\+Controller}}
+\subsubsection[{get\+Age\+From\+Date\+String\+:(\+N\+S\+String $\ast$date\+Of\+Birth)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) get\+Age\+From\+Date\+String\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+String$\ast$)}]{date\+Of\+Birth}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_verordnungen_view_controller_ac889a83817d63664fda92c880541beef}
+calculates the age of a patient based on a given date of birth (dd.\+M\+M.\+yyyy)
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Of\+Birth} & a birthdate of format dd.\+M\+M.\+yyyy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+S\+String age in years 
+\end{DoxyReturn}
 \hypertarget{interface_verordnungen_view_controller_ab4efe19d78a01e4932e86e0a0e1eba81}{}\index{Verordnungen\+View\+Controller@{Verordnungen\+View\+Controller}!get\+Birthdate\+String\+:@{get\+Birthdate\+String\+:}}
 \index{get\+Birthdate\+String\+:@{get\+Birthdate\+String\+:}!Verordnungen\+View\+Controller@{Verordnungen\+View\+Controller}}
 \subsubsection[{get\+Birthdate\+String\+:(\+N\+S\+String $\ast$birthdate)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) get\+Birthdate\+String\+: 
@@ -345,7 +364,7 @@ Reimplemented from \hyperlink{interface_view_controller_aa8418c79310bb5f7235485a
 \hypertarget{interface_verordnungen_view_controller_ae01877c9a830e08c00ed79628be912d2}{}\index{Verordnungen\+View\+Controller@{Verordnungen\+View\+Controller}!table\+View\+Verordnungen@{table\+View\+Verordnungen}}
 \index{table\+View\+Verordnungen@{table\+View\+Verordnungen}!Verordnungen\+View\+Controller@{Verordnungen\+View\+Controller}}
 \subsubsection[{table\+View\+Verordnungen}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\+B\+Outlet U\+I\+Table\+View$\ast$) table\+View\+Verordnungen\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}\label{interface_verordnungen_view_controller_ae01877c9a830e08c00ed79628be912d2}
-table view that lists the patients sectioned in stations 
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

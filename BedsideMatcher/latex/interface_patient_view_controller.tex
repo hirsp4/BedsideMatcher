@@ -54,6 +54,8 @@ Inheritance diagram for Patient\+View\+Controller\+:\begin{figure}[H]
 (N\+S\+String $\ast$) -\/ \hyperlink{interface_patient_view_controller_a735c33ed351ce545b7ef752b678d701d}{get\+Station\+String}{\ttfamily  \mbox{[}implementation\mbox{]}}
 \item 
 (N\+S\+String $\ast$) -\/ \hyperlink{interface_patient_view_controller_a820ee166c056d50a5642319be75137c5}{get\+Birthdate\+String}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{interface_patient_view_controller_a190044e224811feae72262fe5370c5ff}{get\+Age\+From\+Date\+String\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -194,6 +196,23 @@ dealloc method to remove capture layer from superlayer \hypertarget{interface_pa
 {}
 \end{DoxyParamCaption}
 \hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_ad92d050cac572fd5870193412a3ea81a}
+\hypertarget{interface_patient_view_controller_a190044e224811feae72262fe5370c5ff}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!get\+Age\+From\+Date\+String\+:@{get\+Age\+From\+Date\+String\+:}}
+\index{get\+Age\+From\+Date\+String\+:@{get\+Age\+From\+Date\+String\+:}!Patient\+View\+Controller@{Patient\+View\+Controller}}
+\subsubsection[{get\+Age\+From\+Date\+String\+:(\+N\+S\+String $\ast$date\+Of\+Birth)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) get\+Age\+From\+Date\+String\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+String$\ast$)}]{date\+Of\+Birth}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_patient_view_controller_a190044e224811feae72262fe5370c5ff}
+calculates the age of a patient based on a given date of birth (dd.\+M\+M.\+yyyy)
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Of\+Birth} & a birthdate of format dd.\+M\+M.\+yyyy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+S\+String age in years 
+\end{DoxyReturn}
 \hypertarget{interface_patient_view_controller_a820ee166c056d50a5642319be75137c5}{}\index{Patient\+View\+Controller@{Patient\+View\+Controller}!get\+Birthdate\+String@{get\+Birthdate\+String}}
 \index{get\+Birthdate\+String@{get\+Birthdate\+String}!Patient\+View\+Controller@{Patient\+View\+Controller}}
 \subsubsection[{get\+Birthdate\+String()}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) get\+Birthdate\+String 

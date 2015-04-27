@@ -146,6 +146,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a735c33ed351ce545b7ef752b678d701d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a820ee166c056d50a5642319be75137c5"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_patient_view_controller.html#a820ee166c056d50a5642319be75137c5">getBirthdateString</a><code> [implementation]</code></td></tr>
 <tr class="separator:a820ee166c056d50a5642319be75137c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190044e224811feae72262fe5370c5ff"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_patient_view_controller.html#a190044e224811feae72262fe5370c5ff">getAgeFromDateString:</a><code> [implementation]</code></td></tr>
+<tr class="separator:a190044e224811feae72262fe5370c5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -371,6 +373,38 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a190044e224811feae72262fe5370c5ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) getAgeFromDateString: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>dateOfBirth</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">implementation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>calculates the age of a patient based on a given date of birth (dd.MM.yyyy)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dateOfBirth</td><td>a birthdate of format dd.MM.yyyy</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NSString age in years </dd></dl>
 
 </div>
 </div>

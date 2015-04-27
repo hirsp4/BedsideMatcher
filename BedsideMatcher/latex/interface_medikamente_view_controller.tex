@@ -44,6 +44,8 @@ Inheritance diagram for Medikamente\+View\+Controller\+:\begin{figure}[H]
 (void) -\/ \hyperlink{interface_medikamente_view_controller_a84753188124dfa16d816d17b3f24b2fd}{search\+Display\+Controller\+Will\+Begin\+Search\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
 \item 
 (N\+S\+String $\ast$) -\/ \hyperlink{interface_medikamente_view_controller_ae39827760247c1a1b90a1d32324a0b09}{get\+Station\+String\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\item 
+(N\+S\+String $\ast$) -\/ \hyperlink{interface_medikamente_view_controller_af141592e039b5fbbb4c1509721c4d704}{get\+Age\+From\+Date\+String\+:}{\ttfamily  \mbox{[}implementation\mbox{]}}
 \end{DoxyCompactItemize}
 \subsection*{Properties}
 \begin{DoxyCompactItemize}
@@ -105,6 +107,23 @@ filters the arrays of the table view based on a specified search text and a scop
 {\em scope} & a N\+S\+String holding the scope \\
 \hline
 \end{DoxyParams}
+\hypertarget{interface_medikamente_view_controller_af141592e039b5fbbb4c1509721c4d704}{}\index{Medikamente\+View\+Controller@{Medikamente\+View\+Controller}!get\+Age\+From\+Date\+String\+:@{get\+Age\+From\+Date\+String\+:}}
+\index{get\+Age\+From\+Date\+String\+:@{get\+Age\+From\+Date\+String\+:}!Medikamente\+View\+Controller@{Medikamente\+View\+Controller}}
+\subsubsection[{get\+Age\+From\+Date\+String\+:(\+N\+S\+String $\ast$date\+Of\+Birth)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) get\+Age\+From\+Date\+String\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+String$\ast$)}]{date\+Of\+Birth}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}\label{interface_medikamente_view_controller_af141592e039b5fbbb4c1509721c4d704}
+calculates the age of a patient based on a given date of birth (dd.\+M\+M.\+yyyy)
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Of\+Birth} & a birthdate of format dd.\+M\+M.\+yyyy\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+S\+String age in years 
+\end{DoxyReturn}
 \hypertarget{interface_medikamente_view_controller_a498ace480a3e2d37a9ee68034bc34544}{}\index{Medikamente\+View\+Controller@{Medikamente\+View\+Controller}!get\+Birthdate\+String\+:@{get\+Birthdate\+String\+:}}
 \index{get\+Birthdate\+String\+:@{get\+Birthdate\+String\+:}!Medikamente\+View\+Controller@{Medikamente\+View\+Controller}}
 \subsubsection[{get\+Birthdate\+String\+:(\+N\+S\+String $\ast$birthdate)}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+String $\ast$) get\+Birthdate\+String\+: 

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['getagefromdatestring_3a',['getAgeFromDateString:',['../interface_medikamente_view_controller.html#af141592e039b5fbbb4c1509721c4d704',1,'MedikamenteViewController::getAgeFromDateString:()'],['../interface_patient_view_controller.html#a190044e224811feae72262fe5370c5ff',1,'PatientViewController::getAgeFromDateString:()'],['../interface_verordnungen_view_controller.html#ac889a83817d63664fda92c880541beef',1,'VerordnungenViewController::getAgeFromDateString:()']]],
   ['getbirthdatestring',['getBirthdateString',['../interface_patient_view_controller.html#a820ee166c056d50a5642319be75137c5',1,'PatientViewController']]],
   ['getbirthdatestring_3a',['getBirthdateString:',['../interface_medikamente_view_controller.html#a498ace480a3e2d37a9ee68034bc34544',1,'MedikamenteViewController::getBirthdateString:()'],['../interface_verordnungen_view_controller.html#ab4efe19d78a01e4932e86e0a0e1eba81',1,'VerordnungenViewController::getBirthdateString:()']]],
   ['getbloodgroupstring',['getBloodGroupString',['../interface_patient_view_controller.html#a25c12bd39732f6874a96e4d44f49b65e',1,'PatientViewController']]],

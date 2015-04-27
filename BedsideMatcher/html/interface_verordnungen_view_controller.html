@@ -134,6 +134,8 @@ Instance Methods</h2></td></tr>
 <tr class="separator:a21166fd9f608ff26819bcb0025ac2e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d4e0defec451e82f3742165b22d8da"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_verordnungen_view_controller.html#a07d4e0defec451e82f3742165b22d8da">searchDisplayControllerWillBeginSearch:</a><code> [implementation]</code></td></tr>
 <tr class="separator:a07d4e0defec451e82f3742165b22d8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac889a83817d63664fda92c880541beef"><td class="memItemLeft" align="right" valign="top">(NSString *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_verordnungen_view_controller.html#ac889a83817d63664fda92c880541beef">getAgeFromDateString:</a><code> [implementation]</code></td></tr>
+<tr class="separator:ac889a83817d63664fda92c880541beef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_view_controller"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interface_view_controller')"><img src="closed.png" alt="-"/>&#160;Instance Methods inherited from <a class="el" href="interface_view_controller.html">ViewController</a></td></tr>
 <tr class="memitem:a60395654ed339efad2ff77b9890fbbda inherit pub_methods_interface_view_controller"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_view_controller.html#a60395654ed339efad2ff77b9890fbbda">viewWillAppear:</a><code> [implementation]</code></td></tr>
 <tr class="separator:a60395654ed339efad2ff77b9890fbbda inherit pub_methods_interface_view_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,6 +226,38 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="ac889a83817d63664fda92c880541beef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (NSString *) getAgeFromDateString: </td>
+          <td></td>
+          <td class="paramtype">(NSString*)&#160;</td>
+          <td class="paramname"><em>dateOfBirth</em></td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">implementation</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>calculates the age of a patient based on a given date of birth (dd.MM.yyyy)</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dateOfBirth</td><td>a birthdate of format dd.MM.yyyy</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NSString age in years </dd></dl>
 
 </div>
 </div>
@@ -881,7 +915,6 @@ Properties</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>table view that lists the patients sectioned in stations </p>
 
 </div>
 </div>
