@@ -323,6 +323,7 @@
                                                            delegate:self
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil];
+            alert.tag=0;
             [alert show];
 
         }
@@ -503,6 +504,22 @@
                                        toDate:today
                                        options:0];
     return [NSString stringWithFormat:@"%ld",(long)ageComponents.year];
+}
+
+/**
+ *  check the user interaction with the alert view
+ *
+ *  @param alertView   UIAlertView
+ *  @param buttonIndex NSInteger
+ */
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag==0) {
+        if (buttonIndex == 0)
+        {
+            self.hasScannedResult=NO;
+        }
+    }
 }
 
 @end

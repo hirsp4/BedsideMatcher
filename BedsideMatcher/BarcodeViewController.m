@@ -191,7 +191,9 @@
         patientPID = [NSMutableString string];
         [patientPID appendString:numberString];
         // perform the segue to patient view
-        [self performSegueWithIdentifier:@"scanToPatientView" sender:self];
+        if([self shouldPerformSegueWithIdentifier:@"scanToPatientView" sender:self]){
+            [self performSegueWithIdentifier:@"scanToPatientView" sender:self];
+        }
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
             [self.capture start];
         });
@@ -257,6 +259,57 @@
             [message show];
         }
     }
+}
+/**
+ *  check permission to perform segue. if no patient was found, dont perform the segue!
+ *
+ *  @param identifier NSString
+ *  @param sender     id
+ *
+ *  @return BOOL state
+ */
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"scanToPatientView"]) {
+        // web service getPatientInformation
+        Patient *patient = nil;
+        // get the right patient from core data
+        for(Patient *p in patients){
+            if([p.polypointPID isEqualToString:patientPID]){
+                patient=p;
+            }
+        }
+        if(patient ==nil){
+            // build the alert string to inform the user
+            NSString *alertMessage=@"Es wurde kein Patient gefunden.";
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Achtung!"
+                                                              message:alertMessage
+                                                             delegate:self
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            [message show];
+            return NO;
+        }else{return YES;}
+    }else{
+        return NO;
+    }
+}
+/**
+ *  check the user interaction with the alert view
+ *
+ *  @param alertView   UIAlertView
+ *  @param buttonIndex NSInteger
+ */
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+        if (buttonIndex == 0)
+        {
+            [self.decodedLabel setText:@""];
+            self.hasScannedResult=NO;
+        }
+        else
+        {
+            NSLog(@"user pressed Button Indexed 1");
+        }
 }
 
 /**
