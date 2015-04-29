@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *decodedLabel;
 @property (nonatomic, strong) ZXCapture *capture;
 @property (nonatomic, strong) NSArray *patients;
-@property (nonatomic, strong) NSMutableString *minorID;
+@property (nonatomic, strong) NSMutableString *patientPID;
 @property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 @property (nonatomic, assign) BOOL hasScannedResult;
 

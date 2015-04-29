@@ -20,7 +20,7 @@
 @end
 
 @implementation BarcodeViewController
-@synthesize patients,managedObjectContext,minorID;
+@synthesize patients,managedObjectContext,patientPID;
 /**
  *  always called when view did load
  */
@@ -188,8 +188,8 @@
         // Vibrate
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         // set the minor id instance variable
-        minorID = [NSMutableString string];
-        [minorID appendString:numberString];
+        patientPID = [NSMutableString string];
+        [patientPID appendString:numberString];
         // perform the segue to patient view
         [self performSegueWithIdentifier:@"scanToPatientView" sender:self];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
@@ -222,7 +222,7 @@
         Patient *patient = nil;
         // get the right patient from core data
         for(Patient *p in patients){
-            if([p.minorid isEqualToString:minorID]){
+            if([p.polypointPID isEqualToString:patientPID]){
                 patient=p;
             }
         }
@@ -245,7 +245,7 @@
                 destViewController.image=[UIImage imageNamed:@"female.png"];
             }else  destViewController.image=[UIImage imageNamed:@"male.png"];
             // reset the minor id instance variable
-            minorID =nil;
+            patientPID =nil;
         }else{
             // build the alert string to inform the user
             NSString *alertMessage=@"Es wurde kein Patient gefunden.";
