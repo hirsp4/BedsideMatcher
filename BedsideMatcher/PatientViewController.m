@@ -454,6 +454,9 @@
  */
 -(NSString*)getStationString{
     NSString *stationString = station;
+    if([stationString isEqualToString:@""]){
+        return @"";
+    }
     NSArray *stationSplitted = [stationString componentsSeparatedByString:@" "];
     return stationSplitted[1];
 }
@@ -479,8 +482,14 @@
  */
 -(NSString *)getAgeFromDateString:(NSString*)dateOfBirth{
     NSLog(@"%@",dateOfBirth);
+    if ([dateOfBirth isEqualToString:@"Unbekannt"]) {
+        return @"?";
+    }
+    if ([dateOfBirth isEqualToString:@""]) {
+        return @"?";
+    }
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    // this is imporant - we set our input date format to match our input string
+    // this is important - we set our input date format to match our input string
     // if format doesn't match you'll get nil from your string, so be careful
     [dateFormatter setDateFormat:@"dd.MM.yyyy"];
     NSDate *dateFromString = [[NSDate alloc] init];
