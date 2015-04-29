@@ -200,7 +200,19 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
  */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section!=0) {
-        [self performSegueWithIdentifier:@"showPatientView" sender:[self.beaconTableView cellForRowAtIndexPath:indexPath]];
+        if([self shouldPerformSegueWithIdentifier:@"showPatientView" sender:[self.beaconTableView cellForRowAtIndexPath:indexPath]]){
+            [self performSegueWithIdentifier:@"showPatientView" sender:[self.beaconTableView cellForRowAtIndexPath:indexPath]];
+        }else{
+            // build the alert string to inform the user
+            NSString *alertMessage=@"Dieser Beacon wurde noch keinem Patienten zugewiesen.";
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Achtung!"
+                                                              message:alertMessage
+                                                             delegate:self
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles:nil];
+            message.tag=0;
+            [message show];
+        }
     }
 }
 /**
@@ -742,8 +754,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
     NSError *error = nil;
     NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     if (fetchedObjects == nil) {
-        // impossible
-        //... error handling code
+        return nil;
     }
     
     return [fetchedObjects firstObject];
@@ -781,4 +792,28 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
     }
 }
+
+/**
+ *  check permission to perform segue. if no patient was found, dont perform the segue!
+ *
+ *  @param identifier NSString
+ *  @param sender     id
+ *
+ *  @return BOOL state
+ */
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"showPatientView"]) {
+        UITableViewCell *cell =sender;
+        // split the detail string of the beacon cell in table view and
+        // set the destination view controllers instance variables.
+        NSArray *detailSplitted = [cell.detailTextLabel.text componentsSeparatedByString: @" "];
+        Patient *patient = [self getPatientForBeacon:detailSplitted[0]];
+        if(patient ==nil){
+            return NO;
+        }else{return YES;}
+    }else{
+        return NO;
+    }
+}
+
 @end
