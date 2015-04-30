@@ -494,9 +494,7 @@
     // if format doesn't match you'll get nil from your string, so be careful
     [dateFormatter setDateFormat:@"dd.MM.yyyy"];
     NSDate *dateFromString = [[NSDate alloc] init];
-    // voila!
     dateFromString = [dateFormatter dateFromString:dateOfBirth];
-    
     NSDate *today = [NSDate date];
     NSDateComponents *ageComponents = [[NSCalendar currentCalendar]
                                        components:NSYearCalendarUnit

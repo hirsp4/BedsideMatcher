@@ -414,11 +414,13 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
             if (!cell)
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                               reuseIdentifier:kBeaconCellIdentifier];
+            // default values for beacons that dont belong to a patient
             NSString *name = @"Beacon";
             cell.textLabel.text = name;
             cell.detailTextLabel.text = [self detailsStringForBeacon:beacon];
             for(Patient *patient in self.patients){
                 if([[beacon.minor stringValue]isEqualToString:patient.minorid]){
+                    // values for beacons that belong to a patient
                     cell.textLabel.text = [[patient.firstname stringByAppendingString:@" "]stringByAppendingString:patient.name];
                     cell.detailTextLabel.text = [self detailsStringForBeacon:beacon andPatient:patient];
                     if([@"weiblich" isEqualToString:patient.gender]){
@@ -426,7 +428,6 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
                     }else{
                         cell.imageView.image = [UIImage imageNamed:@"male.png"];
                     }
-                    
                 }
             }
             cell.detailTextLabel.textColor = [UIColor grayColor];
@@ -768,7 +769,6 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         NSLog(@"Peripheral manager is off.");
         return;
     }
-    
     NSLog(@"Peripheral manager is on.");
 }
 
@@ -806,7 +806,7 @@ typedef NS_ENUM(NSUInteger, NTOperationsRow) {
         UITableViewCell *cell =sender;
         // split the detail string of the beacon cell in table view and
         // set the destination view controllers instance variables.
-        NSArray *detailSplitted = [cell.detailTextLabel.text componentsSeparatedByString: @" "];
+        NSArray *detailSplitted = [cell.detailTextLabel.text componentsSeparatedByString:@" "];
         Patient *patient = [self getPatientForBeacon:detailSplitted[0]];
         if(patient ==nil){
             return NO;
