@@ -312,7 +312,13 @@
 
         if([vid isEqualToString:numberString]){
             SupplyChainServicePortBinding* service = [[SupplyChainServicePortBinding alloc]init];
-            [service updateDispensedMedication:[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]] arg1:@"7640166731009" __error:nil];
+            trspPrescription *sendingPresc = [prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]];
+            for (trspPreparedMedication *med in sendingPresc.getMedications) {
+                
+            }
+            
+            mediPrepResult *result= [service updateDispensedMedication:sendingPresc arg1:@"7640166731078" __error:nil]; //GLN Station A: 7640166731078
+            
             [[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]]setPrescriptionState:[prescriptionState createWithString:@"stopped"]];
             NSLog(@"%@",[[[prescriptions objectAtIndex:[[prefs objectForKey:@"selectedRow"]integerValue]]getPrescriptionState]stringValue]);
             [self.prescriptionTable reloadData];
