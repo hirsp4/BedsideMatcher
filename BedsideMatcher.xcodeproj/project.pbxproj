@@ -34,6 +34,8 @@
 		EF6339131AB0EAEB002ACE34 /* MedikamenteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339121AB0EAEB002ACE34 /* MedikamenteViewController.m */; };
 		EF6339161AB0EAFE002ACE34 /* BeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */; };
 		EF6339191AB0EB0D002ACE34 /* VerordnungenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */; };
+		EF7C7A4E1B15F6D800A3F026 /* notepad19.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7C7A4D1B15F6D800A3F026 /* notepad19.png */; };
+		EF7C7A501B15F71100A3F026 /* notepad19-2.png in Resources */ = {isa = PBXBuildFile; fileRef = EF7C7A4F1B15F71100A3F026 /* notepad19-2.png */; };
 		EF902E8B1AB0A7BF00347176 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF902E8A1AB0A7BF00347176 /* LoginViewController.m */; };
 		EFAD36191ACD2C80000E978E /* ZXAztecDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD34331ACD2C7F000E978E /* ZXAztecDecoder.m */; };
 		EFAD361A1ACD2C80000E978E /* ZXAztecDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = EFAD34361ACD2C7F000E978E /* ZXAztecDetector.m */; };
@@ -397,6 +399,8 @@
 		EF6339151AB0EAFE002ACE34 /* BeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconViewController.m; sourceTree = "<group>"; };
 		EF6339171AB0EB0D002ACE34 /* VerordnungenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerordnungenViewController.h; sourceTree = "<group>"; };
 		EF6339181AB0EB0D002ACE34 /* VerordnungenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerordnungenViewController.m; sourceTree = "<group>"; };
+		EF7C7A4D1B15F6D800A3F026 /* notepad19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notepad19.png; sourceTree = "<group>"; };
+		EF7C7A4F1B15F71100A3F026 /* notepad19-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notepad19-2.png"; sourceTree = "<group>"; };
 		EF902E891AB0A7BF00347176 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EF902E8A1AB0A7BF00347176 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		EFAD34321ACD2C7F000E978E /* ZXAztecDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXAztecDecoder.h; sourceTree = "<group>"; };
@@ -1053,7 +1057,9 @@
 			children = (
 				E0440DE31ACC21820024E445 /* barcode.png */,
 				E09C91F21AC166D2006804E9 /* LogoApp.png */,
+				EF7C7A4D1B15F6D800A3F026 /* notepad19.png */,
 				EFD9A2561AD3D29600DF7E10 /* female.png */,
+				EF7C7A4F1B15F71100A3F026 /* notepad19-2.png */,
 				EF0F9A8A1AE91AB60005B093 /* ToDo-list.png */,
 				EFD9A2571AD3D29600DF7E10 /* male.png */,
 				E09C91E81AC15FA2006804E9 /* medicine.png */,
@@ -1092,7 +1098,7 @@
 			children = (
 				EFD9A2501AD3C4D900DF7E10 /* Managed Objects */,
 				EF6CD1A31ACC5411000E069E /* General */,
-				EF6CD1A21ACC53CF000E069E /* Medikamente Tab */,
+				EF6CD1A21ACC53CF000E069E /* ToDo Tab */,
 				EF6CD1A11ACC53C7000E069E /* Verordnungen Tab */,
 				EF6CD1A01ACC53B9000E069E /* Beacon Tab */,
 				EF3656891AAF95E000A0B64D /* Images.xcassets */,
@@ -1326,7 +1332,7 @@
 			name = "Verordnungen Tab";
 			sourceTree = "<group>";
 		};
-		EF6CD1A21ACC53CF000E069E /* Medikamente Tab */ = {
+		EF6CD1A21ACC53CF000E069E /* ToDo Tab */ = {
 			isa = PBXGroup;
 			children = (
 				EF6339111AB0EAEB002ACE34 /* MedikamenteViewController.h */,
@@ -1335,7 +1341,7 @@
 				EF400E3B1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.m */,
 				EF400E3C1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.xib */,
 			);
-			name = "Medikamente Tab";
+			name = "ToDo Tab";
 			sourceTree = "<group>";
 		};
 		EF6CD1A31ACC5411000E069E /* General */ = {
@@ -2173,12 +2179,14 @@
 				E09B234A1ACD7D32004B4088 /* TableViewCellVerordnung.xib in Resources */,
 				EF4E88C01AE1549B00DB5BE4 /* PrescriptionTableViewCell.xib in Resources */,
 				E09C91E71AC15E98006804E9 /* notebook.png in Resources */,
+				EF7C7A501B15F71100A3F026 /* notepad19-2.png in Resources */,
 				EF400E3E1AE6A4E2001A1BF4 /* ScheduledPrescriptionCell.xib in Resources */,
 				EF0F9A8B1AE91AB60005B093 /* ToDo-list.png in Resources */,
 				EFD9A2591AD3D29600DF7E10 /* male.png in Resources */,
 				EF36568D1AAF95E000A0B64D /* LaunchScreen.xib in Resources */,
 				E09C91E91AC15FA2006804E9 /* medicine.png in Resources */,
 				EF36568A1AAF95E000A0B64D /* Images.xcassets in Resources */,
+				EF7C7A4E1B15F6D800A3F026 /* notepad19.png in Resources */,
 				E07402AD1AB1A65600B0EF01 /* Main.storyboard in Resources */,
 				EFD9A2581AD3D29600DF7E10 /* female.png in Resources */,
 			);

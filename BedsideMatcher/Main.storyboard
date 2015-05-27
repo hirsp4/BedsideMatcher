@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Medikamente-->
+        <!--ToDo-Liste-->
         <scene sceneID="Y25-Tq-1H1">
             <objects>
-                <viewController title="Medikamente" id="AvX-Cp-KJH" customClass="MedikamenteViewController" sceneMemberID="viewController">
+                <viewController title="ToDo-Liste" id="AvX-Cp-KJH" customClass="MedikamenteViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sUP-Jq-u81"/>
                         <viewControllerLayoutGuide type="bottom" id="jpp-g3-Vsv"/>
@@ -43,7 +43,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Medikamente" image="medicine.png" id="R2k-33-B0F"/>
+                    <tabBarItem key="tabBarItem" title="ToDo-Liste" image="notepad19-2.png" id="R2k-33-B0F"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -781,8 +781,8 @@
     <resources>
         <image name="LogoApp.png" width="343" height="286"/>
         <image name="iBeaconLogo.png" width="32" height="32"/>
-        <image name="medicine.png" width="32" height="32"/>
         <image name="notebook.png" width="32" height="32"/>
+        <image name="notepad19-2.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="x2d-f2-vH2"/>
