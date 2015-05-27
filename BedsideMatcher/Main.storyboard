@@ -30,7 +30,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SDK-do-EN6">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
-                                    <navigationItem title="Medikamente" id="m8a-TM-Ol0"/>
+                                    <navigationItem title="ToDo-Liste" id="m8a-TM-Ol0"/>
                                 </items>
                             </navigationBar>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Suchen" translatesAutoresizingMaskIntoConstraints="NO" id="tEK-dv-Cf6">
